@@ -1,5 +1,6 @@
 ## MacOS
 *.DS_Store
+*.env
 
 ## Hugo build files
 public/

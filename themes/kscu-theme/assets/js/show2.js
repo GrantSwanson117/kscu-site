@@ -21,7 +21,7 @@ function replaceBreaksAndParagraphsWithSpaces(text) {
 async function fetchCurrentShow() {
    // console.log("Fetching show...")
     try {
-        let request = `https://kscuserver.duckdns.org/shows/current/`
+        let request = `https://kscuapi.org/shows/current/`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
@@ -46,7 +46,7 @@ async function fetchCurrentShow() {
 async function fetchNextShow() {
    // console.log("Fetching show...")
     try {
-        let request = `https://kscuserver.duckdns.org/shows/next/`
+        let request = `https://kscuapi.org/shows/next/`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
@@ -76,13 +76,16 @@ async function placeShow() {
     // try to fetch show data
     try {
         data = store.get("show_data");
-        nextData = store.get("next_show_data")
-
     }
     catch (error) {
         console.log("Could not get show data from store")
         await fetchCurrentShow()
         data = store.get("show_data");
+    }
+    try{
+        nextData = store.get("next_show_data")
+    }
+    catch(error) {
         await fetchNextShow()
         nextData = store.get("next_show_data")
     }
@@ -263,8 +266,9 @@ async function placeShowDetails() {
 
 async function updateShow() {
     // First fetch new data
-    await fetchCurrentShow()
     await fetchNextShow()
+    await fetchCurrentShow()
+    
 
     // Then place the new data
     placeShow()
