@@ -1,9 +1,5 @@
 {{ if .Get "default" }}
-<<<<<<< HEAD
-  {{ template "_internal/shortcodes/figure.html" . }}
-=======
   {{ partial "shortcodes/figure.html" . }}
->>>>>>> d49bd28 (initial commit)
 {{ else }}
   {{ $url := urls.Parse (.Get "src") }}
   {{ $altText := .Get "alt" }}

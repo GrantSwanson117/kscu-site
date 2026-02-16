@@ -13,11 +13,7 @@
 <script defer type="text/javascript" src="{{ $jsCron.RelPermalink }}" integrity="{{ $jsCron.Data.Integrity }}"></script>
 {{ $jsShow := resources.Get "js/show2.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script defer type="module" src="{{ $jsShow.RelPermalink }}" integrity="{{ $jsShow.Data.Integrity }}"></script>
-<<<<<<< HEAD
-{{ $jsShow := resources.Get "js/spins2.js" | resources.Minify | resources.Fingerprint "sha512" }}
-=======
 {{ $jsShow := resources.Get "js/track2.js" | resources.Minify | resources.Fingerprint "sha512" }}
->>>>>>> d49bd28 (initial commit)
 <script defer type="text/javascript" src="{{ $jsShow.RelPermalink }}" integrity="{{ $jsShow.Data.Integrity }}"></script>
 
 {{ $jsHowl := resources.Get "js/loudest.core.min.js" | resources.Minify | resources.Fingerprint "sha512" }}
