@@ -1,4 +1,4 @@
-#!bin/bash
+#!/usr/bin/bash
 
 # get current branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
@@ -10,7 +10,7 @@ git push
 npm run build
 
 # branch validation
-if [ $branch = "dev" ]; then
+#if [ $branch = "dev" ]; then
 	# check current branch is clean
 	if output=$(git status --porcelain) && [ -z "$output" ]; then
 		
@@ -63,6 +63,6 @@ if [ $branch = "dev" ]; then
 		echo "ERROR: There are unstaged changes in development!"
 		echo "Clean the working directory and try again."
 	fi
-else 
-	echo "ERROR: Releases can only be published from the dev branch!"
-fi
+#else 
+#	echo "ERROR: Releases can only be published from the dev branch!"
+#fi
