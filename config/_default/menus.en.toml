@@ -1,0 +1,48 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+# url parameter is needed to link pages correctly on Netlify deploy.
+# Not sure why but set url equal to a page's relative url
+
+[[main]]
+  name = "Blog"
+  pageRef = "blog"
+  url = "//blog/"
+  weight = 10
+
+[[main]]
+  name = "Schedule"
+  pageRef = "schedule"
+  url = '//schedule/'
+  weight = 20
+
+[[main]]
+  name = "PSAs"
+  pageRef = "PSAs"
+  url = '//psas/'
+  weight = 25
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  url = '//about/'
+  weight = 30
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+# [[footer]]
+#   name = "Tags"
+#   pageRef = "tags"
+#   weight = 10

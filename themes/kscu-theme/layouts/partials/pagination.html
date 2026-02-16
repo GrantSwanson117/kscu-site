@@ -1,0 +1,44 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<div class="flex flex-row my-3.5 list-none justify-center">
+  <div id="pagination-div" class="flex flex-row mx-4">
+    {{ $prevURL := "" }}
+    {{ if $paginator.HasPrev }}
+    {{ $prevURL = $paginator.Prev.URL }}
+    {{ end }}
+    <li class="{{ if not $paginator.HasPrev }} invisible {{ end }}">
+      <a href="{{ $prevURL }}"
+        class="border mr-5 px-3 py-2 block min-w-[1.8rem] text-center hover:text-neutral-500" rel="prev">
+        &larr;
+      </a>
+    </li>
+    <ul id="paginator-numbers" class="flex flex-row list-none">
+    {{ range $paginator.Pagers }}
+      <li>
+        <a href="{{ .URL }}" class="{{ if eq . $paginator }}
+              underline decoration-1 underline-offset-2 decoration-wavy
+            {{ end }} border border-l-[0px] px-4 py-2 block min-w-[1.8rem] text-center hover:text-neutral-500 middle-number">
+          {{ .PageNumber }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ $nextURL := "" }}
+    {{ if $paginator.HasNext }}
+    {{ $nextURL = $paginator.Next.URL }}
+    {{ end }}
+    <li class="{{ if not $paginator.HasNext }} invisible {{ end }}">
+      <a href="{{ $nextURL }}"
+        class="border ml-5 px-3 py-2 block min-w-[1.8rem] text-center hover:text-neutral-500" rel="next">
+        &rarr;
+      </a>
+    </li>
+  </div>
+</div>
+
+<style>
+#paginator-numbers > li:first-child > a {
+    border-left: 1px solid #000;
+}
+</style>
+{{ end }}

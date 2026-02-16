@@ -1,0 +1,8 @@
+<article class="max-w-full prose dark:prose-invert">
+  {{ with .Title }}
+  {{ end }}
+  <section>{{ .Content | emojify }}</section>
+</article>
+<section class="mb-6" style="margin-top: -20px">
+  {{ partial "recent-articles.html" . }}
+</section>

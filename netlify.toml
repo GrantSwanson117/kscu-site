@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+publish = "public"
+
+[build.environment]
+HUGO_VERSION = "0.104.2"
+
+[dev]
+framework = "hugo"
+publish = "public"

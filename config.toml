@@ -1,0 +1,5 @@
+ignoreLogs = ['warning-partial-superfluous-prefix']
+baseURL = 'kscu-staging.netlify.app'
+languageCode = 'en-us'
+title = 'KSCU Staging'
+theme = "kscu-theme"

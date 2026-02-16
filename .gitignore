@@ -1,0 +1,15 @@
+## MacOS
+*.DS_Store
+
+## Hugo build files
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Local Netlify folder
+.netlify
+
+# Node
+node_modules/
+
+node_modules

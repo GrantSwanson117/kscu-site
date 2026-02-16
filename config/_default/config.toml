@@ -1,0 +1,20 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "http://kscuserver.duckdns.org"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+[pagination]
+  pagerSize = 10
+summaryLength = 20
+
+# title = "KSCU 103.3 FM | The Underground Sound"
+# description = "Tune in to the Underground Sound."
+# copyright = "CC 2022"
+
+googleAnalytics = "G-LTQTS3WW1X"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

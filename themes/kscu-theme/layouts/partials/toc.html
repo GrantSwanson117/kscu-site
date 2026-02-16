@@ -1,0 +1,18 @@
+<details open class="toc mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+  <summary
+    class="list-item py-1 text-lg font-semibold cursor-pointer text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    {{ i18n "article.table_of_contents" }}
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-600 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
+  >
+    {{ .TableOfContents | emojify }}
+  </div>
+  <style>
+    #TableOfContents ul {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  </style>
+</details>
