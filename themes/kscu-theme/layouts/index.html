@@ -1,8 +1,16 @@
 {{ define "main" }}
+<<<<<<< HEAD
   {{ $partial := print "partials/home/" .Site.Params.homepage.layout ".html" }}
   {{ if templates.Exists $partial }}
     {{ partial $partial . }}
   {{ else }}
     {{ partial "partials/home/page.html" . }}
+=======
+  {{ $partial := print "home/" .Site.Params.homepage.layout ".html" }}
+  {{ if templates.Exists $partial }}
+    {{ partial $partial . }}
+  {{ else }}
+    {{ partial "home/page.html" . }}
+>>>>>>> d49bd28 (initial commit)
   {{ end }}
 {{ end }}

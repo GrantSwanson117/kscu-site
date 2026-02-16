@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const formatDayOfWeek = (date) => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayIndex = date.getDay();
@@ -34,6 +35,8 @@ const formatDJs = (djs) => {
 }
 
 
+=======
+>>>>>>> d49bd28 (initial commit)
 function underlineLinksInParagraph(htmlString) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, "text/html");
@@ -54,17 +57,28 @@ function replaceBreaksAndParagraphsWithSpaces(text) {
     return toReturn;
 }
 
+<<<<<<< HEAD
 async function fetchShow() {
    // console.log("Fetching show...")
     try {
         let request = `https://kscuapi.org/shows/get`
+=======
+async function fetchCurrentShow() {
+   // console.log("Fetching show...")
+    try {
+        let request = `https://kscuserver.duckdns.org/shows/current/`
+>>>>>>> d49bd28 (initial commit)
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
         }
+<<<<<<< HEAD
 
         let data = await response.json();
 
+=======
+        let data = await response.json();
+>>>>>>> d49bd28 (initial commit)
         try {
             store.remove("show_data")
             store.remove("showData")
@@ -78,13 +92,43 @@ async function fetchShow() {
     catch (error) {
         // console.log("Error: " + error)
         // wait a random time between 0.2-0.6 seconds and try again
+<<<<<<< HEAD
         setTimeout(fetchSpins, Math.floor(Math.random() * 400) + 200)
+=======
+        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
+    }
+}
+async function fetchNextShow() {
+   // console.log("Fetching show...")
+    try {
+        let request = `https://kscuserver.duckdns.org/shows/next/`
+        let response = await fetch(request);
+        if (response.status != 200) {
+            throw new Error("Error: " + response.status)
+        }
+        let nextData = await response.json();
+        try {
+            store.remove("next_show_data")
+            store.remove("nextShowData")
+            store('next_show_data', nextData)
+        }
+        catch (error) {
+            store('show_data', nextData)
+        //    console.log("Error: " + error)
+        }
+    }
+    catch (error) {
+        // console.log("Error: " + error)
+        // wait a random time between 0.2-0.6 seconds and try again
+        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
+>>>>>>> d49bd28 (initial commit)
     }
 }
 
 
 async function placeShow() {
     let data;
+<<<<<<< HEAD
     // try to fetch show data
     try {
         data = store.get("show_data");
@@ -111,6 +155,24 @@ async function placeShow() {
     const showTitle = `<b style="margin-right: 0.25rem; white-space: nowrap;">${currentShow2}</b> <div id="dj_name_inner_div">with ${formatDJs(data["v2"]["dj-0"])}</div>`;
     document.getElementById("show_title").innerHTML = DOMPurify.sanitize(showTitle, { ALLOWED_TAGS: ['b', 'i', 'div'], ALLOWED_ATTR: ['style', 'id'] });
     document.getElementById("dj_name_inner_div").style.whiteSpace = "nowrap";
+=======
+    let nextData;
+    // try to fetch show data
+    try {
+        data = store.get("show_data");
+        nextData = store.get("next_show_data")
+
+    }
+    catch (error) {
+        console.log("Could not get show data from store")
+        await fetchCurrentShow()
+        data = store.get("show_data");
+        await fetchNextShow()
+        nextData = store.get("next_show_data")
+    }
+    /*document.getElementById("show_title").innerHTML = DOMPurify.sanitize(showTitle, { ALLOWED_TAGS: ['b', 'i', 'div'], ALLOWED_ATTR: ['style', 'id'] });
+    document.getElementById("dj_name_inner_div").style.whiteSpace = "nowrap";*/
+>>>>>>> d49bd28 (initial commit)
 }
 
 function placeDesc(parentElement, descriptionElement, descriptionText) {
@@ -225,11 +287,15 @@ function fadeOut(element) {
     }, 8);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d49bd28 (initial commit)
 async function placeShowDetails() {
     let data;
     try {
         data = store.get("show_data");
+<<<<<<< HEAD
     } catch (error) {
         console.log("Couldn't find show data in store. Fetching...")
         await fetchShow()
@@ -275,11 +341,71 @@ async function placeShowDetails() {
     document.getElementById("right-genre").innerHTML = DOMPurify.sanitize(data["show-1"].category, { ALLOWED_TAGS: [] });
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), data["show-1"].description);
     placeImage(document.getElementById("right-image"), data["show-1"].image, data["show-1"].category, data["show-1"].start);
+=======
+        if (!data) throw new Error("No data in store");
+    } catch (error) {
+        console.log("Fetching show data...");
+        await fetchCurrentShow();
+        data = store.get("show_data");
+    }
+    let nextData;
+    try {
+        nextData = store.get("next_show_data");
+        if (!nextData) throw new Error("No data in store");
+    } catch (error) {
+        console.log("Fetching next show data...");
+        await fetchNextShow();
+        nextData = store.get("next_show_data");
+    }
+
+    const redDot = document.getElementById("live-now-circle");
+    const playHeader = document.getElementById("live-play");
+    const leftHeader = document.getElementById("left-header-box");
+    const rightHeader = document.getElementById("right-header-box");
+
+    redDot.style.display = "block";
+    playHeader.innerHTML = "LIVE";
+    leftHeader.innerHTML = "LIVE NOW";
+    rightHeader.innerHTML = "NEXT UP ON KSCU";
+     /*else {
+        redDot.style.display = "none";
+        playHeader.innerHTML = "NEXT UP";
+        leftHeader.innerHTML = "NEXT UP ON KSCU";
+        rightHeader.innerHTML = "AND AFTER THAT";
+    }*/
+
+    // 2. Render Left Box (Current/Primary Show)
+    // Using destructuring for cleaner access
+    const current = data; // or data.show_0 depending on your new schema
+    
+    document.getElementById("left-show").textContent = current['show_title'];
+    document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with <i>${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
+    document.getElementById("left-time").textContent = `${current['day']} ${current['timeslot']}`;
+    document.getElementById("left-genre").textContent = current.category;
+    
+    placeDesc(document.getElementById("left-description-div"), document.getElementById("left-description"), current.description);
+    placeImage(document.getElementById("left-image"), current.image || current["show-0"]?.image, current.category, current.start);
+
+    const next = nextData
+    // 3. Render Right Box (Next Show)
+    document.getElementById("right-show").textContent = next["show_title"];
+    document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with <i>${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
+    document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
+    document.getElementById("right-genre").textContent = next.category;
+    
+    placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
+    placeImage(document.getElementById("right-image"), next.image, next.category, next.start);
+>>>>>>> d49bd28 (initial commit)
 }
 
 async function updateShow() {
     // First fetch new data
+<<<<<<< HEAD
     await fetchShow()
+=======
+    await fetchCurrentShow()
+    await fetchNextShow()
+>>>>>>> d49bd28 (initial commit)
 
     // Then place the new data
     placeShow()
@@ -289,8 +415,12 @@ async function updateShow() {
 
 // Always place show on page load
 await placeShow()
+<<<<<<< HEAD
 await placeShowDetails();
 
 // Create cron job
 const cron = cronSchedule.parseCronExpression('5 0,15,30,45 * * * *')
 const timer = cronSchedule.TimerBasedCronScheduler.setInterval(cron, updateShow, 0);
+=======
+await placeShowDetails();
+>>>>>>> d49bd28 (initial commit)

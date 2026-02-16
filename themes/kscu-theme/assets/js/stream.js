@@ -18,6 +18,7 @@ function openLinksInSameTab() {
     });
 }
 
+<<<<<<< HEAD
 const formatDJs = (djs) => {
     const len = Object.keys(djs).length;
     let djString = "";
@@ -35,6 +36,8 @@ const formatDJs = (djs) => {
     return djString;
 }
 
+=======
+>>>>>>> d49bd28 (initial commit)
 var playPauseBtn = document.getElementById('play-pause');
 // Add second play button for mobile
 var playPauseBtnMobile = document.getElementById('play-pause-mobile');
@@ -52,7 +55,11 @@ function playUpdate() {
     document.getElementById('play-mobile').style.display = 'none';
     document.getElementById('pause-mobile').style.display = 'block';
     document.getElementById('loader-mobile').style.display = 'none';
+<<<<<<< HEAD
     data = store.get("spin_data")
+=======
+    data = store.get("track_data")
+>>>>>>> d49bd28 (initial commit)
 
     const show_data = store.get("show_data");
     
@@ -62,7 +69,11 @@ function playUpdate() {
         // console.log("test")
         navigator.mediaSession.metadata = new MediaMetadata({
             title: (data["spin-0"]["song"] + " - " + data["spin-0"]["artist"]),
+<<<<<<< HEAD
             artist: show_data["show-0"].title + " - " + formatDJs(show_data["v2"]["dj-0"]),
+=======
+            artist: show_data["show_title"] + " - " + show_data["dj_name"],
+>>>>>>> d49bd28 (initial commit)
             album: "",
             artwork: [
                 { src: "/kscu-round-92.png", sizes: "92x92", type: "image/png" },
