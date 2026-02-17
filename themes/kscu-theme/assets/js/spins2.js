@@ -105,7 +105,7 @@ updateSpins();
 // Open a SSE connection to the /streams/ endpoint
 async function openSSE() {
     // console.log("Opening SSE connection...")
-    let eventSource = new EventSource(`https://kscuapi.org/spins/stream/`);
+    let eventSource = new EventSource(`https://kscuapi.org/stream`);
     eventSource.onmessage = async function (event) {
         // console.log("Received message: " + event.data)
         if (event.data == "Spin outdated - Update needed.") {
