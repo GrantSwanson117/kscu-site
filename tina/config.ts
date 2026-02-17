@@ -8,8 +8,8 @@ import { blog_postFields } from "./templates";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = "main";
-const clientIDENV = process.env.TINA_CLIENT || "Could not find clientID";
-const tokenENV =  process.env.TINA_TOKEN || "Could not find token";
+const clientIDENV = "c0c402ab-3832-48b4-9805-3d346987bc6c"//process.env.TINA_CLIENT || "Could not find clientID";
+const tokenENV = process.env.TINA_TOKEN || "Could not find token";
 
 export default defineConfig({
   branch,
