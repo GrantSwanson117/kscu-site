@@ -11,7 +11,7 @@ const formatSpin_AMPM = (date) => {
 async function fetchSpins() {
     // console.log("hello from fetchSpins()")
     try {
-        let request = `https://kscuapi.org/spins/get`
+        let request = `https://kscuapi.org/tracks/current/`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
