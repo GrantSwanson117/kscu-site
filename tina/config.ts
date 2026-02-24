@@ -11,12 +11,15 @@ if (!process.env.TINA_CLIENT) {throw new Error("Missing TINA_CLIENT environment 
 
 const branch = "main";
 const clientIDENV = process.env.TINA_CLIENT || "Could not find clientID";
-//const tokenENV = process.env.TINA_TOKEN || "Could not find token";
+const tokenENV = process.env.TINA_TOKEN || "Could not find token";
 
 export default defineConfig({
   branch,
   clientId: clientIDENV, // Get this from tina.io
-  //token: tokenENV, // Get this from tina.io
+  token: tokenENV, // Get this from tina.io
+  client: {
+
+  },
   build: {
     outputFolder: "admin",
     publicFolder: "static",
