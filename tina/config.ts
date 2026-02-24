@@ -7,7 +7,7 @@ import { defineConfig } from "tinacms";
 import { blog_postFields } from "./templates";
 
 // Your hosting provider likely exposes this as an environment variable
-if (!process.env.NEXT_PUBLIC_TINA_CLIENT_ID) {throw new Error("Missing TINA_CLIENT environment variable");}
+if (!process.env.TINA_CLIENT) {throw new Error("Missing TINA_CLIENT environment variable");}
 
 if (!process.env.TINA_TOKEN) {throw new Error("Missing TINA_TOKEN environment variable");
 }
