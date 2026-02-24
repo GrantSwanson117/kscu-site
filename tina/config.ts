@@ -7,8 +7,12 @@ import { defineConfig } from "tinacms";
 import { blog_postFields } from "./templates";
 
 // Your hosting provider likely exposes this as an environment variable
+if (!process.env.NEXT_PUBLIC_TINA_CLIENT_ID) {throw new Error("Missing TINA_CLIENT environment variable");}
+
+if (!process.env.TINA_TOKEN) {throw new Error("Missing TINA_TOKEN environment variable");
+}
 const branch = "main";
-const clientIDENV = "c0c402ab-3832-48b4-9805-3d346987bc6c"//process.env.TINA_CLIENT || "Could not find clientID";
+const clientIDENV = process.env.TINA_CLIENT || "Could not find clientID";
 const tokenENV = process.env.TINA_TOKEN || "Could not find token";
 
 export default defineConfig({
