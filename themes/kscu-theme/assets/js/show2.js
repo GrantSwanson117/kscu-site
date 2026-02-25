@@ -21,7 +21,7 @@ function replaceBreaksAndParagraphsWithSpaces(text) {
 async function fetchCurrentShow() {
    // console.log("Fetching show...")
     try {
-        let request = `https://kscuserver.duckdns.org/shows/current/`
+        let request = `https://kscuserver.duckdns.org/shows/current`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
@@ -46,7 +46,7 @@ async function fetchCurrentShow() {
 async function fetchNextShow() {
    // console.log("Fetching show...")
     try {
-        let request = `https://kscuserver.duckdns.org/shows/next/`
+        let request = `https://kscuserver.duckdns.org/shows/next`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)

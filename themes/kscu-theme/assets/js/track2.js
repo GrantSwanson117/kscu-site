@@ -1,7 +1,7 @@
 async function fetchCurrentTrack() {
     // console.log("hello from fetchCurrentTrack()")
     try {
-        let request = `https://kscuapi.org/tracks/current/`
+        let request = `https://kscuapi.org/tracks/current`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
@@ -28,7 +28,7 @@ async function fetchCurrentTrack() {
 async function fetchRecentTracks() {
     // console.log("hello from fetchCurrentTrack()")
     try {
-        let request = `https://kscuapi.org/tracks/recent/`
+        let request = `https://kscuapi.org/tracks/recent`
         let response = await fetch(request);
         if (response.status != 200) {
             throw new Error("Error: " + response.status)
