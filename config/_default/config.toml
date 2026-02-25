@@ -2,7 +2,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/getting-started/
 
-baseURL = "http://kscuapi.org"
+baseURL = "https://kscuapi.org"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
