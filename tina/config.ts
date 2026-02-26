@@ -1,8 +1,5 @@
 // @ts-nocheck
 
-import dotenv from "dotenv";
-dotenv.config();
-
 import { defineConfig } from "tinacms";
 import { blog_postFields } from "./templates";
 
