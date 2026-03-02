@@ -40,6 +40,7 @@ lastmod: 2022-12-09
 {{< /rawhtml >}}
 
 #### Built by:
+- [Grant Swanson](https://www.linkedin.com/in/grant-swanson-dev/)
 - [Aidan Smith](https://aidansmith.me)
 - [Amy Vu](https://github.com/vuamy)
 - [Patrick Lee](https://github.com/PatrickStarLee)

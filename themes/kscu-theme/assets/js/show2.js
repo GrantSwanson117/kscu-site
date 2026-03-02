@@ -59,8 +59,6 @@ async function placeShow() {
         await fetchNextShow()
         nextData = store.get("next_show_data")
     }
-    /*document.getElementById("show_title").innerHTML = DOMPurify.sanitize(showTitle, { ALLOWED_TAGS: ['b', 'i', 'div'], ALLOWED_ATTR: ['style', 'id'] });
-    document.getElementById("dj_name_inner_div").style.whiteSpace = "nowrap";*/
 }
 
 function placeDesc(parentElement, descriptionElement, descriptionText) {
@@ -213,9 +211,10 @@ async function placeShowDetails() {
 
     // 2. Render Left Box (Current/Primary Show)
     // Using destructuring for cleaner access
+    
     const current = data; // or data.show_0 depending on your new schema
     
-    document.getElementById("left-show").textContent = current['show_title'];
+    document.getElementById("left-show").textContent = current.title || current.show_title || "Unknown Show";
     document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with <i>${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("left-time").textContent = `${current['day']} ${current['timeslot']}`;
     document.getElementById("left-genre").textContent = current.category;
@@ -232,6 +231,11 @@ async function placeShowDetails() {
     
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
     placeImage(document.getElementById("right-image"), next.image, next.category, next.start);
+
+    const target = document.getElementById("show_title");
+    if (target) {
+        target.innerHTML = `<b style="margin-right: 0.25rem; white-space: nowrap;">${current.show_title}</b> with ${current.dj_name}`;
+    }
 }
 
 // Always place show on page load
