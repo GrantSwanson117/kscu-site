@@ -4,7 +4,7 @@ This is the website source code for KSCU 103.3 FM Santa Clara, the student-run r
 
 Our site is built primarily using [Hugo](https://gohugo.io/), a static site generator. The theme is based roughly on [Congo](https://github.com/jpanther/congo) with major modifications. 
 
-To function correctly, the site relies on our in-house [Spinitron API Relay Server](https://github.com/aidansmth/API_relay). 
+To function correctly, the site relies on our in-house [KSCU API Server](https://github.com/GrantSwanson117/kscu-web-server). 
 
 While this began as a classroom project, the project has grown into a complex interweaving of different components and libraries. While stable, it's not recommended that you use this project or Hugo theme as a base for your own project. Instead, check out the excellent [Congo theme](https://github.com/jpanther/congo) and use this as reference for how to integrate the Spinitron API Relay and Howler library for live audio streaming.
 

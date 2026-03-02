@@ -90,32 +90,17 @@ function placeDesc(parentElement, descriptionElement, descriptionText) {
     parentElement.style.display = "block";
 }
 
-function placeImage(elem, imageUrl, category, start) {
-    function placeSVG() {
+function placeImage(elem) {
+    elem.src = "/genres/Other.svg"; 
 
-        elem.style.minHeight = "75%";
-        elem.style.minWidth = "75%";
-        elem.style.maxWidth = "75%";
-        elem.style.maxHeight = "75%";
-    }
-    var img = new Image();
+    elem.style.objectFit = "contain";
+    elem.style.padding = "15%"; 
 
-    img.src = imageUrl;
-
-    img.onload = function () {
-        // Image is valid
-
-        elem.style.minHeight = "100%";
-        elem.style.minWidth = "100%";
-        elem.style.maxWidth = "100%";
-        elem.style.maxHeight = "100%";
-
-        elem.src = imageUrl;
-    }
-
-    img.onerror = function () {
-        placeSVG();
-    }
+    elem.onerror = function() {
+        console.error("Could not find the SVG at /static/genres/Other.svg");
+        elem.style.backgroundColor = "#222"; 
+        elem.onerror = null; 
+    };
 }
 
 function fadeIn(element) {
@@ -188,7 +173,7 @@ if (!data) {
     }
 
     document.getElementById("left-show").textContent = current.title || current.show_title || "Unknown Show";
-    document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with <i>${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
+    document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with ${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("left-time").textContent = `${current['day']} ${displayTime}`.trim();
     document.getElementById("left-genre").textContent = current.category;
     
@@ -197,7 +182,7 @@ if (!data) {
 
     const next = nextData
     document.getElementById("right-show").textContent = next["show_title"];
-    document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with <i>${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
+    document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with ${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
     document.getElementById("right-genre").textContent = next.category;
     
