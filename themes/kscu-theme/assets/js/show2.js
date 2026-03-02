@@ -216,7 +216,9 @@ async function placeShowDetails() {
     
     document.getElementById("left-show").textContent = current.title || current.show_title || "Unknown Show";
     document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with <i>${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
-    document.getElementById("left-time").textContent = `${current['day']} ${current['timeslot']}`;
+    const leftDay = current['day'] || "";
+    const leftTime = current['timeslot'] || "";
+    document.getElementById("left-time").textContent = `${leftDay} ${leftTime}`.trim();
     document.getElementById("left-genre").textContent = current.category;
     
     placeDesc(document.getElementById("left-description-div"), document.getElementById("left-description"), current.description);
@@ -227,6 +229,9 @@ async function placeShowDetails() {
     document.getElementById("right-show").textContent = next["show_title"];
     document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with <i>${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
+    const rightDay = current['day'] || "";
+    const rightTime = current['timeslot'] || "";
+    document.getElementById("right-time").textContent = `${rightDay} ${rightTime}`.trim();
     document.getElementById("right-genre").textContent = next.category;
     
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
