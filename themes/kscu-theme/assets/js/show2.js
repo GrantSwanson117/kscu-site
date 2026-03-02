@@ -243,16 +243,14 @@ await placeShow()
 await placeShowDetails();
 
 async function openSSE() {
-    // console.log("Opening SSE connection...")
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
-    eventSource.addEventListener("showUpdate", async (event) => {
-        console.log("Show Update Event Detected!");
-        console.log("New Show Data:", event.data); // This will be "song - artist"
-        
-        await updateTracks();
-    });
+eventSource.addEventListener("showUpdate", async (event) => {
+    console.log("Show Update Event Detected!");
+    
+    await updateShowData(); 
+    await placeShowDetails(); 
+});
 
-    // Optional: Keep this to see the pings/comments for debugging
     eventSource.onmessage = function(event) {
         console.log("Generic message (data only):", event.data);
     };

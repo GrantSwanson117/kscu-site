@@ -91,7 +91,7 @@ async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
     eventSource.addEventListener("trackUpdate", async (event) => {
         console.log("Track Update Event Detected!");
-        console.log("New Song Data:", event.data); // This will be "song - artist"
+        console.log("New Song Data:", event.data);
         
         await updateTracks();
     });
@@ -105,6 +105,6 @@ async function openSSE() {
     };
 }
 
-updateTracks();
+await updateTracks();
 
 openSSE();
