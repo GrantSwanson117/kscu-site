@@ -260,6 +260,7 @@ eventSource.addEventListener("showUpdate", async (event) => {
     };
 }
 
-await updateShowData();
-
-openSSE();
+(async () => {
+    await updateShowData();
+    openSSE();
+})();

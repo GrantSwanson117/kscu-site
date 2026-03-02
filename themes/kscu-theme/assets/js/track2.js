@@ -105,6 +105,7 @@ async function openSSE() {
     };
 }
 
-await updateTracks();
-
-openSSE();
+(async () => {
+    await updateTracks();
+    openSSE();
+})();
