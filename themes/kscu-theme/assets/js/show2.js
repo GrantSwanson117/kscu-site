@@ -229,9 +229,6 @@ async function placeShowDetails() {
     document.getElementById("right-show").textContent = next["show_title"];
     document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with <i>${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
-    const rightDay = current['day'] || "";
-    const rightTime = current['timeslot'] || "";
-    document.getElementById("right-time").textContent = `${rightDay} ${rightTime}`.trim();
     document.getElementById("right-genre").textContent = next.category;
     
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
