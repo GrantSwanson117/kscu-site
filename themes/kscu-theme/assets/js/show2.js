@@ -212,20 +212,26 @@ async function placeShowDetails() {
     // 2. Render Left Box (Current/Primary Show)
     // Using destructuring for cleaner access
     
-    const current = data; // or data.show_0 depending on your new schema
-    
+    const current = data; 
+    let displayTime = "";
+    const start = current['start_time'];
+    if (current["timeslot"]) {
+        displayTime = current["timeslot"];
+    }
+    else if (start) {
+        displayTime = start
+        current['day'] = ""
+    }
+
     document.getElementById("left-show").textContent = current.title || current.show_title || "Unknown Show";
     document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with <i>${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
-    const leftDay = current['day'] || "";
-    const leftTime = current['timeslot'] || "";
-    document.getElementById("left-time").textContent = `${leftDay} ${leftTime}`.trim();
+    document.getElementById("left-time").textContent = `${current['day']} ${displayTime}`.trim();
     document.getElementById("left-genre").textContent = current.category;
     
     placeDesc(document.getElementById("left-description-div"), document.getElementById("left-description"), current.description);
     placeImage(document.getElementById("left-image"), current.image || current["show-0"]?.image, current.category, current.start);
 
     const next = nextData
-    // 3. Render Right Box (Next Show)
     document.getElementById("right-show").textContent = next["show_title"];
     document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with <i>${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
