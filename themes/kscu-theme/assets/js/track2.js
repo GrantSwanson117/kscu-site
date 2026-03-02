@@ -1,137 +1,93 @@
-async function fetchCurrentTrack() {
-    // console.log("hello from fetchCurrentTrack()")
+async function updateTracks() {
     try {
-        let request = `https://kscuapi.org/tracks/current`
-        let response = await fetch(request);
-        if (response.status != 200) {
-            throw new Error("Error: " + response.status)
+        const [currentRes, recentRes] = await Promise.all([
+            fetch(`https://kscuapi.org/tracks/current`),
+            fetch(`https://kscuapi.org/tracks/recent`)
+        ]);
+
+        if (!currentRes.ok || !recentRes.ok) throw new Error("API Error");
+
+        const currentData = await currentRes.json();
+        let recentData = await recentRes.json();
+
+        if (recentData && !Array.isArray(recentData) && recentData.tracks) {
+            recentData = recentData.tracks;
         }
 
-        let data = await response.json();
+        store('track_data', currentData);
+        store('recent_track_data', recentData);
 
-        try {
-            store.remove("track_data")
-            store.remove("recentTracks")
-            store('track_data', data)
-        }
-        catch (error) {
-            store('track_data', data)
-            // console.log("Error: " + error)
-        }
-    }
-    catch (error) {
-        // console.log("Error: " + error)
-        // wait a random time between 0.2-0.6 seconds and try again
-        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
-    }
-}
-async function fetchRecentTracks() {
-    // console.log("hello from fetchCurrentTrack()")
-    try {
-        let request = `https://kscuapi.org/tracks/recent`
-        let response = await fetch(request);
-        if (response.status != 200) {
-            throw new Error("Error: " + response.status)
-        }
-
-        let recentData = await response.json();
-
-        try {
-            store.remove("recent_track_data")
-            store.remove("recentTrackData")
-            store('recent_track_data', recentData)
-        }
-        catch (error) {
-            store('recent_track_data', recentData)
-            // console.log("Error: " + error)
-        }
-    }
-    catch (error) {
-        // console.log("Error: " + error)
-        // wait a random time between 0.2-0.6 seconds and try again
-        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
+        await placeTracks(currentData, recentData);
+        
+    } catch (error) {
+        console.error("Track fetch failed, retrying...", error);
+        setTimeout(updateTracks, 2000);
     }
 }
 
-async function placeSpins() {
-    // console.log("hello from placeSpins()")
-    let data;
-    try {
-        data = store.get("track_data");
+async function placeTracks(data, recentData) {
+    data = data || store.get("track_data");
+    recentData = recentData || store.get("recent_track_data");
+
+    if (!data) {
+        console.error("No current track data available");
+        return;
     }
-    catch (error) {
-        await fetchCurrentTrack()
-        data = store.get("track_data");
+
+    const song = data.name || "Unknown Song";
+    const artist = data.artists || "Unknown Artist";
+
+    // Update main display
+    const mainSong = document.getElementById("playing-song");
+    if (mainSong) {
+        mainSong.innerHTML = DOMPurify.sanitize(`${song} - <em>${artist}</em>`, { ALLOWED_TAGS: ['em'] });
     }
-    let recentData;
-    try {
-        recentData = store.get("recent_track_data");
-    }
-    catch (error) {
-        await fetchCurrentTrack()
-        recentData = store.get("recent_track_data");
-    }
-    const song = data["name"]
-    const artist = data["artists"]
-    document.getElementById("playing-song").innerHTML = DOMPurify.sanitize(`${song} - <em>${artist}</em>`, { ALLOWED_TAGS: ['em'] });
-    if (window.location.pathname == '/') {
+
+    // Update recent list
+    if (window.location.pathname === '/' && Array.isArray(recentData)) {
         for (let i = 0; i < 6; i++) {
             const track = recentData[i]; 
-            const idNum = i + 1; // Maps 0-5 to IDs 1-6
+            const idNum = i + 1;
 
-            if (track) {
-                // Now you can index through and access properties!
-                document.getElementById(`playing-song-${idNum}`).textContent = track.name;
-                document.getElementById(`playing-artist-${idNum}`).textContent = track.artists;
+            // Only update if the track exists AND the DOM elements exist
+            const songElem = document.getElementById(`playing-song-${idNum}`);
+            if (track && songElem) {
+                songElem.textContent = track.name || "Unknown";
+                document.getElementById(`playing-artist-${idNum}`).textContent = track.artists || "Unknown";
                 document.getElementById(`year-${idNum}`).textContent = track.release_date || "";
 
                 const imgElem = document.getElementById(`playing-image-${idNum}`);
-                if (track.image) {
-                    imgElem.src = track.image;
+                if (imgElem) {
+                    imgElem.src = track.image || "/vinyl.svg";
                     imgElem.onerror = function() { this.src = '/vinyl.svg'; };
-                } else {
-                    imgElem.src = "/vinyl.svg";
                 }
             }
         }
     }
 
     if (typeof sound !== 'undefined' && sound.playing()) {
-        const show_data = store.get("show_data");
+        const show_data = store.get("show_data") || { show_title: "KSCU" };
         document.title = `${song} - ${artist}`;
-        media_title = `${song} - ${artist}`;
-        const cur_djs = data["dj-0"][0]["name"];
+        
+        //checking if dj-0 exists before accessing index 0
+        let djName = "KSCU DJ";
+        if (data["dj-0"] && data["dj-0"][0] && data["dj-0"][0].name) {
+            djName = data["dj-0"][0].name;
+        }
 
-        media_artist = `${show_data["show_title"]} - ${cur_djs}`;
         if ('mediaSession' in navigator) {
             navigator.mediaSession.metadata = new MediaMetadata({
-                    title: media_title,
-                    artist: media_artist,
-                    artwork: [
-                        { src: "/kscu-round-92.png", sizes: "92x92", type: "image/png" },
-                        { src: "/kscu-round-128.png", sizes: "128x128", type: "image/png" },
-                        { src: "/kscu-round-192.png", sizes: "192x192", type: "image/png" },
-                        { src: "/kscu-round-256.png", sizes: "256x256", type: "image/png" },
-                        { src: "/kscu-round-384.png", sizes: "384x384", type: "image/png" },
-                        { src: "/kscu-round-512.png", sizes: "512x512", type: "image/png" },
-                    ]
-                });
+                title: song,
+                artist: `${show_data.show_title} - ${djName}`,
+                artwork: [
+                    { src: "/kscu-round-512.png", sizes: "512x512", type: "image/png" }
+                ]
+            });
         }
     }
 }
 
-async function updateTracks() {
-    await fetchCurrentTrack();
-    await fetchRecentTracks()
-    await placeSpins();
-}
-
-placeSpins();
-updateTracks();
-
-// Open a SSE connection to the /streams/ endpoint
 async function openSSE() {
-    // console.log("Opening SSE connection...")
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
     eventSource.addEventListener("trackUpdate", async (event) => {
         console.log("Track Update Event Detected!");
@@ -140,7 +96,6 @@ async function openSSE() {
         await updateTracks();
     });
 
-    // Optional: Keep this to see the pings/comments for debugging
     eventSource.onmessage = function(event) {
         console.log("Generic message (data only):", event.data);
     };
@@ -149,5 +104,7 @@ async function openSSE() {
         console.error("SSE Connection Error:", err);
     };
 }
+
+updateTracks();
 
 openSSE();

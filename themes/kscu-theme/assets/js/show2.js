@@ -18,57 +18,27 @@ function replaceBreaksAndParagraphsWithSpaces(text) {
     return toReturn;
 }
 
-async function fetchCurrentShow() {
-   // console.log("Fetching show...")
+async function updateShowData() {
     try {
-        let request = `https://kscuapi.org/shows/current`
-        let response = await fetch(request);
-        if (response.status != 200) {
-            throw new Error("Error: " + response.status)
-        }
-        let data = await response.json();
-        try {
-            store.remove("show_data")
-            store.remove("showData")
-            store('show_data', data)
-        }
-        catch (error) {
-            store('show_data', data)
-        //    console.log("Error: " + error)
-        }
-    }
-    catch (error) {
-        // console.log("Error: " + error)
-        // wait a random time between 0.2-0.6 seconds and try again
-        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
-    }
-}
-async function fetchNextShow() {
-   // console.log("Fetching show...")
-    try {
-        let request = `https://kscuapi.org/shows/next`
-        let response = await fetch(request);
-        if (response.status != 200) {
-            throw new Error("Error: " + response.status)
-        }
-        let nextData = await response.json();
-        try {
-            store.remove("next_show_data")
-            store.remove("nextShowData")
-            store('next_show_data', nextData)
-        }
-        catch (error) {
-            store('show_data', nextData)
-        //    console.log("Error: " + error)
-        }
-    }
-    catch (error) {
-        // console.log("Error: " + error)
-        // wait a random time between 0.2-0.6 seconds and try again
-        setTimeout(fetchCurrentTrack, Math.floor(Math.random() * 400) + 200)
-    }
-}
+        const [currentRes, nextRes] = await Promise.all([
+            fetch(`https://kscuapi.org/shows/current`),
+            fetch(`https://kscuapi.org/shows/next`)
+        ]);
 
+        if (!currentRes.ok || !nextRes.ok) throw new Error("API issues");
+
+        const currentData = await currentRes.json();
+        const nextData = await nextRes.json();
+
+        store('show_data', currentData);
+        store('next_show_data', nextData);
+        
+        return { currentData, nextData };
+    } catch (error) {
+        console.error("Fetch failed, retrying...", error);
+        setTimeout(updateShowData, 2000); 
+    }
+}
 
 async function placeShow() {
     let data;
@@ -264,18 +234,30 @@ async function placeShowDetails() {
     placeImage(document.getElementById("right-image"), next.image, next.category, next.start);
 }
 
-async function updateShow() {
-    // First fetch new data
-    await fetchNextShow()
-    await fetchCurrentShow()
-    
-
-    // Then place the new data
-    placeShow()
-    placeShowDetails();
-}
-
-
 // Always place show on page load
 await placeShow()
 await placeShowDetails();
+
+async function openSSE() {
+    // console.log("Opening SSE connection...")
+    let eventSource = new EventSource(`https://kscuapi.org/stream`);
+    eventSource.addEventListener("showUpdate", async (event) => {
+        console.log("Show Update Event Detected!");
+        console.log("New Show Data:", event.data); // This will be "song - artist"
+        
+        await updateTracks();
+    });
+
+    // Optional: Keep this to see the pings/comments for debugging
+    eventSource.onmessage = function(event) {
+        console.log("Generic message (data only):", event.data);
+    };
+
+    eventSource.onerror = function(err) {
+        console.error("SSE Connection Error:", err);
+    };
+}
+
+await updateShowData();
+
+openSSE();
