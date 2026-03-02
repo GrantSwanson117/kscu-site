@@ -92,44 +92,13 @@ function placeDesc(parentElement, descriptionElement, descriptionText) {
 
 function placeImage(elem, imageUrl, category, start) {
     function placeSVG() {
-        const categorySvg = {
-            Automation: "Automation",
-            Blues: "Blues",
-            Country: "Country",
-            Electronic: "Electronic",
-            "Hip-Hop": "Hip-Hop",
-            Indie: "Indie",
-            Jazz: "Jazz",
-            Pop: "Pop",
-            Punk: "Punk",
-            Rock: "Rock",
-            Soul: "Soul",
-            Sports: "Sports",
-            Talk: "Talk",
-            Disco: "Disco",
-            Psychedelic: "Psychedelic",
-            Folk: "Folk",
-            "R&B": "R&B",
-            Reggae: "Reggae",
-            Metal: "Metal",
-            "Special Event": "SpecialEvent",
-        }[category] || `Other`;
 
         elem.style.minHeight = "75%";
         elem.style.minWidth = "75%";
         elem.style.maxWidth = "75%";
         elem.style.maxHeight = "75%";
-
-        elem.src = `/genres/${categorySvg}.svg`;
     }
     var img = new Image();
-
-    const regex = /spinitron\.com\/images\/Show/;
-
-    if (!regex.test(imageUrl)) {
-        placeSVG();
-        return;
-    }
 
     img.src = imageUrl;
 
@@ -173,24 +142,28 @@ function fadeOut(element) {
     }, 8);
 }
 
-async function placeShowDetails() {
-    let data;
-    try {
-        data = store.get("show_data");
-        if (!data) throw new Error("No data in store");
-    } catch (error) {
-        console.log("Fetching show data...");
-        await fetchCurrentShow();
-        data = store.get("show_data");
+async function placeShowDetails(overrideCurrent, overrideNext) {
+    let data = overrideCurrent;
+    let nextData = overrideNext;
+if (!data) {
+        try {
+            data = store.get("show_data");
+            if (!data) throw new Error("No data in store");
+        } catch (error) {
+            console.log("Fetching show data...");
+            await fetchCurrentShow();
+            data = store.get("show_data");
+        }
     }
-    let nextData;
-    try {
-        nextData = store.get("next_show_data");
-        if (!nextData) throw new Error("No data in store");
-    } catch (error) {
-        console.log("Fetching next show data...");
-        await fetchNextShow();
-        nextData = store.get("next_show_data");
+    if (!nextData) {
+        try {
+            nextData = store.get("next_show_data");
+            if (!nextData) throw new Error("No data in store");
+        } catch (error) {
+            console.log("Fetching next show data...");
+            await fetchNextShow();
+            nextData = store.get("next_show_data");
+        }
     }
 
     const redDot = document.getElementById("live-now-circle");
@@ -202,15 +175,6 @@ async function placeShowDetails() {
     playHeader.innerHTML = "LIVE";
     leftHeader.innerHTML = "LIVE NOW";
     rightHeader.innerHTML = "NEXT UP ON KSCU";
-     /*else {
-        redDot.style.display = "none";
-        playHeader.innerHTML = "NEXT UP";
-        leftHeader.innerHTML = "NEXT UP ON KSCU";
-        rightHeader.innerHTML = "AND AFTER THAT";
-    }*/
-
-    // 2. Render Left Box (Current/Primary Show)
-    // Using destructuring for cleaner access
     
     const current = data; 
     let displayTime = "";
@@ -252,11 +216,12 @@ await placeShowDetails();
 
 async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
-eventSource.addEventListener("showUpdate", async (event) => {
+    eventSource.addEventListener("showUpdate", async (event) => {
     console.log("Show Update Event Detected!");
     
-    await updateShowData(); 
-    await placeShowDetails(); 
+    const freshData = await updateShowData(); 
+    
+    await placeShowDetails(freshData.currentData, freshData.nextData); 
 });
 
     eventSource.onmessage = function(event) {
