@@ -40,11 +40,11 @@ function playUpdate() {
     const show_data = store.get("show_data");
     
 
-    document.title = data["spin-0"]["artist"] + ' - ' + data["spin-0"]["song"]
+    document.title = data["artists"] + ' - ' + data[""]["song"]
     if ('mediaSession' in navigator) {
         // console.log("test")
         navigator.mediaSession.metadata = new MediaMetadata({
-            title: (data["spin-0"]["song"] + " - " + data["spin-0"]["artist"]),
+            title: (data["name"] + " - " + data["artists"]),
             artist: show_data["show_title"] + " - " + show_data["dj_name"],
             album: "",
             artwork: [
