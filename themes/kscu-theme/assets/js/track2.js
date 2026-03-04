@@ -1,8 +1,8 @@
 async function updateTracks() {
     try {
         const [currentRes, recentRes] = await Promise.all([
-            fetch(`https://kscuapi.org/tracks/current`),
-            fetch(`https://kscuapi.org/tracks/recent`)
+            fetchWithTimeout(`https://kscuapi.org/tracks/current`),
+            fetchWithTimeout(`https://kscuapi.org/tracks/recent`)
         ]);
 
         if (!currentRes.ok || !recentRes.ok) throw new Error("API Error");
@@ -87,6 +87,20 @@ async function placeTracks(data, recentData) {
     }
 }
 
+async function fetchWithTimeout(url, timeout = 5000) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        clearTimeout(id);
+        return res;
+    } catch (err) {
+        clearTimeout(id);
+        throw err;
+    }
+}
+
 async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
     eventSource.addEventListener("trackUpdate", async (event) => {
@@ -104,7 +118,6 @@ async function openSSE() {
         console.error("SSE Connection Error:", err);
     };
 }
-
 (async () => {
     await updateTracks();
     openSSE();

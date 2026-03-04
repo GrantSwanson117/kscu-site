@@ -25,7 +25,7 @@ async function updateShowData() {
             fetch(`https://kscuapi.org/shows/next`)
         ]);
 
-        if (!currentRes.ok || !nextRes.ok) throw new Error("API issues");
+        if (!currentRes.ok || !nextRes.ok) throw new Error("Error fetching data from the KSCU API");
 
         const currentData = await currentRes.json();
         const nextData = await nextRes.json();
@@ -43,7 +43,6 @@ async function updateShowData() {
 async function placeShow() {
     let data;
     let nextData;
-    // try to fetch show data
     try {
         data = store.get("show_data");
     }
@@ -195,10 +194,6 @@ if (!data) {
     }
 }
 
-// Always place show on page load
-await placeShow()
-await placeShowDetails();
-
 async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
     eventSource.addEventListener("showUpdate", async (event) => {
@@ -208,17 +203,49 @@ async function openSSE() {
     
     await placeShowDetails(freshData.currentData, freshData.nextData); 
 });
+    eventSource.addEventListener("viewsUpdate", (event) => {
+    console.log("Views Event Detected!", event.data);
 
+    const viewElem = document.querySelector("#view-count");
+    if (viewElem) {
+        viewElem.textContent = event.data;
+        viewElem.innerHTML = "";
+
+        const img = document.createElement("img");
+        img.src = "/eye_icon.png";
+        img.alt = "Viewers";
+        img.style.width = "16px";
+        img.style.height = "16px";
+        img.style.transform = "scale(2.5)"; 
+        img.style.verticalAlign = "middle";
+        img.style.marginRight = "5px";
+
+        viewElem.appendChild(img);
+
+        const textNode = document.createTextNode(event.data);
+        viewElem.appendChild(textNode);
+    }
+    });
     eventSource.onmessage = function(event) {
         console.log("Generic message (data only):", event.data);
     };
-
     eventSource.onerror = function(err) {
         console.error("SSE Connection Error:", err);
     };
-}
+    eventSource.addEventListener("viewUpdate", async (event) => {
 
+    })
+
+}
 (async () => {
-    await updateShowData();
+    const newShowData = await updateShowData();
+
+    if (newShowData) {
+        await placeShowDetails(
+            newShowData.currentData,
+            newShowData.nextData
+        );
+    }
+
     openSSE();
 })();

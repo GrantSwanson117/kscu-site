@@ -100,6 +100,4 @@ function getDayOfYear(date) {
 }
 
 asciiResult = generateHash(new Date());
-document.querySelector("#left-ascii").innerHTML = asciiResult[0];
 document.querySelector("#right-ascii").innerHTML = asciiResult[1];
-// document.querySelector("#spins-ascii").innerHTML = asciiResult[2];
