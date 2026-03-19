@@ -550,7 +550,14 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-
+.announcement-box {
+    border: 2px solid #3498db;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e8f4fd;
+    border-radius: 5px;
+    font-weight: bold;
+}
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -3181,3 +3188,4 @@ body:has(#menu-controller:checked) {
     width: 20%;
   }
 }
+

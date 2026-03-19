@@ -1,0 +1,21 @@
+.schedule-container {
+    width: 100%;
+    max-width: 125%;
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
+.schedule-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.schedule-item {
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    border-radius: 4px;
+}
