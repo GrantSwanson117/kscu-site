@@ -77,7 +77,7 @@ function pauseUpdate() {
 }
 
 var sound = new Howl({
-    src: `https://kscu.streamguys1.com/live?kscu-site=${new Date().getTime()}`,
+    //src: `https://kscu.streamguys1.com/live?kscu-site=${new Date().getTime()}`,
     xlr: {
         method: 'GET',
         headers: {
