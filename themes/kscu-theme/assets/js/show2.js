@@ -171,6 +171,15 @@ if (!data) {
         current['day'] = ""
     }
 
+    const next = nextData
+    let nextDisplayTime = "";
+    if (next["timeslot"]) {
+        nextDisplayTime = next["timeslot"];
+    } else if (next["start_time"]) {
+        nextDisplayTime = next["start_time"];
+    }
+
+    //Current show
     document.getElementById("left-show").textContent = current.title || current.show_title || "Unknown Show";
     document.getElementById("left-dj").innerHTML = DOMPurify.sanitize(`with ${current['dj_name']}`, { ALLOWED_TAGS: ['i'] });
     document.getElementById("left-time").textContent = `${current['day']} ${displayTime}`.trim();
@@ -179,10 +188,10 @@ if (!data) {
     placeDesc(document.getElementById("left-description-div"), document.getElementById("left-description"), current.description);
     placeImage(document.getElementById("left-image"), current.image || current["show-0"]?.image, current.category, current.start);
 
-    const next = nextData
+    //Next show
     document.getElementById("right-show").textContent = next["show_title"];
     document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with ${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
-    document.getElementById("right-time").textContent = `${next['day']} ${next['timeslot']}`;
+    document.getElementById("right-time").textContent = `${next['day'] || ""} ${nextDisplayTime}`.trim();
     document.getElementById("right-genre").textContent = next.category;
     
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
