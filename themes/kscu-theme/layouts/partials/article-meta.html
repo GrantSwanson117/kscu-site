@@ -36,7 +36,10 @@
   <div class="flex flex-row flex-wrap items-center">
     {{/* Output partials */}}
     {{ with ($meta.Get "partials") }}
-      {{ delimit . "<span class=\"px-2 text-primary-500\">&middot;</span>" }}
+      {{ range $i, $partial := . }}
+        {{ if $i }}<span class="px-2 text-primary-500">&middot;</span>{{ end }}
+        {{ $partial | safeHTML }}
+      {{ end }}
     {{ end }}
 
     {{/* Output draft label */}}
