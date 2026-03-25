@@ -90,25 +90,26 @@ var sound = new Howl({
     format: ['aac', 'mp3'],
     autoplay: false,
     html5: true,
-    preload: true,
+    preload: false,
     onplay: playUpdate,
     onpause: pauseUpdate,
 });
 
 function playPauseOnClick() {
-    if (sound.state() === 'loading') {
-        sound.once('load', function () {
-            sound.play()
-        });
-        return
-    }
     if (sound.playing()) {
         sound.pause();
-    } else {
-        if (sound.state() === 'loaded') {
-            sound.play();
-            return
-        }
+        return;
+    }
+
+    if (sound.state() === 'loading') {
+        return;
+    }
+
+    if (sound.state() === 'loaded') {
+        sound.play();
+        return;
+    }
+
 
         sound.load();
         if (sound.state() === 'loading') {
@@ -123,7 +124,6 @@ function playPauseOnClick() {
         sound.once('load', function () {
             sound.play()
         });
-    }
 
 }
 

@@ -52,7 +52,14 @@ async function placeTracks(data, recentData) {
             // Only update if the track exists AND the DOM elements exist
             const songElem = document.getElementById(`playing-song-${idNum}`);
             if (track && songElem) {
-                songElem.textContent = track.name || "Unknown";
+                    if (track.link) {
+        songElem.innerHTML = DOMPurify.sanitize(
+            `<a href="${track.link}" target="_blank" class="spotify-link">${track.name || "Unknown"}</a>`,
+            { ALLOWED_TAGS: ['a'], ALLOWED_ATTR: ['href', 'target', 'class'] }
+        );
+    } else {
+        songElem.textContent = track.name || "Unknown";
+    }
                 document.getElementById(`playing-artist-${idNum}`).textContent = track.artists || "Unknown";
                 document.getElementById(`year-${idNum}`).textContent = track.release_date || "";
 

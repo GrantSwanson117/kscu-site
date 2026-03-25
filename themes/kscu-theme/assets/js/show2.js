@@ -191,7 +191,8 @@ if (!data) {
     //Next show
     document.getElementById("right-show").textContent = next["show_title"];
     document.getElementById("right-dj").innerHTML = DOMPurify.sanitize(`with ${next['dj_name']}`, { ALLOWED_TAGS: ['i'] });
-    document.getElementById("right-time").textContent = `${next['day'] || ""} ${nextDisplayTime}`.trim();
+    //document.getElementById("right-time").textContent =S`${next['day'] || ""} ${nextDisplayTime}`.trim();
+    document.getElementById("right-time").innerHTML = 'STUDENT SHOWS RETURN <br>MARCH 30TH!';
     document.getElementById("right-genre").textContent = next.category;
     
     placeDesc(document.getElementById("right-description-div"), document.getElementById("right-description"), next.description);
