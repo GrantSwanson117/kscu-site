@@ -53,13 +53,13 @@ async function placeTracks(data, recentData) {
             const songElem = document.getElementById(`playing-song-${idNum}`);
             if (track && songElem) {
                     if (track.link) {
-        songElem.innerHTML = DOMPurify.sanitize(
+            songElem.innerHTML = DOMPurify.sanitize(
             `<a href="${track.link}" target="_blank" class="spotify-link">${track.name || "Unknown"}</a>`,
             { ALLOWED_TAGS: ['a'], ALLOWED_ATTR: ['href', 'target', 'class'] }
-        );
-    } else {
-        songElem.textContent = track.name || "Unknown";
-    }
+            );
+            } else {
+                songElem.textContent = track.name || "Unknown";
+            }
                 document.getElementById(`playing-artist-${idNum}`).textContent = track.artists || "Unknown";
                 document.getElementById(`year-${idNum}`).textContent = track.release_date || "";
 
