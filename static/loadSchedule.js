@@ -97,7 +97,7 @@ async function loadSchedule() {
                 block.className = 'schedule-block';
                 block.style.top = `${minToPx(start)}px`;
                 const blockHeight = (end - start) * PX_PER_MIN;  // ← define it here
-                block.style.height = `${blockHeight}px`;
+                block.style.height = `${blockHeight-2}px`;
                 block.innerHTML = `
                     <span class="schedule-block-title">${show.show_title}</span>
                     ${blockHeight >= 32 ? `<span class="schedule-block-dj">${show.dj_name}</span>` : ''}
@@ -139,7 +139,7 @@ async function loadSchedule() {
 }
 
 updateTimeLine();
-setInterval(updateTimeLine, 60000); // update every minute
+setInterval(updateTimeLine, 60000);
 
     } catch (error) {
         target.innerHTML = '<p>Failed to load schedule.</p>';
