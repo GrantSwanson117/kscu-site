@@ -114,6 +114,32 @@ async function loadSchedule() {
 
         target.innerHTML = '';
         target.appendChild(grid);
+        function updateTimeLine() {
+    const now = new Date();
+    let currentMins = now.getHours() * 60 + now.getMinutes();
+    if (currentMins < 60) currentMins += 24 * 60;
+
+    if (currentMins < START_HOUR * 60 || currentMins >= END_HOUR * 60) return;
+
+    const todayIndex = (now.getDay() + 6) % 7;
+
+    const dayCols = document.querySelectorAll('.schedule-day-blocks');
+    const todayCol = dayCols[todayIndex];
+    if (!todayCol) return;
+
+    let line = todayCol.querySelector('.time-line');
+    if (!line) {
+        line = document.createElement('div');
+        line.className = 'time-line';
+        todayCol.appendChild(line);
+    }
+
+    line.style.display = 'block';
+    line.style.top = `${minToPx(currentMins)}px`;
+}
+
+updateTimeLine();
+setInterval(updateTimeLine, 60000); // update every minute
 
     } catch (error) {
         target.innerHTML = '<p>Failed to load schedule.</p>';
