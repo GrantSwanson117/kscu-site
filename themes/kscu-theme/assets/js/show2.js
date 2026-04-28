@@ -206,46 +206,44 @@ if (!data) {
 
 async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
+
     eventSource.addEventListener("showUpdate", async (event) => {
-    console.log("Show Update Event Detected!");
-    
-    const freshData = await updateShowData(); 
-    
-    await placeShowDetails(freshData.currentData, freshData.nextData); 
-});
-    eventSource.addEventListener("viewsUpdate", (event) => {
-    console.log("Views Event Detected!", event.data);
-
-    const viewElem = document.querySelector("#view-count");
-    if (viewElem) {
-        viewElem.textContent = event.data;
-        viewElem.innerHTML = "";
-
-        const img = document.createElement("img");
-        img.src = "/eye_icon.png";
-        img.alt = "Viewers";
-        img.style.width = "16px";
-        img.style.height = "16px";
-        img.style.transform = "scale(2.5)"; 
-        img.style.verticalAlign = "middle";
-        img.style.marginRight = "5px";
-
-        viewElem.appendChild(img);
-
-        const textNode = document.createTextNode(event.data);
-        viewElem.appendChild(textNode);
-    }
+        console.log("Show Update Event Detected!");
+        const freshData = await updateShowData(); 
+        await placeShowDetails(freshData.currentData, freshData.nextData); 
     });
+
+    eventSource.addEventListener("sportsLiveUpdate", (e) => {
+        const isLive = e.data === "true";
+        const banner = document.getElementById("sports-banner");
+        banner.style.display = isLive ? "block" : "none";
+    });
+
+    eventSource.addEventListener("viewsUpdate", (event) => {
+        console.log("Views Event Detected!", event.data);
+        const viewElem = document.querySelector("#view-count");
+        if (viewElem) {
+            viewElem.innerHTML = "";
+            const img = document.createElement("img");
+            img.src = "/eye_icon.png";
+            img.alt = "Viewers";
+            img.style.width = "16px";
+            img.style.height = "16px";
+            img.style.transform = "scale(2.5)"; 
+            img.style.verticalAlign = "middle";
+            img.style.marginRight = "5px";
+            viewElem.appendChild(img);
+            viewElem.appendChild(document.createTextNode(event.data));
+        }
+    });
+
     eventSource.onmessage = function(event) {
-        console.log("Generic message (data only):", event.data);
+        console.log("Generic message:", event.data);
     };
+
     eventSource.onerror = function(err) {
         console.error("SSE Connection Error:", err);
     };
-    eventSource.addEventListener("viewUpdate", async (event) => {
-
-    })
-
 }
 (async () => {
     const newShowData = await updateShowData();
