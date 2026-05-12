@@ -215,7 +215,7 @@ async function openSSE() {
 
     eventSource.addEventListener("sportsLiveUpdate", (e) => {
         const isLive = e.data === "true";
-        const banner = document.getElementById("sports-banner");
+        const banner = document.getElementById("sports-row-div");
         banner.style.display = isLive ? "block" : "none";
     });
 
