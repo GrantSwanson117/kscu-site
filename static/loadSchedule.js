@@ -114,29 +114,39 @@ async function loadSchedule() {
 
         target.innerHTML = '';
         target.appendChild(grid);
+
         function updateTimeLine() {
-    const now = new Date();
-    let currentMins = now.getHours() * 60 + now.getMinutes();
-    if (currentMins < 60) currentMins += 24 * 60;
+            const now = new Date();
+            let currentMins = now.getHours() * 60 + now.getMinutes();
+            if (currentMins < 60) currentMins += 24 * 60;
 
-    if (currentMins < START_HOUR * 60 || currentMins >= END_HOUR * 60) return;
+            if (currentMins < START_HOUR * 60 || currentMins >= END_HOUR * 60) {
+                const existingLines = document.querySelectorAll('.time-line');
+                existingLines.forEach(l => l.style.display = 'none');
+                return;
+            }
+            
+            let dayMappingIndex = now.getDay();
+                if (hours < 1) {
+                    dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
+                }
 
-    const todayIndex = (now.getDay() + 6) % 7;
+            const todayIndex = (dayMappingIndex + 6) % 7;
 
-    const dayCols = document.querySelectorAll('.schedule-day-blocks');
-    const todayCol = dayCols[todayIndex];
-    if (!todayCol) return;
+            const dayCols = document.querySelectorAll('.schedule-day-blocks');
+            const todayCol = dayCols[todayIndex];
+            if (!todayCol) return;
 
-    let line = todayCol.querySelector('.time-line');
-    if (!line) {
-        line = document.createElement('div');
-        line.className = 'time-line';
-        todayCol.appendChild(line);
-    }
+            let line = todayCol.querySelector('.time-line');
+            if (!line) {
+                line = document.createElement('div');
+                line.className = 'time-line';
+                todayCol.appendChild(line);
+            }
 
-    line.style.display = 'block';
-    line.style.top = `${minToPx(currentMins)}px`;
-}
+            line.style.display = 'block';
+            line.style.top = `${minToPx(currentMins)}px`;
+        }
 
 updateTimeLine();
 setInterval(updateTimeLine, 60000);
