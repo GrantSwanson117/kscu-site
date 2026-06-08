@@ -127,7 +127,7 @@ async function loadSchedule() {
             }
             
             let dayMappingIndex = now.getDay();
-                if (hours < 1) {
+                if (currentMins < 1) {
                     dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
                 }
 
