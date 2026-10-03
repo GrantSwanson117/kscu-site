@@ -128,11 +128,13 @@ async function loadSchedule() {
         function updateTimeLine() {
             const now = new Date();
             let currentMins = now.getHours() * 60 + now.getMinutes();
-            if (currentMins < 60) currentMins += 24 * 60;
+            if (currentMins < 60) {
+                currentMins += 24 * 60;
+                dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
+            }
 
             if (currentMins < START_HOUR * 60 || currentMins >= END_HOUR * 60) {
-                const existingLines = document.querySelectorAll('.time-line');
-                existingLines.forEach(l => l.style.display = 'none');
+                document.querySelectorAll('.time-line').forEach(l => l.style.display = 'none');
                 return;
             }
 
