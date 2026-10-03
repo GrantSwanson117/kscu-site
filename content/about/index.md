@@ -19,7 +19,7 @@ To submit music for airplay, please email our Music Director at [music@kscu.org]
 
 KSCU 103.3 FM continues a long tradition of radio broadcasting at Santa Clara University dating back to 1948 when Fr. Ferdinand J. Spieler, S.J., created KVSC, “The Kampus Voice of Santa Clara.” Reflecting the mission and goals of Santa Clara University, the station has a proud history as a forum for the debate of issues, ideas, and concerns on-campus and in the surrounding community, and it offers an eclectic selection of non-commercial music, sports, and public affairs programming.
 ![KSCU Board](/uploads/kscu-vintage-board.jpg "Vintage KSCU Broadcasting Board")
-KSCU is located in the basement of Benson Memorial Center at Santa Clara University. The station is staffed by students and is overseen by Gordon Young, a faculty advisor. Currently, the station is staffed by seventeen students and features over 140 different DJs. To view our current show and DJ roster, check out our [schedule](/schedule/).
+KSCU is located in the basement of Benson Memorial Center at Santa Clara University. The station is staffed by students and is overseen by Gordon Young, a faculty advisor. Currently, the station is staffed by twenty-two students and features over 140 different DJs. To view our current show and DJ roster, check out our [schedule](/schedule/).
 
 {{< alert icon="instagram" body="Be sure to [follow us on Instagram](https://www.instagram.com/kscuradio/) to stay up to date with our most recent activity!" >}}
 
@@ -27,39 +27,49 @@ KSCU is located in the basement of Benson Memorial Center at Santa Clara Univers
 
 ![KSCU Staff Members](/uploads/IMG_3308.png "KSCU 2025-26 Staff")![KSCU Staff Members](<> "KSCU 2024-25 Staff")
 
-**General Manager:** Colin Friedel
+**General Manager:** Cuitlahuac Ramirez
 
-**Coordinating Director:** Annie Danforth
-
-**Music Director:** Natalia Fernandez
-
-**Assoc. Music Director:** Adriel Hernandez
-
-**Production Director:** Adi Ranganathan
-
-**Assoc. Production Director:** Karla Martinez
-
-**Marketing Director:** Inyene Udoffia
-
-**Assoc. Media Director:** Elizabeth Blakely
-
-**Studio Director:** Cuitlahuac Ramirez
-
-**Creative Director:** Natasha Garcia
+**Events Director:** Luke Carlson
 
 **Programming Director:** Ava Bien
 
-**Business Director:** Sidney Deiss
+**Coordinating Director:** Natasha Garcia
 
-**Events Director:** Francesca Pezza
+**Studio Director:** Palmer Hightower 
 
-**On-Campus Promotions**: Sully Misner
+**Business Director:** Natalie Huey
 
-**Off-Campus Relations**: Shivani Glynn
+**Music Director:** Adriel Hernandez
 
-**Sports Director:** Sam Canales
+**Associate Music Director:** Sebastian Misner
 
-**Web Director:** Grant Swanson
+**Production Director:** Karla Martinez
+
+**Associate Production Director:** Christine Wu
+
+**Co-Marketing Director:** Elizabeth Blakely
+
+**Co-Marketing Director:** Inyene Udoffia
+
+**Creative Director:** Elhannen Hostler
+
+**Associate Creative Director:** Nina Huaracayo
+
+**Off-Campus Relations Director:** Natalia Fernandez
+
+**On-Campus Promotions Director:** Julia Bixby
+
+**Associate On-Campus Promotions Director:** Hayes Averill
+
+**Web Director:** Vir Thakkar (3)
+
+**Sports Director:** Nathan Holan
+
+**Volunteer Staff:** Miles Duncan
+
+**Volunteer Staff:** Destin Emmert
+
+**Volunteer Staff:** Maya Briones
 
 **Faculty Advisor:** [Andrew Ishak](https://mail.google.com/mail/u/0/?fs=1\&tf=cm\&source=mailto\&to=aishak@scu.edu)
 
