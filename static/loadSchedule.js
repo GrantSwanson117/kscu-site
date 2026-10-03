@@ -126,7 +126,10 @@ async function loadSchedule() {
         target.appendChild(grid);
 
         function updateTimeLine() {
+            
             const now = new Date();
+            let dayMappingIndex = now.getDay();
+
             let currentMins = now.getHours() * 60 + now.getMinutes();
             if (currentMins < 60) {
                 currentMins += 24 * 60;
@@ -138,7 +141,6 @@ async function loadSchedule() {
                 return;
             }
 
-            let dayMappingIndex = now.getDay();
             if (currentMins < 1) {
                 dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
             }
