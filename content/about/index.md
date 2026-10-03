@@ -61,7 +61,7 @@ KSCU is located in the basement of Benson Memorial Center at Santa Clara Univers
 
 **Associate On-Campus Promotions Director:** Hayes Averill
 
-**Web Director:** Vir Thakkar (3)
+**Web Director:** Vir Thakkar
 
 **Sports Director:** Nathan Holan
 
