@@ -126,21 +126,19 @@ function expandSection(element) {
 
 try {
     show_tracks = store.get("show_tracks");
-    if (show_tracks === null) {
-        show_tracks = false
+    if (show_tracks == null) {
+        show_tracks = true      
+        // tracklist on by default
     }
     show_details = store.get("show_details");
-    if (show_details === null) {
-        if (show_tracks == true) {
-            show_details = true
-            store('show_details', true)
-        } else {
-            show_details = false
-        }
+    if (show_details == null) {
+        show_details = true     
+        // detailed show info on by default
+        store('show_details', true)
     }
 } catch {
     show_details = true
-    show_tracks = false
+    show_tracks = true
 }
 
 if (window.location.pathname == '/') {
