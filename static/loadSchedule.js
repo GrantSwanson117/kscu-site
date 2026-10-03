@@ -23,6 +23,7 @@ function minToPx(mins) {
     const offset = mins - START_HOUR * 60;
     return offset * PX_PER_MIN;
 }
+
 async function loadSchedule() {
     const target = document.getElementById('schedule-target');
     try {
@@ -33,7 +34,11 @@ async function loadSchedule() {
         shows.forEach(show => {
             const key = `${show.day}-${show.start_time}-${show.show_title}`;
             if (merged[key]) {
-                merged[key].dj_name += ` & ${show.dj_name}`;
+                if (show.dj_name) {
+                    merged[key].dj_name = merged[key].dj_name
+                        ? `${merged[key].dj_name} & ${show.dj_name}`
+                        : show.dj_name;
+                }
             } else {
                 merged[key] = { ...show };
             }
@@ -84,6 +89,11 @@ async function loadSchedule() {
                 }));
 
             [...dayShows, ...nextDayOverflow].forEach(show => {
+
+                // Skip entirely if theres nothing to display
+                
+                if (!show.show_title && !show.dj_name) return;
+
                 let start = show.start_time;
                 let end = show.end_time === 0 ? 24 * 60 : show.end_time;
 
@@ -96,11 +106,11 @@ async function loadSchedule() {
                 const block = document.createElement('div');
                 block.className = 'schedule-block';
                 block.style.top = `${minToPx(start)}px`;
-                const blockHeight = (end - start) * PX_PER_MIN;  // ← define it here
+                const blockHeight = (end - start) * PX_PER_MIN;
                 block.style.height = `${blockHeight-2}px`;
                 block.innerHTML = `
-                    <span class="schedule-block-title">${show.show_title}</span>
-                    ${blockHeight >= 32 ? `<span class="schedule-block-dj">${show.dj_name}</span>` : ''}
+                    ${show.show_title ? `<span class="schedule-block-title">${show.show_title}</span>` : ''}
+                    ${show.dj_name && blockHeight >= 32 ? `<span class="schedule-block-dj">${show.dj_name}</span>` : ''}
                     ${blockHeight >= 48 ? `<span class="schedule-block-time">${fmtTime(show.start_time)}–${fmtTime(show.end_time === 0 ? 24 * 60 : show.end_time)}</span>` : ''}
                 `;
                 const fontSize = blockHeight < 48 ? '8px' : blockHeight < 72 ? '9px' : '10px';
@@ -125,11 +135,11 @@ async function loadSchedule() {
                 existingLines.forEach(l => l.style.display = 'none');
                 return;
             }
-            
+
             let dayMappingIndex = now.getDay();
-                if (currentMins < 1) {
-                    dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
-                }
+            if (currentMins < 1) {
+                dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
+            }
 
             const todayIndex = (dayMappingIndex + 6) % 7;
 
@@ -148,8 +158,8 @@ async function loadSchedule() {
             line.style.top = `${minToPx(currentMins)}px`;
         }
 
-updateTimeLine();
-setInterval(updateTimeLine, 60000);
+        updateTimeLine();
+        setInterval(updateTimeLine, 60000);
 
     } catch (error) {
         target.innerHTML = '<p>Failed to load schedule.</p>';
