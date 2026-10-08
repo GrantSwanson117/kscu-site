@@ -40,10 +40,10 @@ async function placeTracks(data, recentData) {
     const mainSong = document.getElementById("playing-song");
     if (mainSong) {
         if (data.link) {
-            mainSong.innerHTML = DOMPurify.sanitize(
-                `<a href="${data.link}" target="_blank" class="spotify-link">${song}</a> - <em>${artist}</em>`,
-                { ALLOWED_TAGS: ['a', 'em'], ALLOWED_ATTR: ['href', 'target', 'class'] }
-            );
+        mainSong.innerHTML = DOMPurify.sanitize(
+            `<a href="${data.link}" target="_blank" class="spotify-link hover:text-neutral-500 hover:underline hover:decoration-1 hover:underline-offset-2 hover:decoration-wavy">${song}</a> - <em>${artist}</em>`,
+            { ALLOWED_TAGS: ['a', 'em'], ALLOWED_ATTR: ['href', 'target', 'class'] }
+        );
         } else {
             mainSong.innerHTML = DOMPurify.sanitize(`${song} - <em>${artist}</em>`, { ALLOWED_TAGS: ['em'] });
         }
