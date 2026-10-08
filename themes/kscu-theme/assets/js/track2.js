@@ -41,7 +41,7 @@ async function placeTracks(data, recentData) {
     if (mainSong) {
         if (data.link) {
         mainSong.innerHTML = DOMPurify.sanitize(
-            `<a href="${data.link}" target="_blank" class="spotify-link underline decoration-1 underline-offset-2 hover:text-neutral-500">${song}</a> - <em>${artist}</em>`,
+            `<a href="${data.link}" target="_blank" class="spotify-link underline decoration-1 underline-offset-2 hover:decoration-wavy">${song}</a> - <em>${artist}</em>`,
             { ALLOWED_TAGS: ['a', 'em'], ALLOWED_ATTR: ['href', 'target', 'class'] }
         );
         } else {
