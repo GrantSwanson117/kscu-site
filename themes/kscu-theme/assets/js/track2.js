@@ -41,7 +41,7 @@ async function placeTracks(data, recentData) {
     if (mainSong) {
         if (data.link) {
         mainSong.innerHTML = DOMPurify.sanitize(
-            `<a href="${data.link}" target="_blank" class="spotify-link hover:text-neutral-500 hover:underline hover:decoration-1 hover:underline-offset-2 hover:decoration-wavy">${song}</a> - <em>${artist}</em>`,
+            `<a href="${data.link}" target="_blank" class="spotify-link underline decoration-1 underline-offset-2 hover:text-neutral-500">${song}</a> - <em>${artist}</em>`,
             { ALLOWED_TAGS: ['a', 'em'], ALLOWED_ATTR: ['href', 'target', 'class'] }
         );
         } else {
@@ -77,8 +77,17 @@ if (mainImg) {
 
                 const imgElem = document.getElementById(`playing-image-${idNum}`);
                 if (imgElem) {
-                    imgElem.src = track.image || "/vinyl.svg";
-                    imgElem.onerror = function() { this.src = '/vinyl.svg'; };
+                    const newSrc = track.image || "/vinyl.svg";
+
+                    if (imgElem.dataset.src !== newSrc) {
+                        imgElem.dataset.src = newSrc;
+                        imgElem.src = "/vinyl.svg";// placeholder while loading
+
+                        const preload = new Image();
+                        preload.onload = () => { imgElem.src = newSrc; };
+                        preload.onerror = () => { imgElem.src = "/vinyl.svg"; };
+                        preload.src = newSrc;
+                    }
                 }
             }
         }
