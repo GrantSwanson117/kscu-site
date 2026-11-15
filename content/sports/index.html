@@ -969,7 +969,7 @@ function sportPage(sportId, gender) {
   const isMeet = tg.some(g => g.meet) && !tg.some(g => !g.meet);
   const sportName = tg[0]?.sport || "";
   const liveEv = liveEvents().find(e => e.sport === sportName);
-  const liveNow = liveEv ? `${liveEv.us.abbr} ${liveEv.us.score || 0} – ${liveEv.them.score || 0} ${liveEv.them.abbr}` : "";
+  const liveNow = liveEv ? `${liveEv.us.abbr} ${liveEv.us.score || "—"} – ${liveEv.them.score || "—"} ${liveEv.them.abbr}` : "";
   const et = espn.team[sportName]; // official season record + conference standing from ESPN, when covered
   const recStat = et?.record
     ? `<div class="stat"><b>${esc(et.record)}</b><span>SEASON</span></div>${et.standing ? `<div class="stat"><b>${esc(et.standing.split(" ")[0])}</b><span>${esc(et.standing.split(" ").slice(1).join(" ").toUpperCase())}</span></div>` : ""}${et.conf ? `<div class="stat"><b>${esc(et.conf)}</b><span>WCC</span></div>` : ""}${et.streak && et.streak !== "-" ? `<div class="stat"><b>${esc(et.streak)}</b><span>STREAK</span></div>` : ""}`
@@ -1254,6 +1254,16 @@ async function loadSoccer() {
 async function loadSummary(ev) {
   try {
     const d = await getJSON(`${ESPN_BASE}/${espnPath(ev.sport)}/summary?event=${ev.id}`);
+    const competition = d.header?.competitions?.[0];
+    if (!ev.demo) {
+      // ESPN's team schedule can omit both scores while a game is live.
+      for (const team of [ev.us, ev.them]) {
+        const score = competition?.competitors?.find(c => String(c.id ?? c.team?.id) === team.id)?.score;
+        const value = score?.displayValue ?? score?.value ?? score;
+        if (typeof value === "number" || (typeof value === "string" && value.trim())) team.score = String(value);
+      }
+      ev.detail = competition?.status?.type?.shortDetail || ev.detail;
+    }
     const lines = {}, stats = {};
     (d.header?.competitions?.[0]?.competitors || []).forEach(c => lines[String(c.team.id)] = (c.linescores || []).map(l => l.displayValue ?? l.value));
     (d.boxscore?.teams || []).forEach(t => stats[String(t.team.id)] = Object.fromEntries((t.statistics || []).filter(s => s.label).map(s => [s.label, s.displayValue])));
@@ -1337,7 +1347,7 @@ function liveCenter(e) {
   const la = sm.lines?.[away.id] || [], lh = sm.lines?.[home.id] || [], n = Math.max(la.length, lh.length);
   const side = t => t.id === e.us.id ? "us" : "them";
   const linescore = n ? `<table class="ls"><thead><tr><th></th>${Array.from({ length: n }, (_, i) => `<th>${pl(i)}</th>`).join("")}<th>${isVB ? "SETS" : isBase ? "R" : "T"}</th></tr></thead><tbody>
-      ${[[away, la], [home, lh]].map(([t, l]) => `<tr class="${side(t)}"><td>${logo(t, "xs")}${esc(t.abbr)}</td>${Array.from({ length: n }, (_, i) => `<td>${esc(l[i] ?? "")}</td>`).join("")}<td class="tot">${esc(t.score || 0)}</td></tr>`).join("")}
+      ${[[away, la], [home, lh]].map(([t, l]) => `<tr class="${side(t)}"><td>${logo(t, "xs")}${esc(t.abbr)}</td>${Array.from({ length: n }, (_, i) => `<td>${esc(l[i] ?? "")}</td>`).join("")}<td class="tot">${esc(t.score || "—")}</td></tr>`).join("")}
     </tbody></table>` : "";
   const wp = sm.wpHome != null ? (() => { const h = Math.round(sm.wpHome * 100), a = 100 - h;
     return `<div class="wp"><div class="wp-l"><span>${esc(away.abbr)} ${a}%</span><span>WIN PROBABILITY</span><span>${h}% ${esc(home.abbr)}</span></div>
@@ -1354,7 +1364,7 @@ function liveCenter(e) {
     <div class="gc-top live">${icon(s.id, "run")}<b>${esc(e.sport.toUpperCase())}</b>${sign(genderOf(e.sport))}<span class="sp"></span>
       <span class="live-pill"><span class="dot pulse"></span>LIVE${e.demo ? " · DEMO" : ""}</span></div>
     <div class="gc-body"><div class="gc-l">
-      <div class="gc-match live">${teamBlock(away)}<div class="gc-score"><div><b>${esc(away.score || 0)}</b><span>–</span><b>${esc(home.score || 0)}</b></div>
+      <div class="gc-match live">${teamBlock(away)}<div class="gc-score"><div><b>${esc(away.score || "—")}</b><span>–</span><b>${esc(home.score || "—")}</b></div>
         <div class="gc-clock">${esc(e.detail)}</div></div>${teamBlock(home)}</div>
       ${linescore}${wp}
       ${sm.lastPlay ? `<div class="gc-play"><b>LAST PLAY</b>${esc(sm.lastPlay)}</div>` : ""}
@@ -1433,7 +1443,7 @@ async function refreshEspn() {
   const lv = liveEvents();
   const strip = document.getElementById("ks-live-strip");
   strip.innerHTML = lv.length ? `<span class="dot pulse"></span> LIVE NOW ` + lv.map(e =>
-    `<a href="${href(sportOf(e.sport).id, genderOf(e.sport))}">${esc(e.sport)}: ${esc(e.us.abbr)} ${esc(e.us.score || 0)} – ${esc(e.them.score || 0)} ${esc(e.them.abbr)} (${esc(e.detail)})</a>`).join(" · ") : "";
+    `<a href="${href(sportOf(e.sport).id, genderOf(e.sport))}">${esc(e.sport)}: ${esc(e.us.abbr)} ${esc(e.us.score || "—")} – ${esc(e.them.score || "—")} ${esc(e.them.abbr)} (${esc(e.detail)})</a>`).join(" · ") : "";
   strip.classList.toggle("on", lv.length > 0);
   document.querySelectorAll("#ks-rail .livepip").forEach(p => p.remove());
   lv.forEach(e => document.querySelector(`#ks-rail a[data-sport="${sportOf(e.sport).id}"]`)?.insertAdjacentHTML("beforeend", `<span class="dot pulse livepip"></span>`));
