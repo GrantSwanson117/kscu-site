@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T01:47:35.521807+00:00",
+ "updated": "2026-11-15T03:44:22.568205+00:00",
  "games": [
   {
    "sport": "Men's Tennis",
@@ -769,7 +769,7 @@
    "start": "2026-11-14T23:00:00+00:00",
    "allDay": false,
    "location": "Los Angeles",
-   "result": null
+   "result": "W 2-1"
   },
   {
    "sport": "Men's Basketball",
