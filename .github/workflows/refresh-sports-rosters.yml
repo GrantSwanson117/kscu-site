@@ -1,0 +1,48 @@
+# Keeps the team rosters on kscu.org/sports/ current.
+#
+# Rosters only change at the start of a season, so this runs twice a year (March 1 for spring sports,
+# September 1 for fall and winter sports, after SCU posts the new rosters and headshots). It reads each
+# team's roster page on santaclarabroncos.com and commits content/sports/rosters.json to main if anything
+# changed. Photos stay on SCU's image server. To refresh early (say, a roster went up late):
+# GitHub > Actions > "Refresh sports rosters" > Run workflow.
+
+name: Refresh sports rosters
+
+on:
+  schedule:
+    - cron: "0 15 1 3,9 *"   # Mar 1 and Sep 1, 8am Pacific
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-sports-rosters
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh rosters from Santa Clara Athletics
+        run: python3 prototypes/build_rosters.py content/sports/rosters.json
+
+      - name: Commit if a roster changed
+        run: |
+          if git diff --quiet -- content/sports/rosters.json; then
+            echo "No roster changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898208+github-actions[bot]@users.noreply.github.com"
+          git add content/sports/rosters.json
+          git commit -m "Refresh sports rosters from Santa Clara Athletics"
+          git pull --rebase origin main
+          git push origin HEAD:main

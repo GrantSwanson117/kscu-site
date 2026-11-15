@@ -1,6 +1,6 @@
 # Keeps kscu.org/sports/ up to date with Santa Clara Athletics' schedule.
 #
-# Every 6 hours this pulls SCU's public calendar, and if any game changed (new games, time changes,
+# Every hour this pulls SCU's public calendar, and if any game changed (new games, time changes,
 # cancellations, results) it commits content/sports/scu-schedule.json to main. Netlify then rebuilds
 # the site as usual. If nothing changed, it does nothing. If SCU's site is down, it fails without
 # touching the schedule. You can also run it by hand: GitHub > Actions > "Refresh sports schedule" > Run workflow.
@@ -11,7 +11,7 @@ name: Refresh sports schedule
 
 on:
   schedule:
-    - cron: "17 */6 * * *"   # 4x a day (UTC): ~5am, 11am, 5pm, 11pm Pacific
+    - cron: "17 * * * *"   # hourly, so final scores and box scores for non-ESPN sports show up soon after a game
   workflow_dispatch: {}
 
 permissions:

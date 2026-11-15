@@ -146,6 +146,7 @@ showTableOfContents = false
   #kscu-sports .score-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 12px; margin-top: 10px; font: 12px var(--mono); }
   #kscu-sports .score-tools button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); padding: 6px 10px; cursor: pointer; }
   #kscu-sports .score-tools button:disabled { opacity: .65; cursor: default; }
+  #kscu-sports .score-tools[hidden] { display: none; }
   #kscu-sports .live-strip.on { display: flex; }
 
   /* ================= THIS WEEK strip ================= */
@@ -167,6 +168,9 @@ showTableOfContents = false
   #kscu-sports .tile:hover .ico * { animation-play-state: running; }
   #kscu-sports .tile-head { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--ink); }
   #kscu-sports .tile-head .ico { width: 54px; height: 54px; flex: none; }
+  #kscu-sports .teams .tiles { border-top: 1px solid var(--ink); padding-top: 18px; }
+  #kscu-sports .tile-head::after { content: "→"; margin-left: auto; font-family: var(--mono); font-weight: 700; font-size: 18px; transition: transform .25s var(--ease); }
+  #kscu-sports .tile:hover .tile-head::after { transform: translateX(4px); }
   #kscu-sports .tile-head h3 { margin: 0; font-family: var(--mono); font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
   #kscu-sports .tile-row { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 9px 14px; align-items: start; }
   #kscu-sports .tile-row + .tile-row { border-top: 1px dashed rgba(17,24,39,.35); }
@@ -188,27 +192,51 @@ showTableOfContents = false
 
   /* recent-form blocks: W / L / placings */
   #kscu-sports .form { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 5px; }
-  #kscu-sports .form i { font-style: normal; font-family: var(--mono); font-size: 10px; font-weight: 700; min-width: 17px; height: 17px; padding: 0 3px;
+  #kscu-sports .form i, #kscu-sports .form a { font-style: normal; text-decoration: none; font-family: var(--mono); font-size: 10px; font-weight: 700; min-width: 17px; height: 17px; padding: 0 3px;
     display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--ink); }
-  #kscu-sports .form i.W { background: var(--win); border-color: var(--win); color: #fff; }
-  #kscu-sports .form i.L { background: var(--red); border-color: var(--red); color: #fff; }
-  #kscu-sports .form i.D { background: var(--brown); border-color: var(--brown); color: #fff; }
-  #kscu-sports .form.lg i { min-width: 24px; height: 24px; font-size: 12px; }
+  #kscu-sports .form a { color: inherit; transition: transform .15s var(--ease), box-shadow .15s var(--ease); }
+  #kscu-sports .form a:hover { transform: translateY(-2px); box-shadow: 0 2px 0 var(--ink); }
+  #kscu-sports .form i.W, #kscu-sports .form a.W { background: var(--win); border-color: var(--win); color: #fff; }
+  #kscu-sports .form i.L, #kscu-sports .form a.L { background: var(--red); border-color: var(--red); color: #fff; }
+  #kscu-sports .form i.D, #kscu-sports .form a.D { background: var(--brown); border-color: var(--brown); color: #fff; }
+  #kscu-sports .form.lg i, #kscu-sports .form.lg a { min-width: 24px; height: 24px; font-size: 12px; }
 
   /* ================= sport page hero ================= */
   #kscu-sports .hero { display: grid; grid-template-columns: auto 1fr minmax(260px, 340px); border: 1px solid var(--ink); margin: 28px 0; background: var(--red-tint); }
   #kscu-sports .hero-ico { padding: 14px 18px; border-right: 1px solid var(--ink); display: flex; align-items: center; background: var(--bg); }
   #kscu-sports .hero-ico .ico { width: 130px; height: 130px; }
+  /* team color behind the animated icon: pink polka dots for women's teams, blue for men's (the icon itself is transparent) */
+  #kscu-sports .hero.g-womens .hero-ico, #kscu-sports .hero.g-mens .hero-ico { --dot: #efb1cd; background-color: var(--bg);
+    background-image: radial-gradient(circle, var(--dot) 1.6px, transparent 2.1px), radial-gradient(circle, var(--dot) 1.6px, transparent 2.1px);
+    background-size: 16px 16px; background-position: 0 0, 8px 8px; }
+  #kscu-sports .hero.g-mens .hero-ico { --dot: #afc8ec; }
   #kscu-sports .hero-main { padding: 16px 20px; min-width: 0; }
   #kscu-sports .hero-main h2 { font-family: var(--mono); font-weight: 700; font-size: clamp(24px, 3.4vw, 36px); letter-spacing: -.02em; margin: 0; line-height: 1.05; }
   #kscu-sports .seg { display: inline-flex; border: 1px solid var(--ink); margin: 12px 0 14px; }
-  #kscu-sports .seg a { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px 5px 6px; font-family: var(--mono); font-size: 13px; font-weight: 700; text-decoration: none; }
+  #kscu-sports .seg a { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; font-family: var(--mono); font-size: 13px; font-weight: 700; text-decoration: none; }
   #kscu-sports .seg a + a { border-left: 1px solid var(--ink); }
   #kscu-sports .seg a[aria-current="true"] { background: var(--ink); color: var(--bg); }
   #kscu-sports .seg a:hover:not([aria-current="true"]) { background: rgba(0,0,0,.06); }
-  #kscu-sports .stats { display: flex; gap: 26px; flex-wrap: wrap; align-items: flex-end; }
-  #kscu-sports .stat b { display: block; font-family: var(--mono); font-size: 30px; line-height: 1; }
-  #kscu-sports .stat span { font-size: 11px; font-weight: 700; letter-spacing: .06em; }
+  /* hero stats: each number in its own box with a label strip. Season record leads in Bronco red, the WCC
+     standing + conference record share a blue "conference" strip, the streak is green or red, schedule counts stay plain. */
+  #kscu-sports .stats { display: flex; gap: 10px; flex-wrap: wrap; align-items: stretch; }
+  #kscu-sports .stat { --band: var(--ink); display: flex; flex-direction: column; min-width: 78px; border: 1px solid var(--ink); background: var(--paper);
+    box-shadow: 2px 2px 0 var(--ink); text-align: center; }
+  #kscu-sports .stat b { display: block; font-family: var(--mono); font-size: 26px; line-height: 1; padding: 8px 10px 6px; flex: 1;
+    display: flex; align-items: center; justify-content: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  #kscu-sports .stat span { display: block; font-size: 10px; font-weight: 700; letter-spacing: .07em; padding: 3px 8px; background: var(--band); color: #fff; white-space: nowrap; }
+  #kscu-sports .stat.season { --band: var(--bronco); } #kscu-sports .stat.season b { color: var(--bronco); }
+  #kscu-sports .stat.rank, #kscu-sports .stat.conf { --band: #2f5f9e; }
+  #kscu-sports .stat.streak.W { --band: var(--win); } #kscu-sports .stat.streak.W b { color: var(--win); }
+  #kscu-sports .stat.streak.L { --band: var(--red); } #kscu-sports .stat.streak.L b { color: var(--red); }
+  #kscu-sports .stat.sched { background: transparent; box-shadow: none; border-style: dashed; }
+  #kscu-sports .stat.sched span { background: transparent; color: var(--ink); border-top: 1px dashed var(--ink); }
+  @media (max-width: 560px) {
+    #kscu-sports .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    #kscu-sports .stat { min-width: 0; }
+    #kscu-sports .stat b { font-size: 22px; padding: 7px 4px 5px; }
+    #kscu-sports .stat span { white-space: normal; font-size: 9px; padding: 3px 4px; }
+  }
   #kscu-sports .hero-next { border-left: 1px solid var(--ink); display: flex; flex-direction: column; background: var(--bg); }
   #kscu-sports .hero-next .lbl { font-size: 13px; font-weight: 700; padding: 6px 14px; border-bottom: 1px solid var(--ink); display: flex; justify-content: space-between; }
   #kscu-sports .hero-next .pad { flex: 1; }
@@ -398,6 +426,66 @@ showTableOfContents = false
     #kscu-sports .tab.right.mono { font-size: 10.5px; }
   }
 
+  /* ================= finished games open their own page ================= */
+  #kscu-sports .game.done { position: relative; }
+  #kscu-sports .game .stretch { color: inherit; text-decoration: none; }
+  #kscu-sports .game .stretch::after { content: ""; position: absolute; inset: 0; }
+  #kscu-sports .game.done:hover .stretch { text-decoration: underline; text-underline-offset: 3px; }
+  #kscu-sports .game .stretch:focus-visible { outline: none; }
+  #kscu-sports .game.done:has(.stretch:focus-visible) { outline: 2px solid var(--red); outline-offset: -2px; }
+  #kscu-sports .game .rowlink, #kscu-sports .game .tv { position: relative; z-index: 1; }
+  #kscu-sports a.gc-last { display: block; color: inherit; text-decoration: none; transition: background-color .2s var(--ease); }
+  #kscu-sports a.gc-last:hover { background: rgba(255,255,255,.6); }
+  #kscu-sports a.gc-last:hover .lr-t, #kscu-sports a.gc-last:hover .lr-score b { text-decoration: underline; text-underline-offset: 3px; }
+  #kscu-sports .crumbs { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin: 24px 0 -12px; font-family: var(--mono); font-size: 13px; font-weight: 700; }
+  #kscu-sports .crumbs a { text-underline-offset: 3px; }
+  #kscu-sports .crumbs span { color: var(--muted); }
+  #kscu-sports .game-detail .gc-match { padding-top: 20px; }
+  #kscu-sports .game-detail .gc-score b { font-size: 54px; }
+  #kscu-sports .game-detail .ls { margin-top: 2px; }
+  #kscu-sports .gd-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--ink); }
+  #kscu-sports .gd-grid > div { padding-top: 10px; min-width: 0; }
+  #kscu-sports .gd-grid > div + div { border-left: 1px solid var(--ink); }
+  #kscu-sports .gd-grid > div:only-child { grid-column: 1 / -1; }
+  #kscu-sports .gd-grid .ldr { border-top: 0; }
+  #kscu-sports .gd-h { margin: 0 12px 8px; font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+  #kscu-sports .sb-h { font-size: 11px; color: var(--muted); }
+  #kscu-sports .sb-bar.none { border-style: dashed; opacity: .35; }
+  #kscu-sports .gd-plays ol { max-height: 360px; overflow-y: auto; padding-right: 4px; }
+  @media (max-width: 760px) {
+    #kscu-sports .gd-grid { grid-template-columns: 1fr; }
+    #kscu-sports .gd-grid > div + div { border-left: 0; border-top: 1px solid var(--ink); }
+    #kscu-sports .game-detail .gc-score b { font-size: 40px; }
+  }
+
+  /* ================= rosters ================= */
+  #kscu-sports .ro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; padding: 12px; }
+  #kscu-sports .ro-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--paper); text-decoration: none; color: inherit;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+  #kscu-sports .ro-card:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
+  #kscu-sports .ro-ph, #kscu-sports .ro-cph { position: relative; overflow: hidden; background: var(--red-tint); }
+  #kscu-sports .ro-ph { aspect-ratio: 4 / 5; border-bottom: 1px solid var(--ink); }
+  #kscu-sports .ro-ph::before, #kscu-sports .ro-cph::before { content: attr(data-ini); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-weight: 700; font-size: 28px; color: var(--muted); }
+  #kscu-sports .ro-ph img, #kscu-sports .ro-cph img { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; margin: 0; max-width: none; }
+  #kscu-sports .ro-num { position: absolute; top: 6px; left: 6px; background: var(--ink); color: var(--bg); font-family: var(--mono); font-weight: 700; font-size: 13px; padding: 1px 6px; }
+  #kscu-sports .ro-info { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  #kscu-sports .ro-info b { font-size: 15px; line-height: 1.15; }
+  #kscu-sports .ro-info span { font-family: var(--mono); font-size: 11px; font-weight: 700; }
+  #kscu-sports .ro-info .ro-meta { font-family: var(--cond); font-weight: 400; font-size: 12.5px; color: var(--muted); }
+  #kscu-sports .ro-coaches { border-top: 1px solid var(--ink); padding: 10px 0 12px; }
+  #kscu-sports .ro-coaches > div { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; padding: 0 12px; }
+  #kscu-sports .ro-coach { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  #kscu-sports .ro-cph { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--ink); flex: none; }
+  #kscu-sports .ro-cph::before { font-size: 13px; }
+  #kscu-sports .ro-coach b { display: block; font-size: 14px; line-height: 1.2; }
+  #kscu-sports .ro-coach span { font-size: 12.5px; color: var(--muted); font-family: var(--cond); }
+  #kscu-sports .roster .tab.right a { color: inherit; }
+  @media (max-width: 480px) {
+    #kscu-sports .ro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 8px; }
+    #kscu-sports .ro-info { padding: 6px 8px 8px; } #kscu-sports .ro-info b { font-size: 14px; }
+  }
+
   /* ================= full calendar ================= */
   #kscu-sports .cal-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 28px 0 12px; }
   #kscu-sports .cal-head h2 { font-family: var(--mono); font-weight: 700; font-size: clamp(22px, 3.4vw, 32px); letter-spacing: -.02em; margin: 0 6px; min-width: 9ch; }
@@ -528,30 +616,82 @@ showTableOfContents = false
   @keyframes ks-wp-wave { from { transform: translateX(0); } to { transform: translateX(16px); } }
   @keyframes ks-wp-rip { from { transform: scale(.75); opacity: .6; } to { transform: scale(1.5); opacity: 0; } }
 
-  /* Bat meets the pitch, then the ball flies up and out. */
-  #kscu-sports .i-base .bat { transform-origin: 22px 49px; animation: ks-base-swing 2.4s infinite; }
-  #kscu-sports .i-base .bball { transform: translate(49px, 41px); animation: ks-base-ball 2.4s infinite; }
+  /* baseball: the batter waggles, loads the hands back, then the hands drive forward as the bat whips level through
+     the zone. On contact the ball jumps off the barrel; the bat keeps turning and wraps around behind the batter
+     (it shortens as it swings away from us) to finish high over the front shoulder, then resets to the stance.
+     The bat is drawn from the knob (hands) upward, so translate = where the hands are, rotate = bat angle,
+     scaleY = how much of the bat we see. Hands stay above the plate, so the bat never touches the ground. */
+  #kscu-sports .i-base .bat { transform-origin: 0 0; animation: ks-base-swing 2.4s infinite; }
+  #kscu-sports .i-base .bball { animation: ks-base-ball 2.4s infinite; }
+  #kscu-sports .i-base .bspin { transform-origin: 0 0; animation: ks-base-spin .4s linear infinite; }
+  #kscu-sports .i-base .bsh { transform-origin: 0 0; animation: ks-base-shadow 2.4s infinite; }
+  #kscu-sports .i-base .pop { transform-origin: 50px 40px; animation: ks-base-pop 2.4s infinite; }
   @keyframes ks-base-swing {
-    0%, 35% { transform: rotate(0deg); }
-    50% { transform: rotate(72deg); }
-    64% { transform: rotate(110deg); }
-    85%, 100% { transform: rotate(0deg); }
+    0%   { transform: translate(23px, 39px) rotate(-26deg) scaleY(1); animation-timing-function: ease-in-out; }
+    13%  { transform: translate(23px, 38.5px) rotate(-31deg) scaleY(1); animation-timing-function: ease-in-out; }
+    26%  { transform: translate(23px, 39px) rotate(-24deg) scaleY(1); animation-timing-function: ease-in-out; }
+    38%  { transform: translate(22px, 37.5px) rotate(-34deg) scaleY(1); animation-timing-function: cubic-bezier(.55,0,.85,.45); }
+    44%  { transform: translate(22.5px, 40px) rotate(8deg) scaleY(1); animation-timing-function: linear; }
+    48%  { transform: translate(25px, 41px) rotate(86deg) scaleY(1); animation-timing-function: linear; }
+    52%  { transform: translate(28px, 40px) rotate(112deg) scaleY(.6); animation-timing-function: linear; }
+    56%  { transform: translate(29px, 37px) rotate(190deg) scaleY(.22); animation-timing-function: ease-out; }
+    62%  { transform: translate(27px, 34px) rotate(300deg) scaleY(.8); animation-timing-function: ease-in-out; }
+    76%  { transform: translate(26px, 34.5px) rotate(306deg) scaleY(.84); animation-timing-function: ease-in-out; }
+    100% { transform: translate(23px, 39px) rotate(334deg) scaleY(1); }
   }
   @keyframes ks-base-ball {
-    0%, 25% { transform: translate(62px, 41px); opacity: 0; }
-    30% { opacity: 1; }
-    50% { transform: translate(49px, 41px); opacity: 1; }
-    73% { transform: translate(59px, 11px); opacity: 1; }
-    80%, 100% { transform: translate(64px, 3px); opacity: 0; }
+    0%, 24% { transform: translate(70px, 27px); opacity: 0; animation-timing-function: linear; }
+    27% { opacity: 1; }
+    32% { transform: translate(64px, 30px); animation-timing-function: linear; }
+    40% { transform: translate(57px, 35px); animation-timing-function: linear; }
+    48% { transform: translate(50px, 40.5px); animation-timing-function: cubic-bezier(.1,.75,.35,1); }
+    66% { transform: translate(68px, 3px) scale(.7); opacity: 1; }
+    67%, 100% { transform: translate(68px, 3px) scale(.7); opacity: 0; }
   }
-  /* A yellow softball lands in the mitt. */
-  #kscu-sports .i-soft .sball { transform: translate(53px, 12px); animation: ks-soft-release 2.4s infinite; }
-  @keyframes ks-soft-release {
-    0%, 18% { transform: translate(53px, 12px); opacity: 1; }
-    52%, 76% { transform: translate(34px, 34px); opacity: 1; }
-    83%, 95% { transform: translate(34px, 34px); opacity: 0; }
-    96%, 100% { transform: translate(53px, 12px); opacity: 0; }
+  @keyframes ks-base-spin { to { transform: rotate(-360deg); } }
+  @keyframes ks-base-shadow {
+    0%, 25% { transform: translate(70px, 56.5px) scale(.5); opacity: 0; animation-timing-function: linear; }
+    32% { transform: translate(64px, 56.5px) scale(.7); opacity: .14; animation-timing-function: linear; }
+    48% { transform: translate(50px, 56.5px) scale(1); opacity: .22; animation-timing-function: ease-out; }
+    60%, 100% { transform: translate(64px, 56.5px) scale(.3); opacity: 0; }
   }
+  @keyframes ks-base-pop { 0%, 47% { transform: scale(.4); opacity: 0; } 49% { transform: scale(1); opacity: 1; } 57%, 100% { transform: scale(1.4); opacity: 0; } }
+
+  /* softball: an underhand pitch rises out of the windmill, peaks, and drops into the glove; the glove gives with
+     the catch (squeezes and pulls back), holds the ball for a beat, then lets go for the next pitch */
+  #kscu-sports .i-soft .glove { transform-origin: 48px 50px; animation: ks-soft-glove 2.4s infinite; }
+  #kscu-sports .i-soft .sball { animation: ks-soft-arc 2.4s infinite; }
+  #kscu-sports .i-soft .sspin { transform-origin: 0 0; animation: ks-soft-spin 2.4s infinite; }
+  #kscu-sports .i-soft .ssh { transform-origin: 0 0; animation: ks-soft-shadow 2.4s infinite; }
+  #kscu-sports .i-soft .pop { transform-origin: 36px 31px; animation: ks-soft-pop 2.4s infinite; }
+  @keyframes ks-soft-arc {
+    0%, 6% { transform: translate(5px, 52px) scale(.8); opacity: 0; animation-timing-function: linear; }
+    9%  { transform: translate(7px, 47px) scale(.85); opacity: 1; animation-timing-function: linear; }
+    15% { transform: translate(10.5px, 37px) scale(.92); animation-timing-function: linear; }
+    21% { transform: translate(14.5px, 29.5px); animation-timing-function: linear; }
+    27% { transform: translate(19px, 24.5px); animation-timing-function: linear; }
+    33% { transform: translate(24px, 22px); animation-timing-function: linear; }
+    39% { transform: translate(30px, 22.5px); animation-timing-function: linear; }
+    45% { transform: translate(37px, 26px); animation-timing-function: linear; }
+    50% { transform: translate(44px, 31.5px); animation-timing-function: cubic-bezier(.2,.8,.4,1); }
+    55%, 76% { transform: translate(46.5px, 32.5px); opacity: 1; }
+    82%, 100% { transform: translate(46.5px, 32.5px) scale(.9); opacity: 0; }
+  }
+  @keyframes ks-soft-spin { 0%, 9% { transform: rotate(0deg); animation-timing-function: linear; } 50%, 100% { transform: rotate(-560deg); } }
+  @keyframes ks-soft-shadow {
+    0%, 8% { transform: translate(7px, 57.5px) scale(1); opacity: 0; animation-timing-function: linear; }
+    11% { opacity: .2; }
+    33% { transform: translate(24px, 57.5px) scale(.55); opacity: .1; animation-timing-function: linear; }
+    50%, 100% { transform: translate(44px, 57.5px) scale(.7); opacity: 0; }
+  }
+  @keyframes ks-soft-glove {
+    0%, 49% { transform: none; }
+    52% { transform: translate(2.2px, .6px) rotate(5deg) scale(.96, 1); animation-timing-function: cubic-bezier(.3,0,.3,1); }
+    64% { transform: translate(.4px, 0) rotate(1deg); animation-timing-function: ease-in-out; }
+    80% { transform: none; }
+    100% { transform: none; }
+  }
+  @keyframes ks-soft-pop { 0%, 49% { transform: scale(.5); opacity: 0; } 51% { transform: scale(1); opacity: .9; } 60%, 100% { transform: scale(1.3); opacity: 0; } }
   /* beach volleyball reuses the volleyball rally; the sun slowly turns */
   #kscu-sports .i-bvb .ball { transform-origin: 32px 24px; }
   #kscu-sports .i-bvb .sun { transform-origin: 52px 11px; animation: ks-bvb-sun 8s linear infinite; }
@@ -569,8 +709,8 @@ showTableOfContents = false
   @keyframes ks-gen-bob { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-3px) rotate(3deg); } }
 
   /* resting pose: start each story mid-play so a paused icon still shows the ball */
-  #kscu-sports .i-base .bat, #kscu-sports .i-base .bball { animation-delay: -1.05s; }
-  #kscu-sports .i-soft .orbit, #kscu-sports .i-soft .sball { animation-delay: -.5s; }
+  #kscu-sports .i-base .bat, #kscu-sports .i-base .bball, #kscu-sports .i-base .bsh, #kscu-sports .i-base .pop { animation-delay: -.95s; }
+  #kscu-sports .i-soft .glove, #kscu-sports .i-soft .sball, #kscu-sports .i-soft .sspin, #kscu-sports .i-soft .ssh, #kscu-sports .i-soft .pop { animation-delay: -.9s; }
   #kscu-sports .i-ten .racket, #kscu-sports .i-ten .tball, #kscu-sports .i-ten .tsh { animation-delay: -.95s; }
   #kscu-sports .i-golf .gball, #kscu-sports .i-golf .dimple { animation-delay: -1.2s; }
 
@@ -649,7 +789,7 @@ showTableOfContents = false
 <div id="kscu-sports" class="not-prose">
   <!-- Sport sub-menu -->
   <nav class="rail" id="ks-rail" aria-label="Sports"></nav>
-  <div class="score-tools">
+  <div class="score-tools" hidden>
     <button type="button" id="ks-refresh-scores" disabled>↻ Refresh scores</button>
     <span id="ks-refresh-status" role="status"></span>
   </div>
@@ -670,6 +810,7 @@ const ROOT = document.getElementById("kscu-sports");
 // 2) In-game scores for basketball + volleyball: straight from ESPN.
 // ---------------------------------------------------------------------------
 const SCHEDULE_URL = "/sports/scu-schedule.json";
+const ROSTER_URL = "/sports/rosters.json"; // players + coaches from SCU's roster pages, refreshed twice a year
 const ESPN_TEAM_ID = 2541; // Santa Clara on ESPN
 const ESPN_FEEDS = {
   "Men's Basketball":   "basketball/mens-college-basketball",
@@ -706,7 +847,7 @@ const GENDERS = { mens: "Men's", womens: "Women's" };
 // ---------------------------------------------------------------------------
 const ICONS = {
   basketball: `<ellipse class="sh" cx="32" cy="57" rx="13" ry="2.6"/>
-    <g class="ball"><circle class="f" cx="32" cy="24" r="15" style="opacity:.18"/><circle class="s" cx="32" cy="24" r="15"/>
+    <g class="ball"><circle cx="32" cy="24" r="15" fill="var(--paper)"/><circle class="f" cx="32" cy="24" r="15" style="opacity:.18"/><circle class="s" cx="32" cy="24" r="15"/>
     <path class="s" d="M17 24h30M32 9v30M21.5 13.5c5 6 5 15 0 21M42.5 13.5c-5 6-5 15 0 21"/></g>`,
   // Soccer: classic black-and-white ball — filled center pentagon, seams, partial patches at the rim.
   soccer: uid => {
@@ -752,7 +893,10 @@ const ICONS = {
     return `<path class="s wave2" d="${wave(33)}" style="stroke-width:1.6;opacity:.35"/>
       <ellipse class="s rip" cx="32" cy="40" rx="15" ry="2.6" style="stroke-width:1.4"/>
       <ellipse class="s rip rip2" cx="32" cy="40" rx="15" ry="2.6" style="stroke-width:1.4"/>
-      <g class="ball"><g transform="translate(32 29)"><clipPath id="wp${uid}"><circle r="12"/></clipPath>
+      <mask id="wm${uid}" maskUnits="userSpaceOnUse" x="-20" y="-20" width="104" height="104"><rect x="-20" y="-20" width="104" height="104" fill="#fff"/>
+        <path class="wave1" d="${wave(39)}V80H-16z" fill="#000"/></mask>
+      <mask id="wu${uid}" maskUnits="userSpaceOnUse" x="-20" y="-20" width="104" height="104"><path class="wave1" d="${wave(39)}V80H-16z" fill="#fff"/></mask>
+      <g mask="url(#wm${uid})"><g class="ball"><g transform="translate(32 29)"><clipPath id="wp${uid}"><circle r="12"/></clipPath>
         <circle r="12" fill="var(--paper)"/>
         <g clip-path="url(#wp${uid})">${(() => {
           // curved panel channels (classic polo-ball look): a red band along each seam, thin ink line on top
@@ -761,8 +905,9 @@ const ICONS = {
           return `<g style="fill:none;stroke:var(--accent);stroke-width:2.6;opacity:.85">${set(seam)}</g>
                   <g class="s" style="stroke-width:.9">${set(seam)}</g>`;
         })()}</g>
-        <circle class="s" r="12" style="stroke-width:2.4"/></g></g>
-      <g class="wave1"><path d="${wave(39)}V64H-16z" fill="var(--bg)"/><path class="s" d="${wave(39)}" style="stroke-width:2.2"/></g>
+        <circle class="s" r="12" style="stroke-width:2.4"/></g></g></g>
+      <g mask="url(#wu${uid})"><g class="ball" style="opacity:.35"><circle cx="32" cy="29" r="12" fill="var(--paper)"/><circle class="s" cx="32" cy="29" r="12" style="stroke-width:2"/></g></g>
+      <g class="wave1"><path class="s" d="${wave(39)}" style="stroke-width:2.2"/></g>
       <path class="s" d="M8 48h7M22 48h10M40 48h6M50 48h7M14 55h9M30 55h6M42 55h10" style="stroke-width:1.4;opacity:.3"/>`;
   },
   // Tennis: ball comes in, bounces, racket swings through and sends it back out
@@ -773,7 +918,7 @@ const ICONS = {
       <ellipse class="s" cx="20" cy="19" rx="9.6" ry="12.2" style="stroke-width:2.6"/>
       <path class="s" d="M14.6 29.5 20 37.5l5.4-8" style="stroke-width:2"/>
       <path class="s" d="M20 37.5V56" style="stroke-width:4.4"/>
-      <path d="M18 45.5l4-1.5M18 49.5l4-1.5M18 53.5l4-1.5" style="stroke:var(--bg);stroke-width:1;fill:none"/></g></g>
+      <path d="M18 45.5l4-1.5M18 49.5l4-1.5M18 53.5l4-1.5" style="stroke:var(--paper);stroke-width:1;fill:none"/></g></g>
     <g class="tball"><circle class="f" r="4.3"/><path class="s" d="M-3.4-2.6c2 .9 2 4.3 0 5.2M3.4-2.6c-2 .9-2 4.3 0 5.2" style="stroke-width:1.1"/><circle class="s" r="4.3" style="stroke-width:1.6"/></g>`,
   // Golf: ball rolls over the green and drops into the cup, flag ripples
   golf: `<path class="f" d="M0 52Q32 45 64 52V64H0z" style="opacity:.13"/>
@@ -783,7 +928,7 @@ const ICONS = {
     <path class="f flag" d="M46 10.5c4 1.4 8.5-.6 13 2.2-4.5 2.4-9 1-13 3.6z"/>
     <g class="gball"><circle r="3.1" fill="var(--paper)"/><circle class="s" r="3.1" style="stroke-width:1.6"/><circle class="ink dimple" cx="1.1" cy="-.9" r=".7"/></g>`,
   xc: `<path class="s speed" d="M4 30h9"/><path class="s speed" d="M2 38h8"/><path class="s speed" d="M5 46h8"/>
-    <circle class="s" cx="34" cy="37" r="18"/><path class="s" d="M30 13h8M34 13v6M48 21l3-3"/>
+    <circle cx="34" cy="37" r="18" fill="var(--paper)"/><circle class="s" cx="34" cy="37" r="18"/><path class="s" d="M30 13h8M34 13v6M48 21l3-3"/>
     <path class="s" d="M34 22v2M49 37h-2M34 52v-2M19 37h2" style="stroke-width:2"/>
     <path class="s hand" d="M34 37V25" style="stroke:var(--accent)"/><circle class="f" cx="34" cy="37" r="2.4"/>`,
   cal: `<rect class="s" x="9" y="13" width="46" height="42" rx="2.5"/><path class="s" d="M9 23h46M20 8v9M44 8v9"/>
@@ -791,22 +936,36 @@ const ICONS = {
     <rect x="14" y="37" width="5" height="5"/><rect x="23" y="37" width="5" height="5"/><rect x="32" y="37" width="5" height="5"/><rect x="41" y="37" width="5" height="5"/>
     <rect x="14" y="46" width="5" height="5"/><rect x="23" y="46" width="5" height="5"/><rect x="32" y="46" width="5" height="5"/></g>
     <rect class="f calhi" x="13" y="27" width="7" height="7"/>`,
-  // Baseball: pitch comes in, bat swings through on contact, ball flies out
-  baseball: `<g class="bat">
-    <path class="s" d="M22 52V39" style="stroke-width:3.5"/>
-    <path class="s" d="M22 39V23" style="stroke-width:7"/>
-    <path class="s" d="M19 52h6" style="stroke-width:2.6"/>
-  </g><g class="bball"><circle r="5" fill="var(--paper)"/>
-    <circle class="s" r="5" style="stroke-width:1.5"/>
-    <path d="M-2.5-4q3 4 0 8m5-8q-3 4 0 8" fill="none" stroke="var(--accent)" stroke-width="1.2"/>
-  </g>`,
-  softball: `<path d="M17 53c-7-6-9-14-10-20-1-4 4-6 7-2l5 7-6-18c-1-4 4-6 6-2l6 13-3-16c-1-4 5-5 6-1l4 15 1-13c0-4 6-4 6 0l1 16 5-7c3-4 8-1 6 3l-5 13c-3 10-10 16-21 16z"
-    fill="#bd8a5c" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
-    <path class="s" d="M19 38q12-9 22-3m-22 3q5 5 5 12" style="stroke-width:1.7"/>
-    <g class="sball">
-      <circle r="7" fill="#e6cf62" stroke="var(--ink)" stroke-width="1.7"/>
-      <path d="M-3-5q4 5 0 10m6-10q-4 5 0 10" fill="none" stroke="var(--accent)" stroke-width="1.2"/>
-    </g>`,
+  // Baseball: a tapered bat swung from the hands (drawn knob-down from the origin) at a spinning pitch
+  baseball: `<path class="s" d="M4 56.5h56" style="stroke-width:1.6;opacity:.35"/>
+    <path class="ink" d="M42 55.4h11l1.7 1.5-7.2 2.2-7.2-2.2z" style="opacity:.3"/>
+    <ellipse class="sh bsh" rx="4" ry="1.2"/>
+    <g class="pop"><path class="s" d="M50 33v-3.6M55.6 35.4l2.6-2.6M44.4 35.4l-2.6-2.6M57 40.5h3.4" style="stroke-width:1.5"/></g>
+    <g class="bat">
+      <path d="M-1.2 0V-11c0-3.5-2-6-2-11.5V-30a3.2 3.2 0 0 1 6.4 0v7.5c0 5.5-2 8-2 11.5V0z" fill="var(--paper)"/>
+      <path class="f" d="M-1.2 0V-11c0-3.5-2-6-2-11.5V-30a3.2 3.2 0 0 1 6.4 0v7.5c0 5.5-2 8-2 11.5V0z" style="opacity:.24"/>
+      <path class="s" d="M-.8-27v8M1.2-29v5" style="stroke-width:.9;opacity:.4"/>
+      <path class="s" d="M-1.2 0V-11c0-3.5-2-6-2-11.5V-30a3.2 3.2 0 0 1 6.4 0v7.5c0 5.5-2 8-2 11.5V0" style="stroke-width:2.2"/>
+      <path class="s" d="M-1.2-6.5h2.4M-1.2-3.5h2.4" style="stroke-width:1;opacity:.6"/>
+      <ellipse cy="1" rx="2.9" ry="1.4" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/></g>
+    <g class="bball"><g class="bspin"><circle r="4.6" fill="var(--paper)"/>
+      <path d="M-2.4-3.9q2.6 3.9 0 7.8M2.4-3.9q-2.6 3.9 0 7.8" fill="none" stroke="var(--accent)" stroke-width="1.1" stroke-dasharray="1.1 .9"/>
+      <circle class="s" r="4.6" style="stroke-width:1.6"/></g></g>`,
+  // Softball: underhand pitch arcs up and drops into a fielder's glove, which gives with the catch
+  softball: `<path class="s" d="M4 57.5h56" style="stroke-width:1.6;stroke-dasharray:1 4;opacity:.6"/>
+    <ellipse class="sh ssh" rx="4.4" ry="1.2"/>
+    <g class="pop"><path class="s" d="M33.2 24.6l-2.6-2.4M31.8 31.2h-3.6M33.2 37.8l-2.6 2.4" style="stroke-width:1.5"/></g>
+    <g class="glove">
+      <path d="M42 51c-3-3-4.6-7-4.4-11.4l-4.4-6.2c-1.4-2-.2-4.6 2.3-4.2 1.3.2 2.4 1.2 3.6 2.4V20.5a2.6 2.6 0 0 1 5.2 0v-2a2.6 2.6 0 0 1 5.2 0v.6a2.6 2.6 0 0 1 5.2 0v2.6a2.6 2.6 0 0 1 5.2 0v15.6c0 6-2.2 10.4-5.6 13.7z" fill="var(--paper)"/>
+      <path class="f" d="M42 51c-3-3-4.6-7-4.4-11.4l-4.4-6.2c-1.4-2-.2-4.6 2.3-4.2 1.3.2 2.4 1.2 3.6 2.4V20.5a2.6 2.6 0 0 1 5.2 0v-2a2.6 2.6 0 0 1 5.2 0v.6a2.6 2.6 0 0 1 5.2 0v2.6a2.6 2.6 0 0 1 5.2 0v15.6c0 6-2.2 10.4-5.6 13.7z" style="opacity:.22"/>
+      <ellipse class="ink" cx="48.5" cy="35" rx="6.4" ry="7.4" style="opacity:.12"/>
+      <path class="s" d="M44.3 20.5v9M49.5 18.8v9.5M54.7 21.4v8.6" style="stroke-width:1.3;opacity:.75"/>
+      <path class="s" d="M36.4 32.6l3 2.4M38.4 30.4l1.8 3.6" style="stroke-width:1.1"/>
+      <path class="s" d="M42 51c-3-3-4.6-7-4.4-11.4l-4.4-6.2c-1.4-2-.2-4.6 2.3-4.2 1.3.2 2.4 1.2 3.6 2.4V20.5a2.6 2.6 0 0 1 5.2 0v-2a2.6 2.6 0 0 1 5.2 0v.6a2.6 2.6 0 0 1 5.2 0v2.6a2.6 2.6 0 0 1 5.2 0v15.6c0 6-2.2 10.4-5.6 13.7z" style="stroke-width:2.3"/>
+      <path class="s" d="M41.4 47.6h14.6" style="stroke-width:1.8"/></g>
+    <g class="sball"><g class="sspin"><circle r="5.2" fill="#e6cf62"/>
+      <path d="M-2.8-4.4q3 4.4 0 8.8M2.8-4.4q-3 4.4 0 8.8" fill="none" stroke="var(--accent)" stroke-width="1.15" stroke-dasharray="1.2 .9"/>
+      <circle class="s" r="5.2" style="stroke-width:1.6"/></g></g>`,
   // Beach volleyball: low net on sand, sun turning, ball rallying over
   "beach-volleyball": () => {
     const seam = `<path d="M0 0C3.5-1.8 7.2-0.6 9.2 3.9"/><path d="M-1.6-5.2C2.6-6.9 7.4-5.6 9.9-1.4"/>`;
@@ -827,7 +986,7 @@ const ICONS = {
     <path class="s rwave" d="M-16 46q4-3 8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0" style="stroke-width:1.6;opacity:.55"/>
     <path class="s rwave2" d="M-16 55q4-3 8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0t8 0" style="stroke-width:1.4;opacity:.35"/>`,
   // Anything new SCU adds: a generic trophy
-  generic: `<g class="trophy"><path class="s" d="M22 12h20v10a10 10 0 0 1-20 0z" style="stroke-width:2.4"/><path class="f" d="M25 15h14v6a7 7 0 0 1-14 0z" style="opacity:.35"/>
+  generic: `<g class="trophy"><path d="M22 12h20v10a10 10 0 0 1-20 0zM26 41h12v6H26z" fill="var(--paper)"/><path class="s" d="M22 12h20v10a10 10 0 0 1-20 0z" style="stroke-width:2.4"/><path class="f" d="M25 15h14v6a7 7 0 0 1-14 0z" style="opacity:.35"/>
       <path class="s" d="M22 15h-5a5 5 0 0 0 5 9M42 15h5a5 5 0 0 1-5 9M32 32v9M24 47h16M26 41h12v6H26z" style="stroke-width:2.2"/></g>
     <path class="s" d="M10 54h44" style="stroke-width:1.6;opacity:.35"/>`,
   all: `<path class="s" d="M16 58V8"/><path class="f pen" d="M16 10 46 18 16 26z"/>
@@ -896,10 +1055,11 @@ const upcomingOf = arr => arr.filter(isUpcoming);
 const resultsOf = arr => arr.filter(g => g.result).reverse();
 const href = (sport, g) => sport ? `#/${sport}${g ? "/" + g : ""}` : "#/";
 
-function formBlocks(results, n = 8, big = false) {
+function formBlocks(results, n = 8, big = false, linked = false) {
   if (!results.length) return "";
   return `<div class="form ${big ? "lg" : ""}" aria-label="Recent results">${results.slice(0, n).reverse().map(g => {
     const k = g.result[0];
+    if (linked && isFinal(g)) return `<a class="${k}" href="${gameHref(g)}" title="${esc(versus(g) + " — " + g.result)}">${k}</a>`;
     if ("WLD".includes(k) && /^[WLD] \d/.test(g.result)) return `<i class="${k}" title="${esc(versus(g) + " — " + g.result)}">${k}</i>`;
     return `<i title="${esc(g.opponent + " — " + g.result)}">${esc(g.result.split(" of")[0])}</i>`;
   }).join("")}</div>`;
@@ -909,6 +1069,11 @@ function record(results) {
   results.forEach(g => { if (/^[WLD] \d/.test(g.result)) r[g.result[0]]++; });
   return r;
 }
+
+// Finished head-to-head games get their own page (#/game/<SCU game id>), like ESPN's game pages
+const isFinal = g => !g.meet && /^[WLD] \d+-\d+/.test(g.result || "");
+const gameKey = g => g.id || `${g.start.slice(0, 10)}-${sportOf(g.sport).id}-${genderOf(g.sport)}-${String(g.opponent).toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+const gameHref = g => `#/game/${gameKey(g)}`;
 
 function gameRow(g, withSport) {
   const d = when(g);
@@ -921,10 +1086,11 @@ function gameRow(g, withSport) {
     : e?.tv ? `<span class="tv">${esc(e.tv)}</span>` : "";
   const vs = versus(g), pre = vs.match(/^(vs|at) /)?.[0] || "", oppLogo = e?.them?.logo || g.logo;
   const res = (g.result ? `<div class="res ${g.result[0]}">${esc(g.result)}` : `<div class="res">${esc(fmtTime(g))}`) + `${extra ? `<div>${extra}</div>` : ""}</div>`;
-  return `<div class="game">
+  const fin = isFinal(g), name = esc(vs.slice(pre.length));
+  return `<div class="game${fin ? " done" : ""}">
     <div class="cal"><div class="m">${d.toLocaleDateString("en-US", { month: "short" }).toUpperCase()}</div>
       <div class="d">${d.getDate()}</div><div class="w">${d.toLocaleDateString("en-US", { weekday: "short" })}</div></div>
-    <div><div class="opp">${esc(pre)}${oppLogo ? `<img class="tlogo xs" src="${esc(oppLogo)}" alt="" loading="lazy">` : ""}${esc(vs.slice(pre.length))}${venueTag(g)}</div>
+    <div><div class="opp">${esc(pre)}${oppLogo ? `<img class="tlogo xs" src="${esc(oppLogo)}" alt="" loading="lazy">` : ""}${fin ? `<a class="stretch" href="${gameHref(g)}">${name}</a>` : name}${venueTag(g)}</div>
       <div class="meta">${withSport ? esc(g.sport) + " · " : ""}${esc(g.location)}</div></div>
     ${res}</div>`;
 }
@@ -955,7 +1121,7 @@ function buildMenus() {
   const tabs = present.length + 2;
   document.getElementById("ks-rail").style.setProperty("--cols", tabs <= 10 ? tabs : Math.ceil(tabs / 2));
 
-  const col = g => `<div><h4 style="display:flex;align-items:center;gap:6px">${sign(g)}${GENDERS[g].toUpperCase()}</h4>${present.filter(s => hasTeam(s.id, g))
+  const col = g => `<div><h4>${GENDERS[g].toUpperCase()}</h4>${present.filter(s => hasTeam(s.id, g))
     .map(s => `<a href="${href(s.id, g)}" data-nav="${s.id}/${g}">${icon(s.id)}${esc(s.name)}</a>`).join("")}</div>`;
   const navPanel = document.getElementById("ks-navdrop-panel");
   if (navPanel) navPanel.innerHTML = col("mens") + col("womens") +
@@ -997,7 +1163,7 @@ function overview() {
              : `<div class="tab">${fin ? "FINAL SCORE" : "NEXT BRONCOS GAME"}</div><div class="tab right">(ง •̀_•́)ง</div>`}
         <div class="box gc wide">${lv ? liveCenter(lv) : fin ? finalCenter(fin, up[0]) : preCenter(up[0])}</div></div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
-    <div class="tiles">${tiles}</div>`;
+    <div class="card teams"><div class="tab">TEAMS</div><div class="tiles">${tiles}</div></div>`;
 }
 
 function sportPage(sportId, gender) {
@@ -1017,25 +1183,25 @@ function sportPage(sportId, gender) {
   const liveNow = liveEv ? `${liveEv.us.abbr} ${liveEv.us.score || "—"} – ${liveEv.them.score || "—"} ${liveEv.them.abbr}` : "";
   const et = espn.team[sportName]; // official season record + conference standing from ESPN, when covered
   const recStat = et?.record
-    ? `<div class="stat"><b>${esc(et.record)}</b><span>SEASON</span></div>${et.standing ? `<div class="stat"><b>${esc(et.standing.split(" ")[0])}</b><span>${esc(et.standing.split(" ").slice(1).join(" ").toUpperCase())}</span></div>` : ""}${et.conf ? `<div class="stat"><b>${esc(et.conf)}</b><span>WCC</span></div>` : ""}${et.streak && et.streak !== "-" ? `<div class="stat"><b>${esc(et.streak)}</b><span>STREAK</span></div>` : ""}`
-    : `<div class="stat"><b>${rec.W}–${rec.L}${rec.D ? "–" + rec.D : ""}</b><span>RECENT W–L${rec.D ? "–D" : ""}</span></div>`;
+    ? `<div class="stat season"><b>${esc(et.record)}</b><span>SEASON</span></div>${et.standing ? `<div class="stat rank"><b>${esc(et.standing.split(" ")[0])}</b><span>${esc(et.standing.split(" ").slice(1).join(" ").toUpperCase())}</span></div>` : ""}${et.conf ? `<div class="stat conf"><b>${esc(et.conf)}</b><span>WCC RECORD</span></div>` : ""}${et.streak && et.streak !== "-" ? `<div class="stat streak ${esc(et.streak[0])}"><b>${esc(et.streak)}</b><span>STREAK</span></div>` : ""}`
+    : `<div class="stat season"><b>${rec.W}–${rec.L}${rec.D ? "–" + rec.D : ""}</b><span>RECENT W–L${rec.D ? "–D" : ""}</span></div>`;
   if (ESPN_FEEDS[sportName]) loadNews(sportName);
   const stats = isMeet
-    ? `<div class="stat"><b>${res.length}</b><span>EVENTS</span></div><div class="stat"><b>${up.length}</b><span>UPCOMING</span></div>`
-    : `${recStat}<div class="stat"><b>${up.length}</b><span>UPCOMING</span></div>
-       <div class="stat"><b>${up.filter(g => venueOf(g) === "home").length}<small style="opacity:.45"> / </small>${up.filter(g => venueOf(g) !== "home").length}</b><span>HOME / AWAY LEFT</span></div>`;
+    ? `<div class="stat season"><b>${res.length}</b><span>EVENTS</span></div><div class="stat sched"><b>${up.length}</b><span>UPCOMING</span></div>`
+    : `${recStat}<div class="stat sched"><b>${up.length}</b><span>UPCOMING</span></div>
+       <div class="stat sched"><b>${up.filter(g => venueOf(g) === "home").length}<small style="opacity:.45"> / </small>${up.filter(g => venueOf(g) !== "home").length}</b><span>HOME / AWAY LEFT</span></div>`;
   shown = {};
 
   return `
     ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 15s</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
-    <section class="hero run">
+    <section class="hero run g-${gender}">
       <div class="hero-ico">${icon(sportId)}</div>
       <div class="hero-main">
-        <h2 style="display:flex;align-items:center;gap:12px">${sign(gender, "lg")}${esc(teamName(sportId, gender))}</h2>
+        <h2>${esc(teamName(sportId, gender))}</h2>
         ${avail.length > 1 ? `<div class="seg" role="group" aria-label="Team">${avail.map(g =>
-          `<a href="${href(sportId, g)}" aria-current="${g === gender}">${sign(g)}${GENDERS[g].toUpperCase()}</a>`).join("")}</div>` : `<div style="height:14px"></div>`}
+          `<a href="${href(sportId, g)}" aria-current="${g === gender}">${GENDERS[g].toUpperCase()}</a>`).join("")}</div>` : `<div style="height:14px"></div>`}
         <div class="stats">${stats}</div>
-        ${res.length ? `<div style="margin-top:14px"><div class="meta" style="font-weight:700;letter-spacing:.05em">RECENT FORM</div>${formBlocks(res, 10, true)}</div>` : ""}
+        ${res.length ? `<div style="margin-top:14px"><div class="meta" style="font-weight:700;letter-spacing:.05em">RECENT FORM</div>${formBlocks(res, 10, true, true)}</div>` : ""}
         <a class="listen" href="https://mixlr.com/kscusports" target="_blank" rel="noopener"><span class="dot ${liveNow ? "pulse" : ""}"></span>${liveNow ? "LIVE NOW · " + esc(liveNow) : "KSCU PLAY-BY-PLAY ON MIXLR ↗"}</a>
       </div>
       ${(() => { const fin = liveEv ? null : heldFinal(tg, up);
@@ -1047,7 +1213,8 @@ function sportPage(sportId, gender) {
     </div>
     ${ESPN_FEEDS[sportName] ? `<div class="card section-gap" style="margin-top:28px"><div class="tab">HEADLINES</div><div class="tab right mono">via ESPN</div>
       <div class="box news" id="ks-news" data-sport="${esc(sportName)}">${newsList(sportName)}</div></div>`
-      : officialLinks(sportId, gender)}`;
+      : officialLinks(sportId, gender)}
+    ${rosterCard(rosterSlug(sportId, gender))}`;
 }
 
 // Sports ESPN doesn't cover. SCU Athletics posts their live stats on StatBroadcast and results on its own site
@@ -1155,7 +1322,7 @@ function calendarPage(ym) {
 // Mark the current page in the Sports dropdown
 function markMenu() {
   const { sport, resolved } = current;
-  const key = !sport ? "overview" : sport === "calendar" ? "calendar" : `${sport}/${resolved}`;
+  const key = !sport ? "overview" : sport === "calendar" ? "calendar" : `${sport === "game" ? current.gameSport : sport}/${resolved}`;
   document.querySelectorAll("#ks-navdrop-panel a").forEach(a => {
     if (a.dataset.nav === key) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
@@ -1171,14 +1338,17 @@ function rerenderCalendar() {
 // would become real pages like kscu.org/sports/volleyball/.
 // ---------------------------------------------------------------------------
 let current = null;
+const renderView = () => { const { sport, gender } = current;
+  return sport === "calendar" ? calendarPage(gender) : sport === "game" ? gamePage(gender) : sport ? sportPage(sport, gender) : overview(); };
 function route() {
   const [, sport = "", gender = ""] = location.hash.replace(/^#/, "").split("/");
   current = { sport, gender };
   const view = document.getElementById("ks-view");
   view.classList.remove("noanim");
-  view.innerHTML = sport === "calendar" ? calendarPage(gender) : sport ? sportPage(sport, gender) : overview();
+  view.innerHTML = renderView();
+  const tab = sport === "game" ? current.gameSport : sport;
   document.querySelectorAll("#ks-rail a").forEach(a => {
-    if (a.dataset.sport === sport) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    if (a.dataset.sport === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
   markMenu();
   setDrop(false);
@@ -1197,6 +1367,9 @@ ROOT.addEventListener("click", e => {
   const cg = e.target.closest("[data-calgender]");
   if (cg) { cal.gender = cg.dataset.calgender; rerenderCalendar(); return; }
   if (e.target.closest("[data-plays-filter]")) { playFilter.scoring = !playFilter.scoring; rerenderQuiet(); return; }
+  const ro = e.target.closest("[data-roster-all]");
+  if (ro) { const slug = ro.dataset.rosterAll; rosterOpen[slug] = !rosterOpen[slug]; swapRosters();
+    if (!rosterOpen[slug]) document.querySelector(`[data-roster="${slug}"]`)?.scrollIntoView({ block: "nearest" }); return; }
   const more = e.target.closest("[data-more]");
   if (more) {
     const id = more.dataset.more; shown[id] += PAGE;
@@ -1231,8 +1404,8 @@ dropEl.addEventListener("keydown", e => { if (e.key === "Escape") { setDrop(fals
 
 // ===========================================================================
 // ESPN — free, no API key, readable straight from the browser. Covers SCU men's &
-// women's basketball and women's volleyball. Refreshes on its own: every 60s
-// normally, every 15s while a Broncos game is live.
+// women's basketball, volleyball, soccer, baseball and softball. Refreshes on its own: every 60s
+// normally, every 15s during game time (see gameTime below).
 // ===========================================================================
 const ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports";
 const WCC_GROUP = 29; // West Coast Conference in ESPN's standings
@@ -1359,7 +1532,8 @@ async function loadSummary(ev) {
              p.clock?.displayValue].filter(Boolean).join(" · ") });
     const recentPlays = sofar.slice(-5).reverse().map(toPlay);
     const scoringPlays = sofar.filter(p => p.scoringPlay).slice(-5).reverse().map(toPlay);
-    espn.summary[ev.id] = { lines, stats, leaders, last5, recentPlays, scoringPlays, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
+    const allScoring = sofar.filter(p => p.scoringPlay).map(toPlay); // whole game, oldest first (game pages)
+    espn.summary[ev.id] = { lines, stats, leaders, last5, recentPlays, scoringPlays, allScoring, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
   } catch (e) { /* box score not available yet */ }
 }
 async function loadNews(sport) {
@@ -1395,8 +1569,9 @@ function lastResult(g) {
   const body = e && e.completed
     ? `${logo(e.us, "sm")}<b>${esc(e.us.abbr || "SCU")}</b><span class="lr-n">${esc(e.us.score)}</span><span>–</span><span class="lr-n">${esc(e.them.score)}</span><b>${esc(e.them.abbr)}</b>${logo(e.them, "sm")}`
     : `<span class="lr-t">${esc(versus(g))}</span>`;
-  return `<div class="gc-last"><div class="gc-last-h">LAST RESULT · ${esc(g.sport.toUpperCase())} · ${when(g).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
-    <div class="gc-last-row">${icon(sportOf(g.sport).id)}<div class="lr-score">${body}</div><span class="res ${k}">${esc(g.result)}</span></div></div>`;
+  const tag = isFinal(g) ? `a href="${gameHref(g)}"` : "div";
+  return `<${tag} class="gc-last"><div class="gc-last-h">LAST RESULT · ${esc(g.sport.toUpperCase())} · ${when(g).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
+    <div class="gc-last-row">${icon(sportOf(g.sport).id)}<div class="lr-score">${body}</div><span class="res ${k}">${esc(g.result)}</span></div></${tag.split(" ")[0]}>`;
 }
 
 function preCenter(g, compact = false) {
@@ -1408,7 +1583,7 @@ function preCenter(g, compact = false) {
   const [left, right, mid] = v === "home" ? [them, us, "@"] : v === "neutral" ? [us, them, "VS"] : [us, them, "@"];
   const venueLine = e?.venue ? `${e.venue}${e.city ? ", " + e.city : ""}` : g.location;
   return `
-    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b>${sign(genderOf(g.sport))}<span class="sp"></span>${venueTag(g)}</div>
+    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}</div>
     <div class="gc-main">
       ${them ? `<div class="gc-match">${teamBlock(left)}<div class="gc-vs">${mid}</div>${teamBlock(right)}</div>`
              : `<div class="gc-event">${logo(SCU_TEAM(g.sport))}<p class="big">${esc(g.opponent)}</p></div>`}
@@ -1450,14 +1625,14 @@ function finalCenter(g, next) {
   const link = e?.completed ? [espnGameUrl(e), ESPN_SB[g.sport] ? "MATCH CENTER" : "BOX SCORE"]
     : g.boxscore ? [g.boxscore, "BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
   return `
-    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b>${sign(genderOf(g.sport))}<span class="sp"></span><span class="final-pill">FINAL</span></div>
+    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span><span class="final-pill">FINAL</span></div>
     <div class="gc-main">
       <div class="gc-match">${teamBlock(L[0])}<div class="gc-score"><div><b>${esc(L[1])}</b><span>–</span><b>${esc(R[1])}</b></div>
         <div class="gc-clock ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div></div>${teamBlock(R[0])}</div>
       <div class="gc-when">${esc(fmtLong(g))} · ${esc(g.location)}</div>
     </div>
     <div class="gc-side">
-      <div class="gc-info">${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}
+      <div class="gc-info"><a href="${gameHref(g)}">GAME DETAILS →</a>${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}
         ${next ? `<span><b>NEXT UP</b> ${esc(next.sport)} ${esc(versus(next))} · ${esc(when(next).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))} · ${esc(fmtTime(next))}</span>` : ""}
         <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a></div>
     </div>`;
@@ -1477,8 +1652,8 @@ function playsBox(sm, e, away, home) {
       <button type="button" data-plays-filter aria-pressed="${playFilter.scoring}">Scoring only</button></div><ol>${rows}</ol></div>`;
 }
 
-function liveCenter(e) {
-  const sm = espn.summary[e.id] || {}, s = sportOf(e.sport);
+// ESPN box score pieces (linescore, team stat bars, leaders), shared by the live box and the game pages
+function espnBox(e, sm) {
   const away = e.home ? e.them : e.us, home = e.home ? e.us : e.them;
   const isVB = e.sport.includes("Volleyball"), isWBB = e.sport.startsWith("Women's Basketball"), isBase = /Baseball|Softball/.test(e.sport);
   const pl = i => isBase ? `${i + 1}` : isVB ? `S${i + 1}` : isWBB ? (i < 4 ? `Q${i + 1}` : `OT${i - 3}`) : (i < 2 ? `${i + 1}H` : `OT${i - 1}`);
@@ -1487,9 +1662,6 @@ function liveCenter(e) {
   const linescore = n ? `<table class="ls"><thead><tr><th></th>${Array.from({ length: n }, (_, i) => `<th>${pl(i)}</th>`).join("")}<th>${isVB ? "SETS" : isBase ? "R" : "T"}</th></tr></thead><tbody>
       ${[[away, la], [home, lh]].map(([t, l]) => `<tr class="${side(t)}"><td>${logo(t, "xs")}${esc(t.abbr)}</td>${Array.from({ length: n }, (_, i) => `<td>${esc(l[i] ?? "")}</td>`).join("")}<td class="tot">${esc(t.score || "—")}</td></tr>`).join("")}
     </tbody></table>` : "";
-  const wp = sm.wpHome != null ? (() => { const h = Math.round(sm.wpHome * 100), a = 100 - h;
-    return `<div class="wp"><div class="wp-l"><span>${esc(away.abbr)} ${a}%</span><span>WIN PROBABILITY</span><span>${h}% ${esc(home.abbr)}</span></div>
-      <div class="wp-bar"><i class="${side(away)}" style="width:${a}%"></i><i class="${side(home)}" style="width:${h}%"></i></div></div>`; })() : "";
   const want = isVB ? null : ["Field Goal %", "Three Point %", "Rebounds", "Assists", "Turnovers"];
   const sa = sm.stats?.[away.id] || {}, sh = sm.stats?.[home.id] || {};
   const keys = (want || Object.keys(sa).filter(k => !isNaN(parseFloat(sa[k])) && !String(sa[k]).includes("-")).slice(0, 5)).filter(k => k in sa && k in sh);
@@ -1498,8 +1670,17 @@ function liveCenter(e) {
     }).join("")}</div>` : "";
   const ldr = (sm.leaders || []).length ? `<div class="ldr">${[e.us, e.them].map(t => { const L = sm.leaders.find(x => x.id === t.id);
       return `<div><h5>${logo(t, "xs")}${esc(t.abbr)} LEADERS</h5>${(L?.cats || []).map(c => `<p><span>${esc(c.cat)}</span><b>${esc(c.name || "—")}</b><em>${esc(c.val || "")}</em></p>`).join("")}</div>`; }).join("")}</div>` : "";
+  return { away, home, side, linescore, bars, ldr };
+}
+
+function liveCenter(e) {
+  const sm = espn.summary[e.id] || {}, s = sportOf(e.sport);
+  const { away, home, side, linescore, bars, ldr } = espnBox(e, sm);
+  const wp = sm.wpHome != null ? (() => { const h = Math.round(sm.wpHome * 100), a = 100 - h;
+    return `<div class="wp"><div class="wp-l"><span>${esc(away.abbr)} ${a}%</span><span>WIN PROBABILITY</span><span>${h}% ${esc(home.abbr)}</span></div>
+      <div class="wp-bar"><i class="${side(away)}" style="width:${a}%"></i><i class="${side(home)}" style="width:${h}%"></i></div></div>`; })() : "";
   return `
-    <div class="gc-top live">${icon(s.id, "run")}<b>${esc(e.sport.toUpperCase())}</b>${sign(genderOf(e.sport))}<span class="sp"></span>
+    <div class="gc-top live">${icon(s.id, "run")}<b>${esc(e.sport.toUpperCase())}</b><span class="sp"></span>
       <span class="live-pill"><span class="dot pulse"></span>LIVE${e.demo ? " · DEMO" : ""}</span></div>
     <div class="gc-body"><div class="gc-l">
       <div class="gc-match live">${teamBlock(away)}<div class="gc-score"><div><b>${esc(away.score || "—")}</b><span>–</span><b>${esc(home.score || "—")}</b></div>
@@ -1518,6 +1699,120 @@ function liveCenter(e) {
       <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN LIVE · KSCU ↗</a>
       <a href="${espnGameUrl(e)}" target="_blank" rel="noopener">${ESPN_SB[e.sport] ? "MATCH CENTER" : "FULL BOX SCORE"} ↗</a></div>`;
 }
+
+// ---------------------------------------------------------------------------
+// GAME PAGE (#/game/<id>): the final score of one finished game, with whatever box score exists.
+// ESPN covers basketball, volleyball, soccer, baseball and softball; for the rest the period scores and team
+// stats come from SCU's box score page (read by build_snapshot.py into scu-schedule.json as "box").
+// ---------------------------------------------------------------------------
+const summaryAsked = new Set();
+function requestSummary(ev) {
+  if (summaryAsked.has(ev.id)) return;
+  summaryAsked.add(ev.id);
+  loadSummary(ev).then(() => { if (current?.sport === "game") rerenderQuiet(); });
+}
+const isScu = name => /Santa Clara/.test(name || "");
+function scuBox(g, us, them) {
+  const b = g.box;
+  if (!b?.teams?.length) return { linescore: "", bars: "" };
+  const [ours, theirs] = g.result.slice(2).split("-");
+  const isVB = g.sport.includes("Volleyball");
+  const hasTot = b.cols.includes("T");
+  const head = b.cols.map(c => c === "T" ? (isVB ? "SETS" : "T") : c);
+  const rows = b.teams.map(t => { const mine = isScu(t.name), team = mine ? us : them;
+    const tot = hasTot ? "" : `<td class="tot">${esc(mine ? ours : theirs)}</td>`;
+    return `<tr class="${mine ? "us" : "them"}"><td>${logo({ ...team, name: t.name }, "xs")}${esc(t.abbr || t.name)}</td>${t.cells.map((c, i) => `<td${b.cols[i] === "T" ? ' class="tot"' : ""}>${esc(c)}</td>`).join("")}${tot}</tr>`; }).join("");
+  const linescore = `<table class="ls"><thead><tr><th></th>${head.map(h => `<th>${esc(h)}</th>`).join("")}${hasTot ? "" : `<th>${isVB ? "SETS" : "T"}</th>`}</tr></thead><tbody>${rows}</tbody></table>`;
+  const num = v => /^\d+(\.\d+)?( \(\d+\))?$/.test(v) ? parseFloat(v) : null;
+  const tidy = v => String(v).replace(/\.0$/, "");
+  const [ta, tb] = b.teams, sa = isScu(ta.name) ? "us" : "them", sb = isScu(tb.name) ? "us" : "them";
+  const bars = b.stats?.length ? `<div class="sbars"><div class="sb sb-h"><span>${esc(ta.abbr || ta.name)}</span><span></span><span>${esc(tb.abbr || tb.name)}</span></div>${b.stats.map(([k, a, h]) => {
+      const x = num(a), y = num(h), t = (x || 0) + (y || 0) || 1, ok = x != null && y != null;
+      return `<div class="sb"><div class="sb-l">${esc(k.toUpperCase())}</div><span>${esc(tidy(a))}</span><div class="sb-bar${ok ? "" : " none"}">${ok ? `<i class="${sa}" style="width:${x / t * 100}%"></i><i class="${sb}" style="width:${y / t * 100}%"></i>` : ""}</div><span>${esc(tidy(h))}</span></div>`;
+    }).join("")}</div>` : "";
+  return { linescore, bars };
+}
+function scoringList(sm, e, away, home) {
+  const list = sm.allScoring || [];
+  if (!list.length) return "";
+  const teamOf = id => [e.us, e.them].find(t => t.id === id);
+  return `<div class="gc-plays gd-plays"><div class="pl-head"><b>SCORING PLAYS · ${list.length}</b></div><ol>${list.map(p => { const t = teamOf(p.tid);
+      return `<li class="sc"><span class="pl-when">${esc(p.when)}</span><span class="pl-text">${t ? logo(t, "xs") : ""}${esc(p.text)}</span>
+        <span class="pl-score">${esc(away.abbr)} ${esc(p.away)}–${esc(p.home)} ${esc(home.abbr)}</span></li>`; }).join("")}</ol></div>`;
+}
+function gamePage(key) {
+  const g = games.find(x => gameKey(x) === key);
+  if (!g || !isFinal(g)) return `<div class="empty" style="margin:28px 0">We couldn't find that game. <a href="#/">Back to all sports</a></div>`;
+  const s = sportOf(g.sport), gender = genderOf(g.sport), k = g.result[0];
+  current.resolved = gender; current.gameSport = s.id; // so the menus mark this team
+  const e = espnFor(g), done = e?.completed ? e : null;
+  if (done && !espn.summary[done.id]) requestSummary(done);
+  const sm = done ? espn.summary[done.id] || {} : {};
+  const [ours, theirs] = g.result.slice(2).split("-"); // Broncos-first, e.g. "L 16-17"
+  const us = done ? done.us : { ...SCU_TEAM(g.sport), record: "" };
+  const them = done ? done.them : { name: g.opponent, logo: g.logo };
+  const [L, R] = venueOf(g) === "home" ? [[them, theirs], [us, ours]] : [[us, ours], [them, theirs]];
+  const eb = done ? espnBox(done, sm) : null, sb = scuBox(g, us, them);
+  const linescore = eb?.linescore || sb.linescore, bars = eb?.bars || sb.bars, ldr = eb?.ldr || "";
+  const plays = done ? scoringList(sm, done, eb.away, eb.home) : "";
+  const side = bars || ldr ? `<div class="gd-grid">${bars ? `<div><h5 class="gd-h">TEAM STATS</h5>${bars}</div>` : ""}${ldr ? `<div><h5 class="gd-h">LEADERS</h5>${ldr}</div>` : ""}</div>` : "";
+  const venueLine = done?.venue ? `${done.venue}${done.city ? ", " + done.city : ""}` : g.location;
+  const links = [done && [espnGameUrl(done), ESPN_SB[g.sport] ? "ESPN MATCH CENTER" : "ESPN BOX SCORE"],
+    g.boxscore && [g.boxscore, /\.pdf($|\?)/i.test(g.boxscore) ? "OFFICIAL RESULTS (PDF)" : "SCU BOX SCORE"], g.recap && [g.recap, "RECAP"]]
+    .filter(Boolean).map(([u, t]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${t} ↗</a>`).join("");
+  const tg = teamGames(s.id, gender), more = resultsOf(tg).filter(x => x !== g).slice(0, 5);
+  const team = href(s.id, gender);
+  return `
+    <nav class="crumbs"><a href="${team}">← ${esc(g.sport)}</a><span>/</span><span>${esc(versus(g))}</span></nav>
+    <div class="card featured"><div class="tab">FINAL SCORE</div><div class="tab right mono">${esc(when(g).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }).toUpperCase())}</div>
+      <div class="box gc game-detail">
+        <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}<span class="final-pill">FINAL</span></div>
+        <div class="gc-match">${teamBlock(L[0])}<div class="gc-score"><div><b>${esc(L[1])}</b><span>–</span><b>${esc(R[1])}</b></div>
+          <div class="gc-clock ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div></div>${teamBlock(R[0])}</div>
+        <div class="gc-when">${esc(fmtLong(g))}${g.allDay ? "" : " · " + esc(fmtTime(g))}</div>
+        ${linescore}${side}${plays}
+        <div class="gc-info"><span><b>VENUE</b> ${esc(venueLine)}</span>${links}</div>
+      </div></div>
+    ${more.length ? `<div class="card section-gap"><div class="tab">MORE ${esc(g.sport.toUpperCase())} RESULTS</div><a class="tab right mono" href="${team}" style="text-decoration:none">ALL RESULTS →</a>
+      <div class="box">${more.map(x => gameRow(x)).join("")}</div></div>` : `<div class="section-gap"></div>`}`;
+}
+
+// ---------------------------------------------------------------------------
+// ROSTERS: players and coaches from SCU's roster pages (prototypes/build_rosters.py, refreshed twice a year).
+// Photos load straight from SCU's image server, cropped to the face.
+// ---------------------------------------------------------------------------
+let rosters = null, rosterAsked = false;
+const rosterOpen = {};
+const ROSTER_FIRST = 12;
+const rosterSlug = (sportId, gender) => ["baseball", "softball"].includes(sportId) ? sportId : `${gender}-${sportId === "xc" ? "cross-country" : sportId}`;
+function loadRosters() {
+  if (rosterAsked) return;
+  rosterAsked = true;
+  fetch(ROSTER_URL, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).then(d => { rosters = d?.teams || {}; })
+    .catch(() => { rosters = {}; }).finally(swapRosters);
+}
+function swapRosters() { document.querySelectorAll("[data-roster]").forEach(el => { el.outerHTML = rosterCard(el.dataset.roster); }); }
+function rosterCard(slug) {
+  loadRosters();
+  const shell = (right, body) => `<div class="card section-gap roster" data-roster="${esc(slug)}"><div class="tab">ROSTER</div><div class="tab right mono">${right}</div><div class="box">${body}</div></div>`;
+  if (rosters === null) return shell("SCU ATHLETICS", `<div class="empty">Loading roster…</div>`);
+  const r = rosters[slug];
+  if (!r?.players?.length) return "";
+  const open = rosterOpen[slug], list = open ? r.players : r.players.slice(0, ROSTER_FIRST);
+  const photo = (p, cls) => `<div class="${cls}" data-ini="${esc(initials(p.name))}">${p.photo ? `<img src="${esc(p.photo)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
+  const cards = list.map(p => `<a class="ro-card" href="${esc(p.url || r.url)}" target="_blank" rel="noopener">
+      ${photo(p, "ro-ph")}${p.num ? `<span class="ro-num">#${esc(p.num)}</span>` : ""}
+      <div class="ro-info"><b>${esc(p.name)}</b><span>${esc([p.pos, p.year].filter(Boolean).join(" · "))}</span>
+        <span class="ro-meta">${esc([p.ht, p.hometown].filter(Boolean).join(" · "))}</span></div></a>`).join("");
+  const staff = (r.coaches || []).filter(c => /coach/i.test(c.title)).slice(0, 6);
+  const coaches = staff.length ? `<div class="ro-coaches"><h5 class="gd-h">COACHES</h5><div>${staff.map(c =>
+      `<div class="ro-coach">${photo(c, "ro-cph")}<div><b>${esc(c.name)}</b><span>${esc(c.title)}</span></div></div>`).join("")}</div></div>` : "";
+  const more = r.players.length > ROSTER_FIRST
+    ? `<button class="more" data-roster-all="${esc(slug)}">${open ? "SHOW FEWER ↑" : `SHOW ALL ${r.players.length} PLAYERS ↓`}</button>` : "";
+  return shell(`${esc(r.season)} · ${r.players.length} PLAYERS · <a href="${esc(r.url)}" target="_blank" rel="noopener">SCU ↗</a>`,
+    `<div class="ro-grid">${cards}</div>${more}${coaches}`);
+}
+
 function newsList(sport) {
   const a = espn.news[sport];
   if (!a) return `<div class="empty">Loading headlines…</div>`;
@@ -1543,6 +1838,7 @@ async function refreshMixlr() {
     const was = mixlr.live;
     mixlr.live = !!d.is_live; mixlr.avatar = d.profile_image_url || "";
     if (mixlr.live && !mixlr.autoOpened) { mixlr.open = true; mixlr.autoOpened = true; } // pop the player open when a broadcast starts
+    if (!mixlr.live && was) { mixlr.open = false; mixlr.autoOpened = false; } // broadcast over: put the player away, auto-open again next time
     if (was !== mixlr.live || !document.querySelector("#ks-onair img")) swapOnAir();
   } catch (e) { /* Mixlr unreachable: the bar still links out */ }
   setTimeout(refreshMixlr, 60000);
@@ -1573,13 +1869,24 @@ function rerenderQuiet() {
   if (!current) return;
   const v = document.getElementById("ks-view"), y = scrollY;
   v.classList.add("noanim");
-  v.innerHTML = current.sport === "calendar" ? calendarPage(current.gender) : current.sport ? sportPage(current.sport, current.gender) : overview();
+  v.innerHTML = renderView();
   markMenu(); scrollTo(0, y);
   maybeIntro(); // first ESPN redraw lands right after load: replay the intro on the fresh tiles
 }
 const refreshButton = document.getElementById("ks-refresh-scores");
 const refreshStatus = document.getElementById("ks-refresh-status");
-let scoreTimer;
+let scoreTimer, statusTimer;
+// "Game time": an ESPN-covered Broncos game is live, or one is due to start within 15 minutes / should still be going
+// (ESPN can take a few minutes to flip a game to live). That's when the page checks every 15 seconds and shows the
+// manual "Refresh scores" button; the rest of the time the button is hidden and the page checks once a minute.
+const gameTime = () => liveEvents().length > 0 || games.some(g => espnPath(g.sport) && !g.result && !g.allDay && !g.meet &&
+  Date.now() > when(g).getTime() - 15 * 60e3 && Date.now() < estEnd(g) + 30 * 60e3);
+function showRefresh() {
+  const on = gameTime();
+  refreshButton.closest(".score-tools").hidden = !on;
+  if (!on) refreshStatus.textContent = "";
+  return on;
+}
 
 async function refreshEspn(manual = false) {
   clearTimeout(scoreTimer);
@@ -1600,13 +1907,13 @@ async function refreshEspn(manual = false) {
     const held = [heldFinal(games, upcomingOf(games)), tg && heldFinal(tg, upcomingOf(tg))].map(g => g?.start || null);
     const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay]), Object.keys(espn.events).length, games.map(g => g.result), held]);
     if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
-    if (manual) refreshStatus.textContent = "Score check complete";
+    if (manual) { refreshStatus.textContent = "Scores up to date"; clearTimeout(statusTimer); statusTimer = setTimeout(() => { refreshStatus.textContent = ""; }, 4000); }
   } catch (error) {
     if (manual) refreshStatus.textContent = "Couldn’t check scores. Try again.";
     console.warn("Score refresh failed", error);
   } finally {
     refreshButton.disabled = false;
-    scoreTimer = setTimeout(refreshEspn, liveEvents().length ? 15000 : 60000);
+    scoreTimer = setTimeout(refreshEspn, showRefresh() ? 15000 : 60000);
   }
 }
 refreshButton.addEventListener("click", () => refreshEspn(true));

@@ -1,0 +1,4344 @@
+{
+ "updated": "2026-11-15T08:30:52.967706+00:00",
+ "teams": {
+  "mens-basketball": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/mens-basketball/roster",
+   "players": [
+    {
+     "num": "0",
+     "name": "David Castillo",
+     "pos": "Guard",
+     "year": "Jr.",
+     "ht": "6'1\"",
+     "hometown": "Bartlesville, Okla.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/0-David-Castillo-AJT_5255.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/david-castillo/9923"
+    },
+    {
+     "num": "2",
+     "name": "Sash Gavalyugov",
+     "pos": "Guard",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Botevgrad, Bulgaria",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/2-Sash-Gavalyugov-AJT_5539.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/sash-gavalyugov/9920"
+    },
+    {
+     "num": "3",
+     "name": "Francis Chukwudebelu",
+     "pos": "Center",
+     "year": "So.",
+     "ht": "6'10\"",
+     "hometown": "Dallas, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/3-Francis-Chukwudebelu-AJT_5237.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/francis-chukwudebelu/9916"
+    },
+    {
+     "num": "4",
+     "name": "Brad Longcor III",
+     "pos": "Guard",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Quincy, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/4-Brad-Longcor-III-AJT_5239.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/brad-longcor-iii/9921"
+    },
+    {
+     "num": "7",
+     "name": "Eli Jolin",
+     "pos": "Guard",
+     "year": "Fr.",
+     "ht": "6'7\"",
+     "hometown": "Rouyn-Noranda, Quebec, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/7-Eli-Jolin-AJT_5246.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/eli-jolin/9926"
+    },
+    {
+     "num": "8",
+     "name": "Elijah Mahi",
+     "pos": "Forward",
+     "year": "5th",
+     "ht": "6'7\"",
+     "hometown": "Toronto, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/10/25/8-Elijah-Mahi-AJT_5258.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/elijah-mahi/10010"
+    },
+    {
+     "num": "10",
+     "name": "Noah Badibanga",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "6'8\"",
+     "hometown": "Toulouse, France",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/10-Noah-Badibanga-AJT_5226.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/noah-badibanga/9915"
+    },
+    {
+     "num": "12",
+     "name": "KJ Cochran",
+     "pos": "Guard",
+     "year": "So.",
+     "ht": "6'5\"",
+     "hometown": "West Chester, Penn.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/12-KJ-Cochran-AJT_5241.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/kj-cochran/9917"
+    },
+    {
+     "num": "13",
+     "name": "Brayde Kuykendall",
+     "pos": "Guard",
+     "year": "Fr.",
+     "ht": "6'5\"",
+     "hometown": "San Ramon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/13-Brayde-Kuykendall-AJT_5250.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/brayde-kuykendall/9925"
+    },
+    {
+     "num": "14",
+     "name": "Chris Tadjo",
+     "pos": "Forward",
+     "year": "Jr.",
+     "ht": "6'7\"",
+     "hometown": "Montreal, Quebec",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/14-Chris-Tadjo-AJT_5257.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/chris-tadjo/9922"
+    },
+    {
+     "num": "15",
+     "name": "Thierry Darlan",
+     "pos": "Guard",
+     "year": "Sr.",
+     "ht": "6'8\"",
+     "hometown": "Bangui, Central African Republic",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/15-Thierry-Darlan-AJT_5260.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/thierry-darlan/9918"
+    },
+    {
+     "num": "18",
+     "name": "Alex Ensor",
+     "pos": "Center",
+     "year": "Fr.",
+     "ht": "7'1\"",
+     "hometown": "Denver, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/18-Alex-Ensor-AJT_5253.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/alex-ensor/9924"
+    },
+    {
+     "num": "35",
+     "name": "Sidi Gueye",
+     "pos": "Center",
+     "year": "So.",
+     "ht": "6'11\"",
+     "hometown": "Guediawaye, Senegal",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/35-Sidi-Gueye-AJT_5244.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/sidi-gueye/9927"
+    },
+    {
+     "num": "44",
+     "name": "Jake Ensminger",
+     "pos": "Guard",
+     "year": "Gr.",
+     "ht": "6'9\"",
+     "hometown": "Ulm, Germany",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/44-Jake-Ensminger-AJT_5228.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/jake-ensminger/9919"
+    },
+    {
+     "num": "77",
+     "name": "Fedor Zugic",
+     "pos": "Guard",
+     "year": "Sr.",
+     "ht": "6'6\"",
+     "hometown": "Podgorica, Montenegro",
+     "photo": "https://santaclarabroncos.com/images/2026/10/5/77-Fedor-Zugic-AJT_5248.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-basketball/roster/fedor-zugic/10009"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Herb Sendek",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/sendek_herb.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jason Ludwig",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/8/22/ludwig_jasonDJR34138.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Ryan Madry",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/madry_ryan.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Will Burkett",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2025/7/3/Burkett__Will_MBB_4.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jackson Gion",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/8/18/Jackson-Gion-AJT_0001.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Mitch Smith",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/10/9/smith_mitchelDJR30744.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Alan Guillou",
+     "title": "Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2023/9/1/Guillou_HS.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Caine Purnell",
+     "title": "Director, Video & Analytics",
+     "photo": "https://santaclarabroncos.com/images/2024/10/9/purnell_caineDJR30750.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jacob Chin",
+     "title": "Graduate Student Manager",
+     "photo": "https://santaclarabroncos.com/images/2026/8/18/Jacob-Chin-AJT_0006.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Curtis Murphy",
+     "title": "Graduate Student Manager",
+     "photo": "https://santaclarabroncos.com/images/2026/8/18/Curtis-Murhpy-AJT_0003.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Greg Vitanovec",
+     "title": "Graduate Student Manager",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Greg-Vitanovec-_AJT_9214.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-basketball": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/womens-basketball/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Quinsey Bryan",
+     "pos": "Guard",
+     "year": "Fr.",
+     "ht": "5'9\"",
+     "hometown": "Ladera Ranch, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Quinsey-Bryan-AJT_2774.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/quinsey-bryan/9835"
+    },
+    {
+     "num": "2",
+     "name": "Aniya Hooker",
+     "pos": "Guard",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Lynnwood, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Aniya-Hooker-AJT_2781.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/aniya-hooker/9829"
+    },
+    {
+     "num": "3",
+     "name": "Kate Schat",
+     "pos": "Guard",
+     "year": "So.",
+     "ht": "5'9\"",
+     "hometown": "Redwood Valley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Kate-Schat-AJT_2768.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/kate-schat/9832"
+    },
+    {
+     "num": "5",
+     "name": "Sara Schmerbach",
+     "pos": "Guard",
+     "year": "So.",
+     "ht": "5'11\"",
+     "hometown": "South Medford, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Sara-Schmerbach-AJT_2765.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/sara-schmerbach/9833"
+    },
+    {
+     "num": "9",
+     "name": "Maia Jones",
+     "pos": "Guard",
+     "year": "5th",
+     "ht": "5'10\"",
+     "hometown": "Tasman, New Zealand",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Maia-Jones-AJT_2797.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/maia-jones/9830"
+    },
+    {
+     "num": "11",
+     "name": "Brooke Blachly",
+     "pos": "Guard",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "Everett, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Brooke-Blachly-AJT_2790.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/brooke-blachly/9836"
+    },
+    {
+     "num": "12",
+     "name": "Sophie Glancey",
+     "pos": "Forward",
+     "year": "5th",
+     "ht": "6'2\"",
+     "hometown": "Boise, Idaho",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Sophie-Glancey-AJT_2783.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/sophie-glancey/9988"
+    },
+    {
+     "num": "13",
+     "name": "Ava Schmidt",
+     "pos": "Forward",
+     "year": "Sr.",
+     "ht": "6'2\"",
+     "hometown": "Sammamish, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Ava-Schmidt-AJT_2771.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/ava-schmidt/9834"
+    },
+    {
+     "num": "20",
+     "name": "Delainey Miller",
+     "pos": "Guard",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Aurora, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Delainey-Miller-AJT_2788.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/delainey-miller/9831"
+    },
+    {
+     "num": "23",
+     "name": "Emma Najjuma",
+     "pos": "Center",
+     "year": "Sr.",
+     "ht": "6'4\"",
+     "hometown": "Mukono Seeta, Uganda",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Emma-Najjuma-AJT_2794.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/emma-najjuma/9837"
+    },
+    {
+     "num": "24",
+     "name": "Reilly Clark",
+     "pos": "Guard",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "Tucson, Ariz.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Reilly-Clark-AJT_2819.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/reilly-clark/9826"
+    },
+    {
+     "num": "30",
+     "name": "Kylee Fox",
+     "pos": "Guard",
+     "year": "Sr.",
+     "ht": "5'11\"",
+     "hometown": "Richland, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Kylee-Fox-AJT_2758.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/kylee-fox/9827"
+    },
+    {
+     "num": "31",
+     "name": "Joana Magalhaes",
+     "pos": "Guard",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "Lisbon, Portugal",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Joana-Magalhaes-AJT_2763.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/joana-magalhaes/9838"
+    },
+    {
+     "num": "34",
+     "name": "Tyler Gildersleeve-Stiles",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "6'1\"",
+     "hometown": "Snohomish, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Tyler-Gildersleeve-Stiles-AJT_2776.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-basketball/roster/tyler-gildersleeve-stiles/9828"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Loree Payne",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Loree-Payne-AJT_2805.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "TJ Harris",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/TJ-Harris-AJT_2811.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Ryan Freeman",
+     "title": "General Manager/Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Ryan-Freeman-AJT_2802.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Nike McClure",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Nike-McClure-AJT_2809.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Katie Bussey Mayes",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Katie-Bussey-Mayes-AJT_2799.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Martin Jensen",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Martin-Jensen-AJT_2814.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Madison Rich",
+     "title": "Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Madison-Rich-AJT_2816_TrabL.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Kaycie Dunkerley",
+     "title": "Director of Video",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Kaycie-Dunkerley-AJT_2807.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "mens-soccer": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/mens-soccer/roster",
+   "players": [
+    {
+     "num": "0",
+     "name": "Sean Bratkowsky",
+     "pos": "Goalkeeper",
+     "year": "Jr.",
+     "ht": "6'4\"",
+     "hometown": "Colorado Springs, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Sean-Bratkowsky-AJT_0039_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/sean-bratkowsky/9876"
+    },
+    {
+     "num": "1",
+     "name": "Carter Tseu",
+     "pos": "Goalkeeper",
+     "year": "Jr.",
+     "ht": "6'5\"",
+     "hometown": "Elk Grove, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Carter-Tseu-AJT_0053_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/carter-tseu/9887"
+    },
+    {
+     "num": "3",
+     "name": "Alejandro Arenas",
+     "pos": "Defender",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "San Jos\u00e9, Santa Ana, Costa Rica",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Alejandro-Arenas-AJT_0041_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/alejandro-arenas/9872"
+    },
+    {
+     "num": "4",
+     "name": "Jackson Blake",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "6'4\"",
+     "hometown": "Christchurch, New Zealand",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jackson-Blake-AJT_0033_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/jackson-blake/9875"
+    },
+    {
+     "num": "5",
+     "name": "Yu Yokokawa",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Tokyo, Japan",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Yu-Yokokawa-AJT_0037_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/yu-yokokawa/9889"
+    },
+    {
+     "num": "6",
+     "name": "Khalil Rashad",
+     "pos": "Midfielder",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Oakland, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Khalil-Rashad-AJT_0048_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/khalil-rashad/9883"
+    },
+    {
+     "num": "7",
+     "name": "Itamar Efrat",
+     "pos": "Defender",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Givatayim, Israel",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Itamar-Efrat-AJT_0027_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/itamar-efrat/9879"
+    },
+    {
+     "num": "8",
+     "name": "Yarin Hasson",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "5'9\"",
+     "hometown": "Netanya, Israel",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Yarin-Hasson-AJT_0021_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/yarin-hasson/9890"
+    },
+    {
+     "num": "9",
+     "name": "Gabrielius Mazonas",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Vilnius, Lithuania",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Gabrielius-Mazonas-AJT_0009_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/gabrielius-mazonas/9881"
+    },
+    {
+     "num": "10",
+     "name": "Niv Berkovitz",
+     "pos": "Midfielder",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Hod Hasharon, Israel",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Niv-Berkovitz-AJT_0016_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/niv-berkovitz/9874"
+    },
+    {
+     "num": "11",
+     "name": "Simon Diagana",
+     "pos": "Forward",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Berkeley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Simon-Diagana-AJT_0066_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/simon-diagana/9877"
+    },
+    {
+     "num": "12",
+     "name": "James Saggau",
+     "pos": "Midfielder",
+     "year": "Jr.",
+     "ht": "5'11\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/James-Saggau-AJT_0050_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/james-saggau/9884"
+    },
+    {
+     "num": "13",
+     "name": "Alen Begovic",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Santa Clara, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Alen-Begovic-AJT_0061_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/alen-begovic/9873"
+    },
+    {
+     "num": "14",
+     "name": "Tyler Tipton",
+     "pos": "Forward",
+     "year": "5th",
+     "ht": "6'2\"",
+     "hometown": "Sonora, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Tyler-Tipton-AJT_0018_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/tyler-tipton/9886"
+    },
+    {
+     "num": "15",
+     "name": "Moises Almontes",
+     "pos": "Midfielder",
+     "year": "So.",
+     "ht": "5'7\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Moises-Almontes-AJT_0063_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/moises-almontes/9871"
+    },
+    {
+     "num": "16",
+     "name": "Diego Jalleau",
+     "pos": "Midfielder",
+     "year": "Fr.",
+     "ht": "6'1\"",
+     "hometown": "Toronto, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Diego-Jalleau-AJT_0072_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/diego-jalleau/9891"
+    },
+    {
+     "num": "17",
+     "name": "Will Wiersdorf",
+     "pos": "Midfielder",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Danville, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Will-Wiersdorf-AJT_0012_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/will-wiersdorf/9888"
+    },
+    {
+     "num": "18",
+     "name": "Ezana Alemayehu",
+     "pos": "Midfielder",
+     "year": "Jr.",
+     "ht": "6'1\"",
+     "hometown": "San Ramon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Ezana-Alemayehu-AJT_0069_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/ezana-alemayehu/9870"
+    },
+    {
+     "num": "19",
+     "name": "Josmar Guandique",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Sunnyvale, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Josmar-Guandique-AJT_0031_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/josmar-guandique/9880"
+    },
+    {
+     "num": "23",
+     "name": "Bradley Roberson",
+     "pos": "Midfielder",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Santa Cruz, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Bradley-Roberson-AJT_0059_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/bradley-roberson/9893"
+    },
+    {
+     "num": "24",
+     "name": "Nathan Juillard",
+     "pos": "Goalkeeper",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Sunnyvale, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Nathan-Juillard-AJT_0055_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/nathan-juillard/9894"
+    },
+    {
+     "num": "25",
+     "name": "Jona Starek",
+     "pos": "Midfielder",
+     "year": "Jr.",
+     "ht": "6'1\"",
+     "hometown": "D\u00fcsseldorf, Germany",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jona-Starek-AJT_0057_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/jona-starek/9895"
+    },
+    {
+     "num": "26",
+     "name": "Matthew Crothers",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Palo Alto, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Matthew-Crothers-AJT_0025_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/matthew-crothers/9896"
+    },
+    {
+     "num": "27",
+     "name": "Anton Carell",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Stockholm, Sweden",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Anton-Carell-AJT_0070_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/anton-carell/9897"
+    },
+    {
+     "num": "28",
+     "name": "Isaiah Teng",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "5'9\"",
+     "hometown": "",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Isaiah-Teng-AJT_0035_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/isaiah-teng/9892"
+    },
+    {
+     "num": "29",
+     "name": "Andrew Sullivan",
+     "pos": "Midfielder",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Los Angeles",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Andrew-Sullivan-AJT_0046_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/andrew-sullivan/9885"
+    },
+    {
+     "num": "30",
+     "name": "Diego Diaz",
+     "pos": "Defender",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "Guadalajara, Jalisco, Mexico",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Diego-Diaz-AJT_0044_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/diego-diaz/9878"
+    },
+    {
+     "num": "99",
+     "name": "Jackson Ozburn",
+     "pos": "Goalkeeper",
+     "year": "Sr.",
+     "ht": "6'3\"",
+     "hometown": "Sammamish, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jackson-Ozburn-AJT_0014_cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-soccer/roster/jackson-ozburn/9882"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Cameron Rast",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/8/11/rast_camDJR39353_cropped_LvcHt.png?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Eric Yamamoto",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/8/11/yamamoto_ericDJR39358_cropped_ZoFfs.png?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Riley Hanley",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/8/11/hanley_rileyDJR39343_cropped_KdnzK.png?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jack Murphy",
+     "title": "Assistant Coach/Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2024/9/20/murphy_jackDJR33210__1__cropped.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-soccer": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/womens-soccer/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Amaris Franco",
+     "pos": "Goalkeeper",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "South Pasadena, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Amaris-Franco-AJT_9988_4l8dk.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/amaris-franco/9804"
+    },
+    {
+     "num": "2",
+     "name": "Malia Yamamoto",
+     "pos": "Defender",
+     "year": "Sr.",
+     "ht": "5'7\"",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Malia-Yamamoto-AJT_0001_vDuxT.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/malia-yamamoto/9814"
+    },
+    {
+     "num": "3",
+     "name": "Jordan Geis",
+     "pos": "Forward",
+     "year": "Jr.",
+     "ht": "5'10\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jordan-Geis-AJT_0029_XEZqd.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/jordan-geis/9817"
+    },
+    {
+     "num": "4",
+     "name": "Rylan Cashman",
+     "pos": "Midfielder",
+     "year": "So.",
+     "ht": "5'6\"",
+     "hometown": "Sunnyvale, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Rylan-Cashman-AJT_0042_fr6O8.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/rylan-cashman/9801"
+    },
+    {
+     "num": "5",
+     "name": "Izzy De Buyl",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Overland Park, Kan.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Izzy-De-Buyl-AJT_0012_rLEZq.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/izzy-de-buyl/9802"
+    },
+    {
+     "num": "6",
+     "name": "Lovisa Yng",
+     "pos": "Midfielder",
+     "year": "Fr.",
+     "ht": "5'6\"",
+     "hometown": "Malmo, Sweden",
+     "photo": "https://santaclarabroncos.com/images/2026/8/14/lovisa-yng-ajt_4650_fqj6d.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/lovisa-yng/9815"
+    },
+    {
+     "num": "7",
+     "name": "Addie Whitehouse",
+     "pos": "Defender",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Littleton, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Addie-Whitehouse-AJT_9984_vGkK7.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/addie-whitehouse/9813"
+    },
+    {
+     "num": "8",
+     "name": "Lucy Wimsatt",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "5'4\"",
+     "hometown": "Redmond, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Lucy-Wimsatt-AJT_0058_jQbzt.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/lucy-wimsatt/9825"
+    },
+    {
+     "num": "9",
+     "name": "Hildi Benediktsdottir",
+     "pos": "Midfielder",
+     "year": "So.",
+     "ht": "5'6\"",
+     "hometown": "Gardabaer, Iceland",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Hildi-Benediktsdottir-AJT_0032_1ORbs.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/hildi-benediktsdottir/9800"
+    },
+    {
+     "num": "10",
+     "name": "Aoi Kataoka",
+     "pos": "Midfielder",
+     "year": "5th",
+     "ht": "5'3\"",
+     "hometown": "Paramus, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Aoi-Kataoka-AJT_0022_zRomO.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/aoi-kataoka/9816"
+    },
+    {
+     "num": "11",
+     "name": "Jalana Kimber",
+     "pos": "Forward",
+     "year": "So.",
+     "ht": "5'4\"",
+     "hometown": "Elk Grove, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jalana-Kimber-AJT_0037_ZTeUF.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/jalana-kimber/9792"
+    },
+    {
+     "num": "12",
+     "name": "Mia Erba",
+     "pos": "Midfielder",
+     "year": "Sr.",
+     "ht": "5'9\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Mia-Erba-AJT_9992_ITRMp.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/mia-erba/9819"
+    },
+    {
+     "num": "13",
+     "name": "Sydney Scott",
+     "pos": "Midfielder",
+     "year": "Fr.",
+     "ht": "5'4\"",
+     "hometown": "Woodinville, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Sydney-Scott-AJT_0053_qpFii.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/sydney-scott/9823"
+    },
+    {
+     "num": "14",
+     "name": "Maysen Veronda",
+     "pos": "Goalkeeper",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "San Clemente, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Maysen-Veronda-AJT_0026_FFf3J.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/maysen-veronda/9820"
+    },
+    {
+     "num": "15",
+     "name": "Jacey Martinez",
+     "pos": "Midfielder",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "Huntington Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Jacey-Martinez-AJT_9997_YVL5U.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/jacey-martinez/9794"
+    },
+    {
+     "num": "17",
+     "name": "Ava Weiland",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Prairie Village, Kan.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Ava-Weiland-AJT_0016_HNxyf.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/ava-weiland/9797"
+    },
+    {
+     "num": "18",
+     "name": "Amma Melton",
+     "pos": "Forward",
+     "year": "Fr.",
+     "ht": "5'6\"",
+     "hometown": "Hermosa Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Amma-Melton-AJT_0061_hSf7P.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/amma-melton/9818"
+    },
+    {
+     "num": "19",
+     "name": "Solana Van Enoo",
+     "pos": "Forward",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "Huntington Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Solana-Van-Enoo-AJT_0068_cV8jE.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/solana-van-enoo/9824"
+    },
+    {
+     "num": "20",
+     "name": "Adee Goulden",
+     "pos": "Midfielder",
+     "year": "So.",
+     "ht": "5'3\"",
+     "hometown": "Raanana, Israel",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Adee-Goulden-AJT_0045_6sM53.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/adee-goulden/9805"
+    },
+    {
+     "num": "21",
+     "name": "Raygen Lewis",
+     "pos": "Defender",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Milton, Ga.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Raygen-Lewis-AJT_0047_nNyhh.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/raygen-lewis/9808"
+    },
+    {
+     "num": "22",
+     "name": "Lexie Douglass",
+     "pos": "Defender",
+     "year": "Fr.",
+     "ht": "5'6\"",
+     "hometown": "Denver",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Lexie-Douglass-AJT_0050_IlCLy.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/lexie-douglass/9822"
+    },
+    {
+     "num": "23",
+     "name": "Ally Harrison",
+     "pos": "Goalkeeper",
+     "year": "So.",
+     "ht": "5'6\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Ally-Harrison-AJT_0040_ikdfC.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/ally-harrison/9791"
+    },
+    {
+     "num": "24",
+     "name": "Tessa Ferguson",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Granite Bay, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Tessa-Ferguson-AJT_0018_FNFHR.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/tessa-ferguson/9788"
+    },
+    {
+     "num": "30",
+     "name": "Litsy Alcocer",
+     "pos": "Forward",
+     "year": "Fr.",
+     "ht": "5'2\"",
+     "hometown": "Garden Grove, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Litsy-Alcocer-AJT_0065_oMEpz.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/litsy-alcocer/9821"
+    },
+    {
+     "num": "33",
+     "name": "Kennedy Schoennauer",
+     "pos": "Forward",
+     "year": "Sr.",
+     "ht": "5'5\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Kennedy-Schoennauer-AJT_9981_XXR86.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/kennedy-schoennauer/9811"
+    },
+    {
+     "num": "44",
+     "name": "Mailin Orozco",
+     "pos": "Forward",
+     "year": "Sr.",
+     "ht": "5'2\"",
+     "hometown": "Salinas, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/6/Mailin-Orozco-AJT_1144_mx4zF.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-soccer/roster/mailin-orozco/9810"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Jerry Smith",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/smith_jerry.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Gregg Murphy",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/murphy_gregg.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Curtis McAlister",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/mcalister_curtis.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Lizzy Johnson",
+     "title": "Assistant Coach/Recruiting and Video Coordinator",
+     "photo": "https://santaclarabroncos.com/images/2023/5/10/headshot_default.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Michelle Myers",
+     "title": "Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/myers_michelle.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Lorna Carbonatto",
+     "title": "Director, Recruiting & Video",
+     "photo": "https://santaclarabroncos.com/images/2025/9/18/carbonatto_lornaDJR13050.JPG?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Theresa Gethins",
+     "title": "Assistant Athletic Director, Sports Medicine",
+     "photo": ""
+    },
+    {
+     "name": "Sydnee Strong-Jorgens",
+     "title": "Assistant Athletics Director, Academics and Learning Development",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/strong_sydnee.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-volleyball": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Macy Hinshaw",
+     "pos": "Setter",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Fishers, Ind.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Macy-Hinshaw-AJT_5176.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/macy-hinshaw/9857"
+    },
+    {
+     "num": "2",
+     "name": "Kaia Grieve",
+     "pos": "Outside Hitter",
+     "year": "R-So.",
+     "ht": "5'9\"",
+     "hometown": "La Jolla, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Kaia-Grieve-AJT_5181.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/kaia-grieve/9855"
+    },
+    {
+     "num": "3",
+     "name": "Danielle Brown",
+     "pos": "Outside Hitter/Opposite",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Puyallup, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Danielle-Brown-AJT_5174.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/danielle-brown/9852"
+    },
+    {
+     "num": "5",
+     "name": "Caitlin Johnson",
+     "pos": "Middle Blocker",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "South Riding, Va.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Caitlin-Johnson-AJT_5202.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/caitlin-johnson/9858"
+    },
+    {
+     "num": "6",
+     "name": "Grace Flanagan",
+     "pos": "Middle Blocker",
+     "year": "Sr.",
+     "ht": "6'3\"",
+     "hometown": "Rancho Santa Fe, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Grace-Flanagan-AJT_5166.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/grace-flanagan/9854"
+    },
+    {
+     "num": "7",
+     "name": "Lauryn Coleman",
+     "pos": "Middle Blocker",
+     "year": "Fr.",
+     "ht": "6'1\"",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Lauryn-Coleman-AJT_5194.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/lauryn-coleman/9866"
+    },
+    {
+     "num": "8",
+     "name": "Alyssa Eimer",
+     "pos": "Defensive Specialist/Libero",
+     "year": "Sr.",
+     "ht": "5'6\"",
+     "hometown": "Roseville, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Alyssa-Eimer-AJT_5162.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/alyssa-eimer/9853"
+    },
+    {
+     "num": "9",
+     "name": "Selin Aslayan",
+     "pos": "Outside Hitter",
+     "year": "R-Sr.",
+     "ht": "6'4\"",
+     "hometown": "Kadikoy, Turkey",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Selin-Aslayan-AJT_5159.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/selin-aslayan/9851"
+    },
+    {
+     "num": "10",
+     "name": "Ashlynn Reilly",
+     "pos": "Defensive Specialist/Libero",
+     "year": "So.",
+     "ht": "6'2\"",
+     "hometown": "Lakewood, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Ashlynn-Reilly-AJT_5190.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/ashlynn-reilly/9862"
+    },
+    {
+     "num": "11",
+     "name": "Lexi Trapani",
+     "pos": "Defensive Specialist/Libero",
+     "year": "Sr.",
+     "ht": "5'5\"",
+     "hometown": "Santa Monica, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Lexi-Trapani-AJT_5154.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/lexi-trapani/9865"
+    },
+    {
+     "num": "12",
+     "name": "Allison Dzieciuch",
+     "pos": "Middle Blocker",
+     "year": "Fr.",
+     "ht": "6'4\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Allison-Dzieciuch-AJT_5217.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/allison-dzieciuch/9867"
+    },
+    {
+     "num": "13",
+     "name": "Tristen Lujan",
+     "pos": "Middle Blocker",
+     "year": "Sr.",
+     "ht": "6'5\"",
+     "hometown": "Santa Fe, N.M.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Tristen-Lujan-AJT_5183.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/tristen-lujan/9860"
+    },
+    {
+     "num": "14",
+     "name": "Cate Shanahan",
+     "pos": "Outside Hitter",
+     "year": "R-Jr.",
+     "ht": "6'2\"",
+     "hometown": "Toronto",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Cate-Shanahan-AJT_5171.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/cate-shanahan/9863"
+    },
+    {
+     "num": "16",
+     "name": "Kaiya Kearney",
+     "pos": "Outside Hitter",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Kaiya-Kearney-AJT_5219.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/kaiya-kearney/9868"
+    },
+    {
+     "num": "17",
+     "name": "Savannah Walker",
+     "pos": "Opposite",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Fort Wayne, Ind.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Savannah-Walker-AJT_5205.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/savannah-walker/9869"
+    },
+    {
+     "num": "18",
+     "name": "Hailey Newell",
+     "pos": "Setter",
+     "year": "R-So.",
+     "ht": "5'9\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Hailey-Newell-AJT_5192.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/hailey-newell/9861"
+    },
+    {
+     "num": "20",
+     "name": "Morgan Hayes",
+     "pos": "Opposite",
+     "year": "Jr.",
+     "ht": "6'2\"",
+     "hometown": "Honolulu",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Morgan-Hayes-AJT_5198.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/morgan-hayes/9856"
+    },
+    {
+     "num": "21",
+     "name": "Bryn Shankle",
+     "pos": "Middle Blocker",
+     "year": "Jr.",
+     "ht": "6'4\"",
+     "hometown": "Manhattan Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Bryn-Shankle-AJT_5210.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/bryn-shankle/9864"
+    },
+    {
+     "num": "22",
+     "name": "Tia Kapihe",
+     "pos": "Outside Hitter",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Kane'ohe, Hawai'i",
+     "photo": "https://santaclarabroncos.com/images/2026/8/17/Tia-Kapihe-AJT_5185.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-volleyball/roster/tia-kapihe/9859"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Erin Lindsey",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/8/11/Lindsey_Erin.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Gretchen Reinert",
+     "title": "Assistant Coach/Recruiting Coordinator",
+     "photo": "https://santaclarabroncos.com/images/2025/3/5/reinert_gretchenDJR10587.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Ganna Khrystenko",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/3/6/Khrystenko_Anna.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Emilie Davis",
+     "title": "Assistant Coach/Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2025/8/18/emilieDJR10673_lRQDC.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-beach-volleyball": {
+   "season": "2027",
+   "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster",
+   "players": [
+    {
+     "num": "2",
+     "name": "Arelie Hershberg",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Torrance, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/2-Arelie-Hershberg-AJT_2154.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/arelie-hershberg/10012"
+    },
+    {
+     "num": "3",
+     "name": "Kawena Chillingworth",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Oahu, Hawaii",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/3-Kawena-Chillingworth-AJT_2131.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/kawena-chillingworth/9841"
+    },
+    {
+     "num": "4",
+     "name": "Alexandra Urbina",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "5'7\"",
+     "hometown": "Broomfield, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/4-Alexandra-Urbina-AJT_2119.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/alexandra-urbina/9849"
+    },
+    {
+     "num": "7",
+     "name": "Noelle Niederman",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "5'9\"",
+     "hometown": "Mercer Island, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/7-Noelle-Niederman-AJT_2160.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/noelle-niederman/9845"
+    },
+    {
+     "num": "8",
+     "name": "Tyler Parouse",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'9\"",
+     "hometown": "Los Angeles",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/8-Tyler-Parouse-AJT_2141.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/tyler-parouse/9846"
+    },
+    {
+     "num": "10",
+     "name": "Sofie Meissner",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'11\"",
+     "hometown": "Fresno, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/10-Sofie-Meissner-AJT_2156.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/sofie-meissner/10013"
+    },
+    {
+     "num": "11",
+     "name": "Avery Cukjati",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'8\"",
+     "hometown": "Tacoma, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/11-Avery-Cukjati-AJT_2138.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/avery-cukjati/9842"
+    },
+    {
+     "num": "12",
+     "name": "Anna Balsdon",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'7\"",
+     "hometown": "La Jolla, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/12-Anna-Balsdon-AJT_2127.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/anna-balsdon/9839"
+    },
+    {
+     "num": "13",
+     "name": "Ava Stoddard",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'11\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/13-Ava-Stoddard-AJT_2134.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/ava-stoddard/9848"
+    },
+    {
+     "num": "14",
+     "name": "Ellie Skale",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "St. Louis, Mo.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/14-Ellie-Skale-AJT_2114.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/ellie-skale/9847"
+    },
+    {
+     "num": "16",
+     "name": "Sammy Wood",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Huntington Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/wood_sammy.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/sammy-wood/9850"
+    },
+    {
+     "num": "17",
+     "name": "Mandy Hansen",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'2\"",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/1-Mandy-Hansen-AJT_2146.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/mandy-hansen/9844"
+    },
+    {
+     "num": "19",
+     "name": "Reilly Rose Gilliland",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Chico, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/19-Reilly-Rose-Gilliand-AJT_2148.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/reilly-rose-gilliland/9843"
+    },
+    {
+     "num": "22",
+     "name": "Ciara Cantlen",
+     "pos": "",
+     "year": "R-Jr.",
+     "ht": "6'2\"",
+     "hometown": "Santa Cruz, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/22-Ciara-Cantlen-AJT_2123.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-beach-volleyball/roster/ciara-cantlen/9840"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Jeff Alzina",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/2/17/alzina_jeff.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Lance Muret",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/2/17/muret_lance.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Cecily Rasmussen",
+     "title": "Student Manager",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "mens-water-polo": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Harrison Labrosse",
+     "pos": "Goalie",
+     "year": "Sr.",
+     "ht": "6'5\"",
+     "hometown": "Lafayette, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Harrison-Labrosse-AJT_0080.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/harrison-labrosse/9705"
+    },
+    {
+     "num": "1A",
+     "name": "Tyler Swensen",
+     "pos": "Goalie",
+     "year": "R-So.",
+     "ht": "6'4\"",
+     "hometown": "Laguna Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Tyler-Swensen-AJT_0090.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/tyler-swensen/9709"
+    },
+    {
+     "num": "1B",
+     "name": "Connor Clougherty",
+     "pos": "Goalie",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Newport Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Connor-Clougherty-AJT_0116.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/connor-clougherty/9928"
+    },
+    {
+     "num": "1C",
+     "name": "Ryland Pierce",
+     "pos": "Goalie",
+     "year": "So.",
+     "ht": "6'3\"",
+     "hometown": "Pleasant Hill, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Ryland-Pierce-AJT_0102.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/ryland-pierce/9706"
+    },
+    {
+     "num": "2",
+     "name": "Jason Alietti",
+     "pos": "Center Defender",
+     "year": "Sr.",
+     "ht": "6'5\"",
+     "hometown": "Pasadena, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Jason-Alietti-AJT_0072.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/jason-alietti/9692"
+    },
+    {
+     "num": "3",
+     "name": "Henry Engs",
+     "pos": "Utility",
+     "year": "Jr.",
+     "ht": "6'1\"",
+     "hometown": "Orinda, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Henry-Engs-AJT_0082.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/henry-engs/9701"
+    },
+    {
+     "num": "4",
+     "name": "Jensen Welton",
+     "pos": "Utility",
+     "year": "R-So.",
+     "ht": "6'2\"",
+     "hometown": "Austin, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Jensen-Welton-AJT_0086.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/jensen-welton/9710"
+    },
+    {
+     "num": "5",
+     "name": "Ashton Brown",
+     "pos": "Center",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Sydney",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Ashton-Brown-AJT_0096.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/ashton-brown/9695"
+    },
+    {
+     "num": "6",
+     "name": "Charlie Kosinski",
+     "pos": "Attacker",
+     "year": "R-Jr.",
+     "ht": "6'0\"",
+     "hometown": "Greenwich, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Charlie-Kosinski-AJT_0068.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/charlie-kosinski/9704"
+    },
+    {
+     "num": "8",
+     "name": "Dylan Hazen",
+     "pos": "Attacker",
+     "year": "So.",
+     "ht": "6'0\"",
+     "hometown": "Huntington Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Dylan-Hazen-AJT_0100.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/dylan-hazen/9703"
+    },
+    {
+     "num": "9",
+     "name": "Misha Popov",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "6'1\"",
+     "hometown": "Pleasant Hill, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Misha-Popov-AJT_0098.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/misha-popov/9707"
+    },
+    {
+     "num": "10",
+     "name": "Thomas Wisdom",
+     "pos": "Utility",
+     "year": "R-Jr.",
+     "ht": "6'1\"",
+     "hometown": "Saratoga, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Thomas-Wisdom-AJT_0076.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/thomas-wisdom/9711"
+    },
+    {
+     "num": "11",
+     "name": "Julien Chow",
+     "pos": "Utility",
+     "year": "R-Jr.",
+     "ht": "6'2\"",
+     "hometown": "Palo Alto, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Julien-Chow-AJT_0070.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/julien-chow/9696"
+    },
+    {
+     "num": "12",
+     "name": "Riccardo De Simon",
+     "pos": "Utility",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Bologna, Italy",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Riccardo-De-Simon-AJT_0084.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/riccardo-de-simon/9697"
+    },
+    {
+     "num": "13",
+     "name": "Beck Early",
+     "pos": "Attacker",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Newport Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Beck-Early-AJT_0094.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/beck-early/9699"
+    },
+    {
+     "num": "14",
+     "name": "Imme van der Schaaf",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "6'1\"",
+     "hometown": "Veldhoven, Netherlands",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Imme-van-der-Schaaf-AJT_0092.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/imme-van-der-schaaf/9782"
+    },
+    {
+     "num": "15",
+     "name": "Nick Zimmerman",
+     "pos": "Utility",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Webster's Grove, Mo.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Nick-Zimmerman-AJT_0110.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/nick-zimmerman/9932"
+    },
+    {
+     "num": "16",
+     "name": "Jamie De Zwart",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "6'7\"",
+     "hometown": "League City, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Jamie-De-Zwart-AJT_0106.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/jamie-de-zwart/9698"
+    },
+    {
+     "num": "17",
+     "name": "Darion Wang",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Calgary, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Darion-Wang-AJT_0114.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/darion-wang/9934"
+    },
+    {
+     "num": "18",
+     "name": "Caleb Yost",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "6'1\"",
+     "hometown": "Los Angeles",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Caleb-Yost-AJT_0118.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/caleb-yost/9931"
+    },
+    {
+     "num": "19",
+     "name": "Marco Rizof",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "5'10\"",
+     "hometown": "Newport Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Marco-Rizof-AJT_0108.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/marco-rizof/9930"
+    },
+    {
+     "num": "20",
+     "name": "Hank Woodman",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "6'3\"",
+     "hometown": "Wilmette, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Hank-Woodman-AJT_0104.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/hank-woodman/9712"
+    },
+    {
+     "num": "21",
+     "name": "Finn Swanson",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "5'11\"",
+     "hometown": "Los Altos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Finn-Swanson-AJT_0120.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/finn-swanson/9933"
+    },
+    {
+     "num": "22",
+     "name": "Luke Baird",
+     "pos": "Center Defender",
+     "year": "R-Jr.",
+     "ht": "6'5\"",
+     "hometown": "Springfield, Va.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Luke-Baird-AJT_0064.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/luke-baird/9693"
+    },
+    {
+     "num": "23",
+     "name": "Charlie Engs",
+     "pos": "Attacker",
+     "year": "R-Jr.",
+     "ht": "6'2\"",
+     "hometown": "Orinda, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Charlie-Engs-AJT_0078.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/charlie-engs/9700"
+    },
+    {
+     "num": "24",
+     "name": "Weston Bancroft",
+     "pos": "Utility",
+     "year": "R-So.",
+     "ht": "6'4\"",
+     "hometown": "La Jolla, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Weston-Bancroft-AJT_0088.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/weston-bancroft/9694"
+    },
+    {
+     "num": "25",
+     "name": "Mathijs Dirven",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "6'5\"",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Mathijs-Dirven-AJT_0112.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/mathijs-dirven/9929"
+    },
+    {
+     "num": "26",
+     "name": "Reece Hammond",
+     "pos": "Utility",
+     "year": "R-Jr.",
+     "ht": "6'4\"",
+     "hometown": "Long Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Reece-Hammond-AJT_0074.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/reece-hammond/9702"
+    },
+    {
+     "num": "27",
+     "name": "Grant Roesch",
+     "pos": "Utility",
+     "year": "Sr.",
+     "ht": "6'3\"",
+     "hometown": "Moraga, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2025/9/2/Roesch_Grant.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-water-polo/roster/grant-roesch/9708"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Keith Wilbur",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Keith-Wilbur-AJT_0042.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Viktor Nagy",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/8/31/Viktor-Nagy-AJT_0041.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-water-polo": {
+   "season": "2027",
+   "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Fritzi Warneke",
+     "pos": "Goalkeeper",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/1-Fritzi-Warneke-AJT_1189.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/fritzi-warneke/10023"
+    },
+    {
+     "num": "1A",
+     "name": "Keira Walters",
+     "pos": "Goalkeeper",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/1A-Keira-Walters-AJT_1239.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/keira-walters/10025"
+    },
+    {
+     "num": "2",
+     "name": "Annika Burks",
+     "pos": "Defender",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Menlo Park, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/2-Annika-Burks-AJT_1183.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/annika-burks/10014"
+    },
+    {
+     "num": "3",
+     "name": "Bella Adams",
+     "pos": "Attacker",
+     "year": "5th",
+     "ht": "5'7\"",
+     "hometown": "Greenwich, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/3-Bella-Adams-AJT_1178.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/bella-adams/10026"
+    },
+    {
+     "num": "4",
+     "name": "Shea Morris",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "5'4\"",
+     "hometown": "Greenwich, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/4-Shea-Morris-AJT_1228.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/shea-morris/10027"
+    },
+    {
+     "num": "5",
+     "name": "Makenna Genco",
+     "pos": "Defender",
+     "year": "Jr.",
+     "ht": "6'1\"",
+     "hometown": "Clovis, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/5-Makenna-Genco-AJT_1206.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/makenna-genco/10017"
+    },
+    {
+     "num": "6",
+     "name": "Laila Holloway",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "5'9\"",
+     "hometown": "Missouri City, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/6-Laila-Holloway-AJT_1222.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/laila-holloway/10028"
+    },
+    {
+     "num": "7",
+     "name": "Tasaria Kilpatrick",
+     "pos": "Attacker",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/7-Tasaria-Kilpatrick-AJT_1208.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/tasaria-kilpatrick/10029"
+    },
+    {
+     "num": "8",
+     "name": "Hailey Romano",
+     "pos": "2M",
+     "year": "So.",
+     "ht": "5'6\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/8-Hailey-Romano-AJT_1214.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/hailey-romano/10021"
+    },
+    {
+     "num": "9",
+     "name": "Chloe Rizof",
+     "pos": "Attacker",
+     "year": "Jr.",
+     "ht": "5'4\"",
+     "hometown": "Newport Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/9-Chloe-Rizof-AJT_1200.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/chloe-rizof/10020"
+    },
+    {
+     "num": "10",
+     "name": "Ava Wells",
+     "pos": "Attacker",
+     "year": "So.",
+     "ht": "5'5\"",
+     "hometown": "Worthington, Ohio",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/10-Ava-Wells-AJT_1217.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/ava-wells/10024"
+    },
+    {
+     "num": "11",
+     "name": "London Menard",
+     "pos": "2M",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Orinda, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/11-London-Menard-AJT_2104.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/london-menard/10019"
+    },
+    {
+     "num": "12",
+     "name": "Mikayla Crowe",
+     "pos": "Utility",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/12-Mikayla-Crowe-AJT_1197.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/mikayla-crowe/10015"
+    },
+    {
+     "num": "13",
+     "name": "Alexi Sueoka",
+     "pos": "Utility",
+     "year": "Fr.",
+     "ht": "5'9\"",
+     "hometown": "Honolulu",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/13-Alexi-Sueoka-AJT_1226.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/alexi-sueoka/10030"
+    },
+    {
+     "num": "14",
+     "name": "Khloe Tarbet",
+     "pos": "2M",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Agoura Hills, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/14-Khloe-Tarbet-AJT_1241.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/khloe-tarbet/10022"
+    },
+    {
+     "num": "16",
+     "name": "Cameron Rantz",
+     "pos": "Utility",
+     "year": "So.",
+     "ht": "5'7\"",
+     "hometown": "Normandy Park, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/16-Cameron-Rantz-AJT_1220.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/cameron-rantz/10031"
+    },
+    {
+     "num": "17",
+     "name": "Julia Ernsting",
+     "pos": "Attacker",
+     "year": "So.",
+     "ht": "5'7\"",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/17-Julia-Ernsting-AJT_1211.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/julia-ernsting/10016"
+    },
+    {
+     "num": "18",
+     "name": "Taylor Chestnut",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "5'6\"",
+     "hometown": "Walnut Creek, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/18-Taylor-Chestnut-AJT_1232.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/taylor-chestnut/10033"
+    },
+    {
+     "num": "20",
+     "name": "Addison Shaw",
+     "pos": "Attacker",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "Greenwich, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/20-Addison-Shaw-AJT_1234.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/addison-shaw/10032"
+    },
+    {
+     "num": "21",
+     "name": "Lia Lakis",
+     "pos": "Attacker",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Rancho Palos Verdes, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/11/4/21-Lia-Lakis-AJT_1185.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-water-polo/roster/lia-lakis/10018"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Claire Linney",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/claire_linney.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Emily Diacono",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2025/11/12/diacono_emilyDJR15216.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "baseball": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/baseball/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Payton Lambert",
+     "pos": "Outfield",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Pendleton, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Lambert_Payton.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/payton-lambert/9534"
+    },
+    {
+     "num": "2",
+     "name": "Russ Filter",
+     "pos": "Catcher",
+     "year": "R-So.",
+     "ht": "5'11\"",
+     "hometown": "Santa Clara, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Filter_Russ.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/russ-filter/9525"
+    },
+    {
+     "num": "3",
+     "name": "Ben Cleary",
+     "pos": "Infield",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Half Moon Bay, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Cleary_Ben.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/ben-cleary/9520"
+    },
+    {
+     "num": "4",
+     "name": "James Bose",
+     "pos": "Infield",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Bose_James.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/james-bose/9548"
+    },
+    {
+     "num": "5",
+     "name": "Henry Stewart",
+     "pos": "Left-Handed Pitcher",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "Lakewood, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Stewart_Henry.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/henry-stewart/9545"
+    },
+    {
+     "num": "7",
+     "name": "Thomas Ferroggiaro",
+     "pos": "Infield",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "Wilsonville, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Ferroggiaro_Thomas.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/thomas-ferroggiaro/9524"
+    },
+    {
+     "num": "8",
+     "name": "Matthew Tiendas",
+     "pos": "Outfield",
+     "year": "Fr.",
+     "ht": "5'10\"",
+     "hometown": "Santa Clara, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Tiendas_Matthew.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/matthew-tiendas/9682"
+    },
+    {
+     "num": "10",
+     "name": "Hunter Fujimoto",
+     "pos": "Outfield",
+     "year": "Fr.",
+     "ht": "5'10\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Fujimoto_Hunter.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/hunter-fujimoto/9683"
+    },
+    {
+     "num": "11",
+     "name": "Max Reimers",
+     "pos": "Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "5'11\"",
+     "hometown": "Aliso Viejo, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Reimers_Max.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/max-reimers/9684"
+    },
+    {
+     "num": "12",
+     "name": "Tate Medicoff",
+     "pos": "Infield/Outfield",
+     "year": "So.",
+     "ht": "6'3\"",
+     "hometown": "San Francisco",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Medicoff_Tate.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/tate-medicoff/9539"
+    },
+    {
+     "num": "13",
+     "name": "Jackson Cook",
+     "pos": "Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Lincoln, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Cook_Jackson.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/jackson-cook/9685"
+    },
+    {
+     "num": "14",
+     "name": "Max Ross",
+     "pos": "Outfield",
+     "year": "R-Jr.",
+     "ht": "6'2\"",
+     "hometown": "Woodside, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Ross_Max.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/max-ross/9543"
+    },
+    {
+     "num": "15",
+     "name": "Koen Carston",
+     "pos": "Catcher",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Davis, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Carston_Koen.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/koen-carston/9519"
+    },
+    {
+     "num": "16",
+     "name": "Tate Gargasz",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-Fr.",
+     "ht": "6'1\"",
+     "hometown": "Monument, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Gargasz_Tate.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/tate-gargasz/9528"
+    },
+    {
+     "num": "17",
+     "name": "Will Anderson",
+     "pos": "Infield/Outfield",
+     "year": "Jr.",
+     "ht": "6'2\"",
+     "hometown": "Gilroy, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Anderson_Will.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/will-anderson/9673"
+    },
+    {
+     "num": "18",
+     "name": "Bryant Viskovich",
+     "pos": "Outfield",
+     "year": "R-So.",
+     "ht": "6'0\"",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Viskovich_Bryant.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/bryant-viskovich/9587"
+    },
+    {
+     "num": "19",
+     "name": "Brayden Dotoli",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-Sr.",
+     "ht": "6'1\"",
+     "hometown": "Roseville, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Dotoli_Brayden.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/brayden-dotoli/9523"
+    },
+    {
+     "num": "20",
+     "name": "Mateo Garcia",
+     "pos": "Infield",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "Turlock, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Garcia_Mateo.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/mateo-garcia/9527"
+    },
+    {
+     "num": "21",
+     "name": "Kai Cunningham",
+     "pos": "Infield",
+     "year": "R-Jr.",
+     "ht": "5'9\"",
+     "hometown": "Atlanta",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Cunningham_Kai.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/kai-cunningham/9521"
+    },
+    {
+     "num": "22",
+     "name": "Johnny Luetzow",
+     "pos": "Catcher",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "La Jolla, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Luetzow_Johnny.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/johnny-luetzow/9537"
+    },
+    {
+     "num": "23",
+     "name": "Chase Ruden",
+     "pos": "Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Highlands Ranch, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Ruden_Chase.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/chase-ruden/9687"
+    },
+    {
+     "num": "24",
+     "name": "Luke Devine",
+     "pos": "Outfield",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Los Altos Hills, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Devine_Luke.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/luke-devine/9522"
+    },
+    {
+     "num": "26",
+     "name": "Christian Duarte",
+     "pos": "Left-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'6\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Duarte_Christian.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/christian-duarte/9689"
+    },
+    {
+     "num": "27",
+     "name": "Andrew Rayment",
+     "pos": "Outfield",
+     "year": "So.",
+     "ht": "6'5\"",
+     "hometown": "Spokane, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Rayment_Andrew.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/andrew-rayment/9542"
+    },
+    {
+     "num": "28",
+     "name": "James Cunningham",
+     "pos": "Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'4\"",
+     "hometown": "Los Angeles",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Cunningham_James.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/james-cunningham/9690"
+    },
+    {
+     "num": "29",
+     "name": "Tyler Alleman",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-So.",
+     "ht": "6'0\"",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Alleman_Ty.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/tyler-alleman/9516"
+    },
+    {
+     "num": "30",
+     "name": "Bryce Padilla",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-Jr.",
+     "ht": "5'11\"",
+     "hometown": "Fresno, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Padilla_Bryce.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/bryce-padilla/9541"
+    },
+    {
+     "num": "31",
+     "name": "Andrew Habermann",
+     "pos": "Right-Handed Pitcher",
+     "year": "So.",
+     "ht": "6'6\"",
+     "hometown": "Westlake Village, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Habermann_Andrew.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/andrew-habermann/9531"
+    },
+    {
+     "num": "33",
+     "name": "Robert Aivazian",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-Jr.",
+     "ht": "6'3\"",
+     "hometown": "Martinez, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Aivazian_Robert.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/robert-aivazian/9515"
+    },
+    {
+     "num": "34",
+     "name": "Vincent Braga",
+     "pos": "Right-Handed Pitcher",
+     "year": "So.",
+     "ht": "6'3\"",
+     "hometown": "Palo Alto, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Braga_Vincent.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/vincent-braga/9518"
+    },
+    {
+     "num": "36",
+     "name": "Jace Gillmore",
+     "pos": "Right-Handed Pitcher",
+     "year": "Jr.",
+     "ht": "6'5\"",
+     "hometown": "Rocklin, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Gillmore_Jace.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/jace-gillmore/9529"
+    },
+    {
+     "num": "37",
+     "name": "Cooper Lanz",
+     "pos": "Right-Handed Pitcher",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "Atwater, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Lanz_Cooper.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/cooper-lanz/9535"
+    },
+    {
+     "num": "38",
+     "name": "Nick Chow",
+     "pos": "Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'5\"",
+     "hometown": "Redwood City, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Chow_Nick.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/nick-chow/9688"
+    },
+    {
+     "num": "40",
+     "name": "Sebastian Schreiber",
+     "pos": "Left-Handed Pitcher",
+     "year": "R-Sr.",
+     "ht": "6'3\"",
+     "hometown": "Salinas, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Schreiber_Sebastian.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/sebastian-schreiber/9544"
+    },
+    {
+     "num": "41",
+     "name": "Trevor Banning",
+     "pos": "Infield/Right-Handed Pitcher",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "San Juan Capistrano, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Banning_Trevor.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/trevor-banning/9691"
+    },
+    {
+     "num": "43",
+     "name": "RJ Meyn",
+     "pos": "Left-Handed Pitcher",
+     "year": "So.",
+     "ht": "6'0\"",
+     "hometown": "San Ramon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Meyn_RJ.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/rj-meyn/9540"
+    },
+    {
+     "num": "44",
+     "name": "Jack Lazark",
+     "pos": "Right-Handed Pitcher",
+     "year": "Jr.",
+     "ht": "6'2\"",
+     "hometown": "Santa Rosa, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Lazark_Jack.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/jack-lazark/9536"
+    },
+    {
+     "num": "45",
+     "name": "Max Bayles",
+     "pos": "Right-Handed Pitcher",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Bayles_Max.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/max-bayles/9517"
+    },
+    {
+     "num": "46",
+     "name": "Hunter Hargett",
+     "pos": "Right-Handed Pitcher",
+     "year": "R-Sr.",
+     "ht": "6'2\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Hargett_Hunter.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/hunter-hargett/9676"
+    },
+    {
+     "num": "48",
+     "name": "Josh Johnson",
+     "pos": "Right-Handed Pitcher",
+     "year": "Gr.",
+     "ht": "6'2\"",
+     "hometown": "Henderson, Nev.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Johnson_Josh.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/josh-johnson/9532"
+    },
+    {
+     "num": "51",
+     "name": "Mace Wheeler",
+     "pos": "Catcher",
+     "year": "Fr.",
+     "ht": "5'10\"",
+     "hometown": "El Cajon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Wheeler_Mace.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/mace-wheeler/9547"
+    },
+    {
+     "num": "52",
+     "name": "Waylon Walsh",
+     "pos": "Infield",
+     "year": "Fr.",
+     "ht": "6'4\"",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Walsh_Waylon.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/waylon-walsh/9686"
+    },
+    {
+     "num": "54",
+     "name": "Camden Sos",
+     "pos": "Infield",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Alpine, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/16/Sos_Camden.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/baseball/roster/camden-sos/9586"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Rusty Filter",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/rusty_filter.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jay Brossman",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/brossman_jay.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jason Dicochea",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/8/26/Dicochea_Jason.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Chris Perry",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/6/14/gn7e5otnrypu7zri.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Ryan Ozella",
+     "title": "Director of Operations",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/ozella_ryan.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "softball": {
+   "season": "2026",
+   "url": "https://santaclarabroncos.com/sports/softball/roster",
+   "players": [
+    {
+     "num": "1",
+     "name": "Cairah Curran",
+     "pos": "MI/OF",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "Ewa Beach, Hawaii",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/curran_cairahDJR17116_cropped_POdec.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/cairah-curran/9488"
+    },
+    {
+     "num": "2",
+     "name": "Marie Martorella",
+     "pos": "C",
+     "year": "Sr.",
+     "ht": "5'6\"",
+     "hometown": "Salinas, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/martorella_marieDJR17057_cropped_fAKvl.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/marie-martorella/9496"
+    },
+    {
+     "num": "4",
+     "name": "Mariah Montalvo",
+     "pos": "C/3B",
+     "year": "Sr.",
+     "ht": "5'4\"",
+     "hometown": "Watsonville, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/montalvo_mariahDJR17081_cropped_GDs5U.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/mariah-montalvo/9498"
+    },
+    {
+     "num": "7",
+     "name": "Rebecca Rubio",
+     "pos": "MI/OF",
+     "year": "Jr.",
+     "ht": "5'3\"",
+     "hometown": "Buena Park, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/rubio_rebeccaDJR17155_cropped_1Kl2e.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/rebecca-rubio/9499"
+    },
+    {
+     "num": "8",
+     "name": "Cienna Kowaleski",
+     "pos": "1B",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Long Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/kowaleski_ciennabestDJR17190_cropped_xqM9X.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/cienna-kowaleski/9502"
+    },
+    {
+     "num": "9",
+     "name": "Mackenzie Olshenske",
+     "pos": "IF",
+     "year": "Fr.",
+     "ht": "5'4\"",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/olshenske_mackenzieDJR17215_cropped_FvP4q.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/mackenzie-olshenske/9667"
+    },
+    {
+     "num": "10",
+     "name": "Hazyl Gray",
+     "pos": "P/OF",
+     "year": "Sr.",
+     "ht": "5'7\"",
+     "hometown": "Fairfield, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/gray_hazylDJR17212_cropped_RpPSW.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/hazyl-gray/9493"
+    },
+    {
+     "num": "11",
+     "name": "Caitlyn \"Red\" Golob",
+     "pos": "OF",
+     "year": "Jr.",
+     "ht": "5'8\"",
+     "hometown": "Riverside, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/golob_caitlynDJR17108_cropped_rWI3U.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/caitlyn-red-golob/9491"
+    },
+    {
+     "num": "13",
+     "name": "Sophia Cardinale",
+     "pos": "P",
+     "year": "Fr.",
+     "ht": "5'5\"",
+     "hometown": "Salinas, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/cardinale_sophiaDJR17147_cropped_U5Eho.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/sophia-cardinale/9501"
+    },
+    {
+     "num": "14",
+     "name": "Elle Merlino",
+     "pos": "INF/OF",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Vancouver, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/merlino_elleDJR17186_cropped_7loHN.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/elle-merlino/9497"
+    },
+    {
+     "num": "16",
+     "name": "Jacqueline Lemus",
+     "pos": "C",
+     "year": "Sr.",
+     "ht": "5'1\"",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/lemus_jackieDJR17172_cropped_d8vSQ.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/jacqueline-lemus/9494"
+    },
+    {
+     "num": "17",
+     "name": "Avery Seva",
+     "pos": "P",
+     "year": "Jr.",
+     "ht": "5'6\"",
+     "hometown": "Granite Bay, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/seva_averyDJR17174_cropped_dMm1i.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/avery-seva/9500"
+    },
+    {
+     "num": "18",
+     "name": "Claire Krotine",
+     "pos": "OF",
+     "year": "Fr.",
+     "ht": "5'5\"",
+     "hometown": "Folsom, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/krotine_claireDJR17162_cropped_5fS3R.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/claire-krotine/9666"
+    },
+    {
+     "num": "22",
+     "name": "Lillie Brooks",
+     "pos": "C",
+     "year": "Fr.",
+     "ht": "5'6\"",
+     "hometown": "Dayton, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/brooks_lillieDJR17182_cropped_QQgzj.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/lillie-brooks/9668"
+    },
+    {
+     "num": "23",
+     "name": "Robynn Balmediano",
+     "pos": "OF",
+     "year": "Sr.",
+     "ht": "5'3\"",
+     "hometown": "Benicia, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/balmediano_robynnDJR17077_cropped_F5WkU.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/robynn-balmediano/9486"
+    },
+    {
+     "num": "26",
+     "name": "Taryn Clements",
+     "pos": "C",
+     "year": "Jr.",
+     "ht": "5'10\"",
+     "hometown": "Seal Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/clements_tarynDJR17167_cropped_MZL8x.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/taryn-clements/9487"
+    },
+    {
+     "num": "27",
+     "name": "Kyla Acres",
+     "pos": "1B/OF",
+     "year": "Jr.",
+     "ht": "5'6\"",
+     "hometown": "Las Vegas, Nev.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/acres_kylaDJR17119_cropped_jy08d.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/kyla-acres/9485"
+    },
+    {
+     "num": "28",
+     "name": "Cari Ferguson",
+     "pos": "P",
+     "year": "So.",
+     "ht": "5'8\"",
+     "hometown": "Long Beach, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/ferguson_cariDJR17113_cropped_uZaKm.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/cari-ferguson/9490"
+    },
+    {
+     "num": "37",
+     "name": "Audrey Graham",
+     "pos": "MI/OF",
+     "year": "So.",
+     "ht": "5'2\"",
+     "hometown": "Dixon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/graham_audreyDJR17096_cropped_KqDdM.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/audrey-graham/9492"
+    },
+    {
+     "num": "42",
+     "name": "Leiora Davidson",
+     "pos": "1B",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "Eastvale, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/davidson_leioraDJR17071_cropped_AAkLb.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/leiora-davidson/9489"
+    },
+    {
+     "num": "54",
+     "name": "Kendal Manley",
+     "pos": "P",
+     "year": "Sr.",
+     "ht": "5'10\"",
+     "hometown": "Auburn, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/manley_kendalDJR17062_cropped_T3dUn.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/kendal-manley/9495"
+    },
+    {
+     "num": "59",
+     "name": "Sofia Zavarella",
+     "pos": "OF/UT",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Coto de Caza, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/zavarella_sofiaDJR17136_cropped_0OyEE.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/sofia-zavarella/9669"
+    },
+    {
+     "num": "77",
+     "name": "Ellison Schroeder",
+     "pos": "P",
+     "year": "Fr.",
+     "ht": "5'10\"",
+     "hometown": "El Dorado Hills, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/schroeder_ellisonDJR17130_cropped_19wHZ.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/softball/roster/ellison-schroeder/9670"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Gina Carbonatto",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/carbonatto_gina.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Kaitlyn Guevara",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/guevara_kaitlynDJR17201_cropped_oi5Su.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Maddi Hackbarth",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/1/26/hackbarth_maddiDJR17208_cropped_e309M.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Makena Brocki",
+     "title": "Graduate Assistant",
+     "photo": "https://santaclarabroncos.com/images/2024/10/21/brocki_makenaDJR33099_cropped.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Kaylee Pond",
+     "title": "Assistant Coach",
+     "photo": ""
+    },
+    {
+     "name": "Brittanee Fisher",
+     "title": "Assistant Coach",
+     "photo": ""
+    }
+   ]
+  },
+  "mens-tennis": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/mens-tennis/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Alex Bergomi",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "Wollerau, Switzerland",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Alex-Bergomi-AJT_3622_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/alex-bergomi/9996"
+    },
+    {
+     "num": "",
+     "name": "Luca Bluett",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "London, England",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Luca-Bluett-AJT_3606_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/luca-bluett/9989"
+    },
+    {
+     "num": "",
+     "name": "Tiago Boschmans",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "Lisbon, Portugal",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Tiago-Boschmans-AJT_3608_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/tiago-boschmans/9990"
+    },
+    {
+     "num": "",
+     "name": "Anirudh Dhanwada",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'11\"",
+     "hometown": "Tenafly, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Anirudh-Dhanwada-AJT_3949_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/anirudh-dhanwada/9997"
+    },
+    {
+     "num": "",
+     "name": "Adam FaragCao",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'11\"",
+     "hometown": "Calgary, Alberta, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Adam-FaragCao-AJT_3616_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/adam-faragcao/9998"
+    },
+    {
+     "num": "",
+     "name": "Valentin Faure",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "Strasbourg, France",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Valentin-Faure-AJT_3612_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/valentin-faure/9991"
+    },
+    {
+     "num": "",
+     "name": "Mahir Khurana",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "The Woodlands, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Mahir-Khurana-AJT_3618_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/mahir-khurana/9992"
+    },
+    {
+     "num": "",
+     "name": "Luca Lemaitre",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "M\u00e9rida, Mexico",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Luca-Lemaitre-AJT_3610_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/luca-lemaitre/9993"
+    },
+    {
+     "num": "",
+     "name": "Lukas Maskow",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "Berlin, Germany",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Lukas-Maskow-AJT_3620_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/lukas-maskow/9994"
+    },
+    {
+     "num": "",
+     "name": "Ferran Redza",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'10\"",
+     "hometown": "Warwick, England",
+     "photo": "https://santaclarabroncos.com/images/2026/9/16/Ferran-Redza-AJT_3614_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-tennis/roster/ferran-redza/9995"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Niall Angus",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2025/9/17/angus_niallDJR13031_cropped_fT79d.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Josh Page",
+     "title": "Associate Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/8/23/page_joshDJR34041_cropped.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-tennis": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/womens-tennis/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Sofia de Looze",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Kirkland, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Sofia-de-Looze-AJT_4900_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/sofia-de-looze/10003"
+    },
+    {
+     "num": "",
+     "name": "Sonja Hadjipavlou",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Vancouver, British Columbia, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Sonja-Hadjipavlou-AJT_4897_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/sonja-hadjipavlou/10004"
+    },
+    {
+     "num": "",
+     "name": "Ashley Katz",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "Sydney, Australia",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Ashley-Katz-AJT_4915_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/ashley-katz/9999"
+    },
+    {
+     "num": "",
+     "name": "Eliana Kook",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'9\"",
+     "hometown": "North Vancouver, British Columbia, Canada",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Eliana-Kook-AJT_4904_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/eliana-kook/10005"
+    },
+    {
+     "num": "",
+     "name": "Juliette Krumholz",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'5\"",
+     "hometown": "Orinda, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Juliette-Krumholz-AJT_4891_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/juliette-krumholz/10000"
+    },
+    {
+     "num": "",
+     "name": "Ashley Kurizaki",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'4\"",
+     "hometown": "Honolulu, Hawaii",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Ashley-Kurizaki-AJT_4894_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/ashley-kurizaki/10006"
+    },
+    {
+     "num": "",
+     "name": "Alexandra O\u2019Brien",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "5'8\"",
+     "hometown": "Boca Raton, Fla.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Alexandra-O_Brien-AJT_4909_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/alexandra-o-brien/10007"
+    },
+    {
+     "num": "",
+     "name": "Lara Quaglia",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'3\"",
+     "hometown": "San Pedro, Jujuy, Argentina",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Lara-Quaglia-AJT_4918_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/lara-quaglia/10008"
+    },
+    {
+     "num": "",
+     "name": "Anna Rahman",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'3\"",
+     "hometown": "Tokyo, Japan",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Anna-Rahman-AJT_4907_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/anna-rahman/10001"
+    },
+    {
+     "num": "",
+     "name": "Madhu Satishbabu",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'6\"",
+     "hometown": "Redmond, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Madhu-Satishbabu-AJT_4886_Cropped.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-tennis/roster/madhu-satishbabu/10002"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Allie Will-Van Alstyne",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2024/9/20/will_allieDJR38584_cropped.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Connor Van Alstyne",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/9/7/vanalstyne_connorDJR35598_cropped.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "mens-golf": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/mens-golf/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Jared Abercrombie",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Simi Valley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Jared-Abercrombie-AJT_4500.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/jared-abercrombie/9905"
+    },
+    {
+     "num": "",
+     "name": "Jack Hayden",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Dublin, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Jack-Hayden-AJT_4498.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/jack-hayden/9898"
+    },
+    {
+     "num": "",
+     "name": "Max Margolis",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Rancho Mirage, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Max-Margolis-AJT_4514.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/max-margolis/9899"
+    },
+    {
+     "num": "",
+     "name": "Emil Nielsen",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Wellesley, Mass.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Emil-Nielsen-AJT_4494.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/emil-nielsen/9900"
+    },
+    {
+     "num": "",
+     "name": "J.P. Odland",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Tiburon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/J.P.-Odland-AJT_4509.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/j-p-odland/9901"
+    },
+    {
+     "num": "",
+     "name": "Matt Robles",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Downey, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Matt-Robles-AJT_4511.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/matt-robles/9902"
+    },
+    {
+     "num": "",
+     "name": "Tucker Sweeney",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Pasadena, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Tucker-Sweeney-AJT_4517.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/tucker-sweeney/9903"
+    },
+    {
+     "num": "",
+     "name": "Kasper Verwers",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Palm Desert, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Kasper-Verwers-AJT_4496.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/kasper-verwers/9904"
+    },
+    {
+     "num": "",
+     "name": "Ryan Xie",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Aukland, New Zealand",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Ryan-Xie-AJT_4507.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-golf/roster/ryan-xie/9906"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Andrew Larkin",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/9/1/Larkin_HS.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "TL Brown",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-golf": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/womens-golf/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Tyler Burtnett",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Southlake, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Tyler-Burtnett-AJT_4057.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/tyler-burtnett/9912"
+    },
+    {
+     "num": "",
+     "name": "Amy Im",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Auckland, New Zealand",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Amy-Im-AJT_4032.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/amy-im/9907"
+    },
+    {
+     "num": "",
+     "name": "Ines Izuzquiza Ruiz de Arana",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Madrid, Spain",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Ines-Izuzquiza-Ruiz-de-Arana-AJT_4052.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/ines-izuzquiza-ruiz-de-arana/9914"
+    },
+    {
+     "num": "",
+     "name": "Kelsey Kim",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Fullerton, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Kelsey-Kim-AJT_4030.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/kelsey-kim/9908"
+    },
+    {
+     "num": "",
+     "name": "Chloe Lam",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Fountain Valley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Chloe-Lam-AJT_4024.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/chloe-lam/9909"
+    },
+    {
+     "num": "",
+     "name": "Alexa Pineda",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "San Carlos, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Alexa-Pineda-AJT_4045.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/alexa-pineda/9910"
+    },
+    {
+     "num": "",
+     "name": "Sehee Sim",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "San Diego, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Sehee-Sim-AJT_4042.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/sehee-sim/9913"
+    },
+    {
+     "num": "",
+     "name": "Proud Sriwongngam",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "5'9\"",
+     "hometown": "Bankok, Thailand",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Proud-Sriwongngam-AJT_4038.JPG?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-golf/roster/proud-sriwongngam/9911"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Krystal Kelly",
+     "title": "Head Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/shearer_krystal.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Jett Isoda",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/18/Jett-Isoda-AJT_4060.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "mens-rowing": {
+   "season": "2025-26",
+   "url": "https://santaclarabroncos.com/sports/mens-rowing/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Edward Achtner",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'2\"",
+     "hometown": "Marin County, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/atchner_edward.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/edward-achtner/9739"
+    },
+    {
+     "num": "",
+     "name": "Samuel Ackerman",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Hingham, Mass.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/ackerman_sam.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/samuel-ackerman/9766"
+    },
+    {
+     "num": "",
+     "name": "Cole Adam",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'1\"",
+     "hometown": "Wilmette, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/adam_cole.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/cole-adam/9765"
+    },
+    {
+     "num": "",
+     "name": "Julian Balestri",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'4\"",
+     "hometown": "Dallas",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/balestri_julian.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/julian-balestri/9767"
+    },
+    {
+     "num": "",
+     "name": "Alexander Crouse",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "Portola Valley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/crouse_alex.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/alexander-crouse/9740"
+    },
+    {
+     "num": "",
+     "name": "Axel de la Roche",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'6\"",
+     "hometown": "New York",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/delaroche_axel.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/axel-de-la-roche/9715"
+    },
+    {
+     "num": "",
+     "name": "Wyatt Dodge",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'4\"",
+     "hometown": "Westport, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/dodge_wyatt.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/wyatt-dodge/9742"
+    },
+    {
+     "num": "",
+     "name": "Noah Dorsey-Sorofman",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'5\"",
+     "hometown": "Marblehead, Mass.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/dorsey_noah.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/noah-dorsey-sorofman/9717"
+    },
+    {
+     "num": "",
+     "name": "Nate Ferrero",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/ferrero_nate.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/nate-ferrero/9744"
+    },
+    {
+     "num": "",
+     "name": "Michael Ferry",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'0\"",
+     "hometown": "Media, Penn.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/ferry_michael.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/michael-ferry/9719"
+    },
+    {
+     "num": "",
+     "name": "Ryan Glick",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'7\"",
+     "hometown": "Woodinville, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/glick_ryan.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/ryan-glick/9746"
+    },
+    {
+     "num": "",
+     "name": "Peter Godschalk",
+     "pos": "",
+     "year": "Gr.",
+     "ht": "6'4\"",
+     "hometown": "Bethesda, Md.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/godschalk_peter.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/peter-godschalk/9721"
+    },
+    {
+     "num": "",
+     "name": "Grant Gonter",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Vashon Island, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/gonter_grant.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/grant-gonter/9771"
+    },
+    {
+     "num": "",
+     "name": "Jack Halverson",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'1\"",
+     "hometown": "Dallas",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/halverson_jack.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jack-halverson/9748"
+    },
+    {
+     "num": "",
+     "name": "Ronan Jerstroem",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'0\"",
+     "hometown": "Glen Ridge, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/jerestrom_ronan.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/ronan-jerstroem/9723"
+    },
+    {
+     "num": "",
+     "name": "Jack Keavey",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Red Bank, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/keavey_jack.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jack-keavey/9770"
+    },
+    {
+     "num": "",
+     "name": "Jiro Kelly",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'5\"",
+     "hometown": "San Francisco",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/kelly_jiro.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jiro-kelly/9750"
+    },
+    {
+     "num": "",
+     "name": "Ben Knudson",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'0\"",
+     "hometown": "Winnetka, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/knudson_ben.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/ben-knudson/9751"
+    },
+    {
+     "num": "",
+     "name": "Damien Koski",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'4\"",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/kaski_damien.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/damien-koski/9726"
+    },
+    {
+     "num": "",
+     "name": "Jacob Lambert",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'1\"",
+     "hometown": "San Francisco, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/lambert_jacob.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jacob-lambert/9753"
+    },
+    {
+     "num": "",
+     "name": "Preston Lodolce",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Wilmette, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/lodolce_preston.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/preston-lodolce/9728"
+    },
+    {
+     "num": "",
+     "name": "Oliver Lund",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'2\"",
+     "hometown": "Lafayette, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/lund_oliver.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/oliver-lund/9729"
+    },
+    {
+     "num": "",
+     "name": "Thomas McKay",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'4\"",
+     "hometown": "Summit, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2025/3/5/mckay_thomasDJR10619.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/thomas-mckay/9730"
+    },
+    {
+     "num": "",
+     "name": "Lyon McLaughlin",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'2\"",
+     "hometown": "Pacifica, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/maclaughlin_lyon.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/lyon-mclaughlin/9769"
+    },
+    {
+     "num": "",
+     "name": "Jack McMahon",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Red Bank, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/mcmahan_jack.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jack-mcmahon/9768"
+    },
+    {
+     "num": "",
+     "name": "Hudson Meyer",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'4\"",
+     "hometown": "Sacramento, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/meyer_hudson.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/hudson-meyer/9757"
+    },
+    {
+     "num": "",
+     "name": "Liam Miller",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Downington, Penn.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/miller_liam.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/liam-miller/9758"
+    },
+    {
+     "num": "",
+     "name": "Daxton Morris",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'1\"",
+     "hometown": "Redwood City, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/morris_dax.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/daxton-morris/9759"
+    },
+    {
+     "num": "",
+     "name": "Sam Sackett",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'5\"",
+     "hometown": "Los Angeles",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/sackett_sam.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/sam-sackett/9760"
+    },
+    {
+     "num": "",
+     "name": "Ryan Sampoleo",
+     "pos": "",
+     "year": "So.",
+     "ht": "5'4\"",
+     "hometown": "Kirkland, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/sampoleo_ryan.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/ryan-sampoleo/9735"
+    },
+    {
+     "num": "",
+     "name": "Boone Schaefer",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'7\"",
+     "hometown": "Lessburg, Va.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/schaeffer_boone.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/boone-schaefer/9772"
+    },
+    {
+     "num": "",
+     "name": "Drew Schweitzer",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Littleton, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/schweizer_drew.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/drew-schweitzer/9773"
+    },
+    {
+     "num": "",
+     "name": "Kavir Singh",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'8\"",
+     "hometown": "Winnetka, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/singh_kavi.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/kavir-singh/9774"
+    },
+    {
+     "num": "",
+     "name": "Matthew Slear",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'0\"",
+     "hometown": "Dallas",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/slear_matthew.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/matthew-slear/9775"
+    },
+    {
+     "num": "",
+     "name": "Jordan Smith",
+     "pos": "",
+     "year": "So.",
+     "ht": "6'2\"",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/smith_jordan.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/jordan-smith/9736"
+    },
+    {
+     "num": "",
+     "name": "Stevan Trbovic",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "6'3\"",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/stevan_trbovic.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/stevan-trbovic/9763"
+    },
+    {
+     "num": "",
+     "name": "William Vieth",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "6'3\"",
+     "hometown": "Lincroft, N.J.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/vieth_will.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/william-vieth/9776"
+    },
+    {
+     "num": "",
+     "name": "John Young",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "6'2\"",
+     "hometown": "Flourtown, Penn.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/young_jack.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-rowing/roster/john-young/9738"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Jay Farwell",
+     "title": "Director of Rowing",
+     "photo": "https://santaclarabroncos.com/images/2025/3/5/farrel_jayDJR10704.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "John Kaitz",
+     "title": "Associate Head Coach",
+     "photo": ""
+    },
+    {
+     "name": "Michael Brewer",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/brewer_michael.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Riccardo Bouehi",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Riccardo-Bouehi-AJT_4504.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-rowing": {
+   "season": "2025-26",
+   "url": "https://santaclarabroncos.com/sports/womens-rowing/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Emma Adams",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Honolulu",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/adams_emma.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/emma-adams/9420"
+    },
+    {
+     "num": "",
+     "name": "Emory Allen",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Ipswich, Mass.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/allen_emory.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/emory-allen/9440"
+    },
+    {
+     "num": "",
+     "name": "Sera Baang",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Acton, Mass.",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/sera-baang/9779"
+    },
+    {
+     "num": "",
+     "name": "Karolina Barrier",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Denver",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/barrier_karolina.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/karolina-barrier/9421"
+    },
+    {
+     "num": "",
+     "name": "Vicky Cerny",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Littleton, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/cerny_victoria.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/vicky-cerny/9423"
+    },
+    {
+     "num": "",
+     "name": "Addie Chappelle",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Hockinson, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/chapelle_addie.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/addie-chappelle/9424"
+    },
+    {
+     "num": "",
+     "name": "Angie Ciampa",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Cambridge, Mass.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/ciampa_angelina.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/angie-ciampa/9441"
+    },
+    {
+     "num": "",
+     "name": "Emily Cole",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Armonk, N.Y.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/cole_emily.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/emily-cole/9425"
+    },
+    {
+     "num": "",
+     "name": "Daisy Darby",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/darby_daisy.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/daisy-darby/9426"
+    },
+    {
+     "num": "",
+     "name": "Carmen Duque-Diaz",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Southlake, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/duque-diaz_carmen.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/carmen-duque-diaz/9427"
+    },
+    {
+     "num": "",
+     "name": "Sophia Ehret",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Tacoma, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/ehret_sophia.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/sophia-ehret/9428"
+    },
+    {
+     "num": "",
+     "name": "McKenzi Fitzgerald",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Indianapolis",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/fitzgerald_mckenzi.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/mckenzi-fitzgerald/9429"
+    },
+    {
+     "num": "",
+     "name": "Emma Gunter",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/gunter_emma.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/emma-gunter/9442"
+    },
+    {
+     "num": "",
+     "name": "Aly Gushiken",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Honolulu",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/gusheken_aly.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/aly-gushiken/9431"
+    },
+    {
+     "num": "",
+     "name": "Bridget Hestad",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/hestad_bridget.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/bridget-hestad/9444"
+    },
+    {
+     "num": "",
+     "name": "Elise Kahler",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Winnetka, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/kahlco_elise.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/elise-kahler/9433"
+    },
+    {
+     "num": "",
+     "name": "Leah Kearns",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/leah-kearns/9780"
+    },
+    {
+     "num": "",
+     "name": "Arisbeth Lopez",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "American Canyon, Calif.",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/arisbeth-lopez/9778"
+    },
+    {
+     "num": "",
+     "name": "Dominique Matthews",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Yukon, Okla.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/matthews_dominique.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/dominique-matthews/9434"
+    },
+    {
+     "num": "",
+     "name": "Kyra May",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Bethesda, Md.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/may_kyra.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/kyra-may/9446"
+    },
+    {
+     "num": "",
+     "name": "Frankie Park",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Milwaukee, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/park_frankie.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/frankie-park/9671"
+    },
+    {
+     "num": "",
+     "name": "Eliana Schaer",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "New York",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/schaer_eliana.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/eliana-schaer/9435"
+    },
+    {
+     "num": "",
+     "name": "Ella Shafman",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Wethersfield, Conn.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/shafman_ella.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/ella-shafman/9436"
+    },
+    {
+     "num": "",
+     "name": "Dayanara Siddiqui",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "New York",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/siddiqui_daya.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/dayanara-siddiqui/9437"
+    },
+    {
+     "num": "",
+     "name": "Gabi Trbovic",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/trbovic_gabby.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/gabi-trbovic/9438"
+    },
+    {
+     "num": "",
+     "name": "Madi Williams",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Camas, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/2/12/williams_maddi.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/madi-williams/9439"
+    },
+    {
+     "num": "",
+     "name": "Kayly Yount",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "5'3\"",
+     "hometown": "Issaquah, Wash.",
+     "photo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-rowing/roster/kayly-yount/9447"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Jay Farwell",
+     "title": "Director of Rowing",
+     "photo": "https://santaclarabroncos.com/images/2025/3/5/farrel_jayDJR10704.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "John Kaitz",
+     "title": "Associate Head Coach",
+     "photo": ""
+    },
+    {
+     "name": "Michael Brewer",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/brewer_michael.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Riccardo Bouehi",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2026/9/23/Riccardo-Bouehi-AJT_4504.JPG?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "mens-cross-country": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Jude Alvarez",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "South Lake, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jude-Alvarez-AJT_7564.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jude-alvarez/9935"
+    },
+    {
+     "num": "",
+     "name": "Paul Beaven",
+     "pos": "",
+     "year": "5th",
+     "ht": "",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Paul-Beaven-AJT_7559.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/paul-beaven/9936"
+    },
+    {
+     "num": "",
+     "name": "McCoy Brooks",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Enumclaw, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/McCoy-Brooks-AJT_7572.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/mccoy-brooks/9937"
+    },
+    {
+     "num": "",
+     "name": "Antonio Camacho-Bucks",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Ellicott City, Md.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Antonio-Camacho-Bucks-AJT_7605.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/antonio-camacho-bucks/9938"
+    },
+    {
+     "num": "",
+     "name": "Will Carroll",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Tacoma, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Will-Carroll-AJT_7598.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/will-carroll/9939"
+    },
+    {
+     "num": "",
+     "name": "Evan Charkut",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Highlands Ranch, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Evan-Charkut-AJT_7608.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/evan-charkut/9940"
+    },
+    {
+     "num": "",
+     "name": "Austin Clough",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Boise, Idaho",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Austin-Clough-AJT_7545.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/austin-clough/9941"
+    },
+    {
+     "num": "",
+     "name": "Zafer Courcelle",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Zafer-Courcelle-AJT_7567.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/zafer-courcelle/9942"
+    },
+    {
+     "num": "",
+     "name": "James Estrella",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/James-Estrella-AJT_7594.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/james-estrella/9943"
+    },
+    {
+     "num": "",
+     "name": "Kaden Helder",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Boise, Idaho",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Kaden-Helder-AJT_7611.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/kaden-helder/9944"
+    },
+    {
+     "num": "",
+     "name": "Jack Kyle",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jack-Kyle-AJT_7570.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jack-kyle/9945"
+    },
+    {
+     "num": "",
+     "name": "Matthew Lawrence",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Mercer Island, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Matthew-Lawrence-AJT_7549.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/matthew-lawrence/9958"
+    },
+    {
+     "num": "",
+     "name": "Jackson Levasseur",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Elk Grove, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jackson-Levasseur-AJT_7561.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jackson-levasseur/9957"
+    },
+    {
+     "num": "",
+     "name": "Oliver Maldonado",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Houston",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Oliver-Maldonado-AJT_7557.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/oliver-maldonado/9946"
+    },
+    {
+     "num": "",
+     "name": "Jacob McManus",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Vancouver, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jacob-McManus-AJT_7585.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jacob-mcmanus/9947"
+    },
+    {
+     "num": "",
+     "name": "Eric Ortega-Gammill",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Reno, Nev.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Eric-Ortega-Gammill-AJT_7554.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/eric-ortega-gammill/9948"
+    },
+    {
+     "num": "",
+     "name": "Liam Papavasiliou",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Thousand Oaks, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Liam-Papavasiliou-AJT_7588.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/liam-papavasiliou/9949"
+    },
+    {
+     "num": "",
+     "name": "Ben Penzel",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Saratoga, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Ben-Penzel-AJT_7997.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/ben-penzel/9956"
+    },
+    {
+     "num": "",
+     "name": "Ben Pinkel",
+     "pos": "",
+     "year": "5th",
+     "ht": "",
+     "hometown": "Los Gatos, Calif.",
+     "photo": "",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/ben-pinkel/9950"
+    },
+    {
+     "num": "",
+     "name": "James Ponzio",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Hollister, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/James-Ponzio-AJT_7591.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/james-ponzio/9951"
+    },
+    {
+     "num": "",
+     "name": "Connor Rickey",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Issaquah, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Connor-Rickey-AJT_7551.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/connor-rickey/9952"
+    },
+    {
+     "num": "",
+     "name": "Kingston Shillito",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Kingston-Shillito-AJT_7579.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/kingston-shillito/9959"
+    },
+    {
+     "num": "",
+     "name": "Coen Strub",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Coen-Strub-AJT_7602.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/coen-strub/9953"
+    },
+    {
+     "num": "",
+     "name": "Jack Tobin",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Boise, Idaho",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jack-Tobin-AJT_7576.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jack-tobin/9954"
+    },
+    {
+     "num": "",
+     "name": "Jack Tolbert",
+     "pos": "",
+     "year": "5th",
+     "ht": "",
+     "hometown": "Denver",
+     "photo": "https://santaclarabroncos.com/images/2026/9/15/Jack-Tolbert-AJT_7582.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/mens-cross-country/roster/jack-tolbert/9955"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Felipe Montoro",
+     "title": "Head Men's Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/6/14/itkn01csbxkw9t8v.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Meron Simon",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/simon_meron.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Alex Miley",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/9/21/230915-miley_alexHS.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  },
+  "womens-cross-country": {
+   "season": "2026-27",
+   "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster",
+   "players": [
+    {
+     "num": "",
+     "name": "Milaina Almonte",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Edwards, Colo.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Milaina-Almonte-AJT_4742.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/milaina-almonte/9961"
+    },
+    {
+     "num": "",
+     "name": "Mariah Aragon",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Hardin, Mont.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Mariah-Aragon-AJT_4724.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/mariah-aragon/9962"
+    },
+    {
+     "num": "",
+     "name": "Sophie Bair",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Santa Fe, N.M.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Sophie-Bair-AJT_4775.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/sophie-bair/9980"
+    },
+    {
+     "num": "",
+     "name": "Sigrid Brakenhielm",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Lake Oswego, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Sigrid-Brakenhielm-AJT_4783.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/sigrid-brakenhielm/9963"
+    },
+    {
+     "num": "",
+     "name": "Andrea Correa",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Foster City, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Andrea-Correa-AJT_4778.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/andrea-correa/9983"
+    },
+    {
+     "num": "",
+     "name": "Isabella Cruz",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Austin, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Isabella-Cruz-AJT_4771.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/isabella-cruz/9984"
+    },
+    {
+     "num": "",
+     "name": "Emily Fitzgerald",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Piedmont, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Emily-Fitzgerald-AJT_4781.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/emily-fitzgerald/9965"
+    },
+    {
+     "num": "",
+     "name": "Emma Gardner",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Mill Valley, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Emma-Gardner-AJT_4790.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/emma-gardner/9966"
+    },
+    {
+     "num": "",
+     "name": "Isabella Gonzalez",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Crystal Lake, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Isabella-Gonzalez-AJT_4835.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/isabella-gonzalez/9967"
+    },
+    {
+     "num": "",
+     "name": "Heidi Green",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Santa Cruz, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Heidi-Green-AJT_4758.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/heidi-green/9968"
+    },
+    {
+     "num": "",
+     "name": "Sarah Guralnick",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Yarrow Point, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Sarah-Guralnick-AJT_4731.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/sarah-guralnick/9969"
+    },
+    {
+     "num": "",
+     "name": "Ramneek Kaur",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "San Jose, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Ramneek-Kaur-AJT_4787.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/ramneek-kaur/9970"
+    },
+    {
+     "num": "",
+     "name": "Kiera Kime",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Kiera-Kime-AJT_4762.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/kiera-kime/9971"
+    },
+    {
+     "num": "",
+     "name": "Julia Lentz",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Austin, Texas",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Julia-Lentz-AJT_4768.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/julia-lentz/9982"
+    },
+    {
+     "num": "",
+     "name": "Sydney Lim",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Lake Oswego, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Sydney-Lim-AJT_4752.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/sydney-lim/9972"
+    },
+    {
+     "num": "",
+     "name": "Mia Menendez",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Western Springs, Ill.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Mia-Menendez-AJT_4765.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/mia-menendez/9987"
+    },
+    {
+     "num": "",
+     "name": "Stella Newman",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "Burlingame, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Stella-Newman-AJT_5195.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/stella-newman/9985"
+    },
+    {
+     "num": "",
+     "name": "Audrey O'Neill",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Portland, Ore.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Audrey-O_Neill-AJT_4797.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/audrey-o-neill/9973"
+    },
+    {
+     "num": "",
+     "name": "Natalie O\u2019Dell",
+     "pos": "",
+     "year": "Fr.",
+     "ht": "",
+     "hometown": "San Diego",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Natalie-O_Dell-AJT_5191.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/natalie-o-dell/9981"
+    },
+    {
+     "num": "",
+     "name": "Julia Russo",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Phoenix",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Julia-Russo-AJT_4729.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/julia-russo/9974"
+    },
+    {
+     "num": "",
+     "name": "Olivia Schlieman",
+     "pos": "",
+     "year": "Sr.",
+     "ht": "",
+     "hometown": "Sacramento, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Olivia-Schlieman-AJT_4749.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/olivia-schlieman/9975"
+    },
+    {
+     "num": "",
+     "name": "Grace Winkler",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Seattle",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Grace-Winkler-AJT_4737.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/grace-winkler/9977"
+    },
+    {
+     "num": "",
+     "name": "Alyssa Wyatt",
+     "pos": "",
+     "year": "So.",
+     "ht": "",
+     "hometown": "Fontana, Calif.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Alyssa-Wyatt-AJT_4792.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/alyssa-wyatt/9978"
+    },
+    {
+     "num": "",
+     "name": "Aliyah Yearian",
+     "pos": "",
+     "year": "Jr.",
+     "ht": "",
+     "hometown": "Port Townsend, Wash.",
+     "photo": "https://santaclarabroncos.com/images/2026/10/8/Aliyah-Yearian-AJT_4735.jpg?width=240&height=300&mode=crop",
+     "url": "https://santaclarabroncos.com/sports/womens-cross-country/roster/aliyah-yearian/9979"
+    }
+   ],
+   "coaches": [
+    {
+     "name": "Pete Cushman",
+     "title": "Head Women's Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/pete_cushman.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Luisa Westley",
+     "title": "Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/westley_luisa.jpg?width=240&height=300&mode=crop"
+    },
+    {
+     "name": "Tony Coffey",
+     "title": "Volunteer Assistant Coach",
+     "photo": "https://santaclarabroncos.com/images/2023/5/11/coffey_tony.jpg?width=240&height=300&mode=crop"
+    }
+   ]
+  }
+ }
+}
