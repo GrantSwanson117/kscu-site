@@ -1,0 +1,13 @@
+/*
+  Site-level additions, picked up automatically by the theme (themes/kscu-theme/layouts/partials/head.html
+  bundles assets/css/custom.css after the main stylesheet when this file exists).
+
+  Phone header menu: with five links (Blog, Schedule, Sports, PSAs, About) the one-row menu ran out of room on
+  narrow phones and cut off "About". Tighten the gap between links only on small screens; desktop is unchanged.
+*/
+@media (max-width: 420px) {
+  #new-page-links li { margin-left: .55rem !important; }
+}
+@media (max-width: 340px) {
+  #new-page-links li { margin-left: .4rem !important; }
+}
