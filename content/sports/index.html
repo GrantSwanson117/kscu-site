@@ -553,6 +553,63 @@ showTableOfContents = false
   #kscu-sports .fx-banner .ico.fx-bat .bat, #kscu-sports .fx-banner .ico.fx-bat .bball, #kscu-sports .fx-banner .ico.fx-bat .bsh, #kscu-sports .fx-banner .ico.fx-bat .pop { animation-delay: 0s; animation-iteration-count: 1; animation-fill-mode: both; }
   @media (max-width: 600px) { #kscu-sports .fx-banner { gap: 10px; } #kscu-sports .fx-banner img { width: 38px; height: 38px; } #kscu-sports .fx-ico.goalnet { width: 62px; height: 38px; } #kscu-sports .fx-banner .ico.fx-bat { width: 42px; height: 42px; } }
 
+  /* ================= next game: split field + tale of the tape (colors arrive as --lc / --rc) ================= */
+  #kscu-sports .gc.nx { display: flex; flex-direction: column; }
+  #kscu-sports .nx-field { position: relative; isolation: isolate; }
+  /* both tints are full-size layers clipped to share one exact edge down the middle (same as NX_EDGE in the script) */
+  #kscu-sports .nx-field::before, #kscu-sports .nx-field::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--bg); }
+  #kscu-sports .nx-field::before { background: color-mix(in srgb, var(--lc) 11%, var(--bg)); clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); }
+  #kscu-sports .nx-field::after { background: color-mix(in srgb, var(--rc) 11%, var(--bg)); clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
+  #kscu-sports .nx-match { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px; padding: 30px 18px 18px; }
+  #kscu-sports .nx-match .gc-team { position: relative; z-index: 2; }
+  #kscu-sports .nx .gc-team .tlogo { width: 74px; height: 74px; filter: drop-shadow(3px 3px 0 rgba(17,24,39,.18)); }
+  #kscu-sports .nx .gc-name { font-size: 17px; }
+  #kscu-sports .nx-plate { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 18px 14px;
+    background: var(--paper); border: 1px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+  /* VS badge pinned on the plate's top edge (half above it), so the plate stays short */
+  #kscu-sports .nx-vs { position: absolute; top: 0; left: 50%; font: 700 20px/1 var(--mono); padding: 5px 10px 4px; border: 2px solid var(--ink); background: var(--bg);
+    box-shadow: 3px 3px 0 var(--ink); transform: translate(-50%, -55%) rotate(-6deg); animation: ks-nx-thump 3.4s ease-in-out infinite; }
+  @keyframes ks-nx-thump { 0%, 82%, 100% { transform: translate(-50%, -55%) rotate(-6deg) scale(1); } 88% { transform: translate(-50%, -55%) rotate(-6deg) scale(1.12); }
+    94% { transform: translate(-50%, -55%) rotate(-6deg) scale(.97); } }
+  #kscu-sports .nx-when { display: flex; border: 1px solid var(--ink); font: 700 13px/1 var(--mono); text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+  #kscu-sports .nx-when b { padding: 6px 9px; background: var(--ink); color: var(--bg); }
+  #kscu-sports .nx-when span { padding: 6px 9px; background: var(--paper); color: var(--bronco); }
+  #kscu-sports .nx-plate .cd { padding: 0; }
+  #kscu-sports .nx-seam { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+  #kscu-sports .nx-seam path { fill: none; stroke: var(--ink); stroke-width: 2; stroke-dasharray: 6 5; vector-effect: non-scaling-stroke; animation: ks-nx-crackle 1.2s linear infinite; }
+  @keyframes ks-nx-crackle { to { stroke-dashoffset: -22; } }
+  #kscu-sports .nx-tape { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 9px 12px; align-items: center;
+    width: 100%; max-width: 640px; margin: 0 auto; padding: 0 24px 18px; }
+  #kscu-sports .nx-lbl { font: 700 10px/1.5 var(--mono); letter-spacing: .08em; color: var(--muted); text-align: center; min-width: 70px; padding: 1px 8px; background: var(--paper); border-radius: 9px; }
+  #kscu-sports .nx-side { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  #kscu-sports .nx-side.l { justify-content: flex-end; }
+  #kscu-sports .nx-side b { font: 700 13px var(--mono); white-space: nowrap; }
+  #kscu-sports .nx-bar { flex: 1; max-width: 190px; height: 9px; border: 1px solid var(--ink); background: var(--paper); position: relative; overflow: hidden; }
+  #kscu-sports .nx-bar i { position: absolute; top: 0; bottom: 0; animation: ks-nx-grow 1.3s cubic-bezier(.2,.8,.3,1) both; }
+  #kscu-sports .nx-side.l .nx-bar i { right: 0; background: var(--lc); transform-origin: right; }
+  #kscu-sports .nx-side.r .nx-bar i { left: 0; background: var(--rc); transform-origin: left; }
+  @keyframes ks-nx-grow { from { transform: scaleX(0); } }
+  #kscu-sports .nx-form { display: inline-flex; gap: 2px; }
+  #kscu-sports .nx-form i { width: 16px; height: 16px; font: normal 700 10px/16px var(--mono); text-align: center; color: #fff; background: var(--muted); }
+  #kscu-sports .nx-form i.W { background: var(--win); } #kscu-sports .nx-form i.L { background: var(--red); } #kscu-sports .nx-form i.D, #kscu-sports .nx-form i.T { background: var(--brown); }
+  #kscu-sports .nx-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; padding: 9px 14px; border-top: 1px solid var(--ink); font: 12px var(--mono); }
+  #kscu-sports .nx-strip a { font-weight: 700; text-underline-offset: 3px; color: inherit; }
+  #kscu-sports .nx-last { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; }
+  #kscu-sports .nx-last small { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; color: var(--muted); }
+  #kscu-sports .nx-last img { width: 18px; height: 18px; object-fit: contain; margin: 0; }
+  #kscu-sports .nx-last em { font-style: normal; font-weight: 700; } #kscu-sports .nx-last em.W { color: var(--win); } #kscu-sports .nx-last em.L { color: var(--red); } #kscu-sports .nx-last em.D { color: var(--brown); }
+  #kscu-sports .nx-last:hover .nx-score { text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 640px) {
+    #kscu-sports .nx-match { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); row-gap: 14px; padding: 18px 12px 16px; }
+    #kscu-sports .nx-plate { grid-column: 1 / -1; order: 3; }
+    #kscu-sports .nx-match { padding-top: 18px; } #kscu-sports .nx-plate { margin-top: 8px; }
+    #kscu-sports .nx .gc-team .tlogo { width: 60px; height: 60px; }
+    #kscu-sports .nx-tape { padding: 0 12px 16px; gap: 7px 8px; }
+    #kscu-sports .nx-lbl { min-width: 54px; }
+    #kscu-sports .nx-last { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { #kscu-sports .nx-vs, #kscu-sports .nx-seam path, #kscu-sports .nx-bar i { animation: none; } }
+
   /* ================= rosters ================= */
   #kscu-sports .ro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; padding: 12px; }
   #kscu-sports .ro-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--paper); text-decoration: none; color: inherit;
@@ -1312,7 +1369,8 @@ function overviewHtml() {
       return `<div class="card featured${lv ? " live-card" : ""}">
         ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 10s</span></div>`
              : `<div class="tab">${fin ? "FINAL SCORE" : "NEXT BRONCOS GAME"}</div><div class="tab right">(ง •̀_•́)ง</div>`}
-        <div class="box gc wide">${lv ? liveCenter(lv) : fin ? finalCenter(fin, up[0]) : preCenter(up[0])}</div></div>`; })()}
+        ${!lv && !fin && hasOpponent(up[0]) ? `<div class="box gc nx">${nextCenter(up[0])}</div>`
+          : `<div class="box gc wide">${lv ? liveCenter(lv) : fin ? finalCenter(fin, up[0]) : preCenter(up[0])}</div>`}</div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
     <div class="card teams"><div class="tab">TEAMS</div><div class="tiles">${tiles}</div></div>`;
 }
@@ -1592,7 +1650,7 @@ const ESPN_WEB = { "Men's Basketball": "mens-college-basketball", "Women's Baske
 const ESPN_SB = { "Women's Soccer": { path: "soccer/usa.ncaa.w.1", id: "20312" }, "Men's Soccer": { path: "soccer/usa.ncaa.m.1", id: "5588" } };
 const espnPath = sport => ESPN_FEEDS[sport] || ESPN_SB[sport]?.path;
 const espnGameUrl = e => ESPN_SB[e.sport] ? `https://www.espn.com/soccer/match/_/gameId/${e.id}` : `https://www.espn.com/${ESPN_WEB[e.sport]}/game/_/gameId/${e.id}`;
-const espn = { events: {}, team: {}, summary: {}, news: {}, demo: /demo=live/.test(location.search) };
+const espn = { events: {}, team: {}, summary: {}, news: {}, conf: {}, demo: /demo=live/.test(location.search) };
 const getJSON = async url => { const r = await fetch(url, { cache: "no-cache", signal: AbortSignal.timeout(10000) }); if (!r.ok) throw new Error(r.status); return r.json(); };
 
 function normTeam(t) {
@@ -1623,6 +1681,9 @@ async function loadEspn() {
       const done = espn.events[sport].filter(e => e.completed);
       const info = { record: done[done.length - 1]?.us.record || "" };
       const entries = st?.standings?.entries || [];
+      // every WCC team's place, so the next-game box can compare both teams
+      espn.conf[sport] = Object.fromEntries(entries.map((x, i) => [String(x.team?.id),
+        { rank: +(x.stats.find(s => s.name === "playoffSeed")?.value ?? i + 1), of: entries.length }]));
       const me = entries.find(x => x.team?.id === espnTeamId(sport));
       if (me) {
         const stat = (key, by = "type") => me.stats.find(s => s[by] === key);
@@ -1716,11 +1777,15 @@ async function loadSummary(ev) {
     const recentPlays = sofar.slice(-5).reverse().map(toPlay);
     const scoringPlays = sofar.filter(p => p.scoringPlay).slice(-5).reverse().map(toPlay);
     const allScoring = sofar.filter(p => p.scoringPlay).map(toPlay); // whole game, oldest first (game pages)
-    const colors = {};
-    (competition?.competitors || []).forEach(c => { colors[String(c.team?.id ?? c.id)] = { c: c.team?.color, alt: c.team?.alternateColor }; });
+    const colors = {}, records = {};
+    (competition?.competitors || []).forEach(c => { const id = String(c.team?.id ?? c.id);
+      colors[id] = { c: c.team?.color, alt: c.team?.alternateColor };
+      const recs = Array.isArray(c.record) ? c.record : Array.isArray(c.records) ? c.records : [];
+      const tot = recs.find(r => r.type === "total") || recs[0];
+      if (tot) records[id] = tot.summary || tot.displayValue || ""; });
     const ls = sofar.filter(p => p.scoringPlay).pop();
     const lastScore = ls ? { tid: String(ls.team?.id ?? ""), value: +ls.scoreValue || 0, type: ls.type?.text || "", text: ls.text || "" } : null;
-    espn.summary[ev.id] = { colors, lastScore, lines, stats, leaders, last5, recentPlays, scoringPlays, allScoring, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
+    espn.summary[ev.id] = { colors, records, lastScore, lines, stats, leaders, last5, recentPlays, scoringPlays, allScoring, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
   } catch (e) { /* box score not available yet */ }
 }
 async function loadNews(sport) {
@@ -1737,7 +1802,7 @@ async function loadNews(sport) {
 const initials = n => { const w = String(n || "?").replace(/[^A-Za-z ]/g, "").split(/\s+/).filter(Boolean);
   return (w.length === 1 ? w[0].slice(0, 3) : w.map(x => x[0]).join("").slice(0, 3)).toUpperCase(); };
 const logo = (t, cls = "") => t?.logo
-  ? `<img class="tlogo ${cls}" src="${esc(t.logo)}" alt="${esc(t.name)} logo" loading="lazy">`
+  ? `<img class="tlogo ${cls}" src="${esc(t.logo)}" alt="${esc(t.name)} logo" loading="lazy" onerror="this.style.visibility='hidden'">`
   : `<span class="tlogo mono-logo ${cls}" aria-hidden="true">${esc(initials(t?.name))}</span>`;
 const teamBlock = t => `<div class="gc-team">${logo(t)}<div class="gc-name">${esc(shortNames && t.abbr ? t.abbr : t.name)}</div>${t.record ? `<div class="gc-rec">${esc(t.record)}</div>` : ""}</div>`;
 const SCU_TEAM = sport => ({ name: "Santa Clara", abbr: "SCU", logo: SCU_LOGO, record: espn.team[sport]?.record || "" });
@@ -1782,6 +1847,74 @@ function preCenter(g, compact = false) {
         <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a></div>
       ${compact ? "" : lastResult(resultsOf(games)[0])}
     </div>`;
+}
+
+
+// The two tints meet straight down the middle (50%), and the seam is a jagged line along that edge from top to bottom,
+// so it always runs through the VS badge (centered on the plate) and reads as one crack behind the plate and labels.
+const NX_EDGE = [50, 50];
+const NX_SEAM = (() => { const pts = [];
+  for (let i = 0; i <= 10; i++) { const y = i * 10, x = NX_EDGE[0] + (NX_EDGE[1] - NX_EDGE[0]) * (y / 100); pts.push(`${(x + (i % 2 ? 1.1 : -1.1)).toFixed(2)} ${y}`); }
+  return "M" + pts.join("L"); })();
+// ---------------------------------------------------------------------------
+// NEXT GAME (overview): split field + tale of the tape. The box splits down the middle, each half faintly tinted in
+// one team's ESPN color, with a crackling seam between them that runs behind the center plate (VS stamp, date and
+// time, countdown). Under that, head-to-head rows meet in the middle; a row only appears when BOTH teams have that
+// stat (so a non-conference opponent simply has no WCC row). Venue, TV, listen and the last result share one strip.
+// ---------------------------------------------------------------------------
+const ordinal = n => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
+const parseRec = r => { const m = /^(\d+)-(\d+)(?:-(\d+))?/.exec(r || ""); return m ? { w: +m[1], l: +m[2], t: +(m[3] || 0), text: m[0] } : null; };
+const hasOpponent = g => !!g && !g.meet && !isRound(g.opponent) && !isEvent(g);
+function nextCenter(g) {
+  const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g);
+  if (e && !espn.summary[e.id]) requestSummary(e); // opponent colors, record and last 5: one request, once
+  const sm = e ? espn.summary[e.id] || {} : {};
+  const us = e ? { ...e.us } : { ...SCU_TEAM(g.sport), id: "scu" };
+  const them = e ? { ...e.them } : { id: "opp", name: g.opponent, abbr: oppCode(g), logo: g.logo, record: "" };
+  const col = t => e ? teamColor(e, t).bg : t === us ? "#862633" : "#4b5563";
+  const [L, R] = v === "home" ? [them, us] : [us, them];
+
+  // ---- tale of the tape (left team / right team)
+  const bar = pct => `<span class="nx-bar"><i style="width:${Math.max(4, Math.round(pct * 100))}%"></i></span>`;
+  const row = (label, l, r) => `<div class="nx-side l">${l}</div><div class="nx-lbl">${label}</div><div class="nx-side r">${r}</div>`;
+  const rows = [];
+  const recOf = t => parseRec(sm.records?.[t.id] || t.record || (t === us ? espn.team[g.sport]?.record : ""));
+  const rl = recOf(L), rr = recOf(R);
+  if (rl && rr) {
+    const pct = x => (x.w + x.t / 2) / Math.max(1, x.w + x.l + x.t);
+    rows.push(row("SEASON", `<b>${rl.text}</b>${bar(pct(rl))}`, `${bar(pct(rr))}<b>${rr.text}</b>`));
+  }
+  const form = list => `<span class="nx-form">${list.map(x => `<i class="${esc(x.r)}" title="${esc(`${x.r} ${x.score || ""} vs ${x.opp || ""}`)}">${esc(x.r)}</i>`).join("")}</span>`;
+  const fl = sm.last5?.[L.id], fr = sm.last5?.[R.id];
+  if (fl?.length && fr?.length) rows.push(row("LAST 5", form(fl), form(fr)));
+  const conf = espn.conf[g.sport], cl = conf?.[L.id], cr = conf?.[R.id];
+  if (cl && cr) {
+    const up = x => (x.of - x.rank + 1) / x.of;
+    rows.push(row("WCC", `<b>${ordinal(cl.rank)}</b>${bar(up(cl))}`, `${bar(up(cr))}<b>${ordinal(cr.rank)}</b>`));
+  }
+  if (rl && rr) { L.record = ""; R.record = ""; } // the season row already shows the records
+
+  // ---- last result, inline in the strip
+  const last = resultsOf(games)[0];
+  const lastHtml = last && isFinal(last) ? (() => { const k = last.result[0], [a, b] = last.result.slice(2).split("-");
+    return `<a class="nx-last" href="${gameHref(last)}"><small>LAST RESULT</small><img src="${esc(SCU_LOGO)}" alt="">
+      <span class="nx-score">SCU ${esc(a)}–${esc(b)} ${esc(oppCode(last))}</span>${oppLogo(last) ? `<img src="${esc(oppLogo(last))}" alt="">` : ""}<em class="${k}">${k}</em></a>`; })() : "";
+  const d = when(g);
+  const venueLine = e?.venue ? `${e.venue}${e.city ? ", " + e.city : ""}` : g.location;
+  return `
+    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}</div>
+    <div class="nx-field" style="--lc:${col(L)};--rc:${col(R)}">
+      <div class="nx-match">${teamBlock(L)}
+        <div class="nx-plate"><span class="nx-vs">VS</span>
+          <div class="nx-when"><b>${esc(d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}</b><span>${esc(fmtTime(g))}</span></div>
+          ${countdown(d)}</div>
+        ${teamBlock(R)}
+      </div>
+      ${rows.length ? `<div class="nx-tape">${rows.join("")}</div>` : ""}
+      <svg class="nx-seam" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${NX_SEAM}"/></svg>
+    </div>
+    <div class="nx-strip"><span><b>VENUE</b> ${esc(venueLine)}</span>${e?.tv ? `<span class="tv">WATCH · ${esc(e.tv)}</span>` : ""}
+      <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a>${lastHtml}</div>`;
 }
 
 // ---------- final score hold ----------
@@ -1896,7 +2029,7 @@ const summaryAsked = new Set();
 function requestSummary(ev) {
   if (summaryAsked.has(ev.id)) return;
   summaryAsked.add(ev.id);
-  loadSummary(ev).then(() => { if (current?.sport === "game") rerenderQuiet(); });
+  loadSummary(ev).then(() => { if (current) rerenderQuiet(); });
 }
 const isScu = name => /Santa Clara/.test(name || "");
 function scuBox(g, us, them) {
