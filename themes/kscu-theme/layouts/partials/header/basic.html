@@ -202,7 +202,7 @@
                   style="
                   text-decoration-skip-ink: none;" href="{{ .URL }}" title="{{ .Title }}">{{
                   .Name
-                  | markdownify | emojify }}</a>
+                  | markdownify | emojify }}</a>{{ if .Params.new }}<span class="nav-new" aria-label="new">NEW</span>{{ end }}
               </li>
               {{ end }}
               {{ end }}
@@ -392,7 +392,7 @@
                 style="
                 text-decoration-skip-ink: none;" href="{{ .URL }}" title="{{ .Title }}">{{
                 .Name
-                | markdownify | emojify }}</a>
+                | markdownify | emojify }}</a>{{ if .Params.new }}<span class="nav-new" aria-label="new">NEW</span>{{ end }}
             </li>
             {{ end }}
             {{ end }}
@@ -714,6 +714,9 @@
 
 </script>
 <style>
+  /* small light-blue "NEW" badge next to a menu link (set new = true in the menu's params) */
+  .nav-new { display: inline-block; margin-left: 4px; padding: 1px 4px 0; vertical-align: 6px; font: 700 9px/1.25 "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: .06em; color: #0b3a5a; background: #bfe3ff; border: 1px solid #0b3a5a; border-radius: 3px; transform: rotate(-4deg); }
   .announcement-box {
     border: 2px solid rgb(100, 81, 77) !important; 
     padding: 15px !important;
@@ -735,9 +738,7 @@
   }
 </style>
 
-<div class="announcement-box">
-  Welcome to the Underground Sound!
-</div>
+<div class="announcement-box">{{ if eq .RelPermalink "/sports/" }}Welcome to the Underground Sound!{{ else }}Check out the new <a href="/sports/" style="text-decoration: underline; text-underline-offset: 3px;">KSCU Sports page</a>!{{ end }}</div>
 
 <!--
 <div class="announcement-box">

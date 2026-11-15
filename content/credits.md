@@ -44,6 +44,7 @@ lastmod: 2022-12-09
 - [Aidan Smith](https://aidansmith.me)
 - [Amy Vu](https://github.com/vuamy)
 - [Patrick Lee](https://github.com/PatrickStarLee)
+- Vir Thakkar (KSCU Sports page)
 
 #### Design by:
 - [Amy Vu](https://github.com/vuamy)

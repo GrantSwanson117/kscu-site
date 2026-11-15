@@ -25,7 +25,7 @@ Refresh the schedule (new games, times, results for non-ESPN sports):
 python3 prototypes/build_snapshot.py content/sports/scu-schedule.json
 ```
 
-Refresh the rosters (the GitHub Action does this on March 1 and September 1):
+Refresh the rosters (the GitHub Action does this on the 1st of every month):
 
 ```bash
 python3 prototypes/build_rosters.py content/sports/rosters.json
@@ -56,10 +56,24 @@ The refresh also reads each sport's schedule page on santaclarabroncos.com for o
 box score (or results PDF) and recap, and reads each new box score page once for the score by period and team stats.
 Those show on the game page you get by clicking a final score (`#/game/<SCU game id>`).
 
-Rosters come from each team's roster page and only change at the start of a season, so they refresh twice a year.
+Rosters come from each team's roster page and refresh on the 1st of every month (only committed when one changed).
 Player photos aren't stored in the repo; the page loads them from SCU's image server.
 
 ## Not done yet (needs changes outside the sports page)
 
 - A **"Sports" link in the site menu**: add an entry to `config/_default/menus.en.toml`.
 - **Automatic schedule refresh**: e.g. a `/sports/schedule` endpoint on the KSCU API server, or a scheduled build.
+
+## Keeping it running (no one needs to touch it)
+
+- **Health check** (`.github/workflows/sports-health.yml`, Mondays): `prototypes/check_health.py` checks that the hourly
+  refresh is succeeding, the schedule still has results, logos, box score links and short names, every team has a
+  roster, and ESPN, Mixlr and kscu.org/sports/ respond. If anything is wrong it opens one GitHub issue, "Sports page
+  needs attention", which emails the repo's watchers; it closes itself once the checks pass. Run it locally with
+  `python3 prototypes/check_health.py --dry-run`.
+- **Keepalive**: GitHub switches off scheduled jobs after 60 days without repo activity. The health check re-enables
+  all the sports jobs every week, and the hourly refresh re-enables the health check, so a quiet summer can't stop them.
+- **Dependabot** (`.github/dependabot.yml`) opens a pull request when the GitHub Actions these jobs use need updating.
+  Merge it when it shows up (about once a year).
+- The repo lives on a personal GitHub account; moving it to a KSCU organization keeps the data feed independent of
+  any one person.

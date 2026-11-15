@@ -543,9 +543,11 @@
   .ro-info .ro-meta { font-family: var(--cond); font-weight: 400; font-size: 12.5px; color: var(--muted); }
   .ro-coaches { border-top: 1px solid var(--ink); padding: 10px 0 12px; }
   .ro-coaches > div { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; padding: 0 12px; }
-  .ro-coach { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .ro-coach { display: flex; align-items: flex-start; gap: 10px; min-width: 0; } /* names line up even when a title wraps */
   .ro-cph { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--ink); flex: none; }
   .ro-cph::before { font-size: 13px; }
+  /* coach circles: fill the circle, aim a little above center and zoom in on the face (SCU's coach photos come in several shapes) */
+  .ro-cph img { object-fit: cover; object-position: 50% 28%; transform: scale(1.35); transform-origin: 50% 36%; } /* works for any photo shape */
   .ro-coach b { display: block; font-size: 14px; line-height: 1.2; }
   .ro-coach span { font-size: 12.5px; color: var(--muted); font-family: var(--cond); }
   .roster .tab.right a { color: inherit; }

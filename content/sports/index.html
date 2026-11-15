@@ -26,6 +26,9 @@ showTableOfContents = false
     #content-wrapper { max-width: 100% !important; width: 100%; }
     /* The sports page draws its own title (KSCU logo + SPORTS), so hide the theme's text title */
     #article-header h1 { display: none; }
+    /* pull the page up under the announcement box (the theme adds space for its own title, which we hide) */
+    #main-content { margin-top: 0 !important; padding-top: 0 !important; }
+    #kscu-sports h1.title { margin-top: 8px !important; }
 </style>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
@@ -568,9 +571,11 @@ showTableOfContents = false
   #kscu-sports .ro-info .ro-meta { font-family: var(--cond); font-weight: 400; font-size: 12.5px; color: var(--muted); }
   #kscu-sports .ro-coaches { border-top: 1px solid var(--ink); padding: 10px 0 12px; }
   #kscu-sports .ro-coaches > div { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; padding: 0 12px; }
-  #kscu-sports .ro-coach { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  #kscu-sports .ro-coach { display: flex; align-items: flex-start; gap: 10px; min-width: 0; } /* names line up even when a title wraps */
   #kscu-sports .ro-cph { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--ink); flex: none; }
   #kscu-sports .ro-cph::before { font-size: 13px; }
+  /* coach circles: fill the circle, aim a little above center and zoom in on the face (SCU's coach photos come in several shapes) */
+  #kscu-sports .ro-cph img { object-fit: cover; object-position: 50% 28%; transform: scale(1.35); transform-origin: 50% 36%; } /* works for any photo shape */
   #kscu-sports .ro-coach b { display: block; font-size: 14px; line-height: 1.2; }
   #kscu-sports .ro-coach span { font-size: 12.5px; color: var(--muted); font-family: var(--cond); }
   #kscu-sports .roster .tab.right a { color: inherit; }

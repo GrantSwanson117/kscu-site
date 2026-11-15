@@ -1,0 +1,49 @@
+# Weekly check that kscu.org/sports/ is still running by itself (see prototypes/check_health.py).
+#
+# If something's wrong (the hourly refresh stopped, SCU or ESPN changed their sites, a roster is empty, the page is
+# down), it opens one GitHub issue titled "Sports page needs attention" (GitHub emails the repo's watchers), adds to it
+# while the problem lasts, and closes it once everything passes again.
+#
+# Keepalive: GitHub switches off scheduled jobs in a repo with no activity for 60 days (a quiet summer could do it).
+# Each run re-enables all the sports jobs, including this one, which resets that clock. The hourly schedule
+# refresh re-enables this job weekly too, so they keep each other running.
+
+name: Sports health check
+
+on:
+  schedule:
+    - cron: "23 16 * * 1"   # Mondays, ~9am Pacific
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+concurrency:
+  group: sports-health
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Keep the scheduled sports jobs switched on
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for wf in refresh-sports-schedule.yml refresh-sports-rosters.yml sports-health.yml; do
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${wf}/enable" && echo "kept on: ${wf}" || echo "couldn't re-enable ${wf}"
+          done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the sports page and report problems
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 prototypes/check_health.py

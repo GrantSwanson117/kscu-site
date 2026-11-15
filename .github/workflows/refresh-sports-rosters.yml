@@ -1,16 +1,16 @@
 # Keeps the team rosters on kscu.org/sports/ current.
 #
-# Rosters only change at the start of a season, so this runs twice a year (March 1 for spring sports,
-# September 1 for fall and winter sports, after SCU posts the new rosters and headshots). It reads each
+# Rosters mostly change at the start of a season, but SCU often posts rosters and headshots late (basketball
+# in October, spring sports in February), so this runs on the 1st of every month. It reads each
 # team's roster page on santaclarabroncos.com and commits content/sports/rosters.json to main if anything
-# changed. Photos stay on SCU's image server. To refresh early (say, a roster went up late):
+# changed (so most months it does nothing and costs no site build). Photos stay on SCU's image server. To refresh now:
 # GitHub > Actions > "Refresh sports rosters" > Run workflow.
 
 name: Refresh sports rosters
 
 on:
   schedule:
-    - cron: "0 15 1 3,9 *"   # Mar 1 and Sep 1, 8am Pacific
+    - cron: "0 15 1 * *"   # the 1st of every month, 8am Pacific
   workflow_dispatch: {}
 
 permissions:

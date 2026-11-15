@@ -149,6 +149,9 @@ PAGE_OVERRIDES = """<style>
     #content-wrapper { max-width: 100% !important; width: 100%; }
     /* The sports page draws its own title (KSCU logo + SPORTS), so hide the theme's text title */
     #article-header h1 { display: none; }
+    /* pull the page up under the announcement box (the theme adds space for its own title, which we hide) */
+    #main-content { margin-top: 0 !important; padding-top: 0 !important; }
+    #kscu-sports h1.title { margin-top: 8px !important; }
 </style>
 """
 MARKUP = """<div id="kscu-sports" class="not-prose">

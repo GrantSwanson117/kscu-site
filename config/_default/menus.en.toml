@@ -30,6 +30,8 @@
   pageRef = "sports"
   url = '//sports/'
   weight = 22
+  [main.params]
+    new = true   # shows a small "NEW" badge in the header; remove this line when it's not new anymore
 
 [[main]]
   name = "PSAs"

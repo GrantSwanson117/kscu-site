@@ -27,6 +27,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # weekly: keep the health check job switched on (see sports-health.yml)
 
 concurrency:
   group: refresh-sports-schedule
@@ -64,6 +65,12 @@ jobs:
           git add scu-schedule.json
           git commit -m "Refresh sports schedule from Santa Clara Athletics"
           git push origin HEAD:sports-data
+
+      - name: Weekly - keep the health check switched on
+        if: github.event.schedule == '47 12 * * 1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/sports-health.yml/enable" || echo "couldn't re-enable the health check"
 
       - name: Weekly - refresh the fallback copy on main
         if: github.event.schedule == '47 12 * * 1' || inputs.update_main

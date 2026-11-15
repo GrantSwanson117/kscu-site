@@ -1,0 +1,8 @@
+# Keeps the GitHub Actions used by the sports jobs (checkout, setup-python) on supported versions.
+# GitHub retires old versions every year or two; when that's due, Dependabot opens a pull request that just needs merging.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
