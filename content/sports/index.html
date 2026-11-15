@@ -150,8 +150,8 @@ showTableOfContents = false
   #kscu-sports .live-strip.on { display: flex; }
 
   /* ================= THIS WEEK strip ================= */
-  #kscu-sports .week { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(170px, 1fr); overflow-x: auto; border: 1px solid var(--ink); }
-  #kscu-sports .wk { border-right: 1px dashed rgba(17,24,39,.4); padding: 10px 12px 12px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; min-height: 150px; }
+  #kscu-sports .week { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(170px, 1fr); overflow-x: auto; border: 2px solid var(--ink); }
+  #kscu-sports .wk { border-right: 2px solid var(--ink); padding: 10px 12px 12px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; min-height: 150px; }
   #kscu-sports .wk:last-child { border-right: 0; }
   #kscu-sports .wk:hover { background-color: rgba(0,0,0,.04); }
   /* light gender dots behind each game: pink = women's team, blue = men's (fainter than the sport page header) */
@@ -350,7 +350,8 @@ showTableOfContents = false
   #kscu-sports .gc-top.live .ico { --ink: #fff; --paper: var(--bronco); --accent: #ffd0cc; }
   #kscu-sports .live-pill { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-weight: 700; border: 1px solid #fff; padding: 1px 8px; font-size: 12px; }
   #kscu-sports .live-pill .dot { background: #fff; }
-  #kscu-sports .gc-match { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; padding: 14px 12px 6px; }
+  #kscu-sports .gc-match { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; gap: 10px; padding: 14px 12px 6px; }
+  #kscu-sports .gc-match > .gc-vs, #kscu-sports .gc-match > .gc-score { align-self: center; } /* team names line up even when only one side shows a record */
   #kscu-sports .gc-team { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; min-width: 0; }
   #kscu-sports .tlogo { width: 60px; height: 60px; object-fit: contain; display: block; flex: none; }
   #kscu-sports .mono-logo { display: flex; align-items: center; justify-content: center; border: 2px solid var(--ink); border-radius: 50%;
