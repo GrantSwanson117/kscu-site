@@ -169,7 +169,10 @@ showTableOfContents = false
   #kscu-sports .wk:hover .ico * { animation-play-state: running; }
   #kscu-sports .wk .day { font-family: var(--mono); font-size: 12px; font-weight: 700; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
   #kscu-sports .wk .ico { width: 44px; height: 44px; }
-  #kscu-sports .wk .opp { font-weight: 700; font-size: 15px; line-height: 1.2; }
+  #kscu-sports .wk .opp { font-weight: 700; font-size: 15px; line-height: 1.2; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+  #kscu-sports .wk .opp .tlogo.xs { margin: 0; }
+  #kscu-sports .lr-t { display: inline-flex; align-items: center; gap: 5px; }
+  #kscu-sports .lr-t .tlogo.xs { margin: 0; }
   #kscu-sports .wk.today .day { color: var(--red); }
 
   /* ================= sport tiles (overview) ================= */
@@ -223,8 +226,13 @@ showTableOfContents = false
   #kscu-sports .lchip b { font-family: var(--mono); font-size: 13px; flex: none; }
   #kscu-sports .lc-opp { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   #kscu-sports .lc-date { font-family: var(--cond); font-size: 12px; color: var(--muted); flex: none; }
-  #kscu-sports .tile-row .line.next { font-size: 13px; }
-  #kscu-sports .tile-row .line.next b { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--muted); margin-right: 6px; }
+  /* NEXT line: label, vs/at, logo, code, venue tag and date all centered on one line (wraps cleanly when narrow) */
+  #kscu-sports .tile-row .line.next { font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 3px 6px; }
+  #kscu-sports .tile-row .line.next b, #kscu-sports .pre { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+  #kscu-sports .tile-row .line.next .code { font-family: var(--sans); font-weight: 700; color: var(--ink); }
+  #kscu-sports .tile-row .line.next .vb { margin-left: 0; vertical-align: 0; }
+  #kscu-sports .tile-row .line.next .tlogo.xs { margin: 0; }
+  #kscu-sports .tile-row .line.next .nx-dt { font-family: var(--cond); font-weight: 400; color: var(--muted); }
   @media (max-width: 520px) { #kscu-sports .lchip { padding: 8px; min-height: 40px; } }
   #kscu-sports .tile-row .line span { font-weight: 400; color: var(--muted); font-family: var(--cond); }
 
@@ -543,6 +551,7 @@ showTableOfContents = false
   #kscu-sports .subcal-menu a, #kscu-sports .subcal-menu button { display: block; text-align: left; padding: 9px 12px; text-decoration: none; color: inherit; background: none;
     border: 0; border-bottom: 1px dashed rgba(17,24,39,.35); font: inherit; cursor: pointer; }
   #kscu-sports .subcal-menu a:hover, #kscu-sports .subcal-menu button:hover { background: var(--ink); color: var(--bg); }
+  #kscu-sports .subcal-url { margin: 8px 12px 0; padding: 5px 6px; border: 1px solid var(--ink); background: var(--bg); color: var(--ink); font: 11px var(--mono); }
   #kscu-sports .subcal-menu p { margin: 0; padding: 8px 12px 10px; font-family: var(--cond); font-weight: 400; font-size: 12px; color: var(--muted); }
   @media (max-width: 760px) { #kscu-sports .subcal-menu { left: 0; right: auto; } }
   #kscu-sports .cal-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
@@ -565,8 +574,12 @@ showTableOfContents = false
   #kscu-sports .cday .dn { font-family: var(--mono); font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
   #kscu-sports .cday.today .dn b { background: var(--red); color: #fff; padding: 0 5px; }
   #kscu-sports .cday.sel { background: var(--red-tint); box-shadow: inset 0 0 0 2px var(--ink); }
-  #kscu-sports .ev { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 1.2; min-width: 0; }
-  #kscu-sports .ev .ico { width: 18px; height: 18px; flex: none; }
+  #kscu-sports .ev { display: flex; align-items: center; gap: 3px; font-size: 12px; line-height: 1.2; min-width: 0;
+    border-left: 3px solid var(--g, var(--ink)); padding-left: 3px; } /* edge color = team: pink women's, blue men's */
+  #kscu-sports .ev.g-womens { --g: #e0679b; } #kscu-sports .ev.g-mens { --g: #3d74c4; }
+  #kscu-sports .cday { container-type: inline-size; }
+  #kscu-sports @container (max-width: 115px) { .ev-t .tlogo { display: none !important; } } /* narrow day squares: code only, so it isn't cut off */
+  #kscu-sports .ev .ico { width: 16px; height: 16px; flex: none; }
   #kscu-sports .ev .sign { width: 12px; height: 12px; border-width: 1px; box-shadow: none; border-radius: 2px; }
   #kscu-sports .ev-t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; font-weight: 600; }
   #kscu-sports .ev-t .tlogo.xs { margin: 0 3px 0 0; vertical-align: -4px; display: inline-block; width: 14px; height: 14px; }
@@ -1082,10 +1095,12 @@ const oppCode = g => {
 // tournaments and multi-team events (often not flagged as meets in SCU's feed) keep their full name, no logo
 const isEvent = g => g.meet || isRound(g.opponent) || /invitational|championship|dual|classic|tournament|intercollegiate|collegiate|regional|sectional|semifinal|round|cup|open\b| or /i.test(g.opponent);
 const oppLogo = g => (typeof espnFor === "function" ? espnFor(g)?.them?.logo : "") || g.logo || "";
+// tournament names trimmed for tight spots: "ITA Sectional Championships" -> "ITA", "Pacific Invitational" -> "Pacific"
+const eventShort = name => String(name).replace(/\b(hidden dual|invitational|intercollegiate|collegiate|championships?|regionals?|sectionals?|classic|tournament)\b/gi, "").replace(/\s+/g, " ").trim() || name;
 const oppShort = (g, at = "at") => { // at = "" leaves out vs/at (the calendar's H/A/N tag already says it)
-  if (isEvent(g)) return esc(g.opponent);
+  if (isEvent(g)) return esc(at || isRound(g.opponent) ? g.opponent : eventShort(g.opponent));
   const src = oppLogo(g);
-  return `${at ? (g.home || g.neutral ? "vs " : at + " ") : ""}${src ? `<img class="tlogo xs" src="${esc(src)}" alt="" loading="lazy">` : ""}<span title="${esc(g.opponent)}">${esc(oppCode(g))}</span>`;
+  return `${at ? `<span class="pre">${g.home || g.neutral ? "vs" : at}</span>` : ""}${src ? `<img class="tlogo xs" src="${esc(src)}" alt="" loading="lazy">` : ""}<span class="code" title="${esc(g.opponent)}">${esc(oppCode(g))}</span>`;
 };
 const venueOf = g => /Santa Clara/.test(g.location || "") ? "home" : g.neutral ? "neutral" : "away";
 const VENUE = { home: "HOME", away: "AWAY", neutral: "NEUTRAL" };
@@ -1235,7 +1250,7 @@ function overviewHtml() {
       const tg = teamGames(s.id, g), nx = upcomingOf(tg)[0], last = resultsOf(tg)[0];
       // nothing played and nothing scheduled (off-season): one quiet line instead of two empty states
       const body = !last && !nx ? `<div class="line next"><span>No games listed yet</span></div>`
-        : (last ? lastChip(last) : "") + `<div class="line next">${nx ? `<b>NEXT</b>${oppShort(nx)}${venueTag(nx)} <span>· ${md(nx)}</span>` : `<span>No upcoming games listed</span>`}</div>`;
+        : (last ? lastChip(last) : "") + `<div class="line next">${nx ? `<b>NEXT</b>${oppShort(nx)}${venueTag(nx)}<span class="nx-dt">${md(nx)}</span>` : `<span>No upcoming games listed</span>`}</div>`;
       return `<div class="tile-row">${sign(g)}<div class="tr-body">${body}</div></div>`;
     }).join("");
     return `<div class="tile"><div class="tile-head">${icon(s.id)}<h3><a class="tile-link" href="${href(s.id)}">${esc(s.name)}</a></h3></div>${rows}</div>`;
@@ -1362,10 +1377,12 @@ function calendarPage(ym) {
   cal.selected = sel;
 
   const evChip = g => {
-    const r = g.result ? (/^[WLD] \d/.test(g.result) ? g.result[0] : g.result.split(" of")[0]) : fmtTime(g).replace(":00", "").replace(" ", "").toLowerCase();
-    return `<span class="ev" title="${esc(g.sport + " · " + versus(g) + (g.result ? " · " + g.result : " · " + fmtTime(g)))}">
-      ${icon(sportOf(g.sport).id)}${sign(genderOf(g.sport))}${venueTag(g, true)}<span class="ev-t">${oppShort(g, "")}</span>
-      <span class="ev-r ${g.result ? g.result[0] : ""}">${esc(r)}</span></span>`;
+    // right side: W/L/D or placing for results, a short time ("7p", "6:30p") for upcoming games, nothing for all-day events
+    const r = g.result ? (/^[WLD] \d/.test(g.result) ? g.result[0] : g.result.split(" of")[0])
+      : g.allDay ? "" : fmtTime(g).replace(":00", "").replace(/ ?([AP])M/, (m, ap) => ap.toLowerCase());
+    return `<span class="ev g-${genderOf(g.sport)}" title="${esc(g.sport + " · " + versus(g) + (g.result ? " · " + g.result : " · " + fmtTime(g)))}">
+      ${icon(sportOf(g.sport).id)}${venueTag(g, true)}<span class="ev-t">${oppShort(g, "")}</span>
+      ${r ? `<span class="ev-r ${g.result ? g.result[0] : ""}">${esc(r)}</span>` : ""}</span>`;
   };
 
   let cells = "";
@@ -1394,6 +1411,7 @@ function calendarPage(ym) {
       <details class="subcal"><summary class="listen" style="margin:0">＋ SUBSCRIBE TO BRONCOS CALENDAR</summary>
         <div class="subcal-menu">${CAL_SUBSCRIBE.map(([label, url]) => `<a href="${esc(url)}" target="${url.startsWith("webcal:") ? "_self" : "_blank"}" rel="noopener">${esc(label)} ↗</a>`).join("")}
           <button type="button" data-copy-cal>Copy feed link</button>
+          <input class="subcal-url" type="text" readonly value="${CAL_FEED}" aria-label="Calendar feed link">
           <p>Every Bronco game, from SCU Athletics. Your calendar app keeps it up to date.</p></div></details>
     </div>
     <div class="cal-filters" role="group" aria-label="Filter calendar">
@@ -1404,6 +1422,7 @@ function calendarPage(ym) {
     </div>
     <div class="cal-grid">${["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map(d => `<div class="cal-dow">${d}</div>`).join("")}${cells}</div>
     <div class="cal-legend"><span><span class="vb home mini">H</span> home</span><span><span class="vb away mini">A</span> away</span><span><span class="vb neutral mini">N</span> neutral site</span>
+      <span><i style="border:0;border-left:3px solid #3d74c4;padding:0 0 0 3px">&nbsp;</i> men's</span><span><i style="border:0;border-left:3px solid #e0679b;padding:0 0 0 3px">&nbsp;</i> women's</span>
       <span style="color:var(--win)">W win</span><span style="color:var(--red)">L loss</span><span style="color:var(--brown)">D draw</span><span>2nd = finish place</span><span>Tap a day for details</span></div>
     <div class="card day-detail section-gap">
       <div class="tab">${selDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }).toUpperCase()}</div>
@@ -1463,8 +1482,17 @@ ROOT.addEventListener("click", e => {
   if (cg) { cal.gender = cg.dataset.calgender; rerenderCalendar(); return; }
   if (e.target.closest("[data-plays-filter]")) { playFilter.scoring = !playFilter.scoring; rerenderQuiet(); return; }
   const cp = e.target.closest("[data-copy-cal]");
-  if (cp) { const done = t => { cp.textContent = t; setTimeout(() => { cp.textContent = "Copy feed link"; }, 2500); };
-    (navigator.clipboard?.writeText(CAL_FEED) || Promise.reject()).then(() => done("Copied ✓ paste it into your calendar app"), () => done(CAL_FEED)); return; }
+  if (cp) {
+    const done = ok => { cp.textContent = ok ? "Copied ✓ Paste it into your calendar app" : "Couldn't copy: select the link below";
+      clearTimeout(cp._t); cp._t = setTimeout(() => { cp.textContent = "Copy feed link"; }, 3000);
+      if (!ok) cp.parentElement.querySelector(".subcal-url")?.select(); };
+    const legacy = () => { const t = document.createElement("textarea"); t.value = CAL_FEED; t.setAttribute("readonly", "");
+      t.style.cssText = "position:fixed;top:0;left:0;opacity:0"; document.body.appendChild(t); t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (err) { } t.remove(); return ok; };
+    Promise.resolve().then(() => navigator.clipboard.writeText(CAL_FEED)).then(() => done(true), () => done(legacy()));
+    return;
+  }
+  if (e.target.matches?.(".subcal-url")) { e.target.select(); return; }
   if (!e.target.closest(".subcal")) document.querySelectorAll(".subcal[open]").forEach(d => d.removeAttribute("open")); // click outside closes it
   const ro = e.target.closest("[data-roster-all]");
   if (ro) { const slug = ro.dataset.rosterAll; rosterOpen[slug] = !rosterOpen[slug]; swapRosters();
