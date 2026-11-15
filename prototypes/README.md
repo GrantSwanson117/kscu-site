@@ -37,7 +37,9 @@ Fetched live in the visitor's browser, free and with no API keys:
   logos, records, WCC standings, TV info, final scores, headlines.
 - **Mixlr** — whether KSCU Sports is broadcasting right now.
 
-Other sports (water polo, tennis, golf, XC/track) get results only when `scu-schedule.json` is refreshed.
+Other sports (water polo, tennis, golf, XC/track) get results only when `scu-schedule.json` is refreshed (every 6 hours).
+The refresh also reads each sport's schedule page on santaclarabroncos.com for opponent logos and links to each game's
+box score (or results PDF) and recap.
 
 ## Not done yet (needs changes outside the sports page)
 
