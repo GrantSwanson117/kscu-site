@@ -112,6 +112,7 @@ js = rename_ids_css(js)  # selectors like "#rail a" inside querySelector strings
 for old, new in IDS.items():  # ids written into HTML templates, e.g. <div id="onair">
     js = re.sub(r'\bid="' + re.escape(old) + r'"', f'id="{new}"', js)
 js = js.replace('const SCHEDULE_URL = "scu-schedule.json";', 'const SCHEDULE_URL = "/sports/scu-schedule.json";')
+js = js.replace('const ROSTER_URL = "rosters.json";', 'const ROSTER_URL = "/sports/rosters.json";')
 # clicks: only inside the sports section
 js = js.replace('document.addEventListener("click",', 'ROOT.addEventListener("click",')
 # the header dropdown isn't part of this page (the theme owns the header) — make its code a safe no-op
@@ -153,7 +154,7 @@ PAGE_OVERRIDES = """<style>
 MARKUP = """<div id="kscu-sports" class="not-prose">
   <!-- Sport sub-menu -->
   <nav class="rail" id="ks-rail" aria-label="Sports"></nav>
-  <div class="score-tools">
+  <div class="score-tools" hidden>
     <button type="button" id="ks-refresh-scores" disabled>↻ Refresh scores</button>
     <span id="ks-refresh-status" role="status"></span>
   </div>
