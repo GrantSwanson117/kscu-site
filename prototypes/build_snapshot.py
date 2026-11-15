@@ -12,7 +12,7 @@ Safe to run on a schedule (the daily GitHub Action does):
     script exits with an error.
   - If nothing changed, the file isn't rewritten (so no empty daily commits).
 """
-import json, re, sys, urllib.request
+import json, re, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -57,10 +57,65 @@ def parse(raw):
         result = next((d.strip() for d in desc[1:3] if re.match(r"^([WLTD] \d|\d+(st|nd|rd|th) of)", d.strip())), None)
         if result and result.startswith("T "):  # show ties as draws
             result = "D" + result[1:]
-        games.append({"sport": sport, "home": ha.startswith("vs") and "Santa Clara" in loc,
+        uid = re.search(r"vcal_(\d+)", f.get("UID", ("", ""))[1])  # SCU's game id, also used on its schedule pages
+        games.append({"id": uid.group(1) if uid else None, "sport": sport, "home": ha.startswith("vs") and "Santa Clara" in loc,
                       "neutral": ha.startswith("vs") and "Santa Clara" not in loc, "meet": ha == "event",
                       "opponent": opp, "start": dt, "allDay": all_day, "location": loc, "result": result})
     return games
+
+# ---------------------------------------------------------------- per-game details from SCU's schedule pages
+# Each sport's schedule page (santaclarabroncos.com/sports/<slug>/schedule) lists every game with the same id as
+# the calendar feed, plus the opponent's logo, the final score, and links to the box score (or results PDF) and
+# recap. That's the best source for sports ESPN doesn't cover (water polo, tennis, golf, rowing, beach, XC/track).
+# It's a nice-to-have: if a page can't be read, those games just keep what the calendar gave us.
+SITE = "https://santaclarabroncos.com"
+
+def slug(sport):
+    s = sport.replace("Cross Country/Track", "Cross Country").lower().replace("'", "")
+    return re.sub(r"[^a-z]+", "-", s).strip("-")  # "Men's Water Polo" -> "mens-water-polo"
+
+def details_from_page(html):
+    out = {}
+    starts = [m.start() for m in re.finditer(r'<li class="sidearm-schedule-game ', html)]
+    for a, b in zip(starts, starts[1:] + [len(html)]):
+        seg = html[a:b]
+        gid = re.search(r'data-game-id="(\d+)"', seg)
+        if not gid:
+            continue
+        d = {}
+        logo = re.search(r'data-src="(/images/logos/[^"?]+)', seg)
+        if logo:
+            d["logo"] = SITE + urllib.parse.quote(logo.group(1)) + "?width=80&height=80&mode=max"
+        for href, text in re.findall(r'<a[^>]*href="([^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*([^<]{2,40})', seg):
+            text, href = text.strip().lower(), href.replace("&amp;", "&")
+            url = href if href.startswith("http") else SITE + href
+            if text in ("box score", "results", "final results", "stats") and "boxscore" not in d:
+                d["boxscore"] = url
+            elif text == "recap" and "recap" not in d:
+                d["recap"] = url
+        res = re.search(r'sidearm-schedule-game-result[^>]*>(.*?)</div>', seg, re.S)
+        if res:
+            m = re.match(r"([WLT]),\s*(\d+-\d+)", re.sub(r"<[^>]+>|\s+", " ", res.group(1)).strip())
+            if m:
+                d["score"] = ("D" if m.group(1) == "T" else m.group(1)) + " " + m.group(2)
+        out.setdefault(gid.group(1), d)
+    return out
+
+def add_details(games):
+    for sport in sorted({g["sport"] for g in games}):
+        try:
+            req = urllib.request.Request(f"{SITE}/sports/{slug(sport)}/schedule", headers={"User-Agent": "Mozilla/5.0 (KSCU sports page refresh)"})
+            info = details_from_page(urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace"))
+        except Exception as e:
+            print(f"  (skipped {sport} details: {e})")
+            continue
+        for g in games:
+            d = info.get(g.get("id") or "", {}) if g["sport"] == sport else {}
+            for k in ("logo", "boxscore", "recap"):
+                if d.get(k):
+                    g[k] = d[k]
+            if d.get("score") and not g.get("result"):
+                g["result"] = d["score"]
 
 def main(out_path):
     out = Path(out_path)
@@ -75,6 +130,7 @@ def main(out_path):
     window_start = min(g["start"][:10] for g in new)
     kept = [g for g in old.get("games", []) if g["start"][:10] < window_start]  # history SCU's feed no longer shows
     games = sorted(kept + new, key=lambda g: (g["start"], g["sport"], g["opponent"]))
+    add_details(games)
 
     if games == old.get("games"):
         print(f"no changes ({len(games)} games)")

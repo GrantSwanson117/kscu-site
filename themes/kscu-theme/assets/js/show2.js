@@ -204,6 +204,28 @@ if (!data) {
     }
 }
 
+// "KSCU Sports is live now on Mixlr!" banner.
+// The KSCU API's sportsLiveUpdate flag can stay "true" after a broadcast ends, which left the banner up
+// when KSCU Sports was off the air. So we ask Mixlr itself (the same public check the Sports page uses)
+// and keep re-checking every minute while either source says live, so the banner goes away when they sign off.
+const sportsBanner = { apiSaysLive: false, timer: null };
+async function updateSportsBanner() {
+    const banner = document.getElementById("sports-row-div");
+    if (!banner) return;
+    let live = sportsBanner.apiSaysLive;
+    try {
+        const res = await fetch("https://api.mixlr.com/users/kscusports");
+        if (res.ok) live = !!(await res.json()).is_live;
+    } catch (error) {
+        // Mixlr unreachable: fall back to what the KSCU API said
+    }
+    banner.style.display = live ? "block" : "none";
+    clearTimeout(sportsBanner.timer);
+    if (live || sportsBanner.apiSaysLive) {
+        sportsBanner.timer = setTimeout(updateSportsBanner, 60000);
+    }
+}
+
 async function openSSE() {
     let eventSource = new EventSource(`https://kscuapi.org/stream`);
 
@@ -214,9 +236,8 @@ async function openSSE() {
     });
 
     eventSource.addEventListener("sportsLiveUpdate", (e) => {
-        const isLive = e.data === "true";
-        const banner = document.getElementById("sports-row-div");
-        banner.style.display = isLive ? "block" : "none";
+        sportsBanner.apiSaysLive = e.data === "true";
+        updateSportsBanner();
     });
 
     eventSource.addEventListener("viewsUpdate", (event) => {

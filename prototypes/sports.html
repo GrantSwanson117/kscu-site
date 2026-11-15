@@ -300,6 +300,8 @@
   .gc-score b { font-family: var(--mono); font-size: 42px; line-height: 1; font-variant-numeric: tabular-nums; }
   .gc-score span { margin: 0 6px; font-size: 28px; }
   .gc-clock { font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--bronco); margin-top: 6px; }
+  .gc-clock.W { color: var(--win); } .gc-clock.L { color: var(--red); } .gc-clock.D { color: var(--brown); }
+  .final-pill { font-family: var(--mono); font-size: 12px; font-weight: 700; border: 1px solid var(--ink); padding: 2px 8px; background: var(--paper); }
   .ls { width: calc(100% - 24px); margin: 6px 12px 12px; border-collapse: collapse; font-family: var(--mono); font-size: 12px; }
   .ls th, .ls td { border: 1px solid var(--ink); padding: 3px 6px; text-align: center; }
   .ls th { background: var(--ink); color: var(--bg); font-size: 10px; letter-spacing: .05em; }
@@ -333,6 +335,20 @@
   .l5-row .form { margin: 0; }
   .gc-play { padding: 8px 12px; border-top: 1px solid var(--ink); font-size: 13px; }
   .gc-play b { font-family: var(--mono); font-size: 11px; color: var(--bronco); margin-right: 8px; }
+  .gc-plays { border-top: 1px solid var(--ink); padding: 8px 12px 10px; font-size: 13px; }
+  .pl-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 10px; margin-bottom: 4px; }
+  .pl-head b { font-family: var(--mono); font-size: 11px; color: var(--bronco); }
+  .pl-head button { font: 700 11px var(--mono); border: 1px solid var(--ink); background: var(--paper); color: var(--ink); padding: 3px 8px; cursor: pointer; }
+  .pl-head button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .gc-plays ol { list-style: none; margin: 0; padding: 0; }
+  .gc-plays li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 10px; padding: 5px 0; border-top: 1px dashed rgba(17,24,39,.3); }
+  .gc-plays li:first-child { border-top: 0; }
+  .pl-when { grid-column: 1 / -1; font-family: var(--mono); font-size: 10px; color: var(--muted); }
+  .pl-text { display: flex; align-items: flex-start; gap: 6px; min-width: 0; overflow-wrap: anywhere; }
+  .pl-text .tlogo { flex: none; margin-top: 1px; }
+  .pl-score { font-family: var(--mono); font-size: 12px; font-weight: 700; white-space: nowrap; align-self: start; }
+  .gc-plays li.sc .pl-text { font-weight: 700; }
+  .pl-none { color: var(--muted); }
   .hero-next.gc .gc-match { padding-top: 10px; }
   .hero-next.gc .tlogo:not(.sm):not(.xs) { width: 46px; height: 46px; }
   .hero-next.gc .cd-cell { min-width: 50px; }
@@ -894,14 +910,18 @@ function record(results) {
 function gameRow(g, withSport) {
   const d = when(g);
   const e = typeof espnFor === "function" ? espnFor(g) : null;
-  const extra = e ? (g.result && e.completed
+  const played = g.result || d.getTime() < Date.now() - 3 * 3600e3;
+  const scuLink = g.boxscore ? [g.boxscore, "BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null; // from SCU's schedule page
+  const extra = e && g.result && e.completed
       ? `<a class="rowlink" href="${espnGameUrl(e)}" target="_blank" rel="noopener">${ESPN_SB[g.sport] ? "MATCH" : "BOX SCORE"} ↗</a>`
-      : e.tv ? `<span class="tv">${esc(e.tv)}</span>` : "") : "";
+    : played && scuLink ? `<a class="rowlink" href="${esc(scuLink[0])}" target="_blank" rel="noopener">${scuLink[1]} ↗</a>`
+    : e?.tv ? `<span class="tv">${esc(e.tv)}</span>` : "";
+  const vs = versus(g), pre = vs.match(/^(vs|at) /)?.[0] || "", oppLogo = e?.them?.logo || g.logo;
   const res = (g.result ? `<div class="res ${g.result[0]}">${esc(g.result)}` : `<div class="res">${esc(fmtTime(g))}`) + `${extra ? `<div>${extra}</div>` : ""}</div>`;
   return `<div class="game">
     <div class="cal"><div class="m">${d.toLocaleDateString("en-US", { month: "short" }).toUpperCase()}</div>
       <div class="d">${d.getDate()}</div><div class="w">${d.toLocaleDateString("en-US", { weekday: "short" })}</div></div>
-    <div><div class="opp">${e?.them?.logo ? `<img class="tlogo xs" src="${esc(e.them.logo)}" alt="" loading="lazy">` : ""}${esc(versus(g))}${venueTag(g)}</div>
+    <div><div class="opp">${esc(pre)}${oppLogo ? `<img class="tlogo xs" src="${esc(oppLogo)}" alt="" loading="lazy">` : ""}${esc(vs.slice(pre.length))}${venueTag(g)}</div>
       <div class="meta">${withSport ? esc(g.sport) + " · " : ""}${esc(g.location)}</div></div>
     ${res}</div>`;
 }
@@ -967,11 +987,11 @@ function overview() {
 
   return `
     ${onAirBar()}
-    ${(() => { const lv = liveEvents()[0];
+    ${(() => { const lv = liveEvents()[0], fin = lv ? null : heldFinal(games, up);
       return `<div class="card featured${lv ? " live-card" : ""}">
-        ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div>`
-             : `<div class="tab">NEXT BRONCOS GAME</div><div class="tab right">(ง •̀_•́)ง</div>`}
-        <div class="box gc wide">${lv ? liveCenter(lv) : preCenter(up[0])}</div></div>`; })()}
+        ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 15s</span></div>`
+             : `<div class="tab">${fin ? "FINAL SCORE" : "NEXT BRONCOS GAME"}</div><div class="tab right">(ง •̀_•́)ง</div>`}
+        <div class="box gc wide">${lv ? liveCenter(lv) : fin ? finalCenter(fin, up[0]) : preCenter(up[0])}</div></div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
     <div class="tiles">${tiles}</div>`;
 }
@@ -1003,7 +1023,7 @@ function sportPage(sportId, gender) {
   shown = {};
 
   return `
-    ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
+    ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 15s</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
     <section class="hero run">
       <div class="hero-ico">${icon(sportId)}</div>
       <div class="hero-main">
@@ -1014,14 +1034,43 @@ function sportPage(sportId, gender) {
         ${res.length ? `<div style="margin-top:14px"><div class="meta" style="font-weight:700;letter-spacing:.05em">RECENT FORM</div>${formBlocks(res, 10, true)}</div>` : ""}
         <a class="listen" href="https://mixlr.com/kscusports" target="_blank" rel="noopener"><span class="dot ${liveNow ? "pulse" : ""}"></span>${liveNow ? "LIVE NOW · " + esc(liveNow) : "KSCU PLAY-BY-PLAY ON MIXLR ↗"}</a>
       </div>
-      <div class="hero-next gc"><div class="lbl"><span>NEXT UP</span><span>(ง •̀_•́)ง</span></div>${preCenter(up[0], true)}</div>
+      ${(() => { const fin = liveEv ? null : heldFinal(tg, up);
+        return `<div class="hero-next gc"><div class="lbl"><span>${fin ? "FINAL" : "NEXT UP"}</span><span>(ง •̀_•́)ง</span></div>${fin ? finalCenter(fin, up[0]) : preCenter(up[0], true)}</div>`; })()}
     </section>
     <div class="grid2 ${ESPN_FEEDS[sportName] ? "" : "section-gap"}" style="margin-top:0">
       <div class="card"><div class="tab">UPCOMING</div><div class="tab right mono">${up.length}</div><div class="box" id="upcoming">${gameList("upcoming", up, "No games on the calendar yet.")}</div></div>
       <div class="card"><div class="tab">RESULTS</div><div class="tab right mono">${res.length}</div><div class="box" id="results">${gameList("results", res, "No results yet this season.")}</div></div>
     </div>
     ${ESPN_FEEDS[sportName] ? `<div class="card section-gap" style="margin-top:28px"><div class="tab">HEADLINES</div><div class="tab right mono">via ESPN</div>
-      <div class="box news" id="news" data-sport="${esc(sportName)}">${newsList(sportName)}</div></div>` : ""}`;
+      <div class="box news" id="news" data-sport="${esc(sportName)}">${newsList(sportName)}</div></div>`
+      : officialLinks(sportId, gender)}`;
+}
+
+// Sports ESPN doesn't cover. SCU Athletics posts their live stats on StatBroadcast and results on its own site
+// (box scores, PDFs, regatta pages). None of those can be embedded or read by this page (they block framing and
+// cross-site requests), so we link straight to the official pages instead.
+const SCU_SITE = "https://santaclarabroncos.com/sports";
+const SCU_LIVE_STATS = "https://www.statbroadcast.com/events/statmonitr.php?gid=sacl";
+const OFFICIAL = {
+  "water-polo":       "Box score for every match",
+  "tennis":           "Match-by-match results",
+  "golf":             "Tournament leaderboards (PDF)",
+  "rowing":           "Regatta results",
+  "beach-volleyball": "Box score for every match (PDF)",
+  "xc":               "Meet results (PDF)",
+};
+function officialLinks(sportId, gender) {
+  if (!OFFICIAL[sportId]) return "";
+  const slug = `${gender}-${sportId === "xc" ? "cross-country" : sportId}`;
+  const g = gender === "womens" ? "f" : "m";
+  const link = (url, title, desc) => `<a href="${url}" target="_blank" rel="noopener"><h4>${esc(title)} ↗</h4><p>${esc(desc)}</p></a>`;
+  return `<div class="card section-gap" style="margin-top:28px"><div class="tab">OFFICIAL RESULTS &amp; LIVE STATS</div><div class="tab right mono">via SCU Athletics</div>
+    <div class="box news">
+      ${link(`${SCU_SITE}/${slug}/schedule`, "Schedule & results", OFFICIAL[sportId] + ", on santaclarabroncos.com")}
+      ${link(SCU_LIVE_STATS, "Live stats", "StatBroadcast, during games SCU tracks live")}
+      ${sportId === "xc" ? link(`https://www.tfrrs.org/teams/xc/CA_college_${g}_Santa_Clara.html`, "Cross country results", "Every meet on TFRRS")
+        + link(`https://www.tfrrs.org/teams/tf/CA_college_${g}_Santa_Clara.html`, "Track & field results", "Every meet on TFRRS") : ""}
+    </div></div>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -1143,6 +1192,7 @@ document.addEventListener("click", e => {
   if (cs) { cal.sport = cs.dataset.calsport; rerenderCalendar(); return; }
   const cg = e.target.closest("[data-calgender]");
   if (cg) { cal.gender = cg.dataset.calgender; rerenderCalendar(); return; }
+  if (e.target.closest("[data-plays-filter]")) { playFilter.scoring = !playFilter.scoring; rerenderQuiet(); return; }
   const more = e.target.closest("[data-more]");
   if (more) {
     const id = more.dataset.more; shown[id] += PAGE;
@@ -1297,7 +1347,15 @@ async function loadSummary(ev) {
     const last5 = {};
     (d.lastFiveGames || []).forEach(t => last5[String(t.team?.id)] = (t.events || []).slice(-5).map(x =>
       ({ r: x.gameResult === "T" ? "D" : x.gameResult, score: x.score, opp: x.opponent?.abbreviation, date: x.gameDate })));
-    espn.summary[ev.id] = { lines, stats, leaders, last5, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
+    // most recent plays, newest first. ESPN sends play-by-play for basketball, baseball and softball
+    // (not volleyball or soccer), so these lists are empty for those sports and the box is skipped.
+    const sofar = plays.slice(0, pi + 1).filter(p => p.text);
+    const toPlay = p => ({ text: p.text, scoring: !!p.scoringPlay, tid: String(p.team?.id ?? ""), away: p.awayScore, home: p.homeScore,
+      when: [[p.period?.type === "Top" || p.period?.type === "Bottom" ? p.period.type : "", p.period?.displayValue].filter(Boolean).join(" "),
+             p.clock?.displayValue].filter(Boolean).join(" · ") });
+    const recentPlays = sofar.slice(-5).reverse().map(toPlay);
+    const scoringPlays = sofar.filter(p => p.scoringPlay).slice(-5).reverse().map(toPlay);
+    espn.summary[ev.id] = { lines, stats, leaders, last5, recentPlays, scoringPlays, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
   } catch (e) { /* box score not available yet */ }
 }
 async function loadNews(sport) {
@@ -1341,7 +1399,7 @@ function preCenter(g, compact = false) {
   if (!g) return `<div class="empty">Nothing on the calendar yet.</div>`;
   const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g);
   const us = e ? { ...e.us, record: e.us.record || espn.team[g.sport]?.record } : SCU_TEAM(g.sport);
-  const them = e ? e.them : (g.meet || isRound(g.opponent) ? null : { name: g.opponent });
+  const them = e ? e.them : (g.meet || isRound(g.opponent) ? null : { name: g.opponent, logo: g.logo });
   // scoreboard convention: away team on the left, home team on the right; neutral = Broncos first
   const [left, right, mid] = v === "home" ? [them, us, "@"] : v === "neutral" ? [us, them, "VS"] : [us, them, "@"];
   const venueLine = e?.venue ? `${e.venue}${e.city ? ", " + e.city : ""}` : g.location;
@@ -1358,6 +1416,61 @@ function preCenter(g, compact = false) {
         <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a></div>
       ${compact ? "" : lastResult(resultsOf(games)[0])}
     </div>`;
+}
+
+// ---------- final score hold ----------
+// After a game ends, the next-game box keeps showing its final score for a while (people check the site for the
+// final), then switches to the next game's countdown. The hold is half the time until the next game, capped at
+// 3 hours: with 6+ hours until the next game it holds the full 3 hours, a doubleheader 2 hours later gets 1 hour.
+// Neither ESPN nor SCU gives an end time, so "ended" is the start time plus a typical game length for the sport.
+const GAME_HOURS = [["Beach Volleyball", 2], ["Basketball", 2], ["Soccer", 2], ["Volleyball", 2], ["Water Polo", 1.5],
+  ["Baseball", 3], ["Softball", 2.5], ["Tennis", 3]];
+const HOLD_MAX = 3 * 3600e3;
+const estEnd = g => when(g).getTime() + (GAME_HOURS.find(([k]) => g.sport.includes(k))?.[1] ?? 2.5) * 3600e3;
+function heldFinal(arr, up) {
+  const now = Date.now();
+  const last = arr.filter(g => !g.allDay && !g.meet && /^[WLD] \d+-\d+/.test(g.result || "") && when(g).getTime() <= now)
+    .sort((a, b) => when(b) - when(a))[0];
+  if (!last) return null;
+  const ended = estEnd(last), next = up.find(g => when(g).getTime() > when(last).getTime());
+  const hold = Math.min(HOLD_MAX, next ? Math.max(0, when(next) - ended) / 2 : HOLD_MAX);
+  return now < ended + hold ? last : null;
+}
+function finalCenter(g, next) {
+  const e = espnFor(g), s = sportOf(g.sport), k = g.result[0];
+  const [ours, theirs] = g.result.slice(2).split("-"); // results are written Broncos-first, e.g. "L 16-17"
+  const us = e ? { ...e.us, record: e.us.record || espn.team[g.sport]?.record } : SCU_TEAM(g.sport);
+  const them = e ? e.them : { name: g.opponent, logo: g.logo };
+  // same layout as the next-game box: away team left, home team right
+  const [L, R] = venueOf(g) === "home" ? [[them, theirs], [us, ours]] : [[us, ours], [them, theirs]];
+  const link = e?.completed ? [espnGameUrl(e), ESPN_SB[g.sport] ? "MATCH CENTER" : "BOX SCORE"]
+    : g.boxscore ? [g.boxscore, "BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
+  return `
+    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b>${sign(genderOf(g.sport))}<span class="sp"></span><span class="final-pill">FINAL</span></div>
+    <div class="gc-main">
+      <div class="gc-match">${teamBlock(L[0])}<div class="gc-score"><div><b>${esc(L[1])}</b><span>–</span><b>${esc(R[1])}</b></div>
+        <div class="gc-clock ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div></div>${teamBlock(R[0])}</div>
+      <div class="gc-when">${esc(fmtLong(g))} · ${esc(g.location)}</div>
+    </div>
+    <div class="gc-side">
+      <div class="gc-info">${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}
+        ${next ? `<span><b>NEXT UP</b> ${esc(next.sport)} ${esc(versus(next))} · ${esc(when(next).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))} · ${esc(fmtTime(next))}</span>` : ""}
+        <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a></div>
+    </div>`;
+}
+
+// "Last 5 plays" box. The Scoring only toggle is remembered while the page is open, so it survives the 15s redraws.
+const playFilter = { scoring: false };
+function playsBox(sm, e, away, home) {
+  const list = playFilter.scoring ? sm.scoringPlays : sm.recentPlays;
+  const teamOf = id => [e.us, e.them].find(t => t.id === id);
+  const rows = list.length ? list.map(p => { const t = teamOf(p.tid);
+      return `<li class="${p.scoring ? "sc" : ""}"><span class="pl-when">${esc(p.when)}</span>
+        <span class="pl-text">${t ? logo(t, "xs") : ""}${esc(p.text)}</span>
+        ${p.scoring ? `<span class="pl-score">${esc(away.abbr)} ${esc(p.away)}–${esc(p.home)} ${esc(home.abbr)}</span>` : ""}</li>`; }).join("")
+    : `<li class="pl-none">No scoring plays yet.</li>`;
+  return `<div class="gc-plays"><div class="pl-head"><b>${playFilter.scoring ? "LAST 5 SCORING PLAYS" : "LAST 5 PLAYS"}</b>
+      <button type="button" data-plays-filter aria-pressed="${playFilter.scoring}">Scoring only</button></div><ol>${rows}</ol></div>`;
 }
 
 function liveCenter(e) {
@@ -1388,7 +1501,8 @@ function liveCenter(e) {
       <div class="gc-match live">${teamBlock(away)}<div class="gc-score"><div><b>${esc(away.score || "—")}</b><span>–</span><b>${esc(home.score || "—")}</b></div>
         <div class="gc-clock">${esc(e.detail)}</div></div>${teamBlock(home)}</div>
       ${linescore}${wp}
-      ${sm.lastPlay ? `<div class="gc-play"><b>LAST PLAY</b>${esc(sm.lastPlay)}</div>` : ""}
+      ${sm.recentPlays?.length ? playsBox(sm, e, away, home)
+        : sm.lastPlay ? `<div class="gc-play"><b>LAST PLAY</b>${esc(sm.lastPlay)}</div>` : ""}
     </div>${(() => {
       const form = [e.us, e.them].filter(t => sm.last5?.[t.id]?.length).map(t => `<div class="l5-row">${logo(t, "xs")}<b>${esc(t.abbr)}</b>
         <div class="form lg">${sm.last5[t.id].map(x => `<i class="${esc(x.r)}" title="${esc((x.r || "") + " " + (x.score || "") + " vs " + (x.opp || ""))}">${esc(x.r)}</i>`).join("")}</div></div>`).join("");
@@ -1477,7 +1591,10 @@ async function refreshEspn(manual = false) {
     document.querySelectorAll("#rail .livepip").forEach(p => p.remove());
     lv.forEach(e => document.querySelector(`#rail a[data-sport="${sportOf(e.sport).id}"]`)?.insertAdjacentHTML("beforeend", `<span class="dot pulse livepip"></span>`));
     // re-draw only when something visible changed, so the page doesn't flicker every minute
-    const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay]), Object.keys(espn.events).length, games.map(g => g.result)]);
+    // (includes which final score is being held, so the box flips back to the countdown when the hold ends)
+    const tg = current?.sport && current.sport !== "calendar" ? teamGames(current.sport, current.resolved) : null;
+    const held = [heldFinal(games, upcomingOf(games)), tg && heldFinal(tg, upcomingOf(tg))].map(g => g?.start || null);
+    const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay]), Object.keys(espn.events).length, games.map(g => g.result), held]);
     if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
     if (manual) refreshStatus.textContent = "Score check complete";
   } catch (error) {
