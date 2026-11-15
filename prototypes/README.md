@@ -45,6 +45,13 @@ Fetched live in the visitor's browser, free and with no API keys:
 - **Mixlr** — whether KSCU Sports is broadcasting right now.
 
 Other sports (water polo, tennis, golf, XC/track) get results when `scu-schedule.json` is refreshed (hourly, by the GitHub Action).
+
+**Where the schedule lives:** the hourly refresh commits `scu-schedule.json` to the `sports-data` branch, not to `main`,
+so it never triggers a Netlify build. The page reads it from
+`https://raw.githubusercontent.com/GrantSwanson117/kscu-site/sports-data/scu-schedule.json` and also loads the copy
+built into the site (`content/sports/scu-schedule.json`), using whichever is newer. That built-in copy is refreshed once
+a week (one Netlify build a week) so it's a reasonable fallback if GitHub is ever unreachable. Don't delete the
+`sports-data` branch; it has its own `netlify.toml` telling Netlify not to build it.
 The refresh also reads each sport's schedule page on santaclarabroncos.com for opponent logos and links to each game's
 box score (or results PDF) and recap, and reads each new box score page once for the score by period and team stats.
 Those show on the game page you get by clicking a final score (`#/game/<SCU game id>`).
