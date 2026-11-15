@@ -138,10 +138,16 @@ showTableOfContents = false
 +++
 """
 PAGE_OVERRIDES = """<style>
-    /* Same page-level tweaks the Schedule and PSA pages use, plus a wider content column for this page only. */
+    /* Same page-level tweaks the Schedule and PSA pages use. These styles live inside this page's content,
+       so they only apply on /sports/ — every other page keeps the theme's normal layout. */
     #metadata { display: none; }
     article>header.max-w-prose { max-width: 100%; }
-    #content-wrapper { max-width: 72rem !important; width: 100%; }
+    /* Use the full width the site gives the announcement box (90% of the window, up to 80rem)
+       instead of the theme's narrow 896px article column. */
+    #main-content { max-width: 80rem !important; width: 90%; padding-left: 0 !important; padding-right: 0 !important; }
+    #content-wrapper { max-width: 100% !important; width: 100%; }
+    /* Page title in the announcement-box font, like the rest of the sports page */
+    #article-header h1 { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 700; letter-spacing: -.02em; }
 </style>
 """
 MARKUP = """<div id="kscu-sports" class="not-prose">

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T00:47:00.922618+00:00",
+ "updated": "2026-11-15T01:47:35.521807+00:00",
  "games": [
   {
    "sport": "Men's Tennis",
@@ -46,17 +46,6 @@
    "result": "W 3-1"
   },
   {
-   "sport": "Women's Golf",
-   "home": false,
-   "neutral": true,
-   "meet": false,
-   "opponent": "Stanford Intercollegiate",
-   "start": "2026-10-17",
-   "allDay": true,
-   "location": "Stanford, Calif. | Stanford GC",
-   "result": null
-  },
-  {
    "sport": "Men's Tennis",
    "home": false,
    "neutral": true,
@@ -65,6 +54,17 @@
    "start": "2026-10-17",
    "allDay": true,
    "location": "Seattle",
+   "result": null
+  },
+  {
+   "sport": "Women's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Stanford Intercollegiate",
+   "start": "2026-10-17",
+   "allDay": true,
+   "location": "Stanford, Calif. | Stanford GC",
    "result": null
   },
   {
@@ -90,17 +90,6 @@
    "result": "4th of 23"
   },
   {
-   "sport": "Women's Volleyball",
-   "home": true,
-   "neutral": false,
-   "meet": false,
-   "opponent": "Saint Mary's",
-   "start": "2026-10-17T20:00:00+00:00",
-   "allDay": false,
-   "location": "Santa Clara, Calif., Leavey Center",
-   "result": "L 2-3"
-  },
-  {
    "sport": "Men's Water Polo",
    "home": false,
    "neutral": false,
@@ -110,6 +99,17 @@
    "allDay": false,
    "location": "Malibu, Calif.",
    "result": "L 16-17"
+  },
+  {
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-10-17T20:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "L 2-3"
   },
   {
    "sport": "Men's Tennis",
@@ -167,17 +167,6 @@
    "result": "L 13-14"
   },
   {
-   "sport": "Men's Tennis",
-   "home": false,
-   "neutral": true,
-   "meet": false,
-   "opponent": "ITA Regional Championships",
-   "start": "2026-10-19",
-   "allDay": true,
-   "location": "Seattle",
-   "result": null
-  },
-  {
    "sport": "Men's Golf",
    "home": false,
    "neutral": true,
@@ -186,6 +175,17 @@
    "start": "2026-10-19",
    "allDay": true,
    "location": "Monterey, Calif. | Bayonet Blackhorse",
+   "result": null
+  },
+  {
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-19",
+   "allDay": true,
+   "location": "Seattle",
    "result": null
   },
   {
