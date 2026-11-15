@@ -1,0 +1,49 @@
+# Keeps kscu.org/sports/ up to date with Santa Clara Athletics' schedule.
+#
+# Every 6 hours this pulls SCU's public calendar, and if any game changed (new games, time changes,
+# cancellations, results) it commits content/sports/scu-schedule.json to main. Netlify then rebuilds
+# the site as usual. If nothing changed, it does nothing. If SCU's site is down, it fails without
+# touching the schedule. You can also run it by hand: GitHub > Actions > "Refresh sports schedule" > Run workflow.
+#
+# Live scores (ESPN) and Mixlr status don't need this — they update in the visitor's browser.
+
+name: Refresh sports schedule
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # 4x a day (UTC): ~5am, 11am, 5pm, 11pm Pacific
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-sports-schedule
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh schedule from Santa Clara Athletics
+        run: python3 prototypes/build_snapshot.py content/sports/scu-schedule.json
+
+      - name: Commit if the schedule changed
+        run: |
+          if git diff --quiet -- content/sports/scu-schedule.json; then
+            echo "No schedule changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898208+github-actions[bot]@users.noreply.github.com"
+          git add content/sports/scu-schedule.json
+          git commit -m "Refresh sports schedule from Santa Clara Athletics"
+          git pull --rebase origin main
+          git push origin HEAD:main
