@@ -79,7 +79,7 @@ def scope_css(text):
         body = text[brace + 1: j]
         if head.startswith("@media") or head.startswith("@supports"):
             out.append(head + " {" + scope_css(body) + "}")
-        elif head.startswith("@keyframes"):
+        elif head.startswith("@keyframes") or head.startswith("@property"):
             out.append(head + " {" + body + "}")
         else:
             out.append(", ".join(scope_selector(s) for s in split_top(head)) + " {" + body + "}")
@@ -147,11 +147,12 @@ PAGE_OVERRIDES = """<style>
        instead of the theme's narrow 896px article column. */
     #main-content { max-width: 80rem !important; width: 90%; padding-left: 0 !important; padding-right: 0 !important; }
     #content-wrapper { max-width: 100% !important; width: 100%; }
-    /* Page title in the announcement-box font, like the rest of the sports page */
-    #article-header h1 { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 700; letter-spacing: -.02em; }
+    /* The sports page draws its own title (KSCU logo + SPORTS), so hide the theme's text title */
+    #article-header h1 { display: none; }
 </style>
 """
 MARKUP = """<div id="kscu-sports" class="not-prose">
+  <h1 class="title"><img src="/sports/kscu_logo.svg" alt="KSCU"><span>SPORTS</span></h1>
   <!-- Sport sub-menu -->
   <nav class="rail" id="ks-rail" aria-label="Sports"></nav>
   <div class="score-tools" hidden>

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T08:34:41.780771+00:00",
+ "updated": "2026-11-15T11:13:05.298089+00:00",
  "games": [
   {
    "id": "11159",
@@ -56,6 +56,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pacific/boxscore/11024",
    "recap": "https://santaclarabroncos.com/news/2026/10/15/womens-volleyball-volleyball-takes-down-tigers-to-win-fourth-straight.aspx",
+   "abbr": "PAC",
    "box": {
     "v": 2,
     "cols": [
@@ -185,6 +186,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/pepperdine/boxscore/10988",
    "recap": "https://santaclarabroncos.com/news/2026/10/17/mens-water-polo-comeback-comes-up-just-short-at-no-13-pepperdine.aspx",
+   "abbr": "PEPP",
    "box": {
     "v": 2,
     "cols": [
@@ -271,6 +273,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/saint-mary-s/boxscore/11025",
    "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-volleyball-volleyball-leads-early-over-saint-marys-in-top-teams-clash.aspx",
+   "abbr": "SMC",
    "box": {
     "v": 2,
     "cols": [
@@ -376,6 +379,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/seattle/boxscore/10953",
    "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-soccer-plays-to-draw-in-seattle.aspx",
+   "abbr": "SEA",
    "box": {
     "v": 2,
     "cols": [
@@ -441,6 +445,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/saint-mary-s/boxscore/10934",
    "recap": "https://santaclarabroncos.com/news/2026/10/17/scoreless-draw-for-mens-soccer-versus-saint-mary-s.aspx",
+   "abbr": "SMC",
    "box": {
     "v": 2,
     "cols": [
@@ -506,6 +511,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/lmu/boxscore/10989",
    "recap": "https://santaclarabroncos.com/news/2026/10/18/mens-water-polo-late-rally-dooms-no-18-broncos-at-no-8-lmu.aspx",
+   "abbr": "LMU",
    "box": {
     "v": 2,
     "cols": [
@@ -649,6 +655,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/san-diego/boxscore/10935",
    "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-soccer-msoc-recap.aspx",
+   "abbr": "USD",
    "box": {
     "v": 2,
     "cols": [
@@ -714,6 +721,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Princeton_Tigers.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/princeton/boxscore/11004",
    "recap": "https://santaclarabroncos.com/news/2026/10/22/mens-water-polo-broncos-drop-heartbreaker-to-no-6-princeton.aspx",
+   "abbr": "PRIN",
    "box": {
     "v": 2,
     "cols": [
@@ -800,6 +808,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/lmu/boxscore/11026",
    "recap": "https://santaclarabroncos.com/news/2026/10/22/womens-volleyball-volleyball-builds-momentum-late-at-lmu.aspx",
+   "abbr": "LMU",
    "box": {
     "v": 2,
     "cols": [
@@ -887,6 +896,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/LIU-Sharks.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/liu/boxscore/10991",
    "recap": "https://santaclarabroncos.com/news/2026/10/23/mens-water-polo-no-19-broncos-bounce-back-with-22-10-win-over-liu.aspx",
+   "abbr": "LIU",
    "box": {
     "v": 2,
     "cols": [
@@ -973,6 +983,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Brown_logo_200x200.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/brown/boxscore/10992",
    "recap": "https://santaclarabroncos.com/news/2026/10/24/mens-water-polo-no-19-broncos-cruise-to-another-victory-at-julian-fraser-memorial.aspx",
+   "abbr": "BRWN",
    "box": {
     "v": 2,
     "cols": [
@@ -1073,6 +1084,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pepperdine/boxscore/11027",
    "recap": "https://santaclarabroncos.com/news/2026/10/24/womens-volleyball-volleyball-tussles-with-waves-in-back-and-forth-battle.aspx",
+   "abbr": "PEPP",
    "box": {
     "v": 2,
     "cols": [
@@ -1146,6 +1158,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/saint-mary-s/boxscore/10954",
    "recap": "https://santaclarabroncos.com/news/2026/10/24/womens-soccer-early-goals-lead-to-draw-with-saint-mary-s.aspx",
+   "abbr": "SMC",
    "box": {
     "v": 2,
     "cols": [
@@ -1211,6 +1224,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/portland/boxscore/10936",
    "recap": "https://santaclarabroncos.com/news/2026/10/24/mens-soccer-recap-261024.aspx",
+   "abbr": "PORT",
    "box": {
     "v": 2,
     "cols": [
@@ -1290,6 +1304,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Iona_logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/iona/boxscore/10993",
    "recap": "https://santaclarabroncos.com/news/2026/10/25/mens-water-polo-no-19-broncos-roll-past-iona-to-complete-perfect-weekend.aspx",
+   "abbr": "IONA",
    "box": {
     "v": 2,
     "cols": [
@@ -1405,6 +1420,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/pepperdine/boxscore/10955",
    "recap": "https://santaclarabroncos.com/news/2026/10/28/womens-soccer-and-pepperdine-play-to-1-1-draw.aspx",
+   "abbr": "PEPP",
    "box": {
     "v": 2,
     "cols": [
@@ -1484,6 +1500,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/denver/boxscore/11028",
    "recap": "https://santaclarabroncos.com/news/2026/10/29/womens-volleyball-volleyball-defeats-denver-in-four-on-the-road.aspx",
+   "abbr": "DEN",
    "box": {
     "v": 2,
     "cols": [
@@ -1587,6 +1604,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/saint-mary-s/boxscore/10994",
    "recap": "https://santaclarabroncos.com/news/2026/10/30/mens-water-polo-no-18-broncos-pick-up-first-conference-win.aspx",
+   "abbr": "SMC",
    "box": {
     "v": 2,
     "cols": [
@@ -1687,6 +1705,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/SJS_SpartanHead-MAIN.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/san-jose-state/boxscore/10995",
    "recap": "https://santaclarabroncos.com/news/2026/10/31/mens-water-polo-no-18-broncos-battle-back-but-fall-in-ot-to-sjsu.aspx",
+   "abbr": "SJSU",
    "box": {
     "v": 2,
     "cols": [
@@ -1779,6 +1798,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/san-diego/boxscore/11029",
    "recap": "https://santaclarabroncos.com/news/2026/10/31/womens-volleyball-volleyball-surges-late-at-san-diego.aspx",
+   "abbr": "USD",
    "box": {
     "v": 2,
     "cols": [
@@ -1852,6 +1872,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/san-francisco/boxscore/10956",
    "recap": "https://santaclarabroncos.com/news/2026/10/31/offense-leads-womens-soccer-to-4-0-win-at-san-francisco.aspx",
+   "abbr": "SF",
    "box": {
     "v": 2,
     "cols": [
@@ -1931,6 +1952,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/denver/boxscore/10937",
    "recap": "https://santaclarabroncos.com/news/2026/10/31/mens-soccer-and-denver-play-to-a-draw-on-senior-night.aspx",
+   "abbr": "DEN",
    "box": {
     "v": 2,
     "cols": [
@@ -1996,6 +2018,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/wyoming_logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/wyoming/boxscore/11039",
    "recap": "https://santaclarabroncos.com/news/2026/11/2/womens-basketball-rolls-to-34-point-win-at-wyoming-in-season-opener.aspx",
+   "abbr": "WYO",
    "box": {
     "v": 2,
     "cols": [
@@ -2046,6 +2069,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Towson_.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/towson/boxscore/11089",
    "recap": "https://santaclarabroncos.com/news/2026/11/2/mens-basketball-broncos-handle-towson-89-70-for-season-opening-win.aspx",
+   "abbr": "TOW",
    "box": {
     "v": 2,
     "cols": [
@@ -2104,6 +2128,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Milwaukee_Panthers.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/milwaukee/boxscore/11090",
    "recap": "https://santaclarabroncos.com/news/2026/11/4/mens-basketball-broncos-improve-to-2-0-with-95-72-win-over-milwaukee.aspx",
+   "abbr": "MILW",
    "box": {
     "v": 2,
     "cols": [
@@ -2162,6 +2187,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/seattle/boxscore/11030",
    "recap": "https://santaclarabroncos.com/news/2026/11/5/womens-volleyball-volleyball-opens-home-stand-with-triumph-over-seattle.aspx",
+   "abbr": "SEA",
    "box": {
     "v": 2,
     "cols": [
@@ -2263,6 +2289,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/pacific/boxscore/10996",
    "recap": "https://santaclarabroncos.com/news/2026/11/6/mens-water-polo-no-18-broncos-pick-up-historic-12-8-win-in-stockton.aspx",
+   "abbr": "PAC",
    "box": {
     "v": 2,
     "cols": [
@@ -2363,6 +2390,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/portland/boxscore/10957",
    "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-soccer-clinches-spot-in-wcc-tournament-with-draw-against-portland.aspx",
+   "abbr": "PORT",
    "box": {
     "v": 2,
     "cols": [
@@ -2428,6 +2456,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/portland/boxscore/11031",
    "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-volleyball-volleyball-sweep-portland-again-to-sweep-season-series.aspx",
+   "abbr": "PORT",
    "box": {
     "v": 2,
     "cols": [
@@ -2498,6 +2527,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/wolverine_green.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/utah-valley/boxscore/11040",
    "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-basketball-collects-road-win-at-utah-valley.aspx",
+   "abbr": "UVU",
    "box": {
     "v": 2,
     "cols": [
@@ -2562,6 +2592,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Sac-State.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/sacramento-state/boxscore/11091",
    "recap": "https://santaclarabroncos.com/news/2026/11/7/mens-basketball-broncos-use-big-second-half-run-to-improve-to-3-0.aspx",
+   "abbr": "SAC",
    "box": {
     "v": 2,
     "cols": [
@@ -2620,6 +2651,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Air_Force.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/air-force/boxscore/10997",
    "recap": "https://santaclarabroncos.com/news/2026/11/8/mens-water-polo-no-18-broncos-handle-air-force-on-senior-day.aspx",
+   "abbr": "AF",
    "box": {
     "v": 2,
     "cols": [
@@ -2706,6 +2738,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/long_beach_state.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/long-beach-state/boxscore/11041",
    "recap": "https://santaclarabroncos.com/news/2026/11/9/womens-basketball-caps-perfect-three-game-road-trip.aspx",
+   "abbr": "LBSU",
    "box": {
     "v": 2,
     "cols": [
@@ -2756,6 +2789,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/lmu/boxscore/10958",
    "recap": "https://santaclarabroncos.com/news/2026/11/11/womens-soccer-rolls-to-wcc-tourney-semis-win-at-lmu.aspx",
+   "abbr": "LMU",
    "box": {
     "v": 2,
     "cols": [
@@ -2821,6 +2855,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/North-Texas.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/north-texas/boxscore/11092",
    "recap": "https://santaclarabroncos.com/news/2026/11/11/mens-basketball-broncos-come-from-behind-to-remain-undefeated.aspx",
+   "abbr": "UNT",
    "box": {
     "v": 2,
     "cols": [
@@ -2892,6 +2927,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/stanford/boxscore/11042",
    "recap": "https://santaclarabroncos.com/news/2026/11/13/womens-basketball-falls-to-stanford-in-home-opener.aspx",
+   "abbr": "STAN",
    "box": {
     "v": 2,
     "cols": [
@@ -2942,6 +2978,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/san-francisco/boxscore/11032",
    "recap": "https://santaclarabroncos.com/news/2026/11/14/womens-volleyball-fights-to-the-end-against-rival-dons.aspx",
+   "abbr": "SF",
    "box": {
     "v": 2,
     "cols": [
@@ -3018,6 +3055,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/seattle/boxscore/10959",
    "recap": "https://santaclarabroncos.com/news/2026/11/14/womens-soccer-wins-wcc-tournament-title-in-double-overtime.aspx",
+   "abbr": "SEA",
    "box": {
     "v": 2,
     "cols": [
@@ -3083,6 +3121,7 @@
    "logo": "https://santaclarabroncos.com/images/logos/New_Mexico.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/new-mexico/boxscore/11093",
    "recap": "https://santaclarabroncos.com/news/2026/11/14/broncos-hold-off-new-mexico-to-improve-to-5-0.aspx",
+   "abbr": "UNM",
    "box": {
     "v": 2,
     "cols": [
@@ -3124,7 +3163,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max",
+   "abbr": "GCU"
   },
   {
    "id": "10998",
@@ -3150,7 +3190,8 @@
    "allDay": false,
    "location": "Moraga, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "abbr": "SMC"
   },
   {
    "id": "11094",
@@ -3163,7 +3204,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max",
+   "abbr": "VCU"
   },
   {
    "id": "10999",
@@ -3189,7 +3231,8 @@
    "allDay": false,
    "location": "Tempe, Ariz.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max",
+   "abbr": "ASU"
   },
   {
    "id": "11034",
@@ -3202,7 +3245,8 @@
    "allDay": false,
    "location": "Stockton, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "abbr": "PAC"
   },
   {
    "id": "11000",
@@ -3228,7 +3272,8 @@
    "allDay": false,
    "location": "Palm Desert, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Illinois_State_2023.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Illinois_State_2023.png?width=80&height=80&mode=max",
+   "abbr": "ILST"
   },
   {
    "id": "11035",
@@ -3241,7 +3286,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "abbr": "USD"
   },
   {
    "id": "11096",
@@ -3254,7 +3300,8 @@
    "allDay": false,
    "location": "Palm Desert, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/NevadaAthletics_Navy.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/NevadaAthletics_Navy.png?width=80&height=80&mode=max",
+   "abbr": "NEV"
   },
   {
    "id": "11036",
@@ -3267,7 +3314,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "abbr": "DEN"
   },
   {
    "id": "11051",
@@ -3280,7 +3328,8 @@
    "allDay": false,
    "location": "U.S. Virgin Islands",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Xavier_.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Xavier_.png?width=80&height=80&mode=max",
+   "abbr": "XAV"
   },
   {
    "id": "11052",
@@ -3305,7 +3354,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/utah_tech_200x200_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/utah_tech_200x200_logo.png?width=80&height=80&mode=max",
+   "abbr": "UTU"
   },
   {
    "id": "11037",
@@ -3331,7 +3381,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/fresnostate_200x200.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/fresnostate_200x200.png?width=80&height=80&mode=max",
+   "abbr": "FRES"
   },
   {
    "id": "11045",
@@ -3344,7 +3395,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/SDSU.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/SDSU.png?width=80&height=80&mode=max",
+   "abbr": "SDSU"
   },
   {
    "id": "11001",
@@ -3383,7 +3435,8 @@
    "allDay": false,
    "location": "Phoenix",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max",
+   "abbr": "GCU"
   },
   {
    "id": "11046",
@@ -3422,7 +3475,8 @@
    "allDay": false,
    "location": "Henderson, Nev.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Large-new-logos7.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Large-new-logos7.png?width=80&height=80&mode=max",
+   "abbr": "MUR"
   },
   {
    "id": "11047",
@@ -3435,7 +3489,8 @@
    "allDay": false,
    "location": "Boise, Idaho",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max",
+   "abbr": "BOIS"
   },
   {
    "id": "11101",
@@ -3448,7 +3503,8 @@
    "allDay": false,
    "location": "Henderson, Nev.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/mcneese_state_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/mcneese_state_logo.png?width=80&height=80&mode=max",
+   "abbr": "MCN"
   },
   {
    "id": "11048",
@@ -3461,7 +3517,8 @@
    "allDay": false,
    "location": "Seattle",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Washington_2019.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Washington_2019.png?width=80&height=80&mode=max",
+   "abbr": "WASH"
   },
   {
    "id": "11049",
@@ -3474,7 +3531,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/montst.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/montst.png?width=80&height=80&mode=max",
+   "abbr": "MTST"
   },
   {
    "id": "11102",
@@ -3487,7 +3545,8 @@
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max",
+   "abbr": "BOIS"
   },
   {
    "id": "11103",
@@ -3500,7 +3559,8 @@
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/oregonstate_200x200.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/oregonstate_200x200.png?width=80&height=80&mode=max",
+   "abbr": "ORST"
   },
   {
    "id": "11050",
@@ -3539,7 +3599,8 @@
    "allDay": false,
    "location": "Denver",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "abbr": "DEN"
   },
   {
    "id": "11106",
@@ -3552,7 +3613,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "abbr": "PORT"
   },
   {
    "id": "11123",
@@ -3565,7 +3627,8 @@
    "allDay": false,
    "location": "Stockton, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "abbr": "PAC"
   },
   {
    "id": "11107",
@@ -3578,7 +3641,8 @@
    "allDay": false,
    "location": "Moraga, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "abbr": "SMC"
   },
   {
    "id": "11124",
@@ -3591,7 +3655,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "abbr": "SF"
   },
   {
    "id": "11108",
@@ -3604,7 +3669,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "abbr": "LMU"
   },
   {
    "id": "11125",
@@ -3617,7 +3683,8 @@
    "allDay": false,
    "location": "San Diego, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "abbr": "USD"
   },
   {
    "id": "11109",
@@ -3630,7 +3697,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "abbr": "SEA"
   },
   {
    "id": "11110",
@@ -3643,7 +3711,8 @@
    "allDay": false,
    "location": "San Francisco",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "abbr": "SF"
   },
   {
    "id": "11126",
@@ -3656,7 +3725,8 @@
    "allDay": false,
    "location": "Los Angeles",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "abbr": "LMU"
   },
   {
    "id": "11127",
@@ -3669,7 +3739,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "abbr": "PEPP"
   },
   {
    "id": "11111",
@@ -3682,7 +3753,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "abbr": "DEN"
   },
   {
    "id": "11112",
@@ -3695,7 +3767,8 @@
    "allDay": false,
    "location": "Stockton, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "abbr": "PAC"
   },
   {
    "id": "11128",
@@ -3708,7 +3781,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "abbr": "PAC"
   },
   {
    "id": "11129",
@@ -3721,7 +3795,8 @@
    "allDay": false,
    "location": "Portland, Ore.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "abbr": "PORT"
   },
   {
    "id": "11113",
@@ -3734,7 +3809,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "abbr": "USD"
   },
   {
    "id": "11114",
@@ -3747,7 +3823,8 @@
    "allDay": false,
    "location": "Malibu, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "abbr": "PEPP"
   },
   {
    "id": "11130",
@@ -3760,7 +3837,8 @@
    "allDay": false,
    "location": "Moraga, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "abbr": "SMC"
   },
   {
    "id": "11131",
@@ -3773,7 +3851,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "abbr": "SEA"
   },
   {
    "id": "11115",
@@ -3786,7 +3865,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "abbr": "SF"
   },
   {
    "id": "11116",
@@ -3799,7 +3879,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "abbr": "SMC"
   },
   {
    "id": "11132",
@@ -3812,7 +3893,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "abbr": "USD"
   },
   {
    "id": "11133",
@@ -3825,7 +3907,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "abbr": "DEN"
   },
   {
    "id": "11117",
@@ -3838,7 +3921,8 @@
    "allDay": false,
    "location": "Seattle",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "abbr": "SEA"
   },
   {
    "id": "11118",
@@ -3851,7 +3935,8 @@
    "allDay": false,
    "location": "Portland, Ore.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "abbr": "PORT"
   },
   {
    "id": "11134",
@@ -3864,7 +3949,8 @@
    "allDay": false,
    "location": "Malibu, Calif.",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "abbr": "PEPP"
   },
   {
    "id": "11135",
@@ -3877,7 +3963,8 @@
    "allDay": false,
    "location": "Seattle",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "abbr": "SEA"
   },
   {
    "id": "11119",
@@ -3890,7 +3977,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "abbr": "PAC"
   },
   {
    "id": "11121",
@@ -3903,7 +3991,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "abbr": "PEPP"
   },
   {
    "id": "11136",
@@ -3916,7 +4005,8 @@
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "abbr": "LMU"
   },
   {
    "id": "11137",
@@ -3929,7 +4019,8 @@
    "allDay": false,
    "location": "San Francisco",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "abbr": "SF"
   },
   {
    "id": "11120",
@@ -3942,7 +4033,8 @@
    "allDay": false,
    "location": "Los Angeles",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "abbr": "LMU"
   },
   {
    "id": "11138",
@@ -3955,7 +4047,8 @@
    "allDay": true,
    "location": "Santa Clara, Calif., Leavey Center",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "abbr": "SMC"
   },
   {
    "id": "11122",
@@ -3968,7 +4061,8 @@
    "allDay": false,
    "location": "San Diego",
    "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "abbr": "USD"
   },
   {
    "id": "11139",

@@ -14,7 +14,7 @@ Safe to run on a schedule (the hourly GitHub Action runs it against the sports-d
   - Seasons roll over by themselves: anything before July 1 of the current school year is dropped, so last
     season's results and records don't linger on the page once a new year starts.
 """
-import html, json, re, sys, urllib.parse, urllib.request
+import html, json, re, sys, unicodedata, urllib.parse, urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -193,6 +193,38 @@ def add_boxes(games, old_games):
         if box:
             g["box"] = box
 
+# ---------------------------------------------------------------- short names (SCU's calendar only has full names)
+# The overview and calendar show opponents as logo + short code ("GCU", "SMC"). ESPN's list of every Division I
+# school has those codes; opponents not on it (Division II schools, tournaments) just keep their full name.
+ESPN_TEAMS = "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams?limit=1000"
+
+def norm_name(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower().replace("&", "and")
+    s = re.sub(r"[^a-z0-9 ]", "", s)
+    s = re.sub(r"\bst\b", "state", s)
+    s = re.sub(r"\bsaint\b", "st", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+def add_abbr(games):
+    try:
+        req = urllib.request.Request(ESPN_TEAMS, headers={"User-Agent": "Mozilla/5.0 (KSCU sports page refresh)"})
+        teams = [t["team"] for t in json.load(urllib.request.urlopen(req, timeout=60))["sports"][0]["leagues"][0]["teams"]]
+    except Exception as e:
+        print(f"  (skipped short names: {e})")
+        return
+    idx = {}
+    for t in teams:
+        for k in ("location", "shortDisplayName", "displayName", "abbreviation"):
+            if t.get(k):
+                idx.setdefault(norm_name(t[k]), t["abbreviation"])
+    for g in games:
+        if g.get("meet"):
+            continue
+        n = norm_name(g["opponent"])
+        code = idx.get(n) or idx.get(n + " u") or idx.get(re.sub(r" (state|university)$", "", n))
+        if code:
+            g["abbr"] = code
+
 def main(out_path):
     out = Path(out_path)
     old = json.loads(out.read_text()) if out.exists() else {"games": []}
@@ -209,6 +241,7 @@ def main(out_path):
     kept = [g for g in old.get("games", []) if season_start <= g["start"][:10] < window_start]  # history SCU's feed no longer shows
     games = sorted(kept + [g for g in new if g["start"][:10] >= season_start], key=lambda g: (g["start"], g["sport"], g["opponent"]))
     add_details(games)
+    add_abbr(games)
     add_boxes(games, old.get("games", []))
 
     if games == old.get("games"):
