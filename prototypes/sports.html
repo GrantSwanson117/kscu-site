@@ -571,7 +571,17 @@
   .nx-last img { width: 18px; height: 18px; object-fit: contain; margin: 0; }
   .nx-last em { font-style: normal; font-weight: 700; } .nx-last em.W { color: var(--win); } .nx-last em.L { color: var(--red); } .nx-last em.D { color: var(--brown); }
   .nx-last:hover .nx-score { text-decoration: underline; text-underline-offset: 3px; }
+  .nx-final { gap: 8px; }
+  .nx-big { display: flex; align-items: baseline; gap: 10px; font: 700 50px/1 var(--mono); font-variant-numeric: tabular-nums; }
+  .nx-big span { font-size: 32px; }
+  .nx-outcome { font: 700 12px var(--mono); letter-spacing: .08em; }
+  .nx-outcome.W { color: var(--win); } .nx-outcome.L { color: var(--red); } .nx-outcome.D { color: var(--brown); }
+  .nx-next { margin-left: auto; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 7px; font-weight: 700; }
+  .nx-next small { font-size: 10.5px; letter-spacing: .05em; color: var(--muted); }
+  .nx-next .pre { margin-right: -2px; } .nx-next .tlogo.xs { margin: 0; }
+  .nx-next-when { font-weight: 400; color: var(--muted); }
   @media (max-width: 640px) {
+    .nx-big { font-size: 40px; } .nx-next { margin-left: 0; }
     .nx-match { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); row-gap: 14px; padding: 18px 12px 16px; }
     .nx-plate { grid-column: 1 / -1; order: 3; }
     .nx-match { padding-top: 18px; } .nx-plate { margin-top: 8px; }
@@ -1357,12 +1367,14 @@ function overviewHtml() {
 
   return `
     ${onAirBar()}
-    ${(() => { const lv = liveEvents()[0], fin = lv ? null : heldFinal(games, up);
+    ${(() => { const lv = liveEvents()[0], pick = lv ? null : featuredPick(up), fin = pick?.main === "last" ? pick.last : null;
       return `<div class="card featured${lv ? " live-card" : ""}">
         ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 10s</span></div>`
              : `<div class="tab">${fin ? "FINAL SCORE" : "NEXT BRONCOS GAME"}</div><div class="tab right">(ง •̀_•́)ง</div>`}
-        ${!lv && !fin && hasOpponent(up[0]) ? `<div class="box gc nx">${nextCenter(up[0])}</div>`
-          : `<div class="box gc wide">${lv ? liveCenter(lv) : fin ? finalCenter(fin, up[0]) : preCenter(up[0])}</div>`}</div>`; })()}
+        ${lv ? `<div class="box gc wide">${liveCenter(lv)}</div>`
+          : fin ? `<div class="box gc nx">${resultCenter(fin, up[0])}</div>`
+          : hasOpponent(up[0]) ? `<div class="box gc nx">${nextCenter(up[0])}</div>`
+          : `<div class="box gc wide">${preCenter(up[0])}</div>`}</div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
     <div class="card teams"><div class="tab">TEAMS</div><div class="tiles">${tiles}</div></div>`;
 }
@@ -1805,7 +1817,10 @@ function cdCells(ms) {
   return parts.map(([l, v]) => `<div class="cd-cell"><b>${String(v).padStart(2, "0")}</b><span>${l}</span></div>`).join("");
 }
 const countdown = d => `<div class="cd" data-cd="${d.toISOString()}" role="timer" aria-label="Countdown to tip-off">${cdCells(d - Date.now())}</div>`;
-setInterval(() => document.querySelectorAll("[data-cd]").forEach(el => { el.innerHTML = cdCells(new Date(el.dataset.cd) - Date.now()); }), 1000);
+setInterval(() => {
+  document.querySelectorAll("[data-cd]").forEach(el => { el.innerHTML = cdCells(new Date(el.dataset.cd) - Date.now()); });
+  document.querySelectorAll("[data-ago]").forEach(el => { const t = agoText(new Date(el.dataset.ago).getTime()); if (el.textContent !== t) el.textContent = t; });
+}, 1000);
 
 function lastResult(g) {
   if (!g) return "";
@@ -1842,12 +1857,12 @@ function preCenter(g, compact = false) {
 }
 
 
-// The two tints meet straight down the middle (50%), and the seam is a jagged line along that edge from top to bottom,
-// so it always runs through the VS badge (centered on the plate) and reads as one crack behind the plate and labels.
+// The two tints meet straight down the middle (50%). The seam along that edge is a fault line: mostly straight, with
+// small irregular jogs of uneven length (like two plates meeting), staying within ~0.7% of center so it always runs
+// through the VS badge and behind the plate and labels.
 const NX_EDGE = [50, 50];
-const NX_SEAM = (() => { const pts = [];
-  for (let i = 0; i <= 10; i++) { const y = i * 10, x = NX_EDGE[0] + (NX_EDGE[1] - NX_EDGE[0]) * (y / 100); pts.push(`${(x + (i % 2 ? 1.1 : -1.1)).toFixed(2)} ${y}`); }
-  return "M" + pts.join("L"); })();
+const NX_SEAM = "M" + [[50, 0], [50.3, 7], [49.8, 12], [50.2, 18], [49.5, 26], [50.1, 31], [50.6, 38], [49.9, 44], [50.4, 52],
+  [49.6, 57], [50, 65], [50.7, 71], [50.1, 77], [49.6, 84], [50.3, 90], [49.8, 95], [50, 100]].map(([x, y]) => `${x} ${y}`).join("L");
 // ---------------------------------------------------------------------------
 // NEXT GAME (overview): split field + tale of the tape. The box splits down the middle, each half faintly tinted in
 // one team's ESPN color, with a crackling seam between them that runs behind the center plate (VS stamp, date and
@@ -1889,7 +1904,7 @@ function nextCenter(g) {
   // ---- last result, inline in the strip
   const last = resultsOf(games)[0];
   const lastHtml = last && isFinal(last) ? (() => { const k = last.result[0], [a, b] = last.result.slice(2).split("-");
-    return `<a class="nx-last" href="${gameHref(last)}"><small>LAST RESULT</small><img src="${esc(SCU_LOGO)}" alt="">
+    return `<a class="nx-last" href="${gameHref(last)}"><small>LAST RESULT · ${esc(last.sport.toUpperCase())} · ${esc(when(last).toLocaleDateString("en-US", { month: "short", day: "numeric" }).toUpperCase())}</small><img src="${esc(SCU_LOGO)}" alt="">
       <span class="nx-score">SCU ${esc(a)}–${esc(b)} ${esc(oppCode(last))}</span>${oppLogo(last) ? `<img src="${esc(oppLogo(last))}" alt="">` : ""}<em class="${k}">${k}</em></a>`; })() : "";
   const d = when(g);
   const venueLine = e?.venue ? `${e.venue}${e.city ? ", " + e.city : ""}` : g.location;
@@ -1907,6 +1922,65 @@ function nextCenter(g) {
     </div>
     <div class="nx-strip"><span><b>VENUE</b> ${esc(venueLine)}</span>${e?.tv ? `<span class="tv">WATCH · ${esc(e.tv)}</span>` : ""}
       <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a>${lastHtml}</div>`;
+}
+
+
+// ---------------------------------------------------------------------------
+// WHICH GAME LEADS THE OVERVIEW BOX. People come for results as well as previews, so the box shows whichever game is
+// closer in time: the last final result if it ended more recently than the next game starts (measured from the
+// game's estimated end), otherwise the next game. A result stops leading after 72 hours. A live game always wins
+// (handled by the caller); with no upcoming game the result leads, with no result the next game does.
+//   e.g. ended 2 days ago vs starts in 3 days -> result | ended last night vs tip-off tonight -> next game
+//        doubleheader: game 1 ended 30 min ago, game 2 in 1 hour -> result, flipping to game 2 as it gets closer
+// ---------------------------------------------------------------------------
+const RESULT_LEADS_FOR = 72 * 3600e3;
+function featuredPick(up) {
+  const now = Date.now();
+  const last = games.filter(g => isFinal(g) && when(g).getTime() <= now).sort((a, b) => when(b) - when(a))[0] || null;
+  const next = up[0] || null;
+  if (!last) return { main: "next", next, last };
+  if (!next) return { main: "last", next, last };
+  const since = Math.max(0, now - estEnd(last)), until = when(next).getTime() - now;
+  return { main: since < until && since < RESULT_LEADS_FOR ? "last" : "next", next, last };
+}
+// The result version of the split-field box: same halves and seam, a FINAL badge on the plate, the big score and
+// who won; the strip carries the game links and the next game (sport, opponent, date and time).
+// "45 MIN AGO", "15 HRS AGO", "2 DAYS AGO" (counted from the game's estimated end), so a final never reads as upcoming
+function agoText(t) {
+  const m = Math.max(0, Math.round((Date.now() - t) / 60e3));
+  if (m < 60) return m <= 1 ? "JUST ENDED" : `${m} MIN AGO`;
+  const h = Math.round(m / 60);
+  if (h < 36) return `${h} HR${h === 1 ? "" : "S"} AGO`;
+  const days = Math.round(h / 24);
+  return `${days} DAY${days === 1 ? "" : "S"} AGO`;
+}
+function resultCenter(g, next) {
+  const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g), k = g.result[0];
+  if (e && !espn.summary[e.id]) requestSummary(e); // team colors for this game: one request, once
+  const us = e ? { ...e.us, record: "" } : { ...SCU_TEAM(g.sport), id: "scu", record: "" };
+  const them = e ? { ...e.them, record: "" } : { id: "opp", name: g.opponent, abbr: oppCode(g), logo: g.logo, record: "" };
+  const col = t => e ? teamColor(e, t).bg : t === us ? "#862633" : "#4b5563";
+  const [L, R] = v === "home" ? [them, us] : [us, them];
+  const [ours, theirs] = g.result.slice(2).split("-");
+  const sl = L === us ? ours : theirs, sr = R === us ? ours : theirs;
+  const d = when(g), link = e?.completed ? [espnGameUrl(e), ESPN_SB[g.sport] ? "ESPN MATCH CENTER" : "ESPN BOX SCORE"]
+    : g.boxscore ? [g.boxscore, "SCU BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
+  const nextHtml = next ? `<span class="nx-next"><small>NEXT UP · ${esc(next.sport.toUpperCase())}</small>${oppShort(next)}
+      <span class="nx-next-when">${esc(when(next).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}${next.allDay ? "" : " · " + esc(fmtTime(next))}</span></span>` : "";
+  return `
+    <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}</div>
+    <div class="nx-field" style="--lc:${col(L)};--rc:${col(R)}">
+      <div class="nx-match">${teamBlock(L)}
+        <div class="nx-plate nx-final"><span class="nx-vs">FINAL</span>
+          <div class="nx-big"><b>${esc(sl)}</b><span>–</span><b>${esc(sr)}</b></div>
+          <div class="nx-outcome ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div>
+          <div class="nx-when"><b>${esc(d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}</b><span data-ago="${new Date(estEnd(g)).toISOString()}">${esc(agoText(estEnd(g)))}</span></div>
+        </div>
+        ${teamBlock(R)}
+      </div>
+      <svg class="nx-seam" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${NX_SEAM}"/></svg>
+    </div>
+    <div class="nx-strip"><a href="${gameHref(g)}">GAME DETAILS →</a>${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}${nextHtml}</div>`;
 }
 
 // ---------- final score hold ----------
@@ -2424,7 +2498,8 @@ async function refreshEspn(manual = false) {
     // re-draw only when something visible changed, so the page doesn't flicker every minute
     // (includes which final score is being held, so the box flips back to the countdown when the hold ends)
     const tg = current?.sport && current.sport !== "calendar" ? teamGames(current.sport, current.resolved) : null;
-    const held = [heldFinal(games, upcomingOf(games)), tg && heldFinal(tg, upcomingOf(tg))].map(g => g?.start || null);
+    const lead = featuredPick(upcomingOf(games)); // redraw when the overview box switches between result and next game
+    const held = [lead.main + ":" + (lead.main === "last" ? lead.last?.start : lead.next?.start), tg && heldFinal(tg, upcomingOf(tg))?.start || null];
     const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay, espn.summary[e.id]?.lines]), Object.keys(espn.events).length, games.map(g => g.result), held]);
     if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
     if (fx.length) runScoreFx(fx); // after the redraw, so the animation lands on the fresh score
