@@ -358,6 +358,20 @@ showTableOfContents = false
   #kscu-sports .l5-row .form { margin: 0; }
   #kscu-sports .gc-play { padding: 8px 12px; border-top: 1px solid var(--ink); font-size: 13px; }
   #kscu-sports .gc-play b { font-family: var(--mono); font-size: 11px; color: var(--bronco); margin-right: 8px; }
+  #kscu-sports .gc-plays { border-top: 1px solid var(--ink); padding: 8px 12px 10px; font-size: 13px; }
+  #kscu-sports .pl-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 10px; margin-bottom: 4px; }
+  #kscu-sports .pl-head b { font-family: var(--mono); font-size: 11px; color: var(--bronco); }
+  #kscu-sports .pl-head button { font: 700 11px var(--mono); border: 1px solid var(--ink); background: var(--paper); color: var(--ink); padding: 3px 8px; cursor: pointer; }
+  #kscu-sports .pl-head button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  #kscu-sports .gc-plays ol { list-style: none; margin: 0; padding: 0; }
+  #kscu-sports .gc-plays li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 10px; padding: 5px 0; border-top: 1px dashed rgba(17,24,39,.3); }
+  #kscu-sports .gc-plays li:first-child { border-top: 0; }
+  #kscu-sports .pl-when { grid-column: 1 / -1; font-family: var(--mono); font-size: 10px; color: var(--muted); }
+  #kscu-sports .pl-text { display: flex; align-items: flex-start; gap: 6px; min-width: 0; overflow-wrap: anywhere; }
+  #kscu-sports .pl-text .tlogo { flex: none; margin-top: 1px; }
+  #kscu-sports .pl-score { font-family: var(--mono); font-size: 12px; font-weight: 700; white-space: nowrap; align-self: start; }
+  #kscu-sports .gc-plays li.sc .pl-text { font-weight: 700; }
+  #kscu-sports .pl-none { color: var(--muted); }
   #kscu-sports .hero-next.gc .gc-match { padding-top: 10px; }
   #kscu-sports .hero-next.gc .tlogo:not(.sm):not(.xs) { width: 46px; height: 46px; }
   #kscu-sports .hero-next.gc .cd-cell { min-width: 50px; }
@@ -973,7 +987,7 @@ function overview() {
     ${onAirBar()}
     ${(() => { const lv = liveEvents()[0];
       return `<div class="card featured${lv ? " live-card" : ""}">
-        ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div>`
+        ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 15s</span></div>`
              : `<div class="tab">NEXT BRONCOS GAME</div><div class="tab right">(ง •̀_•́)ง</div>`}
         <div class="box gc wide">${lv ? liveCenter(lv) : preCenter(up[0])}</div></div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
@@ -1007,7 +1021,7 @@ function sportPage(sportId, gender) {
   shown = {};
 
   return `
-    ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
+    ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">Updates every 15s</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
     <section class="hero run">
       <div class="hero-ico">${icon(sportId)}</div>
       <div class="hero-main">
@@ -1025,7 +1039,35 @@ function sportPage(sportId, gender) {
       <div class="card"><div class="tab">RESULTS</div><div class="tab right mono">${res.length}</div><div class="box" id="results">${gameList("results", res, "No results yet this season.")}</div></div>
     </div>
     ${ESPN_FEEDS[sportName] ? `<div class="card section-gap" style="margin-top:28px"><div class="tab">HEADLINES</div><div class="tab right mono">via ESPN</div>
-      <div class="box news" id="ks-news" data-sport="${esc(sportName)}">${newsList(sportName)}</div></div>` : ""}`;
+      <div class="box news" id="ks-news" data-sport="${esc(sportName)}">${newsList(sportName)}</div></div>`
+      : officialLinks(sportId, gender)}`;
+}
+
+// Sports ESPN doesn't cover. SCU Athletics posts their live stats on StatBroadcast and results on its own site
+// (box scores, PDFs, regatta pages). None of those can be embedded or read by this page (they block framing and
+// cross-site requests), so we link straight to the official pages instead.
+const SCU_SITE = "https://santaclarabroncos.com/sports";
+const SCU_LIVE_STATS = "https://www.statbroadcast.com/events/statmonitr.php?gid=sacl";
+const OFFICIAL = {
+  "water-polo":       "Box score for every match",
+  "tennis":           "Match-by-match results",
+  "golf":             "Tournament leaderboards (PDF)",
+  "rowing":           "Regatta results",
+  "beach-volleyball": "Box score for every match (PDF)",
+  "xc":               "Meet results (PDF)",
+};
+function officialLinks(sportId, gender) {
+  if (!OFFICIAL[sportId]) return "";
+  const slug = `${gender}-${sportId === "xc" ? "cross-country" : sportId}`;
+  const g = gender === "womens" ? "f" : "m";
+  const link = (url, title, desc) => `<a href="${url}" target="_blank" rel="noopener"><h4>${esc(title)} ↗</h4><p>${esc(desc)}</p></a>`;
+  return `<div class="card section-gap" style="margin-top:28px"><div class="tab">OFFICIAL RESULTS &amp; LIVE STATS</div><div class="tab right mono">via SCU Athletics</div>
+    <div class="box news">
+      ${link(`${SCU_SITE}/${slug}/schedule`, "Schedule & results", OFFICIAL[sportId] + ", on santaclarabroncos.com")}
+      ${link(SCU_LIVE_STATS, "Live stats", "StatBroadcast, during games SCU tracks live")}
+      ${sportId === "xc" ? link(`https://www.tfrrs.org/teams/xc/CA_college_${g}_Santa_Clara.html`, "Cross country results", "Every meet on TFRRS")
+        + link(`https://www.tfrrs.org/teams/tf/CA_college_${g}_Santa_Clara.html`, "Track & field results", "Every meet on TFRRS") : ""}
+    </div></div>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -1147,6 +1189,7 @@ ROOT.addEventListener("click", e => {
   if (cs) { cal.sport = cs.dataset.calsport; rerenderCalendar(); return; }
   const cg = e.target.closest("[data-calgender]");
   if (cg) { cal.gender = cg.dataset.calgender; rerenderCalendar(); return; }
+  if (e.target.closest("[data-plays-filter]")) { playFilter.scoring = !playFilter.scoring; rerenderQuiet(); return; }
   const more = e.target.closest("[data-more]");
   if (more) {
     const id = more.dataset.more; shown[id] += PAGE;
@@ -1301,7 +1344,15 @@ async function loadSummary(ev) {
     const last5 = {};
     (d.lastFiveGames || []).forEach(t => last5[String(t.team?.id)] = (t.events || []).slice(-5).map(x =>
       ({ r: x.gameResult === "T" ? "D" : x.gameResult, score: x.score, opp: x.opponent?.abbreviation, date: x.gameDate })));
-    espn.summary[ev.id] = { lines, stats, leaders, last5, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
+    // most recent plays, newest first. ESPN sends play-by-play for basketball, baseball and softball
+    // (not volleyball or soccer), so these lists are empty for those sports and the box is skipped.
+    const sofar = plays.slice(0, pi + 1).filter(p => p.text);
+    const toPlay = p => ({ text: p.text, scoring: !!p.scoringPlay, tid: String(p.team?.id ?? ""), away: p.awayScore, home: p.homeScore,
+      when: [[p.period?.type === "Top" || p.period?.type === "Bottom" ? p.period.type : "", p.period?.displayValue].filter(Boolean).join(" "),
+             p.clock?.displayValue].filter(Boolean).join(" · ") });
+    const recentPlays = sofar.slice(-5).reverse().map(toPlay);
+    const scoringPlays = sofar.filter(p => p.scoringPlay).slice(-5).reverse().map(toPlay);
+    espn.summary[ev.id] = { lines, stats, leaders, last5, recentPlays, scoringPlays, lastPlay: plays[pi]?.text, wpHome: wpa[wi]?.homeWinPercentage };
   } catch (e) { /* box score not available yet */ }
 }
 async function loadNews(sport) {
@@ -1364,6 +1415,20 @@ function preCenter(g, compact = false) {
     </div>`;
 }
 
+// "Last 5 plays" box. The Scoring only toggle is remembered while the page is open, so it survives the 15s redraws.
+const playFilter = { scoring: false };
+function playsBox(sm, e, away, home) {
+  const list = playFilter.scoring ? sm.scoringPlays : sm.recentPlays;
+  const teamOf = id => [e.us, e.them].find(t => t.id === id);
+  const rows = list.length ? list.map(p => { const t = teamOf(p.tid);
+      return `<li class="${p.scoring ? "sc" : ""}"><span class="pl-when">${esc(p.when)}</span>
+        <span class="pl-text">${t ? logo(t, "xs") : ""}${esc(p.text)}</span>
+        ${p.scoring ? `<span class="pl-score">${esc(away.abbr)} ${esc(p.away)}–${esc(p.home)} ${esc(home.abbr)}</span>` : ""}</li>`; }).join("")
+    : `<li class="pl-none">No scoring plays yet.</li>`;
+  return `<div class="gc-plays"><div class="pl-head"><b>${playFilter.scoring ? "LAST 5 SCORING PLAYS" : "LAST 5 PLAYS"}</b>
+      <button type="button" data-plays-filter aria-pressed="${playFilter.scoring}">Scoring only</button></div><ol>${rows}</ol></div>`;
+}
+
 function liveCenter(e) {
   const sm = espn.summary[e.id] || {}, s = sportOf(e.sport);
   const away = e.home ? e.them : e.us, home = e.home ? e.us : e.them;
@@ -1392,7 +1457,8 @@ function liveCenter(e) {
       <div class="gc-match live">${teamBlock(away)}<div class="gc-score"><div><b>${esc(away.score || "—")}</b><span>–</span><b>${esc(home.score || "—")}</b></div>
         <div class="gc-clock">${esc(e.detail)}</div></div>${teamBlock(home)}</div>
       ${linescore}${wp}
-      ${sm.lastPlay ? `<div class="gc-play"><b>LAST PLAY</b>${esc(sm.lastPlay)}</div>` : ""}
+      ${sm.recentPlays?.length ? playsBox(sm, e, away, home)
+        : sm.lastPlay ? `<div class="gc-play"><b>LAST PLAY</b>${esc(sm.lastPlay)}</div>` : ""}
     </div>${(() => {
       const form = [e.us, e.them].filter(t => sm.last5?.[t.id]?.length).map(t => `<div class="l5-row">${logo(t, "xs")}<b>${esc(t.abbr)}</b>
         <div class="form lg">${sm.last5[t.id].map(x => `<i class="${esc(x.r)}" title="${esc((x.r || "") + " " + (x.score || "") + " vs " + (x.opp || ""))}">${esc(x.r)}</i>`).join("")}</div></div>`).join("");
