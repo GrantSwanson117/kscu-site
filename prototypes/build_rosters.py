@@ -22,7 +22,7 @@ TEAMS = ["mens-basketball", "womens-basketball", "mens-soccer", "womens-soccer",
          "womens-beach-volleyball", "mens-water-polo", "womens-water-polo", "baseball", "softball",
          "mens-tennis", "womens-tennis", "mens-golf", "womens-golf", "mens-rowing", "womens-rowing",
          "mens-cross-country", "womens-cross-country"]
-PHOTO = "?width=240&height=300&mode=crop"  # SCU's image server crops around the face
+PHOTO = "?width=320"  # full headshot (SCU uses 2:3 portraits); the page crops from the top so heads never get cut
 
 def text(fragment):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", fragment or ""))).strip()
