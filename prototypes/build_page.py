@@ -153,6 +153,10 @@ PAGE_OVERRIDES = """<style>
 MARKUP = """<div id="kscu-sports" class="not-prose">
   <!-- Sport sub-menu -->
   <nav class="rail" id="ks-rail" aria-label="Sports"></nav>
+  <div class="score-tools">
+    <button type="button" id="ks-refresh-scores" disabled>↻ Refresh scores</button>
+    <span id="ks-refresh-status" role="status"></span>
+  </div>
   <div class="live-strip" id="ks-live-strip" aria-live="polite"></div>
   <main id="ks-view"><div class="empty" style="margin:28px 0">Loading the Bronco calendar…</div></main>
   <footer id="ks-footer"></footer>

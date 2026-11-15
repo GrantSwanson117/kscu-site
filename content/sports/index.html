@@ -143,6 +143,9 @@ showTableOfContents = false
   /* live score strip */
   #kscu-sports .live-strip { display: none; border: 2px solid var(--red); background: var(--red-tint); padding: 10px 14px; margin: 18px 0 0;
     font-family: var(--mono); font-weight: 700; align-items: center; gap: 12px; flex-wrap: wrap; }
+  #kscu-sports .score-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 12px; margin-top: 10px; font: 12px var(--mono); }
+  #kscu-sports .score-tools button { border: 1px solid var(--ink); background: var(--paper); color: var(--ink); padding: 6px 10px; cursor: pointer; }
+  #kscu-sports .score-tools button:disabled { opacity: .65; cursor: default; }
   #kscu-sports .live-strip.on { display: flex; }
 
   /* ================= THIS WEEK strip ================= */
@@ -275,6 +278,10 @@ showTableOfContents = false
   /* ================= game center (countdown / live box score) ================= */
   #kscu-sports .tab-live { background: var(--bronco); color: #fff; border-color: var(--bronco-deep); }
   #kscu-sports .tab-live .dot { background: #fff; }
+  #kscu-sports .card.live-card { padding-top: 0; }
+  #kscu-sports .live-card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; }
+  #kscu-sports .live-card-head .tab-live { padding: 4px 8px; font-size: 14px; font-weight: 700; }
+  #kscu-sports .live-card-head > .mono { padding: 4px 8px; font-size: 12px; }
   #kscu-sports .gc { display: flex; flex-direction: column; background: var(--bg); }
   #kscu-sports .gc-top { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-bottom: 1px solid var(--ink); font-size: 13px; letter-spacing: .04em; }
   #kscu-sports .gc-top .ico { width: 30px; height: 30px; flex: none; }
@@ -373,7 +380,6 @@ showTableOfContents = false
   @media (max-width: 480px) {
     #kscu-sports .tab { font-size: 12px; padding: 3px 6px; }
     #kscu-sports .tab.right.mono { font-size: 10.5px; }
-    #kscu-sports .tab-live + .tab.right { display: none; }
   }
 
   /* ================= full calendar ================= */
@@ -627,6 +633,10 @@ showTableOfContents = false
 <div id="kscu-sports" class="not-prose">
   <!-- Sport sub-menu -->
   <nav class="rail" id="ks-rail" aria-label="Sports"></nav>
+  <div class="score-tools">
+    <button type="button" id="ks-refresh-scores" disabled>↻ Refresh scores</button>
+    <span id="ks-refresh-status" role="status"></span>
+  </div>
   <div class="live-strip" id="ks-live-strip" aria-live="polite"></div>
   <main id="ks-view"><div class="empty" style="margin:28px 0">Loading the Bronco calendar…</div></main>
   <footer id="ks-footer"></footer>
@@ -962,8 +972,8 @@ function overview() {
   return `
     ${onAirBar()}
     ${(() => { const lv = liveEvents()[0];
-      return `<div class="card featured">
-        ${lv ? `<div class="tab tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><div class="tab right mono">updates every 15s</div>`
+      return `<div class="card featured${lv ? " live-card" : ""}">
+        ${lv ? `<div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div>`
              : `<div class="tab">NEXT BRONCOS GAME</div><div class="tab right">(ง •̀_•́)ง</div>`}
         <div class="box gc wide">${lv ? liveCenter(lv) : preCenter(up[0])}</div></div>`; })()}
     <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
@@ -997,8 +1007,7 @@ function sportPage(sportId, gender) {
   shown = {};
 
   return `
-    ${liveEv ? `<div class="card" style="margin-top:28px"><div class="tab tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div>
-      <div class="tab right mono">updates every 15s</div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
+    ${liveEv ? `<div class="card live-card" style="margin-top:28px"><div class="live-card-head"><div class="tab-live"><span class="dot pulse"></span> LIVE · BOX SCORE</div><span class="mono">ON THE WIRE</span></div><div class="box gc">${liveCenter(liveEv)}</div></div>` : ""}
     <section class="hero run">
       <div class="hero-ico">${icon(sportId)}</div>
       <div class="hero-main">
@@ -1184,7 +1193,7 @@ const ESPN_SB = { "Women's Soccer": { path: "soccer/usa.ncaa.w.1", id: "20312" }
 const espnPath = sport => ESPN_FEEDS[sport] || ESPN_SB[sport]?.path;
 const espnGameUrl = e => ESPN_SB[e.sport] ? `https://www.espn.com/soccer/match/_/gameId/${e.id}` : `https://www.espn.com/${ESPN_WEB[e.sport]}/game/_/gameId/${e.id}`;
 const espn = { events: {}, team: {}, summary: {}, news: {}, demo: /demo=live/.test(location.search) };
-const getJSON = async url => { const r = await fetch(url); if (!r.ok) throw new Error(r.status); return r.json(); };
+const getJSON = async url => { const r = await fetch(url, { cache: "no-cache", signal: AbortSignal.timeout(10000) }); if (!r.ok) throw new Error(r.status); return r.json(); };
 
 function normTeam(t) {
   const recs = t.record || t.records || [];
@@ -1454,20 +1463,36 @@ function rerenderQuiet() {
   markMenu(); scrollTo(0, y);
   maybeIntro(); // first ESPN redraw lands right after load: replay the intro on the fresh tiles
 }
-async function refreshEspn() {
-  await loadEspn();
-  const lv = liveEvents();
-  const strip = document.getElementById("ks-live-strip");
-  strip.innerHTML = lv.length ? `<span class="dot pulse"></span> LIVE NOW ` + lv.map(e =>
-    `<a href="${href(sportOf(e.sport).id, genderOf(e.sport))}">${esc(e.sport)}: ${esc(e.us.abbr)} ${esc(e.us.score || "—")} – ${esc(e.them.score || "—")} ${esc(e.them.abbr)} (${esc(e.detail)})</a>`).join(" · ") : "";
-  strip.classList.toggle("on", lv.length > 0);
-  document.querySelectorAll("#ks-rail .livepip").forEach(p => p.remove());
-  lv.forEach(e => document.querySelector(`#ks-rail a[data-sport="${sportOf(e.sport).id}"]`)?.insertAdjacentHTML("beforeend", `<span class="dot pulse livepip"></span>`));
-  // re-draw only when something visible changed, so the page doesn't flicker every minute
-  const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay]), Object.keys(espn.events).length, games.map(g => g.result)]);
-  if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
-  setTimeout(refreshEspn, lv.length ? 15000 : 60000);
+const refreshButton = document.getElementById("ks-refresh-scores");
+const refreshStatus = document.getElementById("ks-refresh-status");
+let scoreTimer;
+
+async function refreshEspn(manual = false) {
+  clearTimeout(scoreTimer);
+  refreshButton.disabled = true;
+  if (manual) refreshStatus.textContent = "Checking ESPN…";
+  try {
+    await loadEspn();
+    const lv = liveEvents();
+    const strip = document.getElementById("ks-live-strip");
+    strip.innerHTML = lv.length ? `<span class="dot pulse"></span> LIVE NOW ` + lv.map(e =>
+      `<a href="${href(sportOf(e.sport).id, genderOf(e.sport))}">${esc(e.sport)}: ${esc(e.us.abbr)} ${esc(e.us.score || "—")} – ${esc(e.them.score || "—")} ${esc(e.them.abbr)} (${esc(e.detail)})</a>`).join(" · ") : "";
+    strip.classList.toggle("on", lv.length > 0);
+    document.querySelectorAll("#ks-rail .livepip").forEach(p => p.remove());
+    lv.forEach(e => document.querySelector(`#ks-rail a[data-sport="${sportOf(e.sport).id}"]`)?.insertAdjacentHTML("beforeend", `<span class="dot pulse livepip"></span>`));
+    // re-draw only when something visible changed, so the page doesn't flicker every minute
+    const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay]), Object.keys(espn.events).length, games.map(g => g.result)]);
+    if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
+    if (manual) refreshStatus.textContent = "Score check complete";
+  } catch (error) {
+    if (manual) refreshStatus.textContent = "Couldn’t check scores. Try again.";
+    console.warn("Score refresh failed", error);
+  } finally {
+    refreshButton.disabled = false;
+    scoreTimer = setTimeout(refreshEspn, liveEvents().length ? 15000 : 60000);
+  }
 }
+refreshButton.addEventListener("click", () => refreshEspn(true));
 
 fetch(SCHEDULE_URL, { cache: "no-cache" }).then(r => r.json()).then(d => {
   // soccer-style wording: ties are shown as draws ("T 1-1" -> "D 1-1")
