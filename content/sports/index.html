@@ -809,7 +809,9 @@ const ROOT = document.getElementById("kscu-sports");
 //    would serve this same JSON (e.g. GET /sports/schedule).
 // 2) In-game scores for basketball + volleyball: straight from ESPN.
 // ---------------------------------------------------------------------------
-const SCHEDULE_URL = "/sports/scu-schedule.json";
+const SCHEDULE_URL = "/sports/scu-schedule.json"; // copy built into the site (refreshed weekly), used if GitHub is unreachable
+// hourly copy written by the "Refresh sports schedule" GitHub Action to the sports-data branch; no site rebuild needed
+const LIVE_SCHEDULE_URL = "https://raw.githubusercontent.com/GrantSwanson117/kscu-site/sports-data/scu-schedule.json";
 const ROSTER_URL = "/sports/rosters.json"; // players + coaches from SCU's roster pages, refreshed twice a year
 const ESPN_TEAM_ID = 2541; // Santa Clara on ESPN
 const ESPN_FEEDS = {
@@ -1338,6 +1340,12 @@ function rerenderCalendar() {
 // would become real pages like kscu.org/sports/volleyball/.
 // ---------------------------------------------------------------------------
 let current = null;
+function markRail() {
+  const tab = current.sport === "game" ? current.gameSport : current.sport;
+  document.querySelectorAll("#ks-rail a").forEach(a => {
+    if (a.dataset.sport === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
+}
 const renderView = () => { const { sport, gender } = current;
   return sport === "calendar" ? calendarPage(gender) : sport === "game" ? gamePage(gender) : sport ? sportPage(sport, gender) : overview(); };
 function route() {
@@ -1346,10 +1354,7 @@ function route() {
   const view = document.getElementById("ks-view");
   view.classList.remove("noanim");
   view.innerHTML = renderView();
-  const tab = sport === "game" ? current.gameSport : sport;
-  document.querySelectorAll("#ks-rail a").forEach(a => {
-    if (a.dataset.sport === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
-  });
+  markRail();
   markMenu();
   setDrop(false);
   introUntil = Date.now() + 2500; maybeIntro();
@@ -1918,15 +1923,32 @@ async function refreshEspn(manual = false) {
 }
 refreshButton.addEventListener("click", () => refreshEspn(true));
 
-fetch(SCHEDULE_URL, { cache: "no-cache" }).then(r => r.json()).then(d => {
+// Schedule: fetch both copies and use whichever is newer (the GitHub one normally; the built-in one if GitHub is down).
+// While the page is open it re-checks every 10 minutes, so new results and times appear without a reload.
+let scheduleUpdated = "";
+async function loadSchedule() {
+  const get = url => fetch(url, { cache: "no-cache", signal: AbortSignal.timeout(8000) }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  const got = (await Promise.allSettled([get(LIVE_SCHEDULE_URL), get(SCHEDULE_URL)]))
+    .filter(x => x.status === "fulfilled" && Array.isArray(x.value?.games) && x.value.games.length).map(x => x.value);
+  if (!got.length) throw new Error("schedule unavailable");
+  const d = got.sort((a, b) => String(b.updated).localeCompare(String(a.updated)))[0];
+  if (d.updated === scheduleUpdated) return false;
+  scheduleUpdated = d.updated;
   // soccer-style wording: ties are shown as draws ("T 1-1" -> "D 1-1")
   games = d.games.map(g => (g.result && /^T \d/.test(g.result) ? { ...g, result: "D" + g.result.slice(1) } : g))
                  .sort((a, b) => when(a) - when(b));
   games.forEach(g => sportOf(g.sport)); // register any sport we don't have a tab for yet (gets a generic icon)
-  buildMenus(); route();
   document.getElementById("ks-footer").textContent =
     `Updated ${new Date(d.updated).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}`;
+  return true;
+}
+loadSchedule().then(() => {
+  buildMenus(); route();
   refreshEspn(); refreshMixlr();
+  setInterval(() => loadSchedule().then(changed => {
+    if (!changed) return;
+    buildMenus(); markRail(); liveKey = null; refreshEspn(); // redraws with the new schedule (and re-applies ESPN scores)
+  }).catch(() => { /* keep showing what we have */ }), 10 * 60e3);
 }).catch(() => {
   document.getElementById("ks-view").innerHTML = `<div class="empty" style="margin:28px 0">Couldn't load the schedule.</div>`;
 });

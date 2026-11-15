@@ -4,7 +4,7 @@ Refreshes the KSCU Sports schedule from Santa Clara Athletics' public calendar (
 Usage (from the repo root):
     python3 prototypes/build_snapshot.py content/sports/scu-schedule.json
 
-Safe to run on a schedule (the daily GitHub Action does):
+Safe to run on a schedule (the hourly GitHub Action runs it against the sports-data branch):
   - SCU's feed is a rolling window (~5 months). Games that have dropped off the start of the window
     are KEPT from the existing file, so results/records don't shrink over the season.
   - Inside the window, SCU's feed wins (new games, time changes, cancellations, results).
