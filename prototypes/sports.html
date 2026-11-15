@@ -128,7 +128,12 @@
   .week { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(170px, 1fr); overflow-x: auto; border: 1px solid var(--ink); }
   .wk { border-right: 1px dashed rgba(17,24,39,.4); padding: 10px 12px 12px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; min-height: 150px; }
   .wk:last-child { border-right: 0; }
-  .wk:hover { background: rgba(0,0,0,.04); }
+  .wk:hover { background-color: rgba(0,0,0,.04); }
+  /* light gender dots behind each game: pink = women's team, blue = men's (fainter than the sport page header) */
+  .wk.g-womens, .wk.g-mens { --dot: #f6cbdf;
+    background-image: radial-gradient(circle, var(--dot) 1.3px, transparent 1.8px), radial-gradient(circle, var(--dot) 1.3px, transparent 1.8px);
+    background-size: 14px 14px; background-position: 0 0, 7px 7px; background-origin: content-box; background-clip: content-box; }
+  .wk.g-mens { --dot: #c9daf2; }
   .wk:hover .ico * { animation-play-state: running; }
   .wk .day { font-family: var(--mono); font-size: 12px; font-weight: 700; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
   .wk .ico { width: 44px; height: 44px; }
@@ -139,7 +144,8 @@
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px; margin-bottom: 48px; }
   .tile { border: 1px solid var(--ink); text-decoration: none; display: flex; flex-direction: column; background: var(--bg);
     transition: transform .15s ease, box-shadow .15s ease; }
-  .tile:hover { transform: translate(-3px, -3px); box-shadow: 4px 4px 0 var(--ink); }
+  .tile { box-shadow: 3px 3px 0 rgba(17,24,39,.22); }
+  .tile:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
   .tile:hover .ico * { animation-play-state: running; }
   .tile-head { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--ink); }
   .tile-head .ico { width: 54px; height: 54px; flex: none; }
@@ -163,6 +169,31 @@
   .sign.lg { width: 38px; height: 38px; border-width: 2px; box-shadow: 2px 2px 0 var(--ink); }
   .seg .sign { width: 20px; height: 20px; box-shadow: none; }
   .tile-row .line { font-size: 14px; font-weight: 600; }
+  /* team tile: stretched title link + one boxed "last game" chip per team */
+  .tile { position: relative; }
+  .tile-link { color: inherit; text-decoration: none; }
+  .tile-link::after { content: ""; position: absolute; inset: 0; }
+  .tile-link:focus-visible { outline: none; }
+  .tile:has(.tile-link:focus-visible) { outline: 2px solid var(--red); outline-offset: 3px; }
+  .tr-body { min-width: 0; display: flex; flex-direction: column; gap: 6px; container-type: inline-size; }
+  .lc-opp { display: flex; align-items: center; gap: 6px; }
+  .lc-opp img { width: 18px; height: 18px; object-fit: contain; flex: none; margin: 0; }
+  .lc-opp .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  @container (max-width: 250px) { .lc-opp.has-logo .nm { display: none; } } /* narrow box: logo only */
+  .lchip { position: relative; z-index: 1; display: flex; align-items: center; gap: 8px; min-width: 0; padding: 5px 8px; font-size: 13px;
+    background: var(--paper); border: 1px solid var(--ink); color: inherit; text-decoration: none; transition: transform .15s var(--ease), box-shadow .15s var(--ease); }
+  a.lchip:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 var(--ink); }
+  .lchip .lsq { font-style: normal; font-family: var(--mono); font-size: 10px; font-weight: 700; min-width: 17px; height: 17px; padding: 0 3px; flex: 0 0 auto; box-sizing: border-box;
+    display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--ink); }
+  .lchip .lsq.W { background: var(--win); border-color: var(--win); color: #fff; }
+  .lchip .lsq.L { background: var(--red); border-color: var(--red); color: #fff; }
+  .lchip .lsq.D { background: var(--brown); border-color: var(--brown); color: #fff; }
+  .lchip b { font-family: var(--mono); font-size: 13px; flex: none; }
+  .lc-opp { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lc-date { font-family: var(--cond); font-size: 12px; color: var(--muted); flex: none; }
+  .tile-row .line.next { font-size: 13px; }
+  .tile-row .line.next b { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--muted); margin-right: 6px; }
+  @media (max-width: 520px) { .lchip { padding: 8px; min-height: 40px; } }
   .tile-row .line span { font-weight: 400; color: var(--muted); font-family: var(--cond); }
 
   /* recent-form blocks: W / L / placings */
@@ -1138,19 +1169,32 @@ function overview() {
   const weekHtml = week.length ? week.map(g => {
     const s = sportOf(g.sport), d = when(g);
     const isLive = espnFor(g)?.state === "in";
-    return `<a class="wk ${d.toDateString() === todayStr ? "today" : ""}" href="${href(s.id, genderOf(g.sport))}">
+    return `<a class="wk g-${genderOf(g.sport)} ${d.toDateString() === todayStr ? "today" : ""}" href="${href(s.id, genderOf(g.sport))}">
       <div class="day"><span>${isLive ? "LIVE NOW" : d.toDateString() === todayStr ? "TODAY" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }).toUpperCase()}</span><span>${esc(fmtTime(g))}</span></div>
       ${icon(s.id)}<div class="opp">${esc(versus(g))}</div><div class="meta">${esc(g.sport)}</div><div>${venueTag(g).replace('class="vb', 'style="margin-left:0" class="vb')}</div></a>`;
   }).join("") : `<div class="empty">No games in the next 7 days.</div>`;
 
+  // Team tiles: per team, the last game in a box (played = boxed, links to its game page) and the next game as
+  // plain text (upcoming = unboxed). The tile links to the sport page through its title (stretched over the tile),
+  // so the last-game box can be its own link.
+  const md = g => when(g).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  const lastChip = g => {
+    if (isFinal(g)) { const k = g.result[0];
+      return `<a class="lchip" href="${gameHref(g)}" aria-label="${esc(`${g.result} ${versus(g)}, ${md(g)}: game details`)}"><i class="lsq ${k}">${k}</i>
+        <b>${esc(g.result.slice(2).replace("-", "–"))}</b><span class="lc-opp${g.logo ? " has-logo" : ""}">${g.logo ? `<img src="${esc(g.logo)}" alt="" loading="lazy">` : ""}<span class="nm">${esc(g.opponent)}</span></span><span class="lc-date">${md(g)}</span></a>`; }
+    const [place, ...rest] = g.result.split(" "); // placings, e.g. "3rd of 12"
+    const inner = `<i class="lsq pl">${esc(place)}</i><span class="lc-opp">${esc([rest.join(" "), g.opponent].filter(Boolean).join(" · "))}</span><span class="lc-date">${md(g)}</span>`;
+    return g.boxscore ? `<a class="lchip" href="${esc(g.boxscore)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="lchip">${inner}</div>`;
+  };
   const tiles = menuSports().map(s => {
     const rows = ["mens", "womens"].filter(g => hasTeam(s.id, g)).map(g => {
-      const tg = teamGames(s.id, g), nx = upcomingOf(tg)[0];
-      return `<div class="tile-row">${sign(g)}<div>
-        <div class="line">${nx ? `Next: ${esc(versus(nx))}${venueTag(nx)} <span>· ${when(nx).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</span>` : `<span>No upcoming games listed</span>`}</div>
-        ${formBlocks(resultsOf(tg), 8)}</div></div>`;
+      const tg = teamGames(s.id, g), nx = upcomingOf(tg)[0], last = resultsOf(tg)[0];
+      // nothing played and nothing scheduled (off-season): one quiet line instead of two empty states
+      const body = !last && !nx ? `<div class="line next"><span>No games listed yet</span></div>`
+        : (last ? lastChip(last) : "") + `<div class="line next">${nx ? `<b>NEXT</b>${esc(versus(nx))}${venueTag(nx)} <span>· ${md(nx)}</span>` : `<span>No upcoming games listed</span>`}</div>`;
+      return `<div class="tile-row">${sign(g)}<div class="tr-body">${body}</div></div>`;
     }).join("");
-    return `<a class="tile" href="${href(s.id)}"><div class="tile-head">${icon(s.id)}<h3>${esc(s.name)}</h3></div>${rows}</a>`;
+    return `<div class="tile"><div class="tile-head">${icon(s.id)}<h3><a class="tile-link" href="${href(s.id)}">${esc(s.name)}</a></h3></div>${rows}</div>`;
   }).join("");
 
   return `
@@ -1203,7 +1247,7 @@ function sportPage(sportId, gender) {
         <a class="listen" href="https://mixlr.com/kscusports" target="_blank" rel="noopener"><span class="dot ${liveNow ? "pulse" : ""}"></span>${liveNow ? "LIVE NOW · " + esc(liveNow) : "KSCU PLAY-BY-PLAY ON MIXLR ↗"}</a>
       </div>
       ${(() => { const fin = liveEv ? null : heldFinal(tg, up);
-        return `<div class="hero-next gc"><div class="lbl"><span>${fin ? "FINAL" : "NEXT UP"}</span><span>(ง •̀_•́)ง</span></div>${fin ? finalCenter(fin, up[0]) : preCenter(up[0], true)}</div>`; })()}
+        return `<div class="hero-next gc"><div class="lbl"><span>${fin ? "FINAL" : "NEXT UP"}</span><span>(ง •̀_•́)ง</span></div>${fin ? finalCenter(fin, up[0]) : preCenter(up[0], true) + lastResult(res[0])}</div>`; })()}
     </section>
     <div class="grid2 ${ESPN_FEEDS[sportName] ? "" : "section-gap"}" style="margin-top:0">
       <div class="card"><div class="tab">UPCOMING</div><div class="tab right mono">${up.length}</div><div class="box" id="upcoming">${gameList("upcoming", up, "No games on the calendar yet.")}</div></div>
@@ -1572,7 +1616,7 @@ function lastResult(g) {
     : `<span class="lr-t">${esc(versus(g))}</span>`;
   const tag = isFinal(g) ? `a href="${gameHref(g)}"` : "div";
   return `<${tag} class="gc-last"><div class="gc-last-h">LAST RESULT · ${esc(g.sport.toUpperCase())} · ${when(g).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
-    <div class="gc-last-row">${icon(sportOf(g.sport).id)}<div class="lr-score">${body}</div><span class="res ${k}">${esc(g.result)}</span></div></${tag.split(" ")[0]}>`;
+    <div class="gc-last-row">${icon(sportOf(g.sport).id)}<div class="lr-score">${body}</div><span class="res ${k}">${esc(e && e.completed && k ? k : g.result)}</span></div></${tag.split(" ")[0]}>`;
 }
 
 function preCenter(g, compact = false) {
