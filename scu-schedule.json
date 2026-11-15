@@ -1,0 +1,3987 @@
+{
+ "updated": "2026-11-15T08:34:41.780771+00:00",
+ "games": [
+  {
+   "id": "11159",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-15",
+   "allDay": true,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/15/mens-tennis-opens-play-at-ita-northwest-regional-championships.aspx"
+  },
+  {
+   "id": "11160",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-16",
+   "allDay": true,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/16/five-singles-wins-for-mens-tennis-at-the-ita-regionals.aspx"
+  },
+  {
+   "id": "11071",
+   "sport": "Women's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Stanford Intercollegiate",
+   "start": "2026-10-16",
+   "allDay": true,
+   "location": "Stanford, Calif. | Stanford GC",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11024",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2026-10-16T02:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 3-1",
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pacific/boxscore/11024",
+   "recap": "https://santaclarabroncos.com/news/2026/10/15/womens-volleyball-volleyball-takes-down-tigers-to-win-fourth-straight.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Pacific",
+      "abbr": "PAC",
+      "cells": [
+       "16",
+       "25",
+       "10",
+       "24"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "21",
+       "25",
+       "26"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "56.0",
+      "74.0"
+     ],
+     [
+      "Kills",
+      "43",
+      "59"
+     ],
+     [
+      "Aces",
+      "6",
+      "6"
+     ],
+     [
+      "Blocks",
+      "7",
+      "9"
+     ],
+     [
+      "Assists",
+      "42",
+      "56"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11161",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-17",
+   "allDay": true,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/mens-tennis-continues-strong-play-on-third-day-at-ita-regionals.aspx"
+  },
+  {
+   "id": "11072",
+   "sport": "Women's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Stanford Intercollegiate",
+   "start": "2026-10-17",
+   "allDay": true,
+   "location": "Stanford, Calif. | Stanford GC",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-golf-broncos-complete-second-round-at-stanford-intercollegiate.aspx"
+  },
+  {
+   "id": "11056",
+   "sport": "Men's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "Bronco Invitational",
+   "start": "2026-10-17T15:45:00+00:00",
+   "allDay": false,
+   "location": "Sunnyvale, Calif.",
+   "result": "2nd of 22",
+   "logo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/mens-cross-country-track-mens-cross-country-earns-runner-up-finish-at-bronco-invitational.aspx"
+  },
+  {
+   "id": "11063",
+   "sport": "Women's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "Bronco Invitational",
+   "start": "2026-10-17T16:30:00+00:00",
+   "allDay": false,
+   "location": "Sunnyvale, Calif.",
+   "result": "4th of 23",
+   "logo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-cross-country-track-almonte-wins-again-womens-cross-country-finish-fourth-at-bronco-invite.aspx"
+  },
+  {
+   "id": "10988",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2026-10-17T20:00:00+00:00",
+   "allDay": false,
+   "location": "Malibu, Calif.",
+   "result": "L 16-17",
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/pepperdine/boxscore/10988",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/mens-water-polo-comeback-comes-up-just-short-at-no-13-pepperdine.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "5",
+       "4",
+       "1",
+       "6",
+       "16"
+      ]
+     },
+     {
+      "name": "Pepperdine",
+      "abbr": "PEP",
+      "cells": [
+       "3",
+       "5",
+       "6",
+       "3",
+       "17"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "31",
+      "31"
+     ],
+     [
+      "Goals",
+      "16",
+      "17"
+     ],
+     [
+      "Assists",
+      "9",
+      "9"
+     ],
+     [
+      "Points",
+      "25",
+      "26"
+     ],
+     [
+      "Exclusions",
+      "14",
+      "16"
+     ],
+     [
+      "Steals",
+      "8",
+      "4"
+     ],
+     [
+      "Sprints",
+      "1-3",
+      "3-1"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11025",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-10-17T20:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "L 2-3",
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/saint-mary-s/boxscore/11025",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-volleyball-volleyball-leads-early-over-saint-marys-in-top-teams-clash.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "teams": [
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "23",
+       "19",
+       "25",
+       "25",
+       "15"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "25",
+       "22",
+       "17",
+       "9"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "78.0",
+      "72.0"
+     ],
+     [
+      "Kills",
+      "62",
+      "58"
+     ],
+     [
+      "Aces",
+      "10",
+      "4"
+     ],
+     [
+      "Blocks",
+      "6",
+      "10"
+     ],
+     [
+      "Assists",
+      "56",
+      "54"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11162",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-18",
+   "allDay": true,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/18/mens-tennis-bluett-faragcao-advance-to-the-doubles-semis-at-the-ita-regionals.aspx"
+  },
+  {
+   "id": "11073",
+   "sport": "Women's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Stanford Intercollegiate",
+   "start": "2026-10-18",
+   "allDay": true,
+   "location": "Stanford, Calif. | Stanford GC",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/documents/2026/10/18/WGOLF_Intercollegiate_R3_Scores.pdf",
+   "recap": "https://santaclarabroncos.com/news/2026/10/18/womens-golf-broncos-climb-four-spots-on-final-day-of-stanford-intercollegiate.aspx"
+  },
+  {
+   "id": "10953",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2026-10-18T01:00:00+00:00",
+   "allDay": false,
+   "location": "Seattle",
+   "result": "D 1-1",
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/seattle/boxscore/10953",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-soccer-plays-to-draw-in-seattle.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     },
+     {
+      "name": "Seattle U",
+      "abbr": "SU",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "11 (3)",
+      "7 (2)"
+     ],
+     [
+      "Saves",
+      "1",
+      "2"
+     ],
+     [
+      "Corner Kicks",
+      "2",
+      "5"
+     ],
+     [
+      "Fouls",
+      "9",
+      "7"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10934",
+   "sport": "Men's Soccer",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-10-18T02:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Stevens Stadium - Buck Shaw Field",
+   "result": "D 0-0",
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/saint-mary-s/boxscore/10934",
+   "recap": "https://santaclarabroncos.com/news/2026/10/17/scoreless-draw-for-mens-soccer-versus-saint-mary-s.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "16 (9)",
+      "15 (5)"
+     ],
+     [
+      "Saves",
+      "5",
+      "9"
+     ],
+     [
+      "Corner Kicks",
+      "10",
+      "6"
+     ],
+     [
+      "Fouls",
+      "8",
+      "13"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10989",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2026-10-18T19:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": "L 13-14",
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/lmu/boxscore/10989",
+   "recap": "https://santaclarabroncos.com/news/2026/10/18/mens-water-polo-late-rally-dooms-no-18-broncos-at-no-8-lmu.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "3",
+       "4",
+       "4",
+       "2",
+       "13"
+      ]
+     },
+     {
+      "name": "Loyola Marymount",
+      "abbr": "LMU",
+      "cells": [
+       "3",
+       "2",
+       "3",
+       "6",
+       "14"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "29",
+      "32"
+     ],
+     [
+      "Goals",
+      "13",
+      "14"
+     ],
+     [
+      "Assists",
+      "10",
+      "13"
+     ],
+     [
+      "Points",
+      "23",
+      "27"
+     ],
+     [
+      "Exclusions",
+      "8",
+      "7"
+     ],
+     [
+      "Steals",
+      "4",
+      "4"
+     ],
+     [
+      "Sprints",
+      "3-1",
+      "1-3"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11081",
+   "sport": "Men's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Saint Mary's Invitational",
+   "start": "2026-10-19",
+   "allDay": true,
+   "location": "Monterey, Calif. | Bayonet Blackhorse",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/19/no-22-mens-golf-tied-for-ninth-after-saint-marys-invitational-opening-round.aspx"
+  },
+  {
+   "id": "11163",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Regional Championships",
+   "start": "2026-10-19",
+   "allDay": true,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/19/bluett-faragcao-loses-in-semis-mens-tennis-rack-up-21-total-wins-at-ita-regionals.aspx"
+  },
+  {
+   "id": "11082",
+   "sport": "Men's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Saint Mary's Invitational",
+   "start": "2026-10-20",
+   "allDay": true,
+   "location": "Monterey, Calif. | Bayonet Blackhorse",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/20/broncos-surge-up-leaderboard-on-day-2-of-saint-marys-invitational.aspx"
+  },
+  {
+   "id": "11083",
+   "sport": "Men's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Saint Mary's Invitational",
+   "start": "2026-10-21",
+   "allDay": true,
+   "location": "Monterey, Calif. | Bayonet Blackhorse",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/documents/2026/10/21/2026_SMC_Invitational_Final_Leaderboard.pdf",
+   "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-golf-nielsen-earns-co-medalist-honors-broncos-runner-up-at-saint-marys-invitational.aspx"
+  },
+  {
+   "id": "10935",
+   "sport": "Men's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2026-10-22T02:00:00+00:00",
+   "allDay": false,
+   "location": "San Diego",
+   "result": "L 1-3",
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/san-diego/boxscore/10935",
+   "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-soccer-msoc-recap.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     },
+     {
+      "name": "San Diego",
+      "abbr": "USD",
+      "cells": [
+       "0",
+       "3",
+       "3"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "8 (3)",
+      "24 (9)"
+     ],
+     [
+      "Saves",
+      "6",
+      "2"
+     ],
+     [
+      "Corner Kicks",
+      "5",
+      "13"
+     ],
+     [
+      "Fouls",
+      "11",
+      "8"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11004",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Princeton",
+   "start": "2026-10-22T21:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "L 11-12",
+   "logo": "https://santaclarabroncos.com/images/logos/Princeton_Tigers.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/princeton/boxscore/11004",
+   "recap": "https://santaclarabroncos.com/news/2026/10/22/mens-water-polo-broncos-drop-heartbreaker-to-no-6-princeton.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Princeton",
+      "abbr": "PRI",
+      "cells": [
+       "4",
+       "3",
+       "3",
+       "2",
+       "12"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "1",
+       "3",
+       "5",
+       "2",
+       "11"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "29",
+      "31"
+     ],
+     [
+      "Goals",
+      "12",
+      "11"
+     ],
+     [
+      "Assists",
+      "6",
+      "10"
+     ],
+     [
+      "Points",
+      "18",
+      "21"
+     ],
+     [
+      "Exclusions",
+      "12",
+      "15"
+     ],
+     [
+      "Steals",
+      "7",
+      "9"
+     ],
+     [
+      "Sprints",
+      "2-1",
+      "1-2"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11026",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2026-10-23T01:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": "L 1-3",
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/lmu/boxscore/11026",
+   "recap": "https://santaclarabroncos.com/news/2026/10/22/womens-volleyball-volleyball-builds-momentum-late-at-lmu.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "19",
+       "17",
+       "25",
+       "21"
+      ]
+     },
+     {
+      "name": "LMU (CA)",
+      "abbr": "LMU",
+      "cells": [
+       "25",
+       "25",
+       "20",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "58.0",
+      "66.0"
+     ],
+     [
+      "Kills",
+      "51",
+      "50"
+     ],
+     [
+      "Aces",
+      "2",
+      "4"
+     ],
+     [
+      "Blocks",
+      "5",
+      "12"
+     ],
+     [
+      "Assists",
+      "46",
+      "45"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11192",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Santa Clara Hidden Dual",
+   "start": "2026-10-23T17:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/23/womens-tennis-starts-strong-at-hidden-dual-with-three-singles-wins-over-san-jose-state.aspx"
+  },
+  {
+   "id": "10991",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LIU",
+   "start": "2026-10-23T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "W 22-10",
+   "logo": "https://santaclarabroncos.com/images/logos/LIU-Sharks.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/liu/boxscore/10991",
+   "recap": "https://santaclarabroncos.com/news/2026/10/23/mens-water-polo-no-19-broncos-bounce-back-with-22-10-win-over-liu.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Long Island University",
+      "abbr": "LIU",
+      "cells": [
+       "1",
+       "3",
+       "3",
+       "3",
+       "10"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "6",
+       "6",
+       "5",
+       "5",
+       "22"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "33",
+      "36"
+     ],
+     [
+      "Goals",
+      "10",
+      "22"
+     ],
+     [
+      "Assists",
+      "4",
+      "19"
+     ],
+     [
+      "Points",
+      "14",
+      "41"
+     ],
+     [
+      "Exclusions",
+      "13",
+      "11"
+     ],
+     [
+      "Steals",
+      "1",
+      "10"
+     ],
+     [
+      "Sprints",
+      "0-4",
+      "4-0"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10992",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Brown",
+   "start": "2026-10-24T16:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "W 14-10",
+   "logo": "https://santaclarabroncos.com/images/logos/Brown_logo_200x200.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/brown/boxscore/10992",
+   "recap": "https://santaclarabroncos.com/news/2026/10/24/mens-water-polo-no-19-broncos-cruise-to-another-victory-at-julian-fraser-memorial.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Brown",
+      "abbr": "BRN",
+      "cells": [
+       "1",
+       "3",
+       "1",
+       "5",
+       "10"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "5",
+       "3",
+       "4",
+       "2",
+       "14"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "24",
+      "24"
+     ],
+     [
+      "Goals",
+      "10",
+      "14"
+     ],
+     [
+      "Assists",
+      "10",
+      "14"
+     ],
+     [
+      "Points",
+      "20",
+      "28"
+     ],
+     [
+      "Exclusions",
+      "14",
+      "10"
+     ],
+     [
+      "Steals",
+      "4",
+      "10"
+     ],
+     [
+      "Sprints",
+      "1-3",
+      "3-1"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11193",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Santa Clara Hidden Dual",
+   "start": "2026-10-24T16:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/24/womens-tennis-wten-recap-261024.aspx"
+  },
+  {
+   "id": "11027",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2026-10-24T19:00:00+00:00",
+   "allDay": false,
+   "location": "Malibu, Calif.",
+   "result": "L 1-3",
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pepperdine/boxscore/11027",
+   "recap": "https://santaclarabroncos.com/news/2026/10/24/womens-volleyball-volleyball-tussles-with-waves-in-back-and-forth-battle.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "22",
+       "23",
+       "28",
+       "22"
+      ]
+     },
+     {
+      "name": "Pepperdine",
+      "abbr": "PEP",
+      "cells": [
+       "25",
+       "25",
+       "26",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "76.0",
+      "76.0"
+     ],
+     [
+      "Kills",
+      "62",
+      "60"
+     ],
+     [
+      "Aces",
+      "5",
+      "7"
+     ],
+     [
+      "Blocks",
+      "9",
+      "9"
+     ],
+     [
+      "Assists",
+      "56",
+      "58"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10954",
+   "sport": "Women's Soccer",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-10-24T20:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Stevens Stadium - Buck Shaw Field",
+   "result": "D 1-1",
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/saint-mary-s/boxscore/10954",
+   "recap": "https://santaclarabroncos.com/news/2026/10/24/womens-soccer-early-goals-lead-to-draw-with-saint-mary-s.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "1",
+       "0",
+       "1"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "1",
+       "0",
+       "1"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "7 (3)",
+      "25 (9)"
+     ],
+     [
+      "Saves",
+      "8",
+      "2"
+     ],
+     [
+      "Corner Kicks",
+      "1",
+      "11"
+     ],
+     [
+      "Fouls",
+      "7",
+      "8"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10936",
+   "sport": "Men's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2026-10-25T02:00:00+00:00",
+   "allDay": false,
+   "location": "Portland, Ore.",
+   "result": "L 2-5",
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/portland/boxscore/10936",
+   "recap": "https://santaclarabroncos.com/news/2026/10/24/mens-soccer-recap-261024.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "1",
+       "1",
+       "2"
+      ]
+     },
+     {
+      "name": "Portland",
+      "abbr": "POR",
+      "cells": [
+       "3",
+       "2",
+       "5"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "7 (3)",
+      "18 (9)"
+     ],
+     [
+      "Saves",
+      "4",
+      "1"
+     ],
+     [
+      "Corner Kicks",
+      "1",
+      "9"
+     ],
+     [
+      "Fouls",
+      "7",
+      "11"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11194",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Santa Clara Hidden Dual",
+   "start": "2026-10-25T16:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Santa_vxcq2.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/25/womens-tennis-wten-recap.aspx"
+  },
+  {
+   "id": "10993",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Iona",
+   "start": "2026-10-25T16:20:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "W 20-8",
+   "logo": "https://santaclarabroncos.com/images/logos/Iona_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/iona/boxscore/10993",
+   "recap": "https://santaclarabroncos.com/news/2026/10/25/mens-water-polo-no-19-broncos-roll-past-iona-to-complete-perfect-weekend.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Iona",
+      "abbr": "ION",
+      "cells": [
+       "2",
+       "2",
+       "2",
+       "2",
+       "8"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "4",
+       "7",
+       "4",
+       "5",
+       "20"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "32",
+      "34"
+     ],
+     [
+      "Goals",
+      "8",
+      "20"
+     ],
+     [
+      "Assists",
+      "5",
+      "17"
+     ],
+     [
+      "Points",
+      "13",
+      "37"
+     ],
+     [
+      "Exclusions",
+      "6",
+      "14"
+     ],
+     [
+      "Steals",
+      "5",
+      "11"
+     ],
+     [
+      "Sprints",
+      "2-2",
+      "2-2"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11085",
+   "sport": "Men's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Preserve Golf Club Collegiate",
+   "start": "2026-10-26",
+   "allDay": true,
+   "location": "Monterey, Calif. | Preserve GC",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/CP-Mark_NEW.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/26/mens-golf-no-21-broncos-in-good-position-at-preserve-golf-club-collegiate.aspx"
+  },
+  {
+   "id": "11086",
+   "sport": "Men's Golf",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Preserve Golf Club Collegiate",
+   "start": "2026-10-27",
+   "allDay": true,
+   "location": "Monterey, Calif. | Preserve GC",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/CP-Mark_NEW.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/documents/2026/10/27/The_Preserve_Final__Team_and_Individual_.pdf",
+   "recap": "https://santaclarabroncos.com/news/2026/10/27/mens-golf-no-21-broncos-finish-top-3-yet-again-to-close-out-the-fall.aspx"
+  },
+  {
+   "id": "10955",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2026-10-28T22:00:00+00:00",
+   "allDay": false,
+   "location": "Malibu, Calif.",
+   "result": "D 1-1",
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/pepperdine/boxscore/10955",
+   "recap": "https://santaclarabroncos.com/news/2026/10/28/womens-soccer-and-pepperdine-play-to-1-1-draw.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "1",
+       "0",
+       "1"
+      ]
+     },
+     {
+      "name": "Pepperdine",
+      "abbr": "PEPP",
+      "cells": [
+       "1",
+       "0",
+       "1"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "11 (5)",
+      "13 (5)"
+     ],
+     [
+      "Saves",
+      "4",
+      "4"
+     ],
+     [
+      "Corner Kicks",
+      "5",
+      "2"
+     ],
+     [
+      "Fouls",
+      "10",
+      "9"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11165",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Pacific Invitational",
+   "start": "2026-10-30",
+   "allDay": true,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/30/mens-tennis-posts-two-singles-victories-during-fridays-pacific-invite.aspx"
+  },
+  {
+   "id": "11028",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2026-10-30T00:00:00+00:00",
+   "allDay": false,
+   "location": "Denver",
+   "result": "W 3-1",
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/denver/boxscore/11028",
+   "recap": "https://santaclarabroncos.com/news/2026/10/29/womens-volleyball-volleyball-defeats-denver-in-four-on-the-road.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "24",
+       "25",
+       "27"
+      ]
+     },
+     {
+      "name": "Denver",
+      "abbr": "Denver",
+      "cells": [
+       "21",
+       "26",
+       "18",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "84.0",
+      "67.0"
+     ],
+     [
+      "Kills",
+      "68",
+      "62"
+     ],
+     [
+      "Aces",
+      "5",
+      "2"
+     ],
+     [
+      "Blocks",
+      "11",
+      "3"
+     ],
+     [
+      "Assists",
+      "63",
+      "59"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11064",
+   "sport": "Women's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "West Coast Conference Championship",
+   "start": "2026-10-30T17:00:00+00:00",
+   "allDay": false,
+   "location": "San Diego",
+   "result": "3rd of 9",
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/documents/2026/10/30/2026_WCC_XC_Champs_Women_s_Results.pdf",
+   "recap": "https://santaclarabroncos.com/news/2026/10/30/womens-cross-country-track-almonte-lim-lead-broncos-to-third-place-finish-at-wcc-championship.aspx"
+  },
+  {
+   "id": "11057",
+   "sport": "Men's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "West Coast Conference Championship",
+   "start": "2026-10-30T18:00:00+00:00",
+   "allDay": false,
+   "location": "San Diego",
+   "result": "4th of 8",
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/documents/2026/10/30/2026_WCC_XC_Champs_Men_s_Results.pdf",
+   "recap": "https://santaclarabroncos.com/news/2026/10/30/mens-cross-country-track-mens-cross-country-runs-to-fourth-place-finish-at-wcc-championship.aspx"
+  },
+  {
+   "id": "10994",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-10-30T21:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "W 11-10",
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/saint-mary-s/boxscore/10994",
+   "recap": "https://santaclarabroncos.com/news/2026/10/30/mens-water-polo-no-18-broncos-pick-up-first-conference-win.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "3",
+       "2",
+       "2",
+       "4",
+       "11"
+      ]
+     },
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "2",
+       "3",
+       "2",
+       "3",
+       "10"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "29",
+      "26"
+     ],
+     [
+      "Goals",
+      "11",
+      "10"
+     ],
+     [
+      "Assists",
+      "10",
+      "7"
+     ],
+     [
+      "Points",
+      "21",
+      "17"
+     ],
+     [
+      "Exclusions",
+      "15",
+      "9"
+     ],
+     [
+      "Steals",
+      "7",
+      "1"
+     ],
+     [
+      "Sprints",
+      "1-3",
+      "3-1"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11166",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Pacific Invitational",
+   "start": "2026-10-31",
+   "allDay": true,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/10/31/mens-tennis-takes-five-out-of-six-matches-against-sacramento-state-in-pacific-invite.aspx"
+  },
+  {
+   "id": "10995",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Jose State",
+   "start": "2026-10-31T19:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "L 11-12 OT",
+   "logo": "https://santaclarabroncos.com/images/logos/SJS_SpartanHead-MAIN.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/san-jose-state/boxscore/10995",
+   "recap": "https://santaclarabroncos.com/news/2026/10/31/mens-water-polo-no-18-broncos-battle-back-but-fall-in-ot-to-sjsu.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "OT",
+     "OT",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "San Jose State",
+      "abbr": "SJSU",
+      "cells": [
+       "4",
+       "3",
+       "2",
+       "2",
+       "0",
+       "1",
+       "12"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "2",
+       "3",
+       "1",
+       "5",
+       "0",
+       "0",
+       "11"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "40",
+      "35"
+     ],
+     [
+      "Goals",
+      "12",
+      "11"
+     ],
+     [
+      "Assists",
+      "8",
+      "8"
+     ],
+     [
+      "Points",
+      "20",
+      "19"
+     ],
+     [
+      "Exclusions",
+      "15",
+      "16"
+     ],
+     [
+      "Steals",
+      "6",
+      "12"
+     ],
+     [
+      "Sprints",
+      "1-5",
+      "5-1"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11029",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2026-10-31T19:00:00+00:00",
+   "allDay": false,
+   "location": "San Diego",
+   "result": "L 1-3",
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/san-diego/boxscore/11029",
+   "recap": "https://santaclarabroncos.com/news/2026/10/31/womens-volleyball-volleyball-surges-late-at-san-diego.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "19",
+       "19",
+       "25",
+       "24"
+      ]
+     },
+     {
+      "name": "San Diego",
+      "abbr": "SD",
+      "cells": [
+       "25",
+       "25",
+       "14",
+       "26"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "76.0",
+      "66.0"
+     ],
+     [
+      "Kills",
+      "60",
+      "53"
+     ],
+     [
+      "Aces",
+      "6",
+      "3"
+     ],
+     [
+      "Blocks",
+      "10",
+      "10"
+     ],
+     [
+      "Assists",
+      "53",
+      "48"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10956",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2026-10-31T20:00:00+00:00",
+   "allDay": false,
+   "location": "San Francisco",
+   "result": "W 4-0",
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/san-francisco/boxscore/10956",
+   "recap": "https://santaclarabroncos.com/news/2026/10/31/offense-leads-womens-soccer-to-4-0-win-at-san-francisco.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "3",
+       "1",
+       "4"
+      ]
+     },
+     {
+      "name": "San Francisco",
+      "abbr": "USF",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "18 (10)",
+      "12 (3)"
+     ],
+     [
+      "Saves",
+      "3",
+      "6"
+     ],
+     [
+      "Corner Kicks",
+      "5",
+      "2"
+     ],
+     [
+      "Fouls",
+      "17",
+      "9"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11167",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Pacific Invitational",
+   "start": "2026-11-01",
+   "allDay": true,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/1/mens-tennis-wraps-up-pacific-invite-with-five-more-wins.aspx"
+  },
+  {
+   "id": "10937",
+   "sport": "Men's Soccer",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2026-11-01T02:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Stevens Stadium - Buck Shaw Field",
+   "result": "D 1-1",
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/denver/boxscore/10937",
+   "recap": "https://santaclarabroncos.com/news/2026/10/31/mens-soccer-and-denver-play-to-a-draw-on-senior-night.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Denver",
+      "abbr": "DEN",
+      "cells": [
+       "1",
+       "0",
+       "1"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "7 (1)",
+      "11 (4)"
+     ],
+     [
+      "Saves",
+      "3",
+      "0"
+     ],
+     [
+      "Corner Kicks",
+      "7",
+      "1"
+     ],
+     [
+      "Fouls",
+      "7",
+      "17"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11039",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Wyoming",
+   "start": "2026-11-03T01:30:00+00:00",
+   "allDay": false,
+   "location": "Laramie, Wyo.",
+   "result": "W 84-50",
+   "logo": "https://santaclarabroncos.com/images/logos/wyoming_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/wyoming/boxscore/11039",
+   "recap": "https://santaclarabroncos.com/news/2026/11/2/womens-basketball-rolls-to-34-point-win-at-wyoming-in-season-opener.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "26",
+       "22",
+       "20",
+       "16",
+       "84"
+      ]
+     },
+     {
+      "name": "Wyoming",
+      "abbr": "UW",
+      "cells": [
+       "15",
+       "12",
+       "9",
+       "14",
+       "50"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11089",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Towson",
+   "start": "2026-11-03T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 89-70",
+   "logo": "https://santaclarabroncos.com/images/logos/Towson_.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/towson/boxscore/11089",
+   "recap": "https://santaclarabroncos.com/news/2026/11/2/mens-basketball-broncos-handle-towson-89-70-for-season-opening-win.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Towson",
+      "abbr": "Towson",
+      "cells": [
+       "35",
+       "35",
+       "70"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "43",
+       "46",
+       "89"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11168",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Sectional Championships",
+   "start": "2026-11-05",
+   "allDay": true,
+   "location": "Tempe, Ariz.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/5/mens-tennis-duo-falls-in-opening-round-at-ita-sectionals.aspx"
+  },
+  {
+   "id": "11090",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Milwaukee",
+   "start": "2026-11-05T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 95-72",
+   "logo": "https://santaclarabroncos.com/images/logos/Milwaukee_Panthers.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/milwaukee/boxscore/11090",
+   "recap": "https://santaclarabroncos.com/news/2026/11/4/mens-basketball-broncos-improve-to-2-0-with-95-72-win-over-milwaukee.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Milwaukee",
+      "abbr": "MKE",
+      "cells": [
+       "27",
+       "45",
+       "72"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "46",
+       "49",
+       "95"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11169",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Sectional Championships",
+   "start": "2026-11-06",
+   "allDay": true,
+   "location": "Tempe, Ariz.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/6/mens-tennis-finds-success-in-the-consolation-brackets-at-ita-sectionals.aspx"
+  },
+  {
+   "id": "11030",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2026-11-06T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 3-1",
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/seattle/boxscore/11030",
+   "recap": "https://santaclarabroncos.com/news/2026/11/5/womens-volleyball-volleyball-opens-home-stand-with-triumph-over-seattle.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Seattle U",
+      "abbr": "SU",
+      "cells": [
+       "21",
+       "25",
+       "23",
+       "20"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "23",
+       "25",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "58.0",
+      "75.0"
+     ],
+     [
+      "Kills",
+      "44",
+      "65"
+     ],
+     [
+      "Aces",
+      "3",
+      "5"
+     ],
+     [
+      "Blocks",
+      "11",
+      "5"
+     ],
+     [
+      "Assists",
+      "42",
+      "62"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11182",
+   "sport": "Women's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "San Jose State Hidden Dual",
+   "start": "2026-11-06T17:00:00+00:00",
+   "allDay": false,
+   "location": "San Jose, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/SJS_SpartanHead-MAIN.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/6/womens-tennis-wten-recap.aspx"
+  },
+  {
+   "id": "11170",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Sectional Championships",
+   "start": "2026-11-07",
+   "allDay": true,
+   "location": "Tempe, Ariz.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/mens-tennis-lemaitre-redza-capture-consolation-bracket-doubles-title-at-ita-sectionals.aspx"
+  },
+  {
+   "id": "10996",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2026-11-07T03:00:00+00:00",
+   "allDay": false,
+   "location": "Stockton, Calif.",
+   "result": "W 12-8",
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/pacific/boxscore/10996",
+   "recap": "https://santaclarabroncos.com/news/2026/11/6/mens-water-polo-no-18-broncos-pick-up-historic-12-8-win-in-stockton.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "2",
+       "2",
+       "4",
+       "4",
+       "12"
+      ]
+     },
+     {
+      "name": "Pacific",
+      "abbr": "PAC",
+      "cells": [
+       "1",
+       "2",
+       "1",
+       "4",
+       "8"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "26",
+      "34"
+     ],
+     [
+      "Goals",
+      "12",
+      "8"
+     ],
+     [
+      "Assists",
+      "10",
+      "6"
+     ],
+     [
+      "Points",
+      "22",
+      "14"
+     ],
+     [
+      "Exclusions",
+      "12",
+      "6"
+     ],
+     [
+      "Steals",
+      "4",
+      "10"
+     ],
+     [
+      "Sprints",
+      "2-2",
+      "2-2"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11183",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Jose State Hidden Dual",
+   "start": "2026-11-07T17:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/SJS_SpartanHead-MAIN.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-tennis-wten-recap.aspx"
+  },
+  {
+   "id": "10957",
+   "sport": "Women's Soccer",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2026-11-07T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Stevens Stadium - Buck Shaw Field",
+   "result": "D 0-0",
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/portland/boxscore/10957",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-soccer-clinches-spot-in-wcc-tournament-with-draw-against-portland.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Portland",
+      "abbr": "POR",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "4 (2)",
+      "12 (4)"
+     ],
+     [
+      "Saves",
+      "4",
+      "2"
+     ],
+     [
+      "Corner Kicks",
+      "0",
+      "6"
+     ],
+     [
+      "Fouls",
+      "12",
+      "8"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11031",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2026-11-07T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 3-0",
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/portland/boxscore/11031",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-volleyball-volleyball-sweep-portland-again-to-sweep-season-series.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3"
+    ],
+    "teams": [
+     {
+      "name": "Portland",
+      "abbr": "UP",
+      "cells": [
+       "16",
+       "20",
+       "13"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "25",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "28.0",
+      "53.0"
+     ],
+     [
+      "Kills",
+      "19",
+      "40"
+     ],
+     [
+      "Aces",
+      "4",
+      "9"
+     ],
+     [
+      "Blocks",
+      "5",
+      "4"
+     ],
+     [
+      "Assists",
+      "19",
+      "38"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11040",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Utah Valley",
+   "start": "2026-11-07T23:00:00+00:00",
+   "allDay": false,
+   "location": "Orem, Utah",
+   "result": "W 64-62",
+   "logo": "https://santaclarabroncos.com/images/logos/wolverine_green.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/utah-valley/boxscore/11040",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/womens-basketball-collects-road-win-at-utah-valley.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "18",
+       "13",
+       "16",
+       "17",
+       "64"
+      ]
+     },
+     {
+      "name": "Utah Valley",
+      "abbr": "UVU",
+      "cells": [
+       "14",
+       "11",
+       "17",
+       "20",
+       "62"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11171",
+   "sport": "Men's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "ITA Sectional Championships",
+   "start": "2026-11-08",
+   "allDay": true,
+   "location": "Tempe, Ariz.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/ITA_.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/8/mens-tennis-maskow-falls-in-consolation-bracket-singles-finals-at-ita-sectionals.aspx"
+  },
+  {
+   "id": "11091",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Sacramento State",
+   "start": "2026-11-08T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 83-77",
+   "logo": "https://santaclarabroncos.com/images/logos/Sac-State.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/sacramento-state/boxscore/11091",
+   "recap": "https://santaclarabroncos.com/news/2026/11/7/mens-basketball-broncos-use-big-second-half-run-to-improve-to-3-0.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Sacramento St.",
+      "abbr": "SacSt",
+      "cells": [
+       "36",
+       "41",
+       "77"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "45",
+       "38",
+       "83"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11184",
+   "sport": "Women's Tennis",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "San Jose State Hidden Dual",
+   "start": "2026-11-08T17:00:00+00:00",
+   "allDay": false,
+   "location": "San Jose, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/SJS_SpartanHead-MAIN.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/8/womens-tennis-womens-tennis-sweeps-doubles-on-final-day-of-sjsu-hidden-dual.aspx"
+  },
+  {
+   "id": "10997",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Air Force",
+   "start": "2026-11-08T20:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": "W 18-13",
+   "logo": "https://santaclarabroncos.com/images/logos/Air_Force.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/air-force/boxscore/10997",
+   "recap": "https://santaclarabroncos.com/news/2026/11/8/mens-water-polo-no-18-broncos-handle-air-force-on-senior-day.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Air Force",
+      "abbr": "AF",
+      "cells": [
+       "4",
+       "1",
+       "4",
+       "4",
+       "13"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "4",
+       "6",
+       "5",
+       "3",
+       "18"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "32",
+      "34"
+     ],
+     [
+      "Goals",
+      "13",
+      "18"
+     ],
+     [
+      "Assists",
+      "10",
+      "15"
+     ],
+     [
+      "Points",
+      "23",
+      "33"
+     ],
+     [
+      "Exclusions",
+      "8",
+      "10"
+     ],
+     [
+      "Steals",
+      "6",
+      "10"
+     ],
+     [
+      "Sprints",
+      "0-4",
+      "4-0"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11041",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Long Beach State",
+   "start": "2026-11-10T02:00:00+00:00",
+   "allDay": false,
+   "location": "Long Beach, Calif.",
+   "result": "W 89-70",
+   "logo": "https://santaclarabroncos.com/images/logos/long_beach_state.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/long-beach-state/boxscore/11041",
+   "recap": "https://santaclarabroncos.com/news/2026/11/9/womens-basketball-caps-perfect-three-game-road-trip.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "27",
+       "24",
+       "21",
+       "17",
+       "89"
+      ]
+     },
+     {
+      "name": "Long Beach St.",
+      "abbr": "LBSU",
+      "cells": [
+       "22",
+       "17",
+       "18",
+       "13",
+       "70"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "10958",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2026-11-11T23:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": "W 4-0",
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/lmu/boxscore/10958",
+   "recap": "https://santaclarabroncos.com/news/2026/11/11/womens-soccer-rolls-to-wcc-tourney-semis-win-at-lmu.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "2",
+       "2",
+       "4"
+      ]
+     },
+     {
+      "name": "LMU",
+      "abbr": "LMU",
+      "cells": [
+       "0",
+       "0",
+       "0"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "19 (7)",
+      "7 (3)"
+     ],
+     [
+      "Saves",
+      "3",
+      "3"
+     ],
+     [
+      "Corner Kicks",
+      "10",
+      "2"
+     ],
+     [
+      "Fouls",
+      "7",
+      "3"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11092",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "North Texas",
+   "start": "2026-11-12T01:00:00+00:00",
+   "allDay": false,
+   "location": "Denton, Texas",
+   "result": "W 76-71",
+   "logo": "https://santaclarabroncos.com/images/logos/North-Texas.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/north-texas/boxscore/11092",
+   "recap": "https://santaclarabroncos.com/news/2026/11/11/mens-basketball-broncos-come-from-behind-to-remain-undefeated.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "34",
+       "42",
+       "76"
+      ]
+     },
+     {
+      "name": "North Texas",
+      "abbr": "UNT",
+      "cells": [
+       "41",
+       "30",
+       "71"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11065",
+   "sport": "Women's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "NCAA West Regional",
+   "start": "2026-11-13T17:00:00+00:00",
+   "allDay": false,
+   "location": "Sacramento, Calif.",
+   "result": "18th of 37",
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/13/womens-cross-country-track-almontes-all-region-performance-leads-womens-cross-country-to-top-20-finish.aspx"
+  },
+  {
+   "id": "11058",
+   "sport": "Men's Cross Country/Track",
+   "home": false,
+   "neutral": false,
+   "meet": true,
+   "opponent": "NCAA West Regional",
+   "start": "2026-11-13T18:00:00+00:00",
+   "allDay": false,
+   "location": "Sacramento, Calif.",
+   "result": "17th of 30",
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11042",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Stanford",
+   "start": "2026-11-14T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "L 55-66",
+   "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/stanford/boxscore/11042",
+   "recap": "https://santaclarabroncos.com/news/2026/11/13/womens-basketball-falls-to-stanford-in-home-opener.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Stanford",
+      "abbr": "Stan",
+      "cells": [
+       "19",
+       "14",
+       "18",
+       "15",
+       "66"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "19",
+       "12",
+       "12",
+       "12",
+       "55"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11032",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2026-11-14T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "L 2-3",
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/san-francisco/boxscore/11032",
+   "recap": "https://santaclarabroncos.com/news/2026/11/14/womens-volleyball-fights-to-the-end-against-rival-dons.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "teams": [
+     {
+      "name": "San Francisco",
+      "abbr": "USF",
+      "cells": [
+       "25",
+       "11",
+       "12",
+       "25",
+       "16"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "15",
+       "25",
+       "25",
+       "22",
+       "14"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "64.0",
+      "75.5"
+     ],
+     [
+      "Kills",
+      "48",
+      "54"
+     ],
+     [
+      "Aces",
+      "7",
+      "12"
+     ],
+     [
+      "Blocks",
+      "9",
+      "9"
+     ],
+     [
+      "Assists",
+      "40",
+      "51"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10959",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2026-11-14T23:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": "W 2-1",
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/seattle/boxscore/10959",
+   "recap": "https://santaclarabroncos.com/news/2026/11/14/womens-soccer-wins-wcc-tournament-title-in-double-overtime.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "1",
+       "2"
+      ]
+     },
+     {
+      "name": "Seattle U",
+      "abbr": "SEA",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "10 (4)",
+      "9 (3)"
+     ],
+     [
+      "Saves",
+      "2",
+      "2"
+     ],
+     [
+      "Corner Kicks",
+      "6",
+      "4"
+     ],
+     [
+      "Fouls",
+      "11",
+      "12"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "11093",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "New Mexico",
+   "start": "2026-11-15T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": "W 90-85",
+   "logo": "https://santaclarabroncos.com/images/logos/New_Mexico.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/new-mexico/boxscore/11093",
+   "recap": "https://santaclarabroncos.com/news/2026/11/14/broncos-hold-off-new-mexico-to-improve-to-5-0.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "New Mexico",
+      "abbr": "UNM",
+      "cells": [
+       "33",
+       "52",
+       "85"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "51",
+       "39",
+       "90"
+      ]
+     }
+    ],
+    "stats": []
+   }
+  },
+  {
+   "id": "11043",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "GCU",
+   "start": "2026-11-18T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "10998",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "First Round",
+   "start": "2026-11-20",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11033",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2026-11-20T02:30:00+00:00",
+   "allDay": false,
+   "location": "Moraga, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11094",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "VCU",
+   "start": "2026-11-20T03:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "10999",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Semifinals",
+   "start": "2026-11-21",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11044",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Arizona State",
+   "start": "2026-11-21T01:30:00+00:00",
+   "allDay": false,
+   "location": "Tempe, Ariz.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11034",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2026-11-21T22:00:00+00:00",
+   "allDay": false,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11000",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Championship",
+   "start": "2026-11-22",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11095",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Illinois State",
+   "start": "2026-11-24T00:00:00+00:00",
+   "allDay": false,
+   "location": "Palm Desert, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Illinois_State_2023.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11035",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2026-11-24T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11096",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Nevada",
+   "start": "2026-11-25T00:00:00+00:00",
+   "allDay": false,
+   "location": "Palm Desert, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/NevadaAthletics_Navy.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11036",
+   "sport": "Women's Volleyball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2026-11-25T22:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11051",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Xavier",
+   "start": "2026-11-27T01:00:00+00:00",
+   "allDay": false,
+   "location": "U.S. Virgin Islands",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Xavier_.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11052",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Texas Tech or Air Force",
+   "start": "2026-11-28",
+   "allDay": true,
+   "location": "U.S. Virgin Islands",
+   "result": null
+  },
+  {
+   "id": "11097",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Utah Tech",
+   "start": "2026-11-29T00:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/utah_tech_200x200_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11037",
+   "sport": "Women's Volleyball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "NCAA Championship",
+   "start": "2026-12-03",
+   "allDay": true,
+   "location": "TBA",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11098",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Fresno State",
+   "start": "2026-12-03T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/fresnostate_200x200.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11045",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego State",
+   "start": "2026-12-04T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/SDSU.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11001",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "First Round",
+   "start": "2026-12-05",
+   "allDay": true,
+   "location": "La Jolla, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11002",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Semifinals",
+   "start": "2026-12-06",
+   "allDay": true,
+   "location": "La Jolla, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11099",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "GCU",
+   "start": "2026-12-06T01:00:00+00:00",
+   "allDay": false,
+   "location": "Phoenix",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11046",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "UC Santa Cruz",
+   "start": "2026-12-06T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/uc_santa_cruz.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11003",
+   "sport": "Men's Water Polo",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Championship",
+   "start": "2026-12-07",
+   "allDay": true,
+   "location": "La Jolla, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11100",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Murray State",
+   "start": "2026-12-13T00:00:00+00:00",
+   "allDay": false,
+   "location": "Henderson, Nev.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Large-new-logos7.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11047",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Boise State",
+   "start": "2026-12-13T21:00:00+00:00",
+   "allDay": false,
+   "location": "Boise, Idaho",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11101",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "McNeese State",
+   "start": "2026-12-15T02:00:00+00:00",
+   "allDay": false,
+   "location": "Henderson, Nev.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/mcneese_state_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11048",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Washington",
+   "start": "2026-12-18T03:00:00+00:00",
+   "allDay": false,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Washington_2019.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11049",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Montana State",
+   "start": "2026-12-21T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/montst.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11102",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Boise State",
+   "start": "2026-12-21T22:00:00+00:00",
+   "allDay": false,
+   "location": "San Juan Capistrano, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Boise_State.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11103",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "Oregon State",
+   "start": "2026-12-23T23:30:00+00:00",
+   "allDay": false,
+   "location": "San Juan Capistrano, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/oregonstate_200x200.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11050",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Dominican University",
+   "start": "2026-12-29T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/dom_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11104",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Dominican University",
+   "start": "2026-12-30T01:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/dom_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11105",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2026-12-31T20:00:00+00:00",
+   "allDay": false,
+   "location": "Denver",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11106",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2027-01-02T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11123",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2027-01-03T00:00:00+00:00",
+   "allDay": false,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11107",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2027-01-08T03:00:00+00:00",
+   "allDay": false,
+   "location": "Moraga, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11124",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2027-01-08T04:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11108",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2027-01-09T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11125",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2027-01-14T02:30:00+00:00",
+   "allDay": false,
+   "location": "San Diego, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11109",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2027-01-15T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11110",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2027-01-16T22:00:00+00:00",
+   "allDay": false,
+   "location": "San Francisco",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11126",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2027-01-16T23:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11127",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2027-01-21T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11111",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2027-01-22T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11112",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2027-01-23T22:00:00+00:00",
+   "allDay": false,
+   "location": "Stockton, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11128",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2027-01-24T00:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11129",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2027-01-28T03:00:00+00:00",
+   "allDay": false,
+   "location": "Portland, Ore.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11113",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2027-01-29T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11114",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2027-01-30T22:00:00+00:00",
+   "allDay": false,
+   "location": "Malibu, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11130",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2027-01-31T03:00:00+00:00",
+   "allDay": false,
+   "location": "Moraga, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11131",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2027-02-04T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11115",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2027-02-05T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11116",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2027-02-06T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11132",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2027-02-07T01:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11133",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Denver",
+   "start": "2027-02-11T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11117",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2027-02-12T02:00:00+00:00",
+   "allDay": false,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11118",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Portland",
+   "start": "2027-02-14T01:00:00+00:00",
+   "allDay": false,
+   "location": "Portland, Ore.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11134",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2027-02-14T02:00:00+00:00",
+   "allDay": false,
+   "location": "Malibu, Calif.",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11135",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Seattle",
+   "start": "2027-02-17T04:00:00+00:00",
+   "allDay": false,
+   "location": "Seattle",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11119",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pacific",
+   "start": "2027-02-19T03:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11121",
+   "sport": "Women's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2027-02-20T21:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11136",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2027-02-21T01:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11137",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Francisco",
+   "start": "2027-02-25T04:00:00+00:00",
+   "allDay": false,
+   "location": "San Francisco",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Francisco_Dons.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11120",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "LMU",
+   "start": "2027-02-26T02:00:00+00:00",
+   "allDay": false,
+   "location": "Los Angeles",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11138",
+   "sport": "Men's Basketball",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Saint Mary's",
+   "start": "2027-02-27",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Leavey Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11122",
+   "sport": "Women's Basketball",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "San Diego",
+   "start": "2027-02-27T22:00:00+00:00",
+   "allDay": false,
+   "location": "San Diego",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11139",
+   "sport": "Men's Basketball",
+   "home": false,
+   "neutral": true,
+   "meet": false,
+   "opponent": "WCC Championship",
+   "start": "2027-03-05",
+   "allDay": true,
+   "location": "Las Vegas",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  }
+ ]
+}

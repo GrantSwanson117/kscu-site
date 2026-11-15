@@ -1,0 +1,4 @@
+# This branch only holds data for kscu.org/sports/ (written by the "Refresh sports schedule" GitHub Action).
+# It's not the website, so tell Netlify never to build it.
+[build]
+ignore = "exit 0"
