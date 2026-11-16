@@ -4,8 +4,8 @@ Refreshes the team rosters on kscu.org/sports/ from Santa Clara Athletics' roste
 Usage (from the repo root):
     python3 prototypes/build_rosters.py content/sports/rosters.json
 
-Rosters only change at the start of each season, so the GitHub Action runs this twice a year
-(see .github/workflows/refresh-sports-rosters.yml). It's also safe to run by hand at any time:
+Rosters mostly change at the start of each season, but SCU often posts them late, so the GitHub Action runs this
+monthly (see .github/workflows/refresh-sports-rosters.yml). It's also safe to run by hand at any time:
   - Each team comes from santaclarabroncos.com/sports/<slug>/roster (players, then coaches).
   - Photos aren't copied into the repo. The page loads them from SCU's image server, resized.
   - If a team's page can't be read, or comes back with no players, that team keeps its old roster.

@@ -21,7 +21,7 @@
     --bronco: #a6192e;      /* Santa Clara red */
     --bronco-deep: #690b0b; /* ESPN's official SCU team color */
     --mono: "IBM Plex Mono", monospace;
-    --sans: "IBM Plex Mono", ui-monospace, monospace; /* whole page uses the announcement-box font */
+    --sans: "IBM Plex Mono", ui-monospace, monospace; /* whole page uses the site announcement font */
     --cond: var(--sans);
   }
   * { box-sizing: border-box; }
@@ -31,6 +31,7 @@
   .wrap { width: 90%; max-width: 80rem; margin: 0 auto; }
   .mono { font-family: var(--mono); }
 
+  /* proto:start (stand-in header; build_page.py drops this) */
   /* ================= header (stand-in for the theme's real header) ================= */
   .topbar { display: flex; border: 1px solid #000; margin: 16px auto 0; background: var(--bg); position: relative; z-index: 20; }
   .topbar .logo { display: flex; align-items: center; padding: 6px 10px; border-right: 1px solid #000; }
@@ -41,10 +42,12 @@
   .topbar nav { margin-left: auto; display: flex; gap: 16px; font-size: 15px; font-weight: 500; align-items: center; }
   .topbar nav > a, .navdrop > button { text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; font-weight: 500; }
   .topbar nav > a:hover, .navdrop > button:hover, .navdrop > button.active { text-decoration: underline; text-underline-offset: 4px; }
+  /* proto:end */
   .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); display: inline-block; flex: none; }
   .dot.pulse { animation: pulse 1.6s infinite; }
   @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(191,81,77,.6)} 70%{box-shadow:0 0 0 8px rgba(191,81,77,0)} 100%{box-shadow:0 0 0 0 rgba(191,81,77,0)} }
 
+  /* proto:start (stand-in header; build_page.py drops this) */
   /* "Sports ▾" dropdown: Men's | Women's columns */
   .navdrop { position: relative; }
   /* Always laid out, but invisible until .open. Opening: quick fade/slide down. Closing (after a short JS delay):
@@ -74,13 +77,16 @@
   .panel .ico { width: 22px; height: 22px; }
   .panel .all { font-family: var(--mono); font-weight: 700; font-size: 13px; }
 
+  /* proto:end */
   /* ================= page title + announcement box (same as homepage) ================= */
   h1.title { display: flex; align-items: center; gap: clamp(10px, 2vw, 18px); font-family: var(--mono); font-weight: 700;
     font-size: clamp(38px, 7vw, 64px); line-height: 1; color: var(--ink); margin: 28px 0 4px; letter-spacing: .03em; }
   h1.title img { height: 1.15em; width: auto; display: block; margin: 0; }
+  /* proto:start (stand-in header; build_page.py drops this) */
   .announcement-box { border: 2px solid var(--brown); padding: 15px; margin: 18px 0 22px; background: var(--red-tint);
     font-family: var(--mono); font-weight: 700; font-size: .95rem; color: #1a1a1a; line-height: 1.5; }
   .announcement-box a { text-underline-offset: 3px; }
+  /* proto:end */
 
   /* ================= sport sub-menu (icon tab strip) ================= */
   /* wraps into a grid on narrow screens so every sport stays visible */
@@ -107,10 +113,6 @@
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 28px 0; }
   .empty { padding: 16px 12px; font-family: var(--mono); font-size: 14px; }
 
-  .mixlr-box { display: flex; flex-direction: column; }
-  .mixlr-frame { display: block; width: 100%; height: 180px; min-height: 180px; flex: 1; border: 0; }
-  .mixlr-fallback { font-family: var(--mono); font-size: 13px; padding: 8px 14px; border-top: 1px solid var(--ink); }
-  .next-box { display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 0px); min-height: 150px; }
   .grid2 > .card { display: flex; flex-direction: column; }
   .grid2 > .card > .box { flex: 1; }
   .next-wrap { display: flex; gap: 14px; align-items: center; }
@@ -528,7 +530,7 @@
   /* ================= next game: split field + tale of the tape (colors arrive as --lc / --rc) ================= */
   .gc.nx { display: flex; flex-direction: column; }
   .nx-field { position: relative; isolation: isolate; }
-  /* both tints are full-size layers clipped to share one exact edge down the middle (same as NX_EDGE in the script) */
+  /* both tints are full-size layers clipped to share one exact edge down the middle (50%, where the seam runs) */
   .nx-field::before, .nx-field::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--bg); }
   .nx-field::before { background: color-mix(in srgb, var(--lc) 11%, var(--bg)); clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); }
   .nx-field::after { background: color-mix(in srgb, var(--rc) 11%, var(--bg)); clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
@@ -915,7 +917,9 @@
 
   @media (prefers-reduced-motion: reduce) {
     #view > * { animation: none !important; }
+    /* proto:start (stand-in header; build_page.py drops this) */
     .navdrop .panel, .navdrop.open .panel { transition: none; transform: none; }
+    /* proto:end */
     .rail a::after, .wk::after, .listen, .tile { transition: none; } .ico * { animation: none !important; } .tile, .tile:hover { transform: none; } }
 
   /* ================= responsive ================= */
@@ -925,10 +929,12 @@
   }
   @media (max-width: 760px) {
     .grid2 { grid-template-columns: 1fr; }
+    /* proto:start (stand-in header; build_page.py drops this) */
     .topbar .row { flex-wrap: wrap; }
     .topbar nav { gap: 10px; font-size: 14px; margin-left: 0; flex-wrap: wrap; }
     .topbar .hide-sm { display: none; }
     .navdrop .panel { position: fixed; left: 16px; right: 16px; top: 92px; width: auto; }
+    /* proto:end */
     .hero { grid-template-columns: 1fr; }
     .hero-ico { border-right: 0; border-bottom: 1px solid var(--ink); justify-content: center; }
     .hero-ico .ico { width: 96px; height: 96px; }
@@ -986,7 +992,7 @@
 const SCHEDULE_URL = "scu-schedule.json"; // copy built into the site (refreshed weekly), used if GitHub is unreachable
 // hourly copy written by the "Refresh sports schedule" GitHub Action to the sports-data branch; no site rebuild needed
 const LIVE_SCHEDULE_URL = "https://raw.githubusercontent.com/GrantSwanson117/kscu-site/sports-data/scu-schedule.json";
-const ROSTER_URL = "rosters.json"; // players + coaches from SCU's roster pages, refreshed twice a year
+const ROSTER_URL = "rosters.json"; // players + coaches from SCU's roster pages, refreshed monthly
 const ESPN_TEAM_ID = 2541; // Santa Clara on ESPN
 const ESPN_FEEDS = {
   "Men's Basketball":   "basketball/mens-college-basketball",
@@ -1182,7 +1188,7 @@ const icon = (id, extra = "") => {
 // ---------------------------------------------------------------------------
 // HELPERS
 // ---------------------------------------------------------------------------
-let games = [], live = {}, shown = {};
+let games = [], shown = {};
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 const when = g => g.allDay ? new Date(g.start + "T12:00:00") : new Date(g.start);
 const fmtTime = g => g.allDay ? "All day" : when(g).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
@@ -1269,6 +1275,14 @@ function record(results) {
 
 // Finished head-to-head games get their own page (#/game/<SCU game id>), like ESPN's game pages
 const isFinal = g => !g.meet && /^[WLD] \d+-\d+/.test(g.result || "");
+// results are written Broncos-first, e.g. "L 16-17" -> { k: "L", ours: "16", theirs: "17" }
+const scoreParts = g => { const [ours, theirs] = g.result.slice(2).split("-"); return { k: g.result[0], ours, theirs }; };
+const outcomeText = k => k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW";
+const shortDate = d => d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+// where a finished game's stats live: ESPN's game page if ESPN has it, else SCU's box score or recap.
+// "full" names the source (the overview box), otherwise the plain label (the sport page box).
+const resultLink = (g, e, full) => e?.completed ? [espnGameUrl(e), (full ? "ESPN " : "") + (ESPN_SB[g.sport] ? "MATCH CENTER" : "BOX SCORE")]
+  : g.boxscore ? [g.boxscore, (full ? "SCU " : "") + "BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
 const gameKey = g => g.id || `${g.start.slice(0, 10)}-${sportOf(g.sport).id}-${genderOf(g.sport)}-${String(g.opponent).toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 const gameHref = g => `#/game/${gameKey(g)}`;
 
@@ -1297,14 +1311,6 @@ function gameList(id, arr, emptyMsg, withSport) {
   return arr.slice(0, shown[id]).map(g => gameRow(g, withSport)).join("") +
     (arr.length > shown[id] ? `<button class="more" data-more="${id}">SHOW MORE ↓</button>` : "");
 }
-function nextCard(g, withIcon = true) {
-  if (!g) return `<div class="empty">Nothing on the calendar yet.</div>`;
-  const s = sportOf(g.sport);
-  return `<div class="pad"><div class="next-wrap">${withIcon ? icon(s.id, "run") : ""}<div>
-      <p class="big">${esc(versus(g))}</p><p class="sub">${esc(g.sport)}${venueTag(g)}</p>
-      <div class="meta">${esc(g.location)}</div></div></div></div>
-    <div class="when">${esc(fmtLong(g))} · ${esc(fmtTime(g))}</div>`;
-}
 
 // ---------------------------------------------------------------------------
 // MENUS
@@ -1318,10 +1324,12 @@ function buildMenus() {
   const tabs = present.length + 2;
   document.getElementById("rail").style.setProperty("--cols", tabs <= 10 ? tabs : Math.ceil(tabs / 2));
 
+// proto:start (stand-in header; build_page.py drops this)
   const col = g => `<div><h4>${GENDERS[g].toUpperCase()}</h4>${present.filter(s => hasTeam(s.id, g))
     .map(s => `<a href="${href(s.id, g)}" data-nav="${s.id}/${g}">${icon(s.id)}${esc(s.name)}</a>`).join("")}</div>`;
   document.getElementById("navdrop-panel").innerHTML = col("mens") + col("womens") +
     `<div class="panel-foot"><a class="all" href="#/" data-nav="overview">All sports →</a><a class="all" href="#/calendar" data-nav="calendar">Full calendar →</a></div>`;
+// proto:end
 }
 
 // ---------------------------------------------------------------------------
@@ -1338,7 +1346,7 @@ function overviewHtml() {
     const s = sportOf(g.sport), d = when(g);
     const isLive = espnFor(g)?.state === "in";
     return `<a class="wk g-${genderOf(g.sport)} ${d.toDateString() === todayStr ? "today" : ""}" href="${href(s.id, genderOf(g.sport))}">
-      <div class="day"><span>${isLive ? "LIVE NOW" : d.toDateString() === todayStr ? "TODAY" : d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }).toUpperCase()}</span><span>${esc(fmtTime(g))}</span></div>
+      <div class="day"><span>${isLive ? "LIVE NOW" : d.toDateString() === todayStr ? "TODAY" : shortDate(d).toUpperCase()}</span><span>${esc(fmtTime(g))}</span></div>
       ${icon(s.id)}<div class="opp">${oppShort(g)}</div><div class="meta">${esc(g.sport)}</div><div>${venueTag(g).replace('class="vb', 'style="margin-left:0" class="vb')}</div></a>`;
   }).join("") : `<div class="empty">No games in the next 7 days.</div>`;
 
@@ -1413,7 +1421,7 @@ function sportPage(sportId, gender) {
         ${res.length ? `<div style="margin-top:14px"><div class="meta" style="font-weight:700;letter-spacing:.05em">RECENT FORM</div>${formBlocks(res, 10, true, true)}</div>` : ""}
         <a class="listen" href="https://mixlr.com/kscusports" target="_blank" rel="noopener"><span class="dot ${liveNow ? "pulse" : ""}"></span>${liveNow ? "LIVE NOW · " + esc(liveNow) : "KSCU PLAY-BY-PLAY ON MIXLR ↗"}</a>
       </div>
-      ${(() => { const fin = liveEv ? null : heldFinal(tg, up);
+      ${(() => { const pick = liveEv ? null : featuredPick(up, tg), fin = pick?.main === "last" ? pick.last : null;
         return `<div class="hero-next gc"><div class="lbl"><span>${fin ? "FINAL" : "NEXT UP"}</span><span>(ง •̀_•́)ง</span></div>${fin ? finalCenter(fin, up[0]) : preCenter(up[0], true) + lastResult(res[0])}</div>`; })()}
     </section>
     <div class="grid2 ${ESPN_FEEDS[sportName] ? "" : "section-gap"}" style="margin-top:0">
@@ -1542,6 +1550,7 @@ function calendarPage(ym) {
       <div class="box">${dayGames.length ? dayGames.map(g => gameRow(g, true)).join("") : `<div class="empty">No Bronco games this day.</div>`}</div>
     </div>`;
 }
+// proto:start (stand-in header; build_page.py drops this)
 // Mark the current page in the Sports dropdown
 function markMenu() {
   const { sport, resolved } = current;
@@ -1550,6 +1559,7 @@ function markMenu() {
     if (a.dataset.nav === key) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
 }
+// proto:end
 function rerenderCalendar() {
   const v = document.getElementById("view");
   v.classList.add("noanim");
@@ -1576,8 +1586,10 @@ function route() {
   view.classList.remove("noanim");
   view.innerHTML = renderView();
   markRail(); fitRosters();
+// proto:start (stand-in header; build_page.py drops this)
   markMenu();
   setDrop(false);
+// proto:end
   introUntil = Date.now() + 2500; maybeIntro();
   const activeTab = document.querySelector('#rail a[aria-current="page"]');
   activeTab?.scrollIntoView({ block: "nearest", inline: "nearest" });
@@ -1620,13 +1632,16 @@ document.addEventListener("click", e => {
     document.getElementById(id).innerHTML = id === "upcoming" ? gameList(id, upcomingOf(tg), "") : gameList(id, resultsOf(tg), "");
     return;
   }
+// proto:start (stand-in header; build_page.py drops this)
   if (e.target.closest("#navdrop-btn")) {
     setDrop(!document.getElementById("navdrop").classList.contains("open"));
   } else if (!e.target.closest("#navdrop")) {
     setDrop(false);
   }
+// proto:end
 });
 
+// proto:start (stand-in header; build_page.py drops this)
 // Sports dropdown: opens on hover/focus, waits 350ms before closing so you can move into it
 const dropEl = document.getElementById("navdrop");
 let dropTimer;
@@ -1640,6 +1655,7 @@ dropEl.addEventListener("mouseleave", () => { clearTimeout(dropTimer); dropTimer
 dropEl.addEventListener("focusin", () => setDrop(true));
 dropEl.addEventListener("focusout", e => { if (!dropEl.contains(e.relatedTarget)) setDrop(false); });
 dropEl.addEventListener("keydown", e => { if (e.key === "Escape") { setDrop(false); document.getElementById("navdrop-btn").focus(); } });
+// proto:end
 
 // ===========================================================================
 // ESPN — free, no API key, readable straight from the browser. Covers SCU men's &
@@ -1860,7 +1876,6 @@ function preCenter(g, compact = false) {
 // The two tints meet straight down the middle (50%). The seam along that edge is a fault line: mostly straight, with
 // small irregular jogs of uneven length (like two plates meeting), staying within ~0.7% of center so it always runs
 // through the VS badge and behind the plate and labels.
-const NX_EDGE = [50, 50];
 const NX_SEAM = "M" + [[50, 0], [50.3, 7], [49.8, 12], [50.2, 18], [49.5, 26], [50.1, 31], [50.6, 38], [49.9, 44], [50.4, 52],
   [49.6, 57], [50, 65], [50.7, 71], [50.1, 77], [49.6, 84], [50.3, 90], [49.8, 95], [50, 100]].map(([x, y]) => `${x} ${y}`).join("L");
 // ---------------------------------------------------------------------------
@@ -1871,7 +1886,7 @@ const NX_SEAM = "M" + [[50, 0], [50.3, 7], [49.8, 12], [50.2, 18], [49.5, 26], [
 // ---------------------------------------------------------------------------
 const ordinal = n => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 const parseRec = r => { const m = /^(\d+)-(\d+)(?:-(\d+))?/.exec(r || ""); return m ? { w: +m[1], l: +m[2], t: +(m[3] || 0), text: m[0] } : null; };
-const hasOpponent = g => !!g && !g.meet && !isRound(g.opponent) && !isEvent(g);
+const hasOpponent = g => !!g && !isEvent(g);
 function nextCenter(g) {
   const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g);
   if (e && !espn.summary[e.id]) requestSummary(e); // opponent colors, record and last 5: one request, once
@@ -1903,7 +1918,7 @@ function nextCenter(g) {
 
   // ---- last result, inline in the strip
   const last = resultsOf(games)[0];
-  const lastHtml = last && isFinal(last) ? (() => { const k = last.result[0], [a, b] = last.result.slice(2).split("-");
+  const lastHtml = last && isFinal(last) ? (() => { const { k, ours: a, theirs: b } = scoreParts(last);
     return `<a class="nx-last" href="${gameHref(last)}"><small>LAST RESULT · ${esc(last.sport.toUpperCase())} · ${esc(when(last).toLocaleDateString("en-US", { month: "short", day: "numeric" }).toUpperCase())}</small><img src="${esc(SCU_LOGO)}" alt="">
       <span class="nx-score">SCU ${esc(a)}–${esc(b)} ${esc(oppCode(last))}</span>${oppLogo(last) ? `<img src="${esc(oppLogo(last))}" alt="">` : ""}<em class="${k}">${k}</em></a>`; })() : "";
   const d = when(g);
@@ -1913,7 +1928,7 @@ function nextCenter(g) {
     <div class="nx-field" style="--lc:${col(L)};--rc:${col(R)}">
       <div class="nx-match">${teamBlock(L)}
         <div class="nx-plate"><span class="nx-vs">VS</span>
-          <div class="nx-when"><b>${esc(d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}</b><span>${esc(fmtTime(g))}</span></div>
+          <div class="nx-when"><b>${esc(shortDate(d))}</b><span>${esc(fmtTime(g))}</span></div>
           ${countdown(d)}</div>
         ${teamBlock(R)}
       </div>
@@ -1926,21 +1941,22 @@ function nextCenter(g) {
 
 
 // ---------------------------------------------------------------------------
-// WHICH GAME LEADS THE OVERVIEW BOX. People come for results as well as previews, so the box shows whichever game is
+// WHICH GAME LEADS THE NEXT-GAME BOX (the overview's, and each sport page's for its own team). People come for
+// results as well as previews, so the box shows whichever game is
 // closer in time: the last final result if it ended more recently than the next game starts (measured from the
-// game's estimated end), otherwise the next game. A result stops leading after 72 hours. A live game always wins
-// (handled by the caller); with no upcoming game the result leads, with no result the next game does.
+// game's estimated end), otherwise the next game. A result stops leading after 72 hours, even with nothing scheduled
+// (an off-season sport page goes back to its last-result strip). A live game always wins (handled by the caller).
+// Neither ESPN nor SCU gives an end time, so "ended" is the start time plus a typical game length (estEnd).
 //   e.g. ended 2 days ago vs starts in 3 days -> result | ended last night vs tip-off tonight -> next game
 //        doubleheader: game 1 ended 30 min ago, game 2 in 1 hour -> result, flipping to game 2 as it gets closer
 // ---------------------------------------------------------------------------
 const RESULT_LEADS_FOR = 72 * 3600e3;
-function featuredPick(up) {
+function featuredPick(up, pool = games) {
   const now = Date.now();
-  const last = games.filter(g => isFinal(g) && when(g).getTime() <= now).sort((a, b) => when(b) - when(a))[0] || null;
+  const last = pool.filter(g => isFinal(g) && when(g).getTime() <= now).sort((a, b) => when(b) - when(a))[0] || null;
   const next = up[0] || null;
   if (!last) return { main: "next", next, last };
-  if (!next) return { main: "last", next, last };
-  const since = Math.max(0, now - estEnd(last)), until = when(next).getTime() - now;
+  const since = Math.max(0, now - estEnd(last)), until = next ? when(next).getTime() - now : Infinity;
   return { main: since < until && since < RESULT_LEADS_FOR ? "last" : "next", next, last };
 }
 // The result version of the split-field box: same halves and seam, a FINAL badge on the plate, the big score and
@@ -1955,26 +1971,24 @@ function agoText(t) {
   return `${days} DAY${days === 1 ? "" : "S"} AGO`;
 }
 function resultCenter(g, next) {
-  const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g), k = g.result[0];
+  const e = espnFor(g), s = sportOf(g.sport), v = venueOf(g), { k, ours, theirs } = scoreParts(g);
   if (e && !espn.summary[e.id]) requestSummary(e); // team colors for this game: one request, once
   const us = e ? { ...e.us, record: "" } : { ...SCU_TEAM(g.sport), id: "scu", record: "" };
   const them = e ? { ...e.them, record: "" } : { id: "opp", name: g.opponent, abbr: oppCode(g), logo: g.logo, record: "" };
   const col = t => e ? teamColor(e, t).bg : t === us ? "#862633" : "#4b5563";
   const [L, R] = v === "home" ? [them, us] : [us, them];
-  const [ours, theirs] = g.result.slice(2).split("-");
   const sl = L === us ? ours : theirs, sr = R === us ? ours : theirs;
-  const d = when(g), link = e?.completed ? [espnGameUrl(e), ESPN_SB[g.sport] ? "ESPN MATCH CENTER" : "ESPN BOX SCORE"]
-    : g.boxscore ? [g.boxscore, "SCU BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
+  const d = when(g), link = resultLink(g, e, true);
   const nextHtml = next ? `<span class="nx-next"><small>NEXT UP · ${esc(next.sport.toUpperCase())}</small>${oppShort(next)}
-      <span class="nx-next-when">${esc(when(next).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}${next.allDay ? "" : " · " + esc(fmtTime(next))}</span></span>` : "";
+      <span class="nx-next-when">${esc(shortDate(when(next)))}${next.allDay ? "" : " · " + esc(fmtTime(next))}</span></span>` : "";
   return `
     <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}</div>
     <div class="nx-field" style="--lc:${col(L)};--rc:${col(R)}">
       <div class="nx-match">${teamBlock(L)}
         <div class="nx-plate nx-final"><span class="nx-vs">FINAL</span>
           <div class="nx-big"><b>${esc(sl)}</b><span>–</span><b>${esc(sr)}</b></div>
-          <div class="nx-outcome ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div>
-          <div class="nx-when"><b>${esc(d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))}</b><span data-ago="${new Date(estEnd(g)).toISOString()}">${esc(agoText(estEnd(g)))}</span></div>
+          <div class="nx-outcome ${k}">${outcomeText(k)}</div>
+          <div class="nx-when"><b>${esc(shortDate(d))}</b><span data-ago="${new Date(estEnd(g)).toISOString()}">${esc(agoText(estEnd(g)))}</span></div>
         </div>
         ${teamBlock(R)}
       </div>
@@ -1983,43 +1997,27 @@ function resultCenter(g, next) {
     <div class="nx-strip"><a href="${gameHref(g)}">GAME DETAILS →</a>${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}${nextHtml}</div>`;
 }
 
-// ---------- final score hold ----------
-// After a game ends, the next-game box keeps showing its final score for a while (people check the site for the
-// final), then switches to the next game's countdown. The hold is half the time until the next game, capped at
-// 3 hours: with 6+ hours until the next game it holds the full 3 hours, a doubleheader 2 hours later gets 1 hour.
-// Neither ESPN nor SCU gives an end time, so "ended" is the start time plus a typical game length for the sport.
+// typical game length per sport, for estimating when a game ended
 const GAME_HOURS = [["Beach Volleyball", 2], ["Basketball", 2], ["Soccer", 2], ["Volleyball", 2], ["Water Polo", 1.5],
   ["Baseball", 3], ["Softball", 2.5], ["Tennis", 3]];
-const HOLD_MAX = 3 * 3600e3;
 const estEnd = g => when(g).getTime() + (GAME_HOURS.find(([k]) => g.sport.includes(k))?.[1] ?? 2.5) * 3600e3;
-function heldFinal(arr, up) {
-  const now = Date.now();
-  const last = arr.filter(g => !g.allDay && !g.meet && /^[WLD] \d+-\d+/.test(g.result || "") && when(g).getTime() <= now)
-    .sort((a, b) => when(b) - when(a))[0];
-  if (!last) return null;
-  const ended = estEnd(last), next = up.find(g => when(g).getTime() > when(last).getTime());
-  const hold = Math.min(HOLD_MAX, next ? Math.max(0, when(next) - ended) / 2 : HOLD_MAX);
-  return now < ended + hold ? last : null;
-}
 function finalCenter(g, next) {
-  const e = espnFor(g), s = sportOf(g.sport), k = g.result[0];
-  const [ours, theirs] = g.result.slice(2).split("-"); // results are written Broncos-first, e.g. "L 16-17"
+  const e = espnFor(g), s = sportOf(g.sport), { k, ours, theirs } = scoreParts(g);
   const us = e ? { ...e.us, record: e.us.record || espn.team[g.sport]?.record } : SCU_TEAM(g.sport);
   const them = e ? e.them : { name: g.opponent, abbr: oppCode(g), logo: g.logo };
   // same layout as the next-game box: away team left, home team right
   const [L, R] = venueOf(g) === "home" ? [[them, theirs], [us, ours]] : [[us, ours], [them, theirs]];
-  const link = e?.completed ? [espnGameUrl(e), ESPN_SB[g.sport] ? "MATCH CENTER" : "BOX SCORE"]
-    : g.boxscore ? [g.boxscore, "BOX SCORE"] : g.recap ? [g.recap, "RECAP"] : null;
+  const link = resultLink(g, e, false);
   return `
     <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span><span class="final-pill">FINAL</span></div>
     <div class="gc-main">
       <div class="gc-match">${teamBlock(L[0])}<div class="gc-score"><div><b>${esc(L[1])}</b><span>–</span><b>${esc(R[1])}</b></div>
-        <div class="gc-clock ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div></div>${teamBlock(R[0])}</div>
+        <div class="gc-clock ${k}">${outcomeText(k)}</div></div>${teamBlock(R[0])}</div>
       <div class="gc-when">${esc(fmtLong(g))} · ${esc(g.location)}</div>
     </div>
     <div class="gc-side">
       <div class="gc-info"><a href="${gameHref(g)}">GAME DETAILS →</a>${link ? `<a href="${esc(link[0])}" target="_blank" rel="noopener">${link[1]} ↗</a>` : ""}
-        ${next ? `<span><b>NEXT UP</b> ${esc(next.sport)} ${esc(versus(next))} · ${esc(when(next).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))} · ${esc(fmtTime(next))}</span>` : ""}
+        ${next ? `<span><b>NEXT UP</b> ${esc(next.sport)} ${esc(versus(next))} · ${esc(shortDate(when(next)))} · ${esc(fmtTime(next))}</span>` : ""}
         <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">LISTEN · KSCU ↗</a></div>
     </div>`;
 }
@@ -2101,7 +2099,7 @@ const isScu = name => /Santa Clara/.test(name || "");
 function scuBox(g, us, them) {
   const b = g.box;
   if (!b?.teams?.length) return { linescore: "", bars: "" };
-  const [ours, theirs] = g.result.slice(2).split("-");
+  const { ours, theirs } = scoreParts(g);
   const isVB = g.sport.includes("Volleyball");
   const hasTot = b.cols.includes("T");
   const head = b.cols.map(c => c === "T" ? (isVB ? "SETS" : "T") : c);
@@ -2134,7 +2132,7 @@ function gamePage(key) {
   const e = espnFor(g), done = e?.completed ? e : null;
   if (done && !espn.summary[done.id]) requestSummary(done);
   const sm = done ? espn.summary[done.id] || {} : {};
-  const [ours, theirs] = g.result.slice(2).split("-"); // Broncos-first, e.g. "L 16-17"
+  const { ours, theirs } = scoreParts(g);
   const us = done ? done.us : { ...SCU_TEAM(g.sport), record: "" };
   const them = done ? done.them : { name: g.opponent, logo: g.logo };
   const [L, R] = venueOf(g) === "home" ? [[them, theirs], [us, ours]] : [[us, ours], [them, theirs]];
@@ -2154,7 +2152,7 @@ function gamePage(key) {
       <div class="box gc game-detail">
         <div class="gc-top">${icon(s.id, "run")}<b>${esc(g.sport.toUpperCase())}</b><span class="sp"></span>${venueTag(g)}<span class="final-pill">FINAL</span></div>
         <div class="gc-match">${teamBlock(L[0])}<div class="gc-score"><div><b>${esc(L[1])}</b><span>–</span><b>${esc(R[1])}</b></div>
-          <div class="gc-clock ${k}">${k === "W" ? "BRONCOS WIN" : k === "L" ? "BRONCOS LOSE" : "DRAW"}</div></div>${teamBlock(R[0])}</div>
+          <div class="gc-clock ${k}">${outcomeText(k)}</div></div>${teamBlock(R[0])}</div>
         <div class="gc-when">${esc(fmtLong(g))}${g.allDay ? "" : " · " + esc(fmtTime(g))}</div>
         ${linescore}${side}${plays}
         <div class="gc-info"><span><b>VENUE</b> ${esc(venueLine)}</span>${links}</div>
@@ -2164,7 +2162,7 @@ function gamePage(key) {
 }
 
 // ---------------------------------------------------------------------------
-// ROSTERS: players and coaches from SCU's roster pages (prototypes/build_rosters.py, refreshed twice a year).
+// ROSTERS: players and coaches from SCU's roster pages (prototypes/build_rosters.py, refreshed monthly).
 // Photos load straight from SCU's image server (full 2:3 headshots, cropped from the top so heads stay in frame).
 // ---------------------------------------------------------------------------
 let rosters = null, rosterAsked = false;
@@ -2453,7 +2451,10 @@ function rerenderQuiet() {
   const v = document.getElementById("view"), y = scrollY;
   v.classList.add("noanim");
   v.innerHTML = renderView(); fitRosters();
-  markMenu(); scrollTo(0, y);
+// proto:start (stand-in header; build_page.py drops this)
+  markMenu();
+// proto:end
+  scrollTo(0, y);
   maybeIntro(); // first ESPN redraw lands right after load: replay the intro on the fresh tiles
 }
 const refreshButton = document.getElementById("ks-refresh-scores");
@@ -2496,10 +2497,10 @@ async function refreshEspn(manual = false) {
     document.querySelectorAll("#rail .livepip").forEach(p => p.remove());
     lv.forEach(e => document.querySelector(`#rail a[data-sport="${sportOf(e.sport).id}"]`)?.insertAdjacentHTML("beforeend", `<span class="dot pulse livepip"></span>`));
     // re-draw only when something visible changed, so the page doesn't flicker every minute
-    // (includes which final score is being held, so the box flips back to the countdown when the hold ends)
+    // (includes which game leads each next-game box, so a box flips from result to next game on its own)
     const tg = current?.sport && current.sport !== "calendar" ? teamGames(current.sport, current.resolved) : null;
     const lead = featuredPick(upcomingOf(games)); // redraw when the overview box switches between result and next game
-    const held = [lead.main + ":" + (lead.main === "last" ? lead.last?.start : lead.next?.start), tg && heldFinal(tg, upcomingOf(tg))?.start || null];
+    const held = [lead.main + ":" + (lead.main === "last" ? lead.last?.start : lead.next?.start), tg && featuredPick(upcomingOf(tg), tg).main];
     const key = JSON.stringify([lv.map(e => [e.id, e.us.score, e.them.score, e.detail, espn.summary[e.id]?.lastPlay, espn.summary[e.id]?.lines]), Object.keys(espn.events).length, games.map(g => g.result), held]);
     if (key !== liveKey) { liveKey = key; rerenderQuiet(); }
     if (fx.length) runScoreFx(fx); // after the redraw, so the animation lands on the fresh score

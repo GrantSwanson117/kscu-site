@@ -37,6 +37,12 @@ Rebuild the page after editing `prototypes/sports.html`:
 python3 prototypes/build_page.py
 ```
 
+To preview, serve `prototypes/` (for example `python3 -m http.server -d prototypes`) and open `sports.html`.
+`prototypes/scu-schedule.json` and `prototypes/rosters.json` are links to the copies in `content/sports/`, so the
+preview always uses the same data as the site. The stand-in header at the top of `sports.html` (the "Sports"
+dropdown and announcement box) sits between `proto:start` and `proto:end` comments; the build leaves it out, since
+the theme draws the real header, and stops with an error if any of it is left outside those markers.
+
 ## What updates by itself (no rebuild needed)
 
 Fetched live in the visitor's browser, free and with no API keys:
@@ -58,11 +64,6 @@ Those show on the game page you get by clicking a final score (`#/game/<SCU game
 
 Rosters come from each team's roster page and refresh on the 1st of every month (only committed when one changed).
 Player photos aren't stored in the repo; the page loads them from SCU's image server.
-
-## Not done yet (needs changes outside the sports page)
-
-- A **"Sports" link in the site menu**: add an entry to `config/_default/menus.en.toml`.
-- **Automatic schedule refresh**: e.g. a `/sports/schedule` endpoint on the KSCU API server, or a scheduled build.
 
 ## Keeping it running (no one needs to touch it)
 

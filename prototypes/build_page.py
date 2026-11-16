@@ -24,9 +24,17 @@ src = SRC.read_text()
 css = src[src.index("<style>") + 7: src.index("</style>")]
 js = src[src.index("<script>") + 8: src.rindex("</script>")]
 
+# the prototype's stand-in header (its "Sports" dropdown, the announcement box) is marked proto:start ... proto:end;
+# on kscu.org the theme draws the real header, so none of it ships
+css = re.sub(r"[ \t]*/\* proto:start.*?/\* proto:end \*/\n", "", css, flags=re.S)
+js = re.sub(r"// proto:start.*?// proto:end\n", "", js, flags=re.S)
+for leftover in ("navdrop", "setDrop", "topbar", "announcement-box", "proto:"):
+    if leftover in css or leftover in js:
+        sys.exit(f"build_page.py: '{leftover}' is outside a proto:start/proto:end block in sports.html")
+
 # ---------------------------------------------------------------- ids
 IDS = {"view": "ks-view", "rail": "ks-rail", "live-strip": "ks-live-strip", "footer": "ks-footer", "news": "ks-news",
-       "onair": "ks-onair", "navdrop": "ks-navdrop", "navdrop-btn": "ks-navdrop-btn", "navdrop-panel": "ks-navdrop-panel"}
+       "onair": "ks-onair"}
 
 def rename_ids_css(text):
     for old, new in sorted(IDS.items(), key=lambda kv: -len(kv[0])):
@@ -115,13 +123,6 @@ js = js.replace('const SCHEDULE_URL = "scu-schedule.json";', 'const SCHEDULE_URL
 js = js.replace('const ROSTER_URL = "rosters.json";', 'const ROSTER_URL = "/sports/rosters.json";')
 # clicks: only inside the sports section
 js = js.replace('document.addEventListener("click",', 'ROOT.addEventListener("click",')
-# the header dropdown isn't part of this page (the theme owns the header) — make its code a safe no-op
-js = js.replace('const dropEl = document.getElementById("ks-navdrop");\nlet dropTimer;',
-                'const dropEl = document.getElementById("ks-navdrop") || document.createElement("div");\nlet dropTimer;')
-js = js.replace('  document.getElementById("ks-navdrop-btn").setAttribute("aria-expanded", open);',
-                '  document.getElementById("ks-navdrop-btn")?.setAttribute("aria-expanded", open);')
-js = js.replace('  document.getElementById("ks-navdrop-panel").innerHTML =', '  const navPanel = document.getElementById("ks-navdrop-panel");\n  if (navPanel) navPanel.innerHTML =')
-js = js.replace('setDrop(false); document.getElementById("ks-navdrop-btn").focus();', 'setDrop(false); document.getElementById("ks-navdrop-btn")?.focus();')
 js = "(() => {\n\"use strict\";\nconst ROOT = document.getElementById(\"kscu-sports\");\n" + js + "\n})();\n"
 
 # ---------------------------------------------------------------- page
