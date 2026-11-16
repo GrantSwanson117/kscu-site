@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T11:13:05.298089+00:00",
+ "updated": "2026-11-16T22:30:50.617372+00:00",
  "games": [
   {
    "id": "11159",
@@ -41,80 +41,6 @@
    "location": "Stanford, Calif. | Stanford GC",
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/Stanford_Updated_Logo.png?width=80&height=80&mode=max"
-  },
-  {
-   "id": "11024",
-   "sport": "Women's Volleyball",
-   "home": true,
-   "neutral": false,
-   "meet": false,
-   "opponent": "Pacific",
-   "start": "2026-10-16T02:00:00+00:00",
-   "allDay": false,
-   "location": "Santa Clara, Calif., Leavey Center",
-   "result": "W 3-1",
-   "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pacific/boxscore/11024",
-   "recap": "https://santaclarabroncos.com/news/2026/10/15/womens-volleyball-volleyball-takes-down-tigers-to-win-fourth-straight.aspx",
-   "abbr": "PAC",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "3",
-     "4"
-    ],
-    "teams": [
-     {
-      "name": "Pacific",
-      "abbr": "PAC",
-      "cells": [
-       "16",
-       "25",
-       "10",
-       "24"
-      ]
-     },
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "25",
-       "21",
-       "25",
-       "26"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Points",
-      "56.0",
-      "74.0"
-     ],
-     [
-      "Kills",
-      "43",
-      "59"
-     ],
-     [
-      "Aces",
-      "6",
-      "6"
-     ],
-     [
-      "Blocks",
-      "7",
-      "9"
-     ],
-     [
-      "Assists",
-      "42",
-      "56"
-     ]
-    ]
-   }
   },
   {
    "id": "11161",
@@ -3233,6 +3159,19 @@
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max",
    "abbr": "ASU"
+  },
+  {
+   "id": "11303",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Stanford",
+   "start": "2026-11-21T02:00:00+00:00",
+   "allDay": false,
+   "location": "Stanford, Calif.",
+   "result": null,
+   "abbr": "STAN"
   },
   {
    "id": "11034",
