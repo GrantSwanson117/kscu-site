@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T09:51:31.070519+00:00",
+ "updated": "2026-11-16T22:30:50.617372+00:00",
  "games": [
   {
    "id": "11159",
@@ -3159,6 +3159,19 @@
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max",
    "abbr": "ASU"
+  },
+  {
+   "id": "11303",
+   "sport": "Women's Soccer",
+   "home": false,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Stanford",
+   "start": "2026-11-21T02:00:00+00:00",
+   "allDay": false,
+   "location": "Stanford, Calif.",
+   "result": null,
+   "abbr": "STAN"
   },
   {
    "id": "11034",
