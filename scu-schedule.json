@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T22:30:50.617372+00:00",
+ "updated": "2026-11-17T03:57:06.800156+00:00",
  "games": [
   {
    "id": "11159",
@@ -3093,19 +3093,6 @@
    "abbr": "GCU"
   },
   {
-   "id": "10998",
-   "sport": "Men's Water Polo",
-   "home": true,
-   "neutral": false,
-   "meet": false,
-   "opponent": "First Round",
-   "start": "2026-11-20",
-   "allDay": true,
-   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
-   "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
-  },
-  {
    "id": "11033",
    "sport": "Women's Volleyball",
    "home": false,
@@ -3132,6 +3119,20 @@
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max",
    "abbr": "VCU"
+  },
+  {
+   "id": "10998",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Pepperdine",
+   "start": "2026-11-20T19:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "abbr": "PEPP"
   },
   {
    "id": "10999",
