@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T12:59:51.047121+00:00",
+ "updated": "2026-11-20T21:11:55.020980+00:00",
  "games": [
   {
    "id": "11159",
@@ -3931,6 +3931,20 @@
    "abbr": "PEPP"
   },
   {
+   "id": "11304",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Oregon",
+   "start": "2027-02-21",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/oregon.png?width=80&height=80&mode=max",
+   "abbr": "ORE"
+  },
+  {
    "id": "11136",
    "sport": "Men's Basketball",
    "home": true,
@@ -4012,6 +4026,19 @@
    "location": "Las Vegas",
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11305",
+   "sport": "Men's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Menlo College",
+   "start": "2027-04-11T22:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/menlo.png?width=80&height=80&mode=max"
   }
  ]
 }
