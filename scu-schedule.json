@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T03:24:43.738058+00:00",
+ "updated": "2026-11-20T12:59:51.047121+00:00",
  "games": [
   {
    "id": "11159",
@@ -3008,9 +3008,69 @@
    "start": "2026-11-20T02:30:00+00:00",
    "allDay": false,
    "location": "Moraga, Calif.",
-   "result": null,
+   "result": "W 3-1",
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
-   "abbr": "SMC"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/saint-mary-s/boxscore/11033",
+   "recap": "https://santaclarabroncos.com/news/2026/11/19/womens-volleyball-volleyball-earns-comeback-road-win-at-saint-mary-s.aspx",
+   "abbr": "SMC",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "14",
+       "25",
+       "25",
+       "25"
+      ]
+     },
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "25",
+       "23",
+       "19",
+       "23"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "55.0",
+      "67.0"
+     ],
+     [
+      "Kills",
+      "45",
+      "53"
+     ],
+     [
+      "Aces",
+      "3",
+      "8"
+     ],
+     [
+      "Blocks",
+      "7",
+      "6"
+     ],
+     [
+      "Assists",
+      "42",
+      "49"
+     ]
+    ]
+   }
   },
   {
    "id": "11094",
@@ -3022,9 +3082,40 @@
    "start": "2026-11-20T03:30:00+00:00",
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
-   "result": null,
+   "result": "L 77-83 OT",
    "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max",
-   "abbr": "VCU"
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/vcu/boxscore/11094",
+   "recap": "https://santaclarabroncos.com/news/2026/11/19/mens-basketball-broncos-fall-to-vcu.aspx",
+   "abbr": "VCU",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "VCU",
+      "abbr": "VCU",
+      "cells": [
+       "34",
+       "37",
+       "83"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "46",
+       "25",
+       "77"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "10998",
