@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T22:00:50.869624+00:00",
+ "updated": "2026-11-20T03:24:43.738058+00:00",
  "games": [
   {
    "id": "11159",
@@ -3386,7 +3386,7 @@
    "neutral": true,
    "meet": false,
    "opponent": "Boise State",
-   "start": "2026-12-21T22:00:00+00:00",
+   "start": "2026-12-21T22:30:00+00:00",
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
@@ -3400,7 +3400,7 @@
    "neutral": true,
    "meet": false,
    "opponent": "Oregon State",
-   "start": "2026-12-23T23:30:00+00:00",
+   "start": "2026-12-23T23:00:00+00:00",
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
