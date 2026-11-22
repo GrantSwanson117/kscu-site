@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T06:57:38.986911+00:00",
+ "updated": "2026-11-22T15:24:06.498348+00:00",
  "games": [
   {
    "id": "11159",
@@ -434,72 +434,6 @@
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
    "boxscore": "https://santaclarabroncos.com/documents/2026/10/21/2026_SMC_Invitational_Final_Leaderboard.pdf",
    "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-golf-nielsen-earns-co-medalist-honors-broncos-runner-up-at-saint-marys-invitational.aspx"
-  },
-  {
-   "id": "10935",
-   "sport": "Men's Soccer",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "San Diego",
-   "start": "2026-10-22T02:00:00+00:00",
-   "allDay": false,
-   "location": "San Diego",
-   "result": "L 1-3",
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/san-diego/boxscore/10935",
-   "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-soccer-msoc-recap.aspx",
-   "abbr": "USD",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "T"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "0",
-       "1",
-       "1"
-      ]
-     },
-     {
-      "name": "San Diego",
-      "abbr": "USD",
-      "cells": [
-       "0",
-       "3",
-       "3"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Shots",
-      "8 (3)",
-      "24 (9)"
-     ],
-     [
-      "Saves",
-      "6",
-      "2"
-     ],
-     [
-      "Corner Kicks",
-      "5",
-      "13"
-     ],
-     [
-      "Fouls",
-      "11",
-      "8"
-     ]
-    ]
-   }
   },
   {
    "id": "11004",
