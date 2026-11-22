@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T11:14:03.290460+00:00",
+ "updated": "2026-11-22T06:57:38.986911+00:00",
  "games": [
   {
    "id": "11159",
@@ -3343,9 +3343,72 @@
    "start": "2026-11-21T22:00:00+00:00",
    "allDay": false,
    "location": "Stockton, Calif.",
-   "result": null,
+   "result": "W 3-2",
    "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
-   "abbr": "PAC"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pacific/boxscore/11034",
+   "recap": "https://santaclarabroncos.com/news/2026/11/21/womens-volleyball-volleyball-caps-perfect-road-trip-with-five-set-comeback-at-pacific.aspx",
+   "abbr": "PAC",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "24",
+       "21",
+       "25",
+       "16"
+      ]
+     },
+     {
+      "name": "Pacific",
+      "abbr": "PAC",
+      "cells": [
+       "18",
+       "26",
+       "25",
+       "22",
+       "14"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "90.0",
+      "64.0"
+     ],
+     [
+      "Kills",
+      "71",
+      "49"
+     ],
+     [
+      "Aces",
+      "8",
+      "10"
+     ],
+     [
+      "Blocks",
+      "11",
+      "5"
+     ],
+     [
+      "Assists",
+      "66",
+      "47"
+     ]
+    ]
+   }
   },
   {
    "id": "11000",
