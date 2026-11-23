@@ -119,26 +119,234 @@ showTableOfContents = true
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+/* the "now" line: a pulsing dot, dashes drifting right and a NOW tag that bobs */
 .time-line {
     position: absolute;
     left: 0;
     right: 0;
     height: 2px;
-    background: rgba(255, 0, 0, 0.54);
     z-index: 3;
     pointer-events: none;
+    background: repeating-linear-gradient(90deg, rgb(191, 81, 77) 0 9px, rgba(191, 81, 77, .35) 9px 13px) 0 0 / 26px 2px;
+    animation: now-drift 1.6s linear infinite;
 }
+.time-line::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(191, 81, 77);
+    animation: pulse-red 2.2s infinite;
+}
+.now-tag {
+    position: absolute;
+    left: 8px;
+    top: -15px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: rgb(191, 81, 77);
+    color: #fff;
+    font: 700 8px/1.3 'IBM Plex Mono', monospace;
+    letter-spacing: .1em;
+    animation: now-bob 2.4s ease-in-out infinite;
+}
+@keyframes now-drift { to { background-position: 26px 0; } }
+@keyframes now-bob { 50% { transform: translateY(-2px) rotate(-3deg); } }
+@media (prefers-reduced-motion: reduce) { .time-line, .time-line::before, .now-tag { animation: none; } }
 
 </style>
+<button type="button" id="recent-open" class="not-prose"><span class="rp-eq" aria-hidden="true"><i></i><i></i><i></i></span>RECENTLY PLAYED</button>
+
+<dialog id="recent-dialog" class="not-prose" aria-labelledby="recent-title">
+    <div class="rp-box">
+        <div class="rp-h">
+            <h2 id="recent-title"><span class="rp-eq" aria-hidden="true"><i></i><i></i><i></i></span>RECENTLY PLAYED</h2>
+            <button type="button" id="recent-close" aria-label="Close">X</button>
+        </div>
+        <div id="recent-body"><p class="rp-msg">Loading songs…</p></div>
+    </div>
+</dialog>
+
 <div class="schedule-container">
     <div id="schedule-target"></div>
 </div>
 
+<dialog id="songs-dialog" class="not-prose" aria-labelledby="songs-title">
+    <div class="songs-card">
+        <div class="songs-head">
+            <div>
+                <p class="songs-kicker"><span class="songs-eq" aria-hidden="true"><i></i><i></i><i></i></span>KSCU 103.3 FM</p>
+                <h2 id="songs-title"></h2>
+                <p id="songs-sub"></p>
+            </div>
+            <button type="button" id="songs-close" aria-label="Close">✕</button>
+        </div>
+        <div id="songs-body"></div>
+    </div>
+</dialog>
+
+<style>
+    /* clickable shows + the songs dialog (static/recentSongs.js) */
+    .schedule-block[role="button"] { cursor: pointer; transition: background-color .15s, box-shadow .15s; }
+    .schedule-block[role="button"]:hover, .schedule-block[role="button"]:focus-visible { background: #fff1d0; box-shadow: 2px 2px 0 #211408; outline: none; z-index: 2; }
+    /* the show on air right now (static/recentSongs.js keeps this current, every 30s) */
+    .schedule-block.is-live { border-left-color: rgb(191, 81, 77); background: #fff0ea; box-shadow: inset 0 0 0 1px rgba(191, 81, 77, .55); }
+    .schedule-live { position: absolute; top: 3px; right: 3px; display: inline-flex; align-items: center; gap: 4px; padding: 2px 5px 2px 4px;
+        background: rgb(191, 81, 77); color: #fff; font: 700 8px/1.1 'IBM Plex Mono', monospace; letter-spacing: .08em; }
+    .schedule-live i { width: 5px; height: 5px; border-radius: 50%; background: #fff; animation: songs-blink 1.4s ease-in-out infinite; }
+    @keyframes songs-blink { 50% { opacity: .25; } }
+    .schedule-block.is-live .schedule-block-title { padding-right: 34px; }
+
+    #songs-dialog { padding: 0; border: 2px solid #211408; background: #ede8e0; box-shadow: 6px 6px 0 #211408; width: min(520px, calc(100vw - 24px));
+        max-height: min(84vh, 780px); color: #211408; overflow: auto; overscroll-behavior: contain; }
+    #songs-dialog::backdrop { background: rgba(33, 20, 8, .45); }
+    .songs-card { font-family: 'IBM Plex Mono', monospace; }
+    /* the dialog sits inside the article, so undo the article's text styles */
+    #songs-dialog h2, #songs-dialog p, #songs-dialog img, #songs-dialog ol, #songs-dialog li { margin: 0; padding: 0; }
+    #songs-dialog li::before, #songs-dialog li::marker { content: none; }
+    #songs-dialog a { text-decoration: none; color: inherit; }
+    #songs-dialog b { font-weight: 700; color: inherit; }
+
+    .songs-head { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+        padding: 16px 16px 14px 18px; background: #211408; color: #fff9ef; }
+    .songs-kicker { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #e2bc01; }
+    #songs-dialog .songs-head h2 { margin-top: 6px; font-size: 22px; line-height: 1.15; font-weight: 700; color: #fff9ef; }
+    #songs-dialog #songs-sub { margin-top: 6px; font-size: 12px; line-height: 1.45; color: #d6c7ad; }
+    #songs-close { width: 40px; height: 40px; flex: none; border: 1px solid #fff9ef; background: transparent; color: #fff9ef; font-size: 15px; cursor: pointer; }
+    #songs-close:hover, #songs-close:focus-visible { background: #fff9ef; color: #211408; outline: none; }
+    .songs-eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 11px; }
+    .songs-eq i { width: 3px; background: #e2bc01; animation: songs-eq 1s ease-in-out infinite alternate; }
+    .songs-eq i:nth-child(1) { height: 60%; } .songs-eq i:nth-child(2) { height: 100%; animation-delay: -.4s; } .songs-eq i:nth-child(3) { height: 40%; animation-delay: -.7s; }
+    @keyframes songs-eq { from { transform: scaleY(.35); } to { transform: scaleY(1); } }
+    .songs-eq i { transform-origin: bottom; }
+
+    #songs-body { padding: 18px 18px 16px; }
+    .songs-callout { display: flex; gap: 10px; margin-bottom: 18px !important; padding: 10px 12px !important; border: 1px dashed #211408; background: #fff9ef;
+        font-size: 12.5px; line-height: 1.5; color: #3a2610; }
+    .songs-callout > i { color: #995d26; margin-top: 3px; }
+    .songs-msg { padding: 24px 0 !important; text-align: center; font-size: 13px; color: #553415; }
+
+    .songs-hero { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 14px; align-items: center; margin-bottom: 22px; padding: 12px;
+        background: #fff9ef; border: 1px solid #211408; box-shadow: 4px 4px 0 #211408; transition: transform .1s, box-shadow .1s; }
+    a.songs-hero:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #211408; }
+    a.songs-hero:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #211408; }
+    .songs-hero .songs-art { width: 104px; height: 104px; }
+    .songs-hero-text { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+    .songs-tag { display: inline-flex; align-items: center; gap: 6px; padding: 2px 7px; background: #211408; color: #fff9ef; font-size: 10.5px; font-weight: 700; letter-spacing: .08em; }
+    .songs-hero .songs-title { font-size: 16px; -webkit-line-clamp: 3; margin-top: 4px; }
+    .songs-hero .songs-artist { font-size: 13px; }
+    .songs-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; font-weight: 700; border-bottom: 1px solid currentColor; }
+    a.songs-hero:hover .songs-cta { color: #1a7f3c; }
+    .songs-live { width: 8px; height: 8px; border-radius: 50%; background: rgb(191, 81, 77); animation: pulse-red 3s infinite; }
+
+    .songs-label { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 6px !important; border-bottom: 2px solid #211408;
+        font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+    .songs-label span { color: #995d26; font-weight: 500; letter-spacing: .04em; }
+    .songs-list { list-style: none; }
+    .songs-list li { border-bottom: 1px solid rgba(33, 20, 8, .15); }
+    .songs-row { display: grid; grid-template-columns: 58px 44px minmax(0, 1fr) 16px; gap: 12px; align-items: center; padding: 9px 6px; transition: background-color .12s; }
+    a.songs-row:hover, a.songs-row:focus-visible { background: #fff9ef; outline: none; }
+    .songs-time { font-size: 12px; color: #995d26; font-variant-numeric: tabular-nums; }
+    .songs-art { display: block; width: 44px; height: 44px; object-fit: cover; border: 1px solid #211408; background: #d8d0c2; }
+    .songs-what { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+    .songs-title { font-size: 13px; line-height: 1.3; font-weight: 700; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .songs-artist { font-size: 12px; line-height: 1.35; color: #553415; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+    .songs-go { font-size: 14px; color: #211408; opacity: .3; transition: opacity .12s, color .12s; }
+    a.songs-row:hover .songs-go { opacity: 1; color: #1a7f3c; }
+    .songs-foot { margin-top: 14px !important; font-size: 11px; text-align: center; color: #8a7a66; }
+
+    @media (max-width: 560px) {
+        #songs-dialog { margin: auto 0 0; width: 100vw; max-width: 100vw; max-height: 88vh; border-width: 2px 0 0; box-shadow: none; }
+        .songs-head { padding: 14px 14px 12px 16px; }
+        #songs-dialog .songs-head h2 { font-size: 19px; }
+        #songs-body { padding: 16px 14px 14px; }
+        .songs-hero { grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding: 10px; }
+        .songs-hero .songs-art { width: 84px; height: 84px; }
+        .songs-hero .songs-title { font-size: 15px; }
+        .songs-row { grid-template-columns: 50px 40px minmax(0, 1fr) 14px; gap: 10px; padding: 9px 2px; }
+        .songs-row .songs-art { width: 40px; height: 40px; }
+    }
+    /* ---------- recently played pop-up (static/recentSongs.js) ----------
+       Built like the homepage boxes: cream background, 1px ink lines, a bold tab label sitting on the box and a square X,
+       no drop shadows. Song titles are underlined links, times in Plex Mono. */
+    #recent-open, #recent-dialog { --ink: rgb(17, 24, 39); --paper: rgb(237, 232, 224); --sans: ui-sans-serif, system-ui, -apple-system, "segoe ui", Roboto, "helvetica neue", Arial, sans-serif; }
+    #recent-open { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px; padding: 7px 12px; min-height: 40px; border: 1px solid var(--ink);
+        background: transparent; color: var(--ink); font: 700 14px var(--sans); cursor: pointer; transition: background-color .15s, color .15s; }
+    #recent-open:hover, #recent-open:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+    .rp-eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 11px; }
+    .rp-eq i { width: 3px; background: currentColor; transform-origin: bottom; animation: songs-eq 1s ease-in-out infinite alternate; }
+    .rp-eq i:nth-child(1) { height: 60%; } .rp-eq i:nth-child(2) { height: 100%; animation-delay: -.4s; } .rp-eq i:nth-child(3) { height: 40%; animation-delay: -.7s; }
+
+    #recent-dialog { padding: 0; border: 0; background: transparent; color: var(--ink); width: min(600px, calc(100vw - 24px)); max-width: none; overflow: visible; }
+    #recent-dialog::backdrop { background: rgba(17, 24, 39, .4); }
+    #recent-dialog * { box-sizing: border-box; }
+    #recent-dialog img, #recent-dialog p, #recent-dialog h2 { margin: 0; }
+    .rp-box { border: 1px solid var(--ink); background: var(--paper); overflow: hidden; }
+    .rp-h { display: flex; align-items: stretch; border-bottom: 1px solid var(--ink); }
+    #recent-dialog .rp-h h2 { flex: 1; display: flex; align-items: center; gap: 8px; padding: 9px 12px; font: 700 15px/1.4 var(--sans); color: var(--ink); }
+    #recent-close { width: 44px; padding: 0; border: 0; border-left: 1px solid var(--ink); background: transparent; color: var(--ink); font: 700 15px var(--sans); cursor: pointer; }
+    #recent-close:hover, #recent-close:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+    .rp-msg { padding: 40px 16px; text-align: center; font: 14px var(--sans); }
+
+    /* the carousel: covers slide sideways on a dotted background; the front one is full size with an ink shadow and a
+       red sticker saying how long ago it played */
+    .rp-stage { position: relative; overflow: hidden; height: calc(var(--s) + 58px); border-bottom: 1px solid var(--ink);
+        background: radial-gradient(rgba(17, 24, 39, .16) 1px, transparent 1.5px) 0 0 / 12px 12px; }
+    .rp-stage > button { position: absolute; left: 50%; top: 26px; width: var(--s); height: var(--s); margin-left: calc(var(--s) / -2); padding: 0;
+        border: 1px solid var(--ink); border-radius: 0; background: #d6d0c4; cursor: pointer;
+        transition: transform .65s cubic-bezier(.65, 0, .25, 1), opacity .4s, box-shadow .65s, filter .65s; }
+    .rp-stage > button.on { box-shadow: 5px 5px 0 var(--ink); }
+    .rp-stage > button:focus-visible { outline: 2px solid rgb(191, 81, 77); outline-offset: 3px; }
+    .rp-stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .rp-sticker { position: absolute; z-index: 30; left: calc(50% + var(--s) / 2 - 30px); top: 14px; padding: 3px 8px; border: 1px solid var(--ink);
+        background: rgb(191, 81, 77); color: #fff; font: 700 11px var(--sans); letter-spacing: .06em; white-space: nowrap;
+        transform: rotate(6deg); box-shadow: 2px 2px 0 var(--ink); animation: rp-pop .45s cubic-bezier(.3, 1.6, .5, 1) both; }
+    @keyframes rp-pop { from { transform: rotate(6deg) scale(.4); opacity: 0; } }
+
+    /* the song at the front, laid out like a homepage "previously spun" row */
+    .rp-now { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; min-height: 72px; border-bottom: 1px solid var(--ink); }
+    .rp-art { border-right: 1px solid var(--ink); background: #d6d0c4; }
+    .rp-art img { width: 100%; height: 100%; object-fit: cover; }
+    .rp-what { display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; padding: 10px 12px; animation: rp-in .4s ease both; }
+    @keyframes rp-in { from { opacity: 0; transform: translateY(4px); } }
+    #recent-dialog .rp-title { font: 500 16px/1.3 var(--sans); color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    #recent-dialog a.rp-title:hover { color: #1a7f3c; }
+    .rp-by { font: 14px/1.3 var(--sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rp-when { display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 3px; padding: 10px 12px; border-left: 1px solid var(--ink);
+        font: 13px 'IBM Plex Mono', monospace; white-space: nowrap; }
+    .rp-when b { font: 700 11px var(--sans); letter-spacing: .04em; }
+
+    /* which song is in front, and arrows to turn the wheel */
+    .rp-foot { display: flex; justify-content: space-between; align-items: stretch; min-height: 40px; }
+    .rp-dots { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; }
+    .rp-dots button { width: 12px; height: 12px; padding: 0; border: 1px solid var(--ink); background: transparent; cursor: pointer; }
+    .rp-dots button.on { background: var(--ink); }
+    .rp-arrows { display: flex; }
+    .rp-arrows button { width: 46px; padding: 0; border: 0; border-left: 1px solid var(--ink); background: transparent; color: var(--ink); font: 700 14px var(--sans); cursor: pointer; }
+    .rp-arrows button:hover, .rp-arrows button:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+    @media (max-width: 480px) {
+        .rp-now { grid-template-columns: 60px minmax(0, 1fr) auto; min-height: 60px; }
+        #recent-dialog .rp-title { font-size: 15px; }
+        .rp-by { font-size: 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .songs-eq i, .songs-live, .schedule-live i { animation: none; } .rp-stage > button { transition: none; } .rp-eq i, .rp-sticker { animation: none; } }
+</style>
+
 <script src="/loadSchedule.js"></script>
+<script src="/recentSongs.js"></script>
 <style>
     @media screen and (max-width: 1090px) {
         #content-wrapper {
             max-width: 100% !important;
+        }
+
+        /* the grid scrolls sideways inside its own box, so the page itself stays the width of the screen */
+        .schedule-container {
+            width: 100%;
         }
 
         #framewrapper {

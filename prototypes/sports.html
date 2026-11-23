@@ -162,6 +162,13 @@
   .tile-head { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--ink); }
   .tile-head .ico { width: 54px; height: 54px; flex: none; }
   .teams .tiles { border-top: 1px solid var(--ink); padding-top: 18px; }
+  .offseason { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -26px 0 48px; }
+  .off-h { flex: 1 1 100%; font: 700 11px var(--mono); letter-spacing: .06em; color: var(--muted); }
+  .off-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 4px 12px 4px 6px; border: 1px solid var(--ink);
+    background: var(--bg); box-shadow: 2px 2px 0 rgba(17,24,39,.22); font: 700 12px var(--mono); text-decoration: none; }
+  .off-chip .ico { width: 26px; height: 26px; }
+  .off-chip:hover { background: var(--ink); color: var(--bg); }
+  .off-chip:hover .ico { --ink: var(--bg); --paper: #111827; }
   .tile-head::after { content: "→"; margin-left: auto; font-family: var(--mono); font-weight: 700; font-size: 18px; transition: transform .25s var(--ease); }
   .tile:hover .tile-head::after { transform: translateX(4px); }
   .tile-head h3 { margin: 0; font-family: var(--mono); font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
@@ -298,6 +305,7 @@
   .onair.is-live { background: var(--bronco); color: #fff; border-color: var(--bronco-deep); }
   .onair.is-live .dot { background: #fff; animation: pulse 1.6s infinite; }
   .onair .sp { flex: 1; }
+  .oa-status { font: 700 11px var(--mono); letter-spacing: .06em; padding: 2px 6px; border: 1px solid currentColor; }
   .oa-btn { border: 1px solid currentColor; background: transparent; padding: 4px 10px; font-family: var(--mono); font-size: 12px; font-weight: 700; cursor: pointer;
     transition: background-color .2s var(--ease), color .2s var(--ease); }
   .oa-btn:hover { background: var(--ink); color: var(--bg); }
@@ -938,10 +946,33 @@
     .hero { grid-template-columns: 1fr; }
     .hero-ico { border-right: 0; border-bottom: 1px solid var(--ink); justify-content: center; }
     .hero-ico .ico { width: 96px; height: 96px; }
-    .rail { grid-template-columns: repeat(3, 1fr); }
-    .rail .ico { width: 34px; height: 34px; }
-    .rail a { font-size: 12px; }
+    /* one swipeable row instead of five rows of tiles, so the next game is on the first screen; the half-visible
+       tile at the right edge shows there's more to swipe */
+    .rail { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; overscroll-behavior-x: contain; }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail a { flex: 0 0 auto; min-width: 74px; scroll-snap-align: start; padding: 8px 12px 7px; font-size: 11px; gap: 3px; white-space: nowrap; }
+    .rail .ico { width: 28px; height: 28px; }
   }
+  @media (max-width: 640px) {
+    /* This week: a short vertical list (first 3 games, then "show all") instead of a sideways carousel */
+    .week { display: flex; flex-direction: column; overflow: visible; }
+    .wk { border-right: 0; border-bottom: 2px solid var(--ink); min-height: 0; flex-direction: row; flex-wrap: wrap; align-items: center;
+      column-gap: 10px; row-gap: 4px; padding: 10px 12px; }
+    .wk:last-child { border-bottom: 0; }
+    .wk .day { flex: 1 1 100%; }
+    .wk .ico { width: 30px; height: 30px; }
+    .wk .opp { flex: 1 1 auto; min-width: 0; }
+    .wk .meta { flex: 1 1 100%; order: 5; margin: 0; }
+    .week:not(.all) .wk.wk-extra { display: none; }
+    .wk-all { display: block; width: 100%; min-height: 44px; border: 0; border-top: 2px solid var(--ink); background: var(--paper);
+      font: 700 12px var(--mono); letter-spacing: .05em; cursor: pointer; }
+    .week.all + .wk-all { display: none; }
+    /* bigger tap areas for the listening links and buttons */
+    .oa-btn { min-height: 44px; padding: 8px 14px; }
+    .onair > a, .nx-strip a, .gc-info a { display: inline-flex; align-items: center; min-height: 44px; }
+    .nx-strip { padding-top: 2px; padding-bottom: 2px; }
+  }
+  @media (min-width: 641px) { .wk-all { display: none; } }
 </style>
 </head>
 <body>
@@ -1342,10 +1373,10 @@ function overviewHtml() {
   const end = Date.now() + 7 * 864e5;
   const week = up.filter(g => when(g).getTime() < end);
   const todayStr = new Date().toDateString();
-  const weekHtml = week.length ? week.map(g => {
+  const weekHtml = week.length ? week.map((g, i) => {
     const s = sportOf(g.sport), d = when(g);
     const isLive = espnFor(g)?.state === "in";
-    return `<a class="wk g-${genderOf(g.sport)} ${d.toDateString() === todayStr ? "today" : ""}" href="${href(s.id, genderOf(g.sport))}">
+    return `<a class="wk g-${genderOf(g.sport)} ${d.toDateString() === todayStr ? "today" : ""}${i >= 3 ? " wk-extra" : ""}" href="${href(s.id, genderOf(g.sport))}">
       <div class="day"><span>${isLive ? "LIVE NOW" : d.toDateString() === todayStr ? "TODAY" : shortDate(d).toUpperCase()}</span><span>${esc(fmtTime(g))}</span></div>
       ${icon(s.id)}<div class="opp">${oppShort(g)}</div><div class="meta">${esc(g.sport)}</div><div>${venueTag(g).replace('class="vb', 'style="margin-left:0" class="vb')}</div></a>`;
   }).join("") : `<div class="empty">No games in the next 7 days.</div>`;
@@ -1362,7 +1393,12 @@ function overviewHtml() {
     const inner = `<i class="lsq pl">${esc(place)}</i><span class="lc-opp"><span class="nm">${esc([rest.join(" "), g.opponent].filter(Boolean).join(" · "))}</span></span><span class="lc-date">${md(g)}</span>`;
     return g.boxscore ? `<a class="lchip" href="${esc(g.boxscore)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="lchip">${inner}</div>`;
   };
-  const tiles = menuSports().map(s => {
+  // off-season sports (no result and nothing scheduled for any of their teams) get a small chip each, below the tiles
+  const quiet = (id, g) => { const tg = teamGames(id, g); return !upcomingOf(tg)[0] && !resultsOf(tg)[0]; }; // the tile would say "No games listed yet"
+  const offSeason = menuSports().filter(s => ["mens", "womens"].every(g => !hasTeam(s.id, g) || quiet(s.id, g)));
+  const offHtml = offSeason.length ? `<div class="offseason"><span class="off-h">NO GAMES LISTED YET</span>${offSeason.map(s =>
+    `<a class="off-chip" href="${href(s.id)}">${icon(s.id)}${esc(s.name)}</a>`).join("")}</div>` : "";
+  const tiles = menuSports().filter(s => !offSeason.includes(s)).map(s => {
     const rows = ["mens", "womens"].filter(g => hasTeam(s.id, g)).map(g => {
       const tg = teamGames(s.id, g), nx = upcomingOf(tg)[0], last = resultsOf(tg)[0];
       // nothing played and nothing scheduled (off-season): one quiet line instead of two empty states
@@ -1383,8 +1419,8 @@ function overviewHtml() {
           : fin ? `<div class="box gc nx">${resultCenter(fin, up[0])}</div>`
           : hasOpponent(up[0]) ? `<div class="box gc nx">${nextCenter(up[0])}</div>`
           : `<div class="box gc wide">${preCenter(up[0])}</div>`}</div>`; })()}
-    <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div></div>
-    <div class="card teams"><div class="tab">TEAMS</div><div class="tiles">${tiles}</div></div>`;
+    <div class="card section-gap"><div class="tab">THIS WEEK</div><a class="tab right mono" href="#/calendar" style="text-decoration:none">${week.length} game${week.length === 1 ? "" : "s"} · FULL CALENDAR →</a><div class="week">${weekHtml}</div>${week.length > 3 ? `<button class="wk-all" data-week-all>SHOW ALL ${week.length} GAMES ↓</button>` : ""}</div>
+    <div class="card teams"><div class="tab">TEAMS</div><div class="tiles">${tiles}</div>${offHtml}</div>`;
 }
 
 function sportPage(sportId, gender) {
@@ -1597,6 +1633,7 @@ function route() {
 window.addEventListener("hashchange", () => { route(); document.getElementById("rail").scrollIntoView({ block: "nearest", behavior: "smooth" }); });
 
 document.addEventListener("click", e => {
+  if (e.target.closest("[data-week-all]")) { document.querySelector(".week")?.classList.add("all"); return; }
   const day = e.target.closest("[data-day]");
   if (day) { cal.selected = day.dataset.day; rerenderCalendar();
     document.querySelector(".day-detail")?.scrollIntoView({ block: "nearest", behavior: "smooth" }); return; }
@@ -1928,7 +1965,7 @@ function nextCenter(g) {
     <div class="nx-field" style="--lc:${col(L)};--rc:${col(R)}">
       <div class="nx-match">${teamBlock(L)}
         <div class="nx-plate"><span class="nx-vs">VS</span>
-          <div class="nx-when"><b>${esc(shortDate(d))}</b><span>${esc(fmtTime(g))}</span></div>
+          <div class="nx-when"><b>${esc(shortDate(d))}</b><span>${esc(g.allDay ? fmtTime(g) : when(g).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZoneName: "short" }))}</span></div>
           ${countdown(d)}</div>
         ${teamBlock(R)}
       </div>
@@ -2223,10 +2260,10 @@ const mixlr = { live: false, avatar: "", open: false, autoOpened: false };
 function onAirBar() {
   return `<div class="onair ${mixlr.live ? "is-live" : ""}" id="onair">
       ${mixlr.avatar ? `<img src="${esc(mixlr.avatar)}" alt="">` : ""}<span class="dot"></span>
-      <b>ON THE CALL</b><span>${mixlr.live ? "KSCU Sports is LIVE — Bronco play-by-play" : "KSCU Sports is off air right now"}</span>
+      <b>SPORTS BROADCAST</b><span class="oa-status">${mixlr.live ? "LIVE NOW" : "OFF AIR"}</span><span>${mixlr.live ? "Bronco play-by-play on Mixlr" : "No game on right now"}</span>
       <span class="sp"></span>
       <button class="oa-btn" data-toggle-player aria-expanded="${mixlr.open}">${mixlr.open ? "▲ HIDE PLAYER" : mixlr.live ? "▶ LISTEN NOW" : "▶ OPEN PLAYER"}</button>
-      <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">mixlr.com/kscusports ↗</a></div>
+      <a href="https://mixlr.com/kscusports" target="_blank" rel="noopener">OPEN IN MIXLR ↗</a></div>
     <div class="oa-player ${mixlr.open ? "open" : ""}">${mixlr.open ? `<iframe src="https://kscusports.mixlr.com/embed" title="KSCU Sports live on Mixlr" allow="autoplay"></iframe>` : ""}</div>`;
 }
 async function refreshMixlr() {

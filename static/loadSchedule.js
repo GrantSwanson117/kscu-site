@@ -115,6 +115,12 @@ async function loadSchedule() {
                 `;
                 const fontSize = blockHeight < 48 ? '8px' : blockHeight < 72 ? '9px' : '10px';
                 block.style.fontSize = fontSize;
+                // clickable: opens this show's songs (static/recentSongs.js). Times are the slot's real day and time.
+                Object.assign(block.dataset, { day: show.day.toLowerCase(), start: show.start_time % 1440,
+                    end: (show.end_time === 0 ? 1440 : show.end_time) % 1440, title: show.show_title || '', dj: show.dj_name || '' });
+                block.tabIndex = 0;
+                block.setAttribute('role', 'button');
+                block.setAttribute('aria-label', `${show.show_title || 'Show'}: see songs played`);
                 blocks.appendChild(block);
             });
 
@@ -127,10 +133,12 @@ async function loadSchedule() {
 
         function updateTimeLine() {
             
-            const now = new Date();
-            let dayMappingIndex = now.getDay();
+            // station time (Pacific), so the line is right for visitors in any time zone
+            const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', weekday: 'short',
+                hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+            let dayMappingIndex = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[p.weekday];
 
-            let currentMins = now.getHours() * 60 + now.getMinutes();
+            let currentMins = (+p.hour) * 60 + (+p.minute);
             if (currentMins < 60) {
                 currentMins += 24 * 60;
                 dayMappingIndex = (dayMappingIndex === 0) ? 6 : dayMappingIndex - 1;
@@ -155,6 +163,7 @@ async function loadSchedule() {
             if (!line) {
                 line = document.createElement('div');
                 line.className = 'time-line';
+                line.innerHTML = '<span class="now-tag">NOW</span>';
                 todayCol.appendChild(line);
             }
 

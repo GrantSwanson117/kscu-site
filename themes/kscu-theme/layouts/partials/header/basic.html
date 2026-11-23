@@ -61,7 +61,7 @@
       </div>
       <!-- Vertical Flexbox -->
 
-      <div class="flex flex-col w-screen">
+      <div id="header-middle" class="flex flex-col" style="flex: 1 1 0; min-width: 0;">
         <!-- Top Row Flexbox -->
         <div id="top-row" class="flex justify-between items-center" style="
           height: 29px;
@@ -152,7 +152,7 @@
               width: 1px; 
               background-color: black;
               "></div>
-            <div class="flex flex-row grow justify-left">
+            <div id="show-title-wrap" class="flex flex-row grow justify-left">
               <button id="info-2">
                 <img id="info-img-2" class="mx-2" src="/info-filled.svg" alt="Show Details" style="
                                             margin-top: 8px;
@@ -197,7 +197,7 @@
             <ul class="flex list-none text-[15px] ltr:text-right rtl:text-left sm:flex-row">
               {{ if .Site.Menus.main }}
               {{ range .Site.Menus.main }}
-              <li style="margin-left: 1rem;">
+              <li style="margin-left: 1rem;"{{ if .Params.new }} class="has-new"{{ end }}>
                 <a class="decoration-primary-500 hover:text-neutral-500 hover:underline hover:decoration-1 hover:underline-offset-2 hover:text-gray-400 hover:decoration-wavy"
                   style="
                   text-decoration-skip-ink: none;" href="{{ .URL }}" title="{{ .Title }}">{{
@@ -228,7 +228,7 @@
               width: 1px; 
               background-color: black;
               "></div>
-              <div class="flex flex-row items-center whitespace-nowrap">
+              <div id="playing-wrap" class="flex flex-row items-center whitespace-nowrap">
             <img id="playing-image" src="/vinyl.svg" alt="Album art" style="
               height: 30px;
               width: 30px;
@@ -284,12 +284,12 @@
 <div id="third-row-div">
   <div id="third-row" class="font-medium text-sm z-10 overflow-hidden">
     <div class="px-6">
-      <div class="flex justify-between items-center" style="
+      <div id="third-row-box" class="flex justify-between items-center" style="
       height: 30px;
       border-bottom: 1px solid black;
       border-left: 1px solid black;
       border-right: 1px solid black">
-        <div class="flex justify-left items-center">
+        <div id="third-row-controls" class="flex justify-left items-center">
           <!-- Social media icons in third row -->
           <!-- Disappears when screen width gets too small -->
           <!-- Play pause buttons in third row -->
@@ -387,7 +387,7 @@
             {{ range .Site.Menus.main }}
             <li style="
               margin-left: 1rem;
-              ">
+              "{{ if .Params.new }} class="has-new"{{ end }}>
               <a class="decoration-primary-500 hover:text-neutral-500 hover:underline hover:decoration-1 hover:underline-offset-2 hover:text-gray-400 hover:decoration-wavy"
                 style="
                 text-decoration-skip-ink: none;" href="{{ .URL }}" title="{{ .Title }}">{{
@@ -696,6 +696,45 @@
 
 </style>
 
+<style>
+  /* ---------- header fit on tablets and phones ----------
+     Long show titles and song names end in "…" instead of being cut off mid-letter. Under 640px the menu links get
+     their own full-width row (they no longer fit next to the player buttons), and the play and volume buttons get a
+     bigger tap area. */
+  #show-title-wrap, #padding-without-info, #top-row > div:first-child, #bottom-row, #bottom-row > div:first-child, #playing-wrap { min-width: 0; overflow: hidden; }
+  #show_title { display: block !important; white-space: nowrap !important; overflow: hidden; text-overflow: ellipsis; }
+  #playing-wrap #playing-song { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  #playing-image { flex: none; }
+  @media (max-width: 640px) {
+    #third-row-box { height: auto !important; flex-wrap: wrap; }
+    #third-row-controls { height: 40px; }
+    #third-row-controls > div[style*="width: 1px"], #third-row-controls #new-social-media > div { height: 40px !important; }
+    #play-pause-mobile, #mobile-volume > button { min-width: 44px; height: 40px; display: grid; place-items: center; }
+    #play-pause-mobile img, #mobile-volume img { margin: 0 !important; }
+    #new-page-links { flex: 1 1 100%; height: 40px !important; padding-right: 0 !important; border-top: 1px solid black; }
+    #new-page-links-bar { display: none; }
+    #new-page-links ul { width: 100%; justify-content: space-around; font-size: 14px; }
+    #new-page-links li { margin-left: 0 !important; }
+    #new-page-links li.has-new { margin-right: 26px; }
+    #new-page-links li.has-new .nav-new { top: 50%; transform: translateY(-55%) rotate(-4deg); }
+    /* the controls row has room for the social icons again now that the links have their own row */
+    #new-social-media, #new-spotify { display: flex !important; }
+    #new-spotify { display: inline-block !important; }
+    #new-page-links a { display: inline-block; padding: 9px 2px; }
+    /* play, volume, Instagram and Spotify split the full row evenly, so there's no empty gap on the right */
+    #third-row-controls { flex: 1 1 100%; }
+    #third-row-controls > div:first-child, #mobile-volume { flex: 1 1 0; display: flex; }
+    #play-pause-mobile, #mobile-volume > button { width: 100%; }
+    #new-social-media { flex: 2 1 0; padding-top: 0 !important; align-self: stretch; }
+    #new-social-media > a { flex: 1 1 0; display: grid; place-items: center; height: 40px; }
+    #new-social-media > a + a { border-left: 1px solid black; }
+    #new-social-media > a i { padding: 0 !important; }
+    #new-social-media > div { display: none; }
+    #mobile-volume-bar { display: block !important; }
+    #third-row-controls button:active, #new-social-media > a:active { background: rgba(0, 0, 0, .06); }
+  }
+</style>
+
 <script>
   /* Function to display and hide volume slider when pressing button */
   function toggleVolume() {
@@ -715,7 +754,9 @@
 </script>
 <style>
   /* small light-blue "NEW" badge next to a menu link (set new = true in the menu's params) */
-  .nav-new { display: inline-block; margin-left: 4px; padding: 1px 4px 0; vertical-align: 6px; font: 700 9px/1.25 "IBM Plex Mono", ui-monospace, monospace;
+  li.has-new { position: relative; margin-right: 30px; white-space: nowrap; }
+  li.has-new .nav-new { position: absolute; left: 100%; top: 50%; transform: translateY(-68%) rotate(-4deg); }
+  .nav-new { display: inline-block; margin-left: 3px; padding: 1px 4px 0; line-height: 1.25; font: 700 9px/1.25 "IBM Plex Mono", ui-monospace, monospace;
     letter-spacing: .06em; color: #0b3a5a; background: #bfe3ff; border: 1px solid #0b3a5a; border-radius: 3px; transform: rotate(-4deg); }
   .announcement-box {
     border: 2px solid rgb(100, 81, 77) !important; 
@@ -738,7 +779,8 @@
   }
 </style>
 
-<div class="announcement-box">{{ if eq .RelPermalink "/sports/" }}Welcome to the Underground Sound!{{ else }}Check out the new <a href="/sports/" style="text-decoration: underline; text-underline-offset: 3px;">KSCU Sports page</a>!{{ end }}</div>
+{{/* the sports page skips the banner so its games start higher on phones */}}
+{{ if ne .RelPermalink "/sports/" }}<div class="announcement-box">Check out the new <a href="/sports/" style="text-decoration: underline; text-underline-offset: 3px;">KSCU Sports page</a>!</div>{{ end }}
 
 <!--
 <div class="announcement-box">
