@@ -291,20 +291,51 @@ showTableOfContents = true
     #recent-close:hover, #recent-close:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
     .rp-msg { padding: 40px 16px; text-align: center; font: 14px var(--sans); }
 
-    /* the carousel: covers slide sideways on a dotted background; the front one is full size with an ink shadow and a
-       red sticker saying how long ago it played */
-    .rp-stage { position: relative; overflow: hidden; height: calc(var(--s) + 58px); border-bottom: 1px solid var(--ink);
+    /* the timeline: covers stand on a time line, the song on air at the right by NOW, earlier songs to the left, each
+       pinned to the line with how long ago it played. It only moves when clicked, and stops at both ends. */
+    .rp-stage { position: relative; overflow: hidden; height: calc(var(--s) + 144px); border-bottom: 1px solid var(--ink);
         background: radial-gradient(rgba(17, 24, 39, .16) 1px, transparent 1.5px) 0 0 / 12px 12px; }
-    .rp-stage > button { position: absolute; left: 50%; top: 26px; width: var(--s); height: var(--s); margin-left: calc(var(--s) / -2); padding: 0;
-        border: 1px solid var(--ink); border-radius: 0; background: #d6d0c4; cursor: pointer;
-        transition: transform .65s cubic-bezier(.65, 0, .25, 1), opacity .4s, box-shadow .65s, filter .65s; }
-    .rp-stage > button.on { box-shadow: 5px 5px 0 var(--ink); }
-    .rp-stage > button:focus-visible { outline: 2px solid rgb(191, 81, 77); outline-offset: 3px; }
-    .rp-stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
-    .rp-sticker { position: absolute; z-index: 30; left: calc(50% + var(--s) / 2 - 30px); top: 14px; padding: 3px 8px; border: 1px solid var(--ink);
-        background: rgb(191, 81, 77); color: #fff; font: 700 11px var(--sans); letter-spacing: .06em; white-space: nowrap;
-        transform: rotate(6deg); box-shadow: 2px 2px 0 var(--ink); animation: rp-pop .45s cubic-bezier(.3, 1.6, .5, 1) both; }
-    @keyframes rp-pop { from { transform: rotate(6deg) scale(.4); opacity: 0; } }
+    .rp-axis { position: absolute; left: 0; right: 0; bottom: 46px; border-top: 1px solid var(--ink); }
+    .rp-axis::before { content: ""; position: absolute; inset: -5px 0 auto; height: 9px;
+        background: repeating-linear-gradient(90deg, rgba(17, 24, 39, .45) 0 1px, transparent 1px 12px); }
+    .rp-item { position: absolute; left: 50%; bottom: 46px; width: var(--s); margin-left: calc(var(--s) / -2); transform-origin: 50% 100%;
+        transition: transform .5s cubic-bezier(.65, 0, .25, 1), opacity .35s, filter .5s; }
+    .rp-item::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 30px; background: var(--ink); }
+    .rp-item > button { position: relative; display: block; width: var(--s); height: var(--s); margin: 0 0 30px; padding: 0; border: 1px solid var(--ink);
+        border-radius: 0; background: #d6d0c4; cursor: pointer; }
+    .rp-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .rp-item.on > button { box-shadow: 5px 5px 0 var(--ink); }
+    .rp-item > button:focus-visible { outline: 2px solid rgb(191, 81, 77); outline-offset: 3px; }
+    .rp-dot { position: absolute; left: 50%; bottom: -5px; width: 9px; height: 9px; margin-left: -4.5px; border: 1px solid var(--ink); border-radius: 50%; background: var(--paper); }
+    .rp-item.on .rp-dot { background: var(--ink); }
+    .rp-label { position: absolute; left: 50%; top: calc(100% + 12px); transform: translateX(-50%); font: 700 11px var(--sans); letter-spacing: .04em; white-space: nowrap; }
+    .rp-item.on .rp-label { top: calc(100% + 10px); padding: 2px 7px; border: 1px solid var(--ink); background: rgb(191, 81, 77); color: #fff; }
+    /* the song on air, drawn like the site's line art: a wobbly ink frame that redraws itself a few times a second
+       (a cartoon "boiling" line) with a red offset shadow, red vibration marks popping at the corners, and the cover
+       rocking frame by frame. Everything moves in steps, no smooth tweening, so it reads as hand-drawn. */
+    .rp-item.is-now.on > button { box-shadow: none; }
+    .rp-item.is-now > button { animation: rp-rock .5s steps(1) infinite; }
+    @keyframes rp-rock { 0% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
+    .rp-comic { position: absolute; inset: -16%; width: 132%; height: 132%; overflow: visible; pointer-events: none;
+        filter: drop-shadow(2.5px 2.5px 0 rgb(191, 81, 77)); }
+    .rp-comic path { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .rp-boil path { stroke: var(--ink); stroke-width: 2.5; opacity: 0; animation: rp-boil .42s infinite; }
+    .rp-boil path:nth-child(2) { animation-delay: -.28s; }
+    .rp-boil path:nth-child(3) { animation-delay: -.14s; }
+    @keyframes rp-boil { 0% { opacity: 1; animation-timing-function: steps(1, end); } 33.34% { opacity: 0; } 100% { opacity: 0; } }
+    .rp-buzz path { stroke: rgb(191, 81, 77); stroke-width: 2.5; }
+    .rp-buzz { transform-box: view-box; transform-origin: 50px 50px; animation: rp-buzz .6s infinite; }
+    .rp-buzz + .rp-buzz { animation-delay: -.3s; }
+    @keyframes rp-buzz { 0% { transform: scale(1); opacity: 1; animation-timing-function: steps(1, end); }
+        33.34% { transform: scale(1.09); opacity: 1; animation-timing-function: steps(1, end); } 66.67% { opacity: 0; } 100% { opacity: 0; } }
+    .rp-badge { position: absolute; left: 6px; top: 6px; display: inline-flex; align-items: center; gap: 6px; padding: 3px 6px; background: var(--ink); color: var(--paper);
+        font: 700 10px var(--sans); letter-spacing: .08em; }
+    .rp-item.is-now .rp-dot { border-color: rgb(191, 81, 77); background: rgb(191, 81, 77); animation: pulse-red 2.2s infinite; }
+    /* the NOW end of the line, when nothing is reported as playing */
+    .rp-nowmark { position: absolute; left: 50%; bottom: 46px; transition: transform .5s cubic-bezier(.65, 0, .25, 1), opacity .35s; }
+    .rp-nowmark i { position: absolute; left: -6px; bottom: -6px; width: 12px; height: 12px; border-radius: 50%; background: rgb(191, 81, 77); animation: pulse-red 2.2s infinite; }
+    .rp-nowmark b { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 2px 6px; background: rgb(191, 81, 77); color: #fff;
+        font: 700 10px var(--sans); letter-spacing: .1em; }
 
     /* the song at the front, laid out like a homepage "previously spun" row */
     .rp-now { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; min-height: 72px; border-bottom: 1px solid var(--ink); }
@@ -320,20 +351,20 @@ showTableOfContents = true
         font: 13px 'IBM Plex Mono', monospace; white-space: nowrap; }
     .rp-when b { font: 700 11px var(--sans); letter-spacing: .04em; }
 
-    /* which song is in front, and arrows to turn the wheel */
-    .rp-foot { display: flex; justify-content: space-between; align-items: stretch; min-height: 40px; }
-    .rp-dots { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; }
-    .rp-dots button { width: 12px; height: 12px; padding: 0; border: 1px solid var(--ink); background: transparent; cursor: pointer; }
-    .rp-dots button.on { background: var(--ink); }
+    /* where you are on the line, and buttons to move along it (greyed out at the ends) */
+    .rp-foot { display: flex; justify-content: space-between; align-items: stretch; min-height: 42px; }
+    .rp-info { display: flex; align-items: center; padding: 8px 12px; font: 12px 'IBM Plex Mono', monospace; }
     .rp-arrows { display: flex; }
-    .rp-arrows button { width: 46px; padding: 0; border: 0; border-left: 1px solid var(--ink); background: transparent; color: var(--ink); font: 700 14px var(--sans); cursor: pointer; }
-    .rp-arrows button:hover, .rp-arrows button:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+    .rp-arrows button { padding: 0 12px; border: 0; border-left: 1px solid var(--ink); background: transparent; color: var(--ink); font: 700 12px var(--sans);
+        letter-spacing: .03em; white-space: nowrap; cursor: pointer; }
+    .rp-arrows button:hover:not(:disabled), .rp-arrows button:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+    .rp-arrows button:disabled { color: rgba(17, 24, 39, .3); cursor: default; }
     @media (max-width: 480px) {
         .rp-now { grid-template-columns: 60px minmax(0, 1fr) auto; min-height: 60px; }
         #recent-dialog .rp-title { font-size: 15px; }
         .rp-by { font-size: 13px; }
     }
-    @media (prefers-reduced-motion: reduce) { .songs-eq i, .songs-live, .schedule-live i { animation: none; } .rp-stage > button { transition: none; } .rp-eq i, .rp-sticker { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .songs-eq i, .songs-live, .schedule-live i { animation: none; } .rp-item, .rp-nowmark { transition: none; } .rp-eq i, .rp-item.is-now > button, .rp-boil path, .rp-buzz, .rp-item.is-now .rp-dot, .rp-nowmark i { animation: none; } .rp-boil path:first-child { opacity: 1; } }
 </style>
 
 <script src="/loadSchedule.js"></script>
