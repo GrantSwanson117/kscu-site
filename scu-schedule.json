@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T15:24:06.498348+00:00",
+ "updated": "2026-11-23T12:56:56.169379+00:00",
  "games": [
   {
    "id": "11159",
@@ -518,80 +518,6 @@
       "Sprints",
       "2-1",
       "1-2"
-     ]
-    ]
-   }
-  },
-  {
-   "id": "11026",
-   "sport": "Women's Volleyball",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "LMU",
-   "start": "2026-10-23T01:00:00+00:00",
-   "allDay": false,
-   "location": "Los Angeles",
-   "result": "L 1-3",
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/lmu/boxscore/11026",
-   "recap": "https://santaclarabroncos.com/news/2026/10/22/womens-volleyball-volleyball-builds-momentum-late-at-lmu.aspx",
-   "abbr": "LMU",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "3",
-     "4"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "19",
-       "17",
-       "25",
-       "21"
-      ]
-     },
-     {
-      "name": "LMU (CA)",
-      "abbr": "LMU",
-      "cells": [
-       "25",
-       "25",
-       "20",
-       "25"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Points",
-      "58.0",
-      "66.0"
-     ],
-     [
-      "Kills",
-      "51",
-      "50"
-     ],
-     [
-      "Aces",
-      "2",
-      "4"
-     ],
-     [
-      "Blocks",
-      "5",
-      "12"
-     ],
-     [
-      "Assists",
-      "46",
-      "45"
      ]
     ]
    }
