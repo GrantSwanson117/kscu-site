@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T22:30:50.617372+00:00",
+ "updated": "2026-11-23T12:56:56.169379+00:00",
  "games": [
   {
    "id": "11159",
@@ -292,138 +292,6 @@
    "recap": "https://santaclarabroncos.com/news/2026/10/18/womens-golf-broncos-climb-four-spots-on-final-day-of-stanford-intercollegiate.aspx"
   },
   {
-   "id": "10953",
-   "sport": "Women's Soccer",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "Seattle",
-   "start": "2026-10-18T01:00:00+00:00",
-   "allDay": false,
-   "location": "Seattle",
-   "result": "D 1-1",
-   "logo": "https://santaclarabroncos.com/images/logos/Seattle_U.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/seattle/boxscore/10953",
-   "recap": "https://santaclarabroncos.com/news/2026/10/17/womens-soccer-plays-to-draw-in-seattle.aspx",
-   "abbr": "SEA",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "T"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "0",
-       "1",
-       "1"
-      ]
-     },
-     {
-      "name": "Seattle U",
-      "abbr": "SU",
-      "cells": [
-       "0",
-       "1",
-       "1"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Shots",
-      "11 (3)",
-      "7 (2)"
-     ],
-     [
-      "Saves",
-      "1",
-      "2"
-     ],
-     [
-      "Corner Kicks",
-      "2",
-      "5"
-     ],
-     [
-      "Fouls",
-      "9",
-      "7"
-     ]
-    ]
-   }
-  },
-  {
-   "id": "10934",
-   "sport": "Men's Soccer",
-   "home": true,
-   "neutral": false,
-   "meet": false,
-   "opponent": "Saint Mary's",
-   "start": "2026-10-18T02:00:00+00:00",
-   "allDay": false,
-   "location": "Santa Clara, Calif., Stevens Stadium - Buck Shaw Field",
-   "result": "D 0-0",
-   "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/saint-mary-s/boxscore/10934",
-   "recap": "https://santaclarabroncos.com/news/2026/10/17/scoreless-draw-for-mens-soccer-versus-saint-mary-s.aspx",
-   "abbr": "SMC",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "T"
-    ],
-    "teams": [
-     {
-      "name": "Saint Mary's (CA)",
-      "abbr": "SMC",
-      "cells": [
-       "0",
-       "0",
-       "0"
-      ]
-     },
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "0",
-       "0",
-       "0"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Shots",
-      "16 (9)",
-      "15 (5)"
-     ],
-     [
-      "Saves",
-      "5",
-      "9"
-     ],
-     [
-      "Corner Kicks",
-      "10",
-      "6"
-     ],
-     [
-      "Fouls",
-      "8",
-      "13"
-     ]
-    ]
-   }
-  },
-  {
    "id": "10989",
    "sport": "Men's Water Polo",
    "home": false,
@@ -568,72 +436,6 @@
    "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-golf-nielsen-earns-co-medalist-honors-broncos-runner-up-at-saint-marys-invitational.aspx"
   },
   {
-   "id": "10935",
-   "sport": "Men's Soccer",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "San Diego",
-   "start": "2026-10-22T02:00:00+00:00",
-   "allDay": false,
-   "location": "San Diego",
-   "result": "L 1-3",
-   "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/san-diego/boxscore/10935",
-   "recap": "https://santaclarabroncos.com/news/2026/10/21/mens-soccer-msoc-recap.aspx",
-   "abbr": "USD",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "T"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "0",
-       "1",
-       "1"
-      ]
-     },
-     {
-      "name": "San Diego",
-      "abbr": "USD",
-      "cells": [
-       "0",
-       "3",
-       "3"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Shots",
-      "8 (3)",
-      "24 (9)"
-     ],
-     [
-      "Saves",
-      "6",
-      "2"
-     ],
-     [
-      "Corner Kicks",
-      "5",
-      "13"
-     ],
-     [
-      "Fouls",
-      "11",
-      "8"
-     ]
-    ]
-   }
-  },
-  {
    "id": "11004",
    "sport": "Men's Water Polo",
    "home": true,
@@ -716,80 +518,6 @@
       "Sprints",
       "2-1",
       "1-2"
-     ]
-    ]
-   }
-  },
-  {
-   "id": "11026",
-   "sport": "Women's Volleyball",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "LMU",
-   "start": "2026-10-23T01:00:00+00:00",
-   "allDay": false,
-   "location": "Los Angeles",
-   "result": "L 1-3",
-   "logo": "https://santaclarabroncos.com/images/logos/LMU_LogoUpdated.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/lmu/boxscore/11026",
-   "recap": "https://santaclarabroncos.com/news/2026/10/22/womens-volleyball-volleyball-builds-momentum-late-at-lmu.aspx",
-   "abbr": "LMU",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "3",
-     "4"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "19",
-       "17",
-       "25",
-       "21"
-      ]
-     },
-     {
-      "name": "LMU (CA)",
-      "abbr": "LMU",
-      "cells": [
-       "25",
-       "25",
-       "20",
-       "25"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Points",
-      "58.0",
-      "66.0"
-     ],
-     [
-      "Kills",
-      "51",
-      "50"
-     ],
-     [
-      "Aces",
-      "2",
-      "4"
-     ],
-     [
-      "Blocks",
-      "5",
-      "12"
-     ],
-     [
-      "Assists",
-      "46",
-      "45"
      ]
     ]
    }
@@ -2837,7 +2565,8 @@
    "allDay": false,
    "location": "Sacramento, Calif.",
    "result": "17th of 30",
-   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
+   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max",
+   "recap": "https://santaclarabroncos.com/news/2026/11/13/mens-cross-country-track-elite-pack-lifts-mens-cross-country-to-another-top-20-finish-at-west-regional.aspx"
   },
   {
    "id": "11042",
@@ -3088,22 +2817,46 @@
    "start": "2026-11-18T03:00:00+00:00",
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
-   "result": null,
+   "result": "W 82-72",
    "logo": "https://santaclarabroncos.com/images/logos/GCU_Logo_200x200.png?width=80&height=80&mode=max",
-   "abbr": "GCU"
-  },
-  {
-   "id": "10998",
-   "sport": "Men's Water Polo",
-   "home": true,
-   "neutral": false,
-   "meet": false,
-   "opponent": "First Round",
-   "start": "2026-11-20",
-   "allDay": true,
-   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
-   "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/gcu/boxscore/11043",
+   "recap": "https://santaclarabroncos.com/news/2026/11/17/womens-basketball-hands-gcu-first-loss.aspx",
+   "abbr": "GCU",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Grand Canyon",
+      "abbr": "GCU",
+      "cells": [
+       "18",
+       "18",
+       "10",
+       "26",
+       "72"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "17",
+       "25",
+       "19",
+       "21",
+       "82"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "11033",
@@ -3115,9 +2868,69 @@
    "start": "2026-11-20T02:30:00+00:00",
    "allDay": false,
    "location": "Moraga, Calif.",
-   "result": null,
+   "result": "W 3-1",
    "logo": "https://santaclarabroncos.com/images/logos/St_Mary_CA.png?width=80&height=80&mode=max",
-   "abbr": "SMC"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/saint-mary-s/boxscore/11033",
+   "recap": "https://santaclarabroncos.com/news/2026/11/19/womens-volleyball-volleyball-earns-comeback-road-win-at-saint-mary-s.aspx",
+   "abbr": "SMC",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "14",
+       "25",
+       "25",
+       "25"
+      ]
+     },
+     {
+      "name": "Saint Mary's (CA)",
+      "abbr": "SMC",
+      "cells": [
+       "25",
+       "23",
+       "19",
+       "23"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "55.0",
+      "67.0"
+     ],
+     [
+      "Kills",
+      "45",
+      "53"
+     ],
+     [
+      "Aces",
+      "3",
+      "8"
+     ],
+     [
+      "Blocks",
+      "7",
+      "6"
+     ],
+     [
+      "Assists",
+      "42",
+      "49"
+     ]
+    ]
+   }
   },
   {
    "id": "11094",
@@ -3129,22 +2942,127 @@
    "start": "2026-11-20T03:30:00+00:00",
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
-   "result": null,
+   "result": "L 77-83 OT",
    "logo": "https://santaclarabroncos.com/images/logos/VCU.png?width=80&height=80&mode=max",
-   "abbr": "VCU"
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/vcu/boxscore/11094",
+   "recap": "https://santaclarabroncos.com/news/2026/11/19/mens-basketball-broncos-fall-to-vcu.aspx",
+   "abbr": "VCU",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "VCU",
+      "abbr": "VCU",
+      "cells": [
+       "34",
+       "37",
+       "83"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "46",
+       "25",
+       "77"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
-   "id": "10999",
+   "id": "10998",
    "sport": "Men's Water Polo",
    "home": true,
    "neutral": false,
    "meet": false,
-   "opponent": "Semifinals",
-   "start": "2026-11-21",
-   "allDay": true,
+   "opponent": "Pepperdine",
+   "start": "2026-11-20T19:30:00+00:00",
+   "allDay": false,
    "location": "Santa Clara, Calif., Sullivan Aquatic Center",
-   "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+   "result": "W 12-11",
+   "logo": "https://santaclarabroncos.com/images/logos/pepperdine_logo.png?width=80&height=80&mode=max",
+   "boxscore": "https://santaclarabroncos.com/sports/mens-water-polo/stats/2026/pepperdine/boxscore/10998",
+   "recap": "https://santaclarabroncos.com/news/2026/11/20/mens-water-polo-no-17-broncos-advance-to-wcc-championship-semifinal.aspx",
+   "abbr": "PEPP",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "2",
+       "5",
+       "3",
+       "2",
+       "12"
+      ]
+     },
+     {
+      "name": "Pepperdine",
+      "abbr": "PEP",
+      "cells": [
+       "1",
+       "4",
+       "4",
+       "2",
+       "11"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "29",
+      "27"
+     ],
+     [
+      "Goals",
+      "12",
+      "11"
+     ],
+     [
+      "Assists",
+      "10",
+      "8"
+     ],
+     [
+      "Points",
+      "22",
+      "19"
+     ],
+     [
+      "Exclusions",
+      "12",
+      "12"
+     ],
+     [
+      "Steals",
+      "8",
+      "12"
+     ],
+     [
+      "Sprints",
+      "1-3",
+      "3-1"
+     ]
+    ]
+   }
   },
   {
    "id": "11044",
@@ -3156,9 +3074,46 @@
    "start": "2026-11-21T01:30:00+00:00",
    "allDay": false,
    "location": "Tempe, Ariz.",
-   "result": null,
+   "result": "L 63-76",
    "logo": "https://santaclarabroncos.com/images/logos/Arizona-State.png?width=80&height=80&mode=max",
-   "abbr": "ASU"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/arizona-state/boxscore/11044",
+   "recap": "https://santaclarabroncos.com/news/2026/11/20/womens-basketball-drops-road-game-at-arizona-state.aspx",
+   "abbr": "ASU",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "14",
+       "19",
+       "14",
+       "16",
+       "63"
+      ]
+     },
+     {
+      "name": "Arizona St.",
+      "abbr": "ASU",
+      "cells": [
+       "18",
+       "19",
+       "22",
+       "17",
+       "76"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "11303",
@@ -3166,12 +3121,77 @@
    "home": false,
    "neutral": false,
    "meet": false,
-   "opponent": "Stanford",
+   "opponent": "#16 Stanford",
    "start": "2026-11-21T02:00:00+00:00",
    "allDay": false,
    "location": "Stanford, Calif.",
+   "result": "L 1-2",
+   "boxscore": "https://santaclarabroncos.com/sports/womens-soccer/stats/2026/-16-stanford/boxscore/11303",
+   "recap": "https://santaclarabroncos.com/news/2026/11/20/womens-soccer-topped-by-no-16-stanford-in-ncaa-first-round.aspx",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "0",
+       "1",
+       "1"
+      ]
+     },
+     {
+      "name": "Stanford",
+      "abbr": "STAN",
+      "cells": [
+       "1",
+       "1",
+       "2"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Shots",
+      "5 (1)",
+      "35 (17)"
+     ],
+     [
+      "Saves",
+      "15",
+      "0"
+     ],
+     [
+      "Corner Kicks",
+      "0",
+      "13"
+     ],
+     [
+      "Fouls",
+      "9",
+      "10"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10999",
+   "sport": "Men's Water Polo",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "UC Davis",
+   "start": "2026-11-21T19:00:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Sullivan Aquatic Center",
    "result": null,
-   "abbr": "STAN"
+   "logo": "https://santaclarabroncos.com/images/logos/UC_DAVIS.png?width=80&height=80&mode=max",
+   "abbr": "UCD"
   },
   {
    "id": "11034",
@@ -3183,9 +3203,72 @@
    "start": "2026-11-21T22:00:00+00:00",
    "allDay": false,
    "location": "Stockton, Calif.",
-   "result": null,
+   "result": "W 3-2",
    "logo": "https://santaclarabroncos.com/images/logos/tiger_2hunnitby2hunnit.png?width=80&height=80&mode=max",
-   "abbr": "PAC"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/pacific/boxscore/11034",
+   "recap": "https://santaclarabroncos.com/news/2026/11/21/womens-volleyball-volleyball-caps-perfect-road-trip-with-five-set-comeback-at-pacific.aspx",
+   "abbr": "PAC",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "25",
+       "24",
+       "21",
+       "25",
+       "16"
+      ]
+     },
+     {
+      "name": "Pacific",
+      "abbr": "PAC",
+      "cells": [
+       "18",
+       "26",
+       "25",
+       "22",
+       "14"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "90.0",
+      "64.0"
+     ],
+     [
+      "Kills",
+      "71",
+      "49"
+     ],
+     [
+      "Aces",
+      "8",
+      "10"
+     ],
+     [
+      "Blocks",
+      "11",
+      "5"
+     ],
+     [
+      "Assists",
+      "66",
+      "47"
+     ]
+    ]
+   }
   },
   {
    "id": "11000",
@@ -3480,7 +3563,7 @@
    "neutral": true,
    "meet": false,
    "opponent": "Boise State",
-   "start": "2026-12-21T22:00:00+00:00",
+   "start": "2026-12-21T22:30:00+00:00",
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
@@ -3494,7 +3577,7 @@
    "neutral": true,
    "meet": false,
    "opponent": "Oregon State",
-   "start": "2026-12-23T23:30:00+00:00",
+   "start": "2026-12-23T23:00:00+00:00",
    "allDay": false,
    "location": "San Juan Capistrano, Calif.",
    "result": null,
@@ -3934,6 +4017,20 @@
    "abbr": "PEPP"
   },
   {
+   "id": "11304",
+   "sport": "Women's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Oregon",
+   "start": "2027-02-21",
+   "allDay": true,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/oregon.png?width=80&height=80&mode=max",
+   "abbr": "ORE"
+  },
+  {
    "id": "11136",
    "sport": "Men's Basketball",
    "home": true,
@@ -4015,6 +4112,19 @@
    "location": "Las Vegas",
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/WCC_2022.png?width=80&height=80&mode=max"
+  },
+  {
+   "id": "11305",
+   "sport": "Men's Tennis",
+   "home": true,
+   "neutral": false,
+   "meet": false,
+   "opponent": "Menlo College",
+   "start": "2027-04-11T22:30:00+00:00",
+   "allDay": false,
+   "location": "Santa Clara, Calif., Degheri Tennis Center",
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/menlo.png?width=80&height=80&mode=max"
   }
  ]
 }
