@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:56:56.169379+00:00",
+ "updated": "2026-11-24T11:00:36.378828+00:00",
  "games": [
   {
    "id": "11159",
@@ -3293,9 +3293,40 @@
    "start": "2026-11-24T00:00:00+00:00",
    "allDay": false,
    "location": "Palm Desert, Calif.",
-   "result": null,
+   "result": "W 102-99",
    "logo": "https://santaclarabroncos.com/images/logos/Illinois_State_2023.png?width=80&height=80&mode=max",
-   "abbr": "ILST"
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/illinois-state/boxscore/11095",
+   "recap": "https://santaclarabroncos.com/news/2026/11/23/broncos-outlast-illinois-state-102-99.aspx",
+   "abbr": "ILST",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "47",
+       "55",
+       "102"
+      ]
+     },
+     {
+      "name": "Illinois St.",
+      "abbr": "ILS",
+      "cells": [
+       "47",
+       "52",
+       "99"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "11035",
@@ -3307,9 +3338,66 @@
    "start": "2026-11-24T03:00:00+00:00",
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
-   "result": null,
+   "result": "L 0-3",
    "logo": "https://santaclarabroncos.com/images/logos/San_Diego.png?width=80&height=80&mode=max",
-   "abbr": "USD"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/san-diego/boxscore/11035",
+   "recap": "https://santaclarabroncos.com/news/2026/11/23/womens-volleyball-volleyball-fights-against-toreros-in-opener-of-final-home-stand.aspx",
+   "abbr": "USD",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3"
+    ],
+    "teams": [
+     {
+      "name": "San Diego",
+      "abbr": "SD",
+      "cells": [
+       "25",
+       "25",
+       "25"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "20",
+       "16",
+       "22"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "54.0",
+      "40.0"
+     ],
+     [
+      "Kills",
+      "45",
+      "36"
+     ],
+     [
+      "Aces",
+      "3",
+      "2"
+     ],
+     [
+      "Blocks",
+      "6",
+      "2"
+     ],
+     [
+      "Assists",
+      "40",
+      "33"
+     ]
+    ]
+   }
   },
   {
    "id": "11096",
@@ -3378,19 +3466,6 @@
    "result": null,
    "logo": "https://santaclarabroncos.com/images/logos/utah_tech_200x200_logo.png?width=80&height=80&mode=max",
    "abbr": "UTU"
-  },
-  {
-   "id": "11037",
-   "sport": "Women's Volleyball",
-   "home": false,
-   "neutral": true,
-   "meet": false,
-   "opponent": "NCAA Championship",
-   "start": "2026-12-03",
-   "allDay": true,
-   "location": "TBA",
-   "result": null,
-   "logo": "https://santaclarabroncos.com/images/logos/NCAALogoUpdated.png?width=80&height=80&mode=max"
   },
   {
    "id": "11098",
