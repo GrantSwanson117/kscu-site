@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T04:21:22.608610+00:00",
+ "updated": "2026-11-25T15:41:27.061450+00:00",
  "games": [
   {
    "id": "11159",
@@ -860,72 +860,6 @@
       "Fouls",
       "7",
       "8"
-     ]
-    ]
-   }
-  },
-  {
-   "id": "10936",
-   "sport": "Men's Soccer",
-   "home": false,
-   "neutral": false,
-   "meet": false,
-   "opponent": "Portland",
-   "start": "2026-10-25T02:00:00+00:00",
-   "allDay": false,
-   "location": "Portland, Ore.",
-   "result": "L 2-5",
-   "logo": "https://santaclarabroncos.com/images/logos/PortlandUpdatedLogo2022.png?width=80&height=80&mode=max",
-   "boxscore": "https://santaclarabroncos.com/sports/mens-soccer/stats/2026/portland/boxscore/10936",
-   "recap": "https://santaclarabroncos.com/news/2026/10/24/mens-soccer-recap-261024.aspx",
-   "abbr": "PORT",
-   "box": {
-    "v": 2,
-    "cols": [
-     "1",
-     "2",
-     "T"
-    ],
-    "teams": [
-     {
-      "name": "Santa Clara",
-      "abbr": "SCU",
-      "cells": [
-       "1",
-       "1",
-       "2"
-      ]
-     },
-     {
-      "name": "Portland",
-      "abbr": "POR",
-      "cells": [
-       "3",
-       "2",
-       "5"
-      ]
-     }
-    ],
-    "stats": [
-     [
-      "Shots",
-      "7 (3)",
-      "18 (9)"
-     ],
-     [
-      "Saves",
-      "4",
-      "1"
-     ],
-     [
-      "Corner Kicks",
-      "1",
-      "9"
-     ],
-     [
-      "Fouls",
-      "7",
-      "11"
      ]
     ]
    }
