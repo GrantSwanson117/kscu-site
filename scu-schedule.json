@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T11:00:36.378828+00:00",
+ "updated": "2026-11-25T04:21:22.608610+00:00",
  "games": [
   {
    "id": "11159",
@@ -3409,9 +3409,40 @@
    "start": "2026-11-25T00:00:00+00:00",
    "allDay": false,
    "location": "Palm Desert, Calif.",
-   "result": null,
+   "result": "L 66-85",
    "logo": "https://santaclarabroncos.com/images/logos/NevadaAthletics_Navy.png?width=80&height=80&mode=max",
-   "abbr": "NEV"
+   "boxscore": "https://santaclarabroncos.com/sports/mens-basketball/stats/2026-27/nevada/boxscore/11096",
+   "recap": "https://santaclarabroncos.com/news/2026/11/24/mens-basketball-broncos-fall-in-final-game-of-acrisure-invitational.aspx",
+   "abbr": "NEV",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "35",
+       "31",
+       "66"
+      ]
+     },
+     {
+      "name": "Nevada",
+      "abbr": "Nevada",
+      "cells": [
+       "41",
+       "44",
+       "85"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "11036",
