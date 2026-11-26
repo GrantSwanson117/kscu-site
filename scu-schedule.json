@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:41:27.061450+00:00",
+ "updated": "2026-11-26T00:27:34.786866+00:00",
  "games": [
   {
    "id": "11159",
@@ -3388,7 +3388,7 @@
    "start": "2026-11-25T22:00:00+00:00",
    "allDay": false,
    "location": "Santa Clara, Calif., Leavey Center",
-   "result": null,
+   "result": "W 3-1",
    "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
    "abbr": "DEN"
   },
