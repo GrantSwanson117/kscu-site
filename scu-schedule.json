@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T00:27:34.786866+00:00",
+ "updated": "2026-11-26T09:36:27.299422+00:00",
  "games": [
   {
    "id": "11159",
@@ -3390,7 +3390,67 @@
    "location": "Santa Clara, Calif., Leavey Center",
    "result": "W 3-1",
    "logo": "https://santaclarabroncos.com/images/logos/Denver_2022.png?width=80&height=80&mode=max",
-   "abbr": "DEN"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-volleyball/stats/2026/denver/boxscore/11036",
+   "recap": "https://santaclarabroncos.com/news/2026/11/25/womens-volleyball-volleyball-downs-denver-on-senior-day.aspx",
+   "abbr": "DEN",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "teams": [
+     {
+      "name": "Denver",
+      "abbr": "Denver",
+      "cells": [
+       "24",
+       "25",
+       "16",
+       "21"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "26",
+       "22",
+       "25",
+       "25"
+      ]
+     }
+    ],
+    "stats": [
+     [
+      "Points",
+      "57.0",
+      "83.0"
+     ],
+     [
+      "Kills",
+      "49",
+      "72"
+     ],
+     [
+      "Aces",
+      "2",
+      "5"
+     ],
+     [
+      "Blocks",
+      "6",
+      "6"
+     ],
+     [
+      "Assists",
+      "47",
+      "70"
+     ]
+    ]
+   }
   },
   {
    "id": "11051",
