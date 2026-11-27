@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T09:36:27.299422+00:00",
+ "updated": "2026-11-27T12:33:06.530560+00:00",
  "games": [
   {
    "id": "11159",
@@ -3462,9 +3462,46 @@
    "start": "2026-11-27T01:00:00+00:00",
    "allDay": false,
    "location": "U.S. Virgin Islands",
-   "result": null,
+   "result": "W 89-80",
    "logo": "https://santaclarabroncos.com/images/logos/Xavier_.png?width=80&height=80&mode=max",
-   "abbr": "XAV"
+   "boxscore": "https://santaclarabroncos.com/sports/womens-basketball/stats/2026-27/xavier/boxscore/11051",
+   "recap": "https://santaclarabroncos.com/news/2026/11/26/womens-basketball-beats-xavier-at-paradise-jam.aspx",
+   "abbr": "XAV",
+   "box": {
+    "v": 2,
+    "cols": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "T"
+    ],
+    "teams": [
+     {
+      "name": "Xavier",
+      "abbr": "XU",
+      "cells": [
+       "21",
+       "15",
+       "17",
+       "27",
+       "80"
+      ]
+     },
+     {
+      "name": "Santa Clara",
+      "abbr": "SCU",
+      "cells": [
+       "27",
+       "23",
+       "19",
+       "20",
+       "89"
+      ]
+     }
+    ],
+    "stats": []
+   }
   },
   {
    "id": "11052",
@@ -3472,11 +3509,13 @@
    "home": false,
    "neutral": true,
    "meet": false,
-   "opponent": "Texas Tech or Air Force",
-   "start": "2026-11-28",
-   "allDay": true,
+   "opponent": "Texas Tech",
+   "start": "2026-11-28T20:00:00+00:00",
+   "allDay": false,
    "location": "U.S. Virgin Islands",
-   "result": null
+   "result": null,
+   "logo": "https://santaclarabroncos.com/images/logos/Texas-Tech.png?width=80&height=80&mode=max",
+   "abbr": "TTU"
   },
   {
    "id": "11097",
